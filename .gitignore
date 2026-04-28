@@ -16,6 +16,9 @@ desktop.ini
 *.log
 *.tmp
 
+# Build output (Netlify rebuilds from source)
+dist/
+
 # PHP
 vendor/
 composer.phar

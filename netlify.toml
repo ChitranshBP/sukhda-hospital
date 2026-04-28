@@ -1,0 +1,32 @@
+# Netlify deployment config
+# Build command runs `php build.php` which renders index.php → dist/index.html
+# and copies /assets so Netlify can serve the result as a static site.
+
+[build]
+  command  = "php build.php"
+  publish  = "dist"
+
+# Netlify's default Ubuntu image ships with PHP 8.x available on PATH; no
+# extra install step is needed. If a future image drops PHP, switch the
+# command to:  apt-get update -qq && apt-get install -y php-cli && php build.php
+
+[build.environment]
+  PHP_VERSION = "8.2"
+
+# Long-cache for fingerprintable static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML should always revalidate
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Pretty 404
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404

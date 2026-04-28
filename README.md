@@ -51,6 +51,35 @@ php -S 127.0.0.1:8000
 
 Then open http://127.0.0.1:8000 in your browser.
 
+## Building for static hosting (Netlify, Vercel, etc.)
+
+The `build.php` script renders `index.php` to a static `dist/index.html`
+and copies `/assets`, producing a folder ready for any static host.
+
+```bash
+php build.php
+# → outputs dist/index.html + dist/assets/* + 404.html + robots.txt
+```
+
+### Netlify deployment
+
+Already configured via `netlify.toml`:
+
+| Setting | Value |
+|---|---|
+| Build command | `php build.php` |
+| Publish dir | `dist` |
+| PHP version | 8.2 |
+
+Steps to deploy:
+
+1. Push this repo to GitHub (already done)
+2. On Netlify: **Add new site → Import existing project → pick the repo**
+3. Netlify reads `netlify.toml`; click **Deploy**
+4. Done — every push to `main` triggers a new build
+
+The site is fully static once built — no PHP runtime needed at request time.
+
 ## Customising
 
 - Edit content in `includes/data.php` (hospital info, specialties, doctors, blogs, testimonials, news)
