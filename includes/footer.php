@@ -74,10 +74,10 @@
   <div class="relative max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-12 gap-10">
     <div class="lg:col-span-4">
       <a href="#" class="inline-flex items-center" aria-label="<?= htmlspecialchars($HOSPITAL['name']) ?>">
-        <img src="assets/images/logo-removebg-preview.png"
+        <img src="assets/images/Sukhda_Medpark_Logo-04-removebg-preview.png"
              alt="<?= htmlspecialchars($HOSPITAL['name']) ?>"
-             width="294" height="80"
-             class="h-12 w-auto select-none brightness-0 invert">
+             width="831" height="300"
+             class="h-14 w-auto select-none brightness-0 invert">
       </a>
       <p class="mt-5 text-sm leading-relaxed text-brand-100/70 max-w-sm">
         NABH accredited multispeciality hospital in Hisar. Caring for families since <?= htmlspecialchars($HOSPITAL['founded']) ?> with world-class technology and a human touch.

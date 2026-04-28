@@ -35,12 +35,12 @@
                 900: '#051D3C',
               },
               coral: {
-                50:  '#F4F8E1',
-                100: '#E5EFC0',
-                300: '#C9DD7A',
-                500: '#ACCF43',   // brand accent green
-                600: '#8FB330',   // darker on hover
-                700: '#6F8A23',   // deepest, for text on light bg
+                50:  '#FBF5E8',
+                100: '#F4E5C5',
+                300: '#DCC084',
+                500: '#C9A86A',   // logo champagne gold
+                600: '#A88349',   // darker on hover
+                700: '#8D6E3A',   // deepest, for text on light bg
               },
               sand:  '#FBF6EE',
               ink:   '#0B1424',
@@ -139,10 +139,10 @@ $MAIN_MENU = [
       <!-- LEFT: Logo + divider + NABH -->
       <div class="flex items-center gap-3 lg:gap-4 shrink-0">
         <a href="#" class="flex items-center" aria-label="<?= htmlspecialchars($HOSPITAL['name']) ?>">
-          <img src="assets/images/logo-removebg-preview.png"
+          <img src="assets/images/Sukhda_Medpark_Logo-04-removebg-preview.png"
                alt="<?= htmlspecialchars($HOSPITAL['name']) ?>"
-               width="294" height="80"
-               class="h-11 lg:h-[52px] w-auto select-none">
+               width="831" height="300"
+               class="h-14 lg:h-16 w-auto select-none">
         </a>
         <span class="hidden sm:block w-px h-10 bg-brand-100"></span>
         <img src="assets/images/nabh.jpg"
