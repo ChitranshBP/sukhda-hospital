@@ -53,12 +53,12 @@ $DOCTORS = [
 ];
 
 $TECH = [
-    ['name' => '128-Slice CT Scanner',     'tag' => 'Imaging',       'desc' => 'Ultra-fast, low-radiation imaging for cardiac, neuro and whole-body scans.', 'img' => 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=900&auto=format&fit=crop'],
-    ['name' => 'Modular Operation Theatres','tag' => 'Surgery',      'desc' => 'HEPA-filtered, laminar-flow OTs designed for precision surgery.',           'img' => 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=900&auto=format&fit=crop'],
-    ['name' => 'Advanced Cath Lab',        'tag' => 'Cardiology',    'desc' => 'Flat panel digital cath lab for angiography & angioplasty.',              'img' => 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=900&auto=format&fit=crop'],
-    ['name' => 'Dialysis Suite',           'tag' => 'Nephrology',    'desc' => '8-station HDF dialysis with isolation suites.',                            'img' => 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?w=900&auto=format&fit=crop'],
-    ['name' => 'NICU & PICU',              'tag' => 'Paediatrics',   'desc' => 'Level III neonatal & paediatric ICU with 24×7 neonatologist.',            'img' => 'https://images.unsplash.com/photo-1631815587646-b85a1bb027e1?w=900&auto=format&fit=crop'],
-    ['name' => 'NABL Pathology Lab',       'tag' => 'Diagnostics',   'desc' => 'Fully automated lab — biochemistry, hematology, microbiology.',           'img' => 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=900&auto=format&fit=crop'],
+    ['name' => 'Siemens CT Scanner',         'tag' => 'Imaging',       'desc' => '32-slice Siemens Healthineers CT for cardiac, neuro & whole-body scans.', 'img' => 'assets/images/infra/ct-scan.jpg'],
+    ['name' => 'Modular Operation Theatre',  'tag' => 'Surgery',       'desc' => 'HEPA-filtered, laminar-flow OT with C-arm and modern anaesthesia.',      'img' => 'assets/images/infra/operation-theatre.jpg'],
+    ['name' => 'Advanced Cath Lab',          'tag' => 'Cardiology',    'desc' => 'Fully digital ARTS ZEE PURE catheterisation lab for angio & angioplasty.', 'img' => 'assets/images/infra/cath-lab.jpg'],
+    ['name' => 'Dialysis Department',        'tag' => 'Nephrology',    'desc' => 'Seven-bed renal dialysis unit with dedicated isolation stations.',       'img' => 'assets/images/infra/dialysis.jpg'],
+    ['name' => 'Cardiac ICU',                'tag' => 'Critical Care', 'desc' => 'Four-bed coronary intensive care with 24×7 cardiac monitoring.',          'img' => 'assets/images/infra/icu.jpg'],
+    ['name' => 'NABL Pathology Lab',         'tag' => 'Diagnostics',   'desc' => 'Fully equipped lab — biochemistry, haematology and microbiology.',        'img' => 'assets/images/infra/pathology-lab.jpg'],
 ];
 
 $BLOGS = [
