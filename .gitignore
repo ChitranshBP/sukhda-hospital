@@ -1,0 +1,26 @@
+# Claude / IDE memory
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs / temp
+*.log
+*.tmp
+
+# PHP
+vendor/
+composer.phar
+composer.lock
+
+# Local env
+.env
+.env.local
