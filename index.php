@@ -170,37 +170,37 @@ $PROCEDURES = [
                   class="pb-3 -mb-px border-b-2 font-semibold text-[17px] transition">Procedures</button>
         </div>
 
-        <!-- SPECIALITIES tab -->
+        <!-- SPECIALITIES tab — 3 per row on desktop -->
         <div x-show="tab === 'specialties'"
              x-transition:enter="transition ease-out duration-300"
              x-transition:enter-start="opacity-0 translate-y-2"
              x-transition:enter-end="opacity-100 translate-y-0"
-             class="mt-8 grid sm:grid-cols-2 gap-3 lg:gap-4">
-          <?php foreach (array_slice($SPECIALTIES, 0, 8) as $s):
+             class="mt-8 grid grid-cols-2 lg:grid-cols-3 gap-3">
+          <?php foreach (array_slice($SPECIALTIES, 0, 9) as $s):
             $icon = $iconMap[$s['icon']] ?? 'stethoscope'; ?>
             <a href="#"
-               class="group flex items-start gap-4 p-4 lg:p-5 rounded-2xl border border-brand-200 bg-white hover:border-brand-500 hover:shadow-soft transition">
-              <span class="w-12 h-12 rounded-2xl bg-brand-50 grid place-items-center text-brand-600 shrink-0 group-hover:bg-brand-600 group-hover:text-white transition">
-                <i data-lucide="<?= $icon ?>" class="w-5 h-5"></i>
+               class="group flex items-start gap-3 p-3 lg:p-3.5 rounded-2xl border border-brand-200 bg-white hover:border-brand-500 hover:shadow-soft transition">
+              <span class="w-10 h-10 rounded-xl bg-brand-50 grid place-items-center text-brand-600 shrink-0 group-hover:bg-brand-600 group-hover:text-white transition">
+                <i data-lucide="<?= $icon ?>" class="w-4 h-4"></i>
               </span>
-              <h4 class="flex-1 font-semibold text-[15px] text-brand-900 leading-tight self-center"><?= htmlspecialchars($s['name']) ?></h4>
+              <h4 class="flex-1 font-semibold text-[13px] text-brand-900 leading-snug self-center line-clamp-2"><?= htmlspecialchars($s['name']) ?></h4>
             </a>
           <?php endforeach; ?>
         </div>
 
-        <!-- PROCEDURES tab -->
+        <!-- PROCEDURES tab — 3 per row on desktop -->
         <div x-show="tab === 'procedures'" x-cloak
              x-transition:enter="transition ease-out duration-300"
              x-transition:enter-start="opacity-0 translate-y-2"
              x-transition:enter-end="opacity-100 translate-y-0"
-             class="mt-8 grid sm:grid-cols-2 gap-3 lg:gap-4">
-          <?php foreach ($PROCEDURES as $p): ?>
+             class="mt-8 grid grid-cols-2 lg:grid-cols-3 gap-3">
+          <?php foreach (array_slice($PROCEDURES, 0, 6) as $p): ?>
             <a href="#"
-               class="group flex items-start gap-4 p-4 lg:p-5 rounded-2xl border border-brand-200 bg-white hover:border-brand-500 hover:shadow-soft transition">
-              <span class="w-12 h-12 rounded-2xl bg-brand-50 grid place-items-center text-brand-600 shrink-0 group-hover:bg-brand-600 group-hover:text-white transition">
-                <i data-lucide="<?= $p['icon'] ?>" class="w-5 h-5"></i>
+               class="group flex items-start gap-3 p-3 lg:p-3.5 rounded-2xl border border-brand-200 bg-white hover:border-brand-500 hover:shadow-soft transition">
+              <span class="w-10 h-10 rounded-xl bg-brand-50 grid place-items-center text-brand-600 shrink-0 group-hover:bg-brand-600 group-hover:text-white transition">
+                <i data-lucide="<?= $p['icon'] ?>" class="w-4 h-4"></i>
               </span>
-              <h4 class="flex-1 font-semibold text-[15px] text-brand-900 leading-tight self-center"><?= htmlspecialchars($p['name']) ?></h4>
+              <h4 class="flex-1 font-semibold text-[13px] text-brand-900 leading-snug self-center line-clamp-2"><?= htmlspecialchars($p['name']) ?></h4>
             </a>
           <?php endforeach; ?>
         </div>
