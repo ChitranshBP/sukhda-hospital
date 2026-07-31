@@ -11,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Tailwind via Play CDN -->
@@ -21,34 +21,49 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            serif: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            mono: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            sans: ['"Inter"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Outfit"', 'system-ui', 'sans-serif'],
+            mono: ['"SF Mono"', 'ui-monospace', 'monospace'],
           },
           colors: {
             brand: {
-              50: '#F8FAFC',
-              100: '#F1F5F9',
-              200: '#E2E8F0',
-              300: '#CBD5E1',
-              400: '#94A3B8',
-              500: '#3B82F6',
-              600: '#0F4F94',   // primary brand blue
-              700: '#0B3D74',
-              800: '#0F172A',
-              900: '#0B1424',
+              50: '#EBF7E5',    // Soft Logo Green Tint
+              100: '#DCF3D3',   // Light Green Tint
+              200: '#BCE8A9',
+              300: '#8AE065',
+              400: '#68CE3C',
+              500: '#56B929',   // Logo Leaf Green Primary
+              600: '#4EA422',   // Action Green
+              700: '#286411',   // Dark Green
+              800: '#0C2B09',   // Deep Forest Green
+              900: '#081E06',   // Ultra Dark Green
+            },
+            accent: {
+              50: '#E6F2FB',
+              100: '#D4EAFA',
+              200: '#A4D0F4',
+              500: '#0068B5',   // Logo Medpark Blue Accent
+              600: '#004F8A',
+              700: '#051B3B',
+            },
+            emerald: {
+              50: '#EBF7E5',
+              100: '#DCF3D3',
+              500: '#56B929',
+              600: '#4EA422',
+              700: '#286411',
+              800: '#1E4D0C',
             },
             coral: {
-              50: '#FFFBEB',
-              100: '#FEF3C7',
-              300: '#FDE68A',
-              500: '#C9A86A',
-              600: '#A88349',
-              700: '#8D6E3A',
+              50: '#EBF7E5',
+              100: '#DCF3D3',
+              500: '#56B929',
+              600: '#4EA422',
+              700: '#286411',
             },
             sand: '#F8FAFC',
-            ink: '#0F172A',
+            ink: '#0C2B09',     // Deep Green text color
             mist: '#F1F5F9',
           },
           boxShadow: {
@@ -83,9 +98,17 @@
       max-width: 100vw !important;
     }
 
+    h1, h2, h3, h4, h5, h6, .font-display {
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+      letter-spacing: -0.022em;
+    }
+
     body {
-      font-feature-settings: "ss01", "ss02";
+      font-family: 'Inter', 'Plus Jakarta Sans', sans-serif !important;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
       font-size: 0.9375rem;
       overflow-x: clip !important;
       width: 100% !important;
@@ -263,7 +286,7 @@
   <header x-data="{ open:false, m:null, t:null }" class="sticky top-0 z-50 bg-white border-b border-slate-200 w-full">
 
     <!-- ===== TIER 1: Upper Header Utility & Guide Bar ===== -->
-    <div class="hidden lg:block relative bg-slate-900 text-slate-200 border-b border-slate-800">
+    <div class="hidden lg:block relative bg-[#0C2B09] text-slate-200 border-b border-[#184614]">
       <div class="max-w-[1440px] mx-auto px-6 h-10 flex items-center justify-between gap-4 text-[12px]">
 
         <!-- Left: Quick contact actions -->
@@ -276,7 +299,7 @@
           </a>
           <span class="w-px h-3.5 bg-slate-700"></span>
           <a href="tel:<?= $HOSPITAL['emergency'] ?>" class="inline-flex items-center gap-1.5 font-semibold hover:text-white transition">
-            <span class="w-4 h-4 bg-brand-600 grid place-items-center">
+            <span class="w-4 h-4 bg-[#56B929] grid place-items-center">
               <i data-lucide="phone-call" class="w-2.5 h-2.5 text-white"></i>
             </span>
             <span>Emergency: <?= htmlspecialchars($HOSPITAL['emergency']) ?></span>
@@ -337,8 +360,8 @@
         <!-- LEFT: Logo + divider + NABH -->
         <div class="flex items-center gap-3 shrink-0">
           <a href="#top" class="flex items-center" aria-label="<?= htmlspecialchars($HOSPITAL['name']) ?>">
-            <img src="assets/images/logo-sukhda.png" alt="<?= htmlspecialchars($HOSPITAL['name']) ?>" width="831"
-              height="300" class="h-16 lg:h-16 w-auto select-none">
+            <img src="assets/images/sukhda-medpark-new-logo.png" alt="<?= htmlspecialchars($HOSPITAL['name']) ?>"
+              class="h-16 lg:h-18 w-auto select-none object-contain">
           </a>
           <span class="hidden sm:block w-px h-10 bg-slate-200"></span>
           <img src="assets/images/nabh.jpg" alt="NABH Accredited" title="NABH Accredited" width="80" height="80"

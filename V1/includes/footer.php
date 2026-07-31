@@ -3,18 +3,18 @@
 ============================================================ -->
 <section id="cta" class="relative py-12 lg:py-16 bg-white border-t border-slate-200">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="bg-slate-900 border border-slate-800 p-8 sm:p-12">
+    <div class="bg-[#0C2B09] border border-[#184614] p-8 sm:p-12">
       <div class="grid lg:grid-cols-12 gap-8 items-center">
 
         <!-- Headline + intro -->
         <div class="lg:col-span-7 text-white space-y-3">
-          <div class="inline-block px-2.5 py-1 bg-slate-800 border border-slate-700 text-[11px] uppercase tracking-widest font-bold text-slate-300">
+          <div class="inline-block px-2.5 py-1 bg-[#133A10] border border-[#1B4D17] text-[11px] uppercase tracking-widest font-bold text-[#8AE065]">
             24×7 Emergency &amp; Priority Triage
           </div>
           <h2 class="font-display text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white">
             Your family's health, always our priority.
           </h2>
-          <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl">
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl">
             Speak directly to round-the-clock care coordinators, schedule priority OPD visits with senior department heads, or request immediate emergency support.
           </p>
         </div>
@@ -24,14 +24,14 @@
 
           <!-- Emergency button -->
           <a href="tel:<?= $HOSPITAL['emergency'] ?>"
-             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider transition-colors whitespace-nowrap">
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#56B929] hover:bg-[#4EA422] text-white font-bold text-xs uppercase tracking-wider transition-colors whitespace-nowrap">
             <i data-lucide="phone-call" class="w-4 h-4 shrink-0"></i>
             <span>Call <?= htmlspecialchars($HOSPITAL['emergency']) ?></span>
           </a>
 
           <!-- Book button -->
           <a href="#search"
-             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-slate-700 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase tracking-wider transition-colors whitespace-nowrap">
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-[#56B929] bg-[#4EA422] hover:bg-[#3A8F17] text-white font-bold text-xs uppercase tracking-wider transition-colors whitespace-nowrap">
             <i data-lucide="calendar-plus" class="w-4 h-4 shrink-0"></i>
             <span>Book Appointment</span>
           </a>
@@ -46,17 +46,17 @@
 <!-- ============================================================
      FOOTER — Minimal Institutional Layout
 ============================================================ -->
-<footer id="contact" class="relative bg-slate-950 text-slate-300 border-t border-slate-800">
+<footer id="contact" class="relative bg-[#081E06] text-slate-300 border-t border-[#184614]">
   
   <!-- Tier 1: Emergency & Command Bar -->
-  <div class="bg-slate-900 border-b border-slate-800 py-5 px-6">
+  <div class="bg-[#0C2B09] border-b border-[#184614] py-5 px-6">
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3 text-white">
-        <span class="w-8 h-8 bg-slate-800 border border-slate-700 text-brand-400 grid place-items-center shrink-0">
+        <span class="w-8 h-8 bg-[#133A10] border border-[#1B4D17] text-[#56B929] grid place-items-center shrink-0">
           <i data-lucide="radio" class="w-4 h-4"></i>
         </span>
         <div>
-          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-300">
+          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-200">
             24×7 Clinical Command &amp; Rapid Triage
           </div>
           <p class="text-xs text-slate-400 mt-0.5">Instant emergency admission &amp; priority specialist appointments.</p>
@@ -64,13 +64,13 @@
       </div>
 
       <div class="flex flex-wrap items-center justify-center gap-3 w-full lg:w-auto">
-        <a href="tel:<?= $HOSPITAL['emergency'] ?>" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap">
+        <a href="tel:<?= $HOSPITAL['emergency'] ?>" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#56B929] hover:bg-[#4EA422] text-white text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap">
           <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> Emergency Desk
         </a>
-        <a href="#search" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap">
+        <a href="#search" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#4EA422] hover:bg-[#3A8F17] text-white text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap">
           <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i> Book Priority Slot
         </a>
-        <a href="https://wa.me/919996544005" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap">
+        <a href="https://wa.me/919996544005" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap">
           <i data-lucide="message-square" class="w-3.5 h-3.5"></i> WhatsApp Scans
         </a>
       </div>
@@ -82,20 +82,19 @@
     
     <!-- Column 1: Institutional Info -->
     <div class="lg:col-span-4 space-y-5">
-      <a href="#" class="inline-block" aria-label="<?= htmlspecialchars($HOSPITAL['name']) ?>">
-        <img src="assets/images/logo-sukhda.png"
+      <a href="#top" class="inline-block bg-white p-2 border border-[#184614]" aria-label="<?= htmlspecialchars($HOSPITAL['name']) ?>">
+        <img src="assets/images/sukhda-medpark-new-logo.png"
              alt="<?= htmlspecialchars($HOSPITAL['name']) ?>"
-             width="831" height="300"
-             class="h-12 w-auto brightness-0 invert opacity-95">
+             class="h-12 w-auto object-contain">
       </a>
       <p class="text-xs leading-relaxed text-slate-400 max-w-sm">
         Northern India’s premier NABH-accredited multispeciality clinical institute in Hisar. Integrating advanced medical technology across specialized centers with compassionate healthcare since <?= htmlspecialchars($HOSPITAL['founded']) ?>.
       </p>
 
       <!-- Direct Emergency Desk -->
-      <div class="p-3.5 bg-slate-900 border border-slate-800 flex items-center justify-between gap-3">
+      <div class="p-3.5 bg-[#0C2B09] border border-[#184614] flex items-center justify-between gap-3">
         <div class="flex items-center gap-3">
-          <span class="w-9 h-9 bg-brand-600 text-white grid place-items-center shrink-0">
+          <span class="w-9 h-9 bg-[#56B929] text-white grid place-items-center shrink-0">
             <i data-lucide="phone-call" class="w-4 h-4"></i>
           </span>
           <div>
@@ -103,21 +102,21 @@
             <div class="text-sm font-bold text-white tracking-wide"><?= htmlspecialchars($HOSPITAL['emergency']) ?></div>
           </div>
         </div>
-        <a href="tel:<?= $HOSPITAL['emergency'] ?>" class="px-3 py-1.5 border border-slate-700 bg-slate-800 text-white font-bold text-xs hover:bg-slate-700 transition-colors whitespace-nowrap">Call →</a>
+        <a href="tel:<?= $HOSPITAL['emergency'] ?>" class="px-3 py-1.5 border border-[#184614] bg-[#56B929] hover:bg-[#4EA422] text-white font-bold text-xs transition-colors whitespace-nowrap">Call →</a>
       </div>
 
       <!-- Social Media -->
       <div class="pt-1 flex items-center gap-2">
-        <a href="#" aria-label="Facebook" class="w-9 h-9 grid place-items-center bg-slate-900 border border-slate-800 hover:bg-brand-600 hover:border-brand-600 text-slate-400 hover:text-white transition-colors">
+        <a href="#" aria-label="Facebook" class="w-9 h-9 grid place-items-center bg-[#0C2B09] border border-[#184614] hover:bg-[#56B929] hover:border-[#56B929] text-slate-300 hover:text-white transition-colors">
           <i data-lucide="facebook" class="w-4 h-4"></i>
         </a>
-        <a href="#" aria-label="Instagram" class="w-9 h-9 grid place-items-center bg-slate-900 border border-slate-800 hover:bg-brand-600 hover:border-brand-600 text-slate-400 hover:text-white transition-colors">
+        <a href="#" aria-label="Instagram" class="w-9 h-9 grid place-items-center bg-[#0C2B09] border border-[#184614] hover:bg-[#56B929] hover:border-[#56B929] text-slate-300 hover:text-white transition-colors">
           <i data-lucide="instagram" class="w-4 h-4"></i>
         </a>
-        <a href="#" aria-label="YouTube" class="w-9 h-9 grid place-items-center bg-slate-900 border border-slate-800 hover:bg-brand-600 hover:border-brand-600 text-slate-400 hover:text-white transition-colors">
+        <a href="#" aria-label="YouTube" class="w-9 h-9 grid place-items-center bg-[#0C2B09] border border-[#184614] hover:bg-[#56B929] hover:border-[#56B929] text-slate-300 hover:text-white transition-colors">
           <i data-lucide="youtube" class="w-4 h-4"></i>
         </a>
-        <a href="#" aria-label="LinkedIn" class="w-9 h-9 grid place-items-center bg-slate-900 border border-slate-800 hover:bg-brand-600 hover:border-brand-600 text-slate-400 hover:text-white transition-colors">
+        <a href="#" aria-label="LinkedIn" class="w-9 h-9 grid place-items-center bg-[#0C2B09] border border-[#184614] hover:bg-[#56B929] hover:border-[#56B929] text-slate-300 hover:text-white transition-colors">
           <i data-lucide="linkedin" class="w-4 h-4"></i>
         </a>
       </div>
