@@ -5,625 +5,652 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= htmlspecialchars($HOSPITAL['name']) ?> &mdash; <?= htmlspecialchars($HOSPITAL['tagline']) ?></title>
+  <title>Sukhda Medpark &mdash; Cancer &amp; Super Speciality Hospital, Hisar</title>
   <meta name="description"
-    content="Sukhda Multispeciality Hospital, Hisar — NABH accredited multispeciality hospital. 22+ specialties, 60+ expert doctors, 24x7 emergency.">
+    content="Sukhda Medpark, Hisar — NABH accredited cancer & super speciality hospital. 28 specialities, 60+ expert doctors, 120+ beds, 24x7 emergency & trauma care since 2002.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400&display=swap"
     rel="stylesheet">
 
-  <!-- Tailwind via Play CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Inter"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            display: ['"Outfit"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            serif: ['"Outfit"', 'system-ui', 'sans-serif'],
-            mono: ['"SF Mono"', 'ui-monospace', 'monospace'],
-          },
-          colors: {
-            brand: {
-              50: '#EBF7E5',    // Soft Logo Green Tint
-              100: '#DCF3D3',   // Light Green Tint
-              200: '#BCE8A9',
-              300: '#8AE065',
-              400: '#68CE3C',
-              500: '#56B929',   // Logo Leaf Green Primary
-              600: '#4EA422',   // Action Green
-              700: '#286411',   // Dark Green
-              800: '#0C2B09',   // Deep Forest Green
-              900: '#081E06',   // Ultra Dark Green
-            },
-            accent: {
-              50: '#E6F2FB',
-              100: '#D4EAFA',
-              200: '#A4D0F4',
-              500: '#0068B5',   // Logo Medpark Blue Accent
-              600: '#004F8A',
-              700: '#051B3B',
-            },
-            emerald: {
-              50: '#EBF7E5',
-              100: '#DCF3D3',
-              500: '#56B929',
-              600: '#4EA422',
-              700: '#286411',
-              800: '#1E4D0C',
-            },
-            coral: {
-              50: '#EBF7E5',
-              100: '#DCF3D3',
-              500: '#56B929',
-              600: '#4EA422',
-              700: '#286411',
-            },
-            sand: '#F8FAFC',
-            ink: '#0C2B09',     // Deep Green text color
-            mist: '#F1F5F9',
-          },
-          boxShadow: {
-            'none': 'none',
-            'soft': 'none',
-            'glow': 'none',
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Lucide icons (pinned to stable, loaded BEFORE Alpine so global is ready) -->
-  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
-  <!-- Alpine.js for interactivity -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
   <style>
-    [x-cloak] {
-      display: none !important;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
 
-    *, *::before, *::after {
-      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-      border-radius: 0 !important;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 14px !important;
-      overflow-x: clip !important;
-      max-width: 100vw !important;
-    }
-
-    h1, h2, h3, h4, h5, h6, .font-display {
-      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
-      letter-spacing: -0.022em;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', 'Plus Jakarta Sans', sans-serif !important;
-      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      margin: 0;
+      background: #F7FAF7;
+      color: #12305F;
+      font-family: 'Schibsted Grotesk', system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-      font-size: 0.9375rem;
-      overflow-x: clip !important;
-      width: 100% !important;
-      max-width: 100vw !important;
-      position: relative;
+      overflow-x: hidden;
     }
 
-    .text-balance {
-      text-wrap: balance;
+    a { color: #12305F; text-decoration: none; transition: color .15s ease; }
+    a:hover { color: #2E8B3C; }
+    img { display: block; max-width: 100%; }
+    h1, h2, h3 { letter-spacing: -0.025em; font-weight: 500; text-wrap: pretty; }
+    button { font-family: inherit; }
+    ::selection { background: #7DCB6B; color: #12305F; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: none; }
     }
 
-    .marquee-track {
-      animation: marquee 28s linear infinite;
+    section[id] { scroll-margin-top: 96px; }
+
+    .wrap { max-width: 1240px; margin: 0 auto; padding-left: 28px; padding-right: 28px; }
+
+    /* ---------- Top bar ---------- */
+    .topbar { background: #12305F; color: #EAF3EA; font-size: 13px; letter-spacing: 0.01em; }
+    .topbar-inner {
+      max-width: 1240px; margin: 0 auto; padding: 9px 28px;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+    .topbar-live { display: flex; align-items: center; gap: 8px; }
+    .topbar-live::before { content: ''; width: 7px; height: 7px; background: #3EA94B; display: inline-block; }
+    .topbar-addr { opacity: 0.55; }
+    .topbar-right { display: flex; align-items: center; gap: 20px; }
+    .topbar-mail { color: #EAF3EA; opacity: 0.8; }
+    .topbar-mail:hover { opacity: 1; color: #7DCB6B; }
+    .topbar-tel { color: #7DCB6B; font-weight: 600; }
+    .topbar-tel:hover { color: #7DCB6B; }
+
+    /* ---------- Header ---------- */
+    .site-header { position: sticky; top: 0; z-index: 50; background: #F7FAF7; border-bottom: 1px solid #DCE6DC; }
+    .header-inner {
+      max-width: 1240px; margin: 0 auto; padding: 14px 28px;
+      display: flex; align-items: center; gap: 12px 24px; flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .brand img { height: 48px; width: auto; }
+    .brand-text { display: block; line-height: 1; }
+    .brand-text .l1 { display: block; font-size: 22px; font-weight: 700; letter-spacing: 0.06em; color: #12305F; }
+    .brand-text .l2 { display: block; font-size: 13px; font-weight: 700; letter-spacing: 0.22em; color: #1E7BC4; margin-top: 4px; }
+    .brand-text .l3 { display: block; font-size: 8.5px; font-weight: 600; letter-spacing: 0.11em; color: #7A8A7C; margin-top: 4px; white-space: nowrap; }
+
+    .main-nav {
+      flex: 1 1 auto; display: flex; align-items: center; justify-content: flex-end;
+      gap: 2px 6px; flex-wrap: wrap; font-size: 14px; font-weight: 500; white-space: nowrap; order: 3;
+    }
+    .main-nav a:hover { color: #2E8B3C; }
+
+    .nav-item { position: relative; display: flex; align-items: center; gap: 2px; }
+    .nav-item.has-mega { position: static; }
+    .nav-link { display: inline-flex; align-items: center; padding: 8px 6px; }
+    .drop-toggle {
+      display: grid; place-items: center; width: 18px; height: 18px; padding: 0; margin-left: -2px;
+      border: none; background: transparent; color: #7A8A7C; cursor: pointer;
+    }
+    .drop-toggle svg { width: 14px; height: 14px; transition: transform .18s ease; }
+    .nav-item:hover .drop-toggle svg, .nav-item.sub-open .drop-toggle svg { transform: rotate(180deg); color: #2E8B3C; }
+
+    /* ---------- Dropdown + mega panels ---------- */
+    .drop, .mega {
+      position: absolute; z-index: 60; background: #FFFFFF; border: 1px solid #DCE6DC;
+      box-shadow: 0 28px 56px -28px rgba(18, 48, 95, 0.35);
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
+    }
+    .drop::before, .mega::before { content: ''; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
+    .nav-item:hover > .drop, .nav-item:focus-within > .drop,
+    .nav-item:hover > .mega, .nav-item:focus-within > .mega { opacity: 1; visibility: visible; pointer-events: auto; }
+
+    .drop { top: calc(100% + 15px); left: 0; width: 330px; padding: 10px; border-radius: 10px; transform: translateY(10px); }
+    .nav-item:hover > .drop, .nav-item:focus-within > .drop { transform: none; }
+    .nav-item.drop-right .drop { left: auto; right: 0; }
+
+    .drop-item { display: flex; align-items: flex-start; gap: 11px; padding: 9px 10px; border-radius: 8px; white-space: normal; }
+    .drop-item:hover { background: #EAF3EA; }
+    .drop-ico {
+      width: 32px; height: 32px; flex-shrink: 0; display: grid; place-items: center;
+      background: #F7FAF7; border: 1px solid #DCE6DC; border-radius: 6px; color: #12305F; transition: all .15s ease;
+    }
+    .drop-ico svg { width: 15px; height: 15px; }
+    .drop-item:hover .drop-ico { background: #12305F; border-color: #12305F; color: #7DCB6B; }
+    .drop-item .t { display: block; font-size: 14px; font-weight: 700; }
+    .drop-item .d { display: block; font-size: 12.5px; font-weight: 400; color: #7A8A7C; margin-top: 3px; line-height: 1.45; }
+
+    .mega {
+      top: calc(100% + 1px); left: 50%; transform: translate(-50%, 10px);
+      width: min(1184px, calc(100vw - 40px)); padding: 22px 24px 24px; border-radius: 12px;
+      max-height: calc(100vh - 150px); overflow-y: auto;
+    }
+    .nav-item:hover > .mega, .nav-item:focus-within > .mega { transform: translate(-50%, 0); }
+
+    .mega-head {
+      display: flex; align-items: center; justify-content: space-between; gap: 14px 24px; flex-wrap: wrap;
+      padding-bottom: 16px; margin-bottom: 18px; border-bottom: 1px solid #E6EFE6;
+    }
+    .mega-head-l { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .mega-badge {
+      font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 700; color: #2E8B3C;
+      background: #EAF3EA; border: 1px solid #BFDCBF; border-radius: 999px; padding: 6px 13px;
+    }
+    .mega-note { font-size: 13.5px; font-weight: 400; color: #5B6480; white-space: normal; }
+    .mega-link { font-size: 13.5px; font-weight: 700; color: #2E8B3C; flex-shrink: 0; }
+
+    .mega-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .mega-col { background: #F7FAF7; border: 1px solid #E6EFE6; border-radius: 8px; padding: 14px; min-width: 0; }
+    .mega-col-head { display: flex; align-items: center; gap: 10px; padding-bottom: 11px; margin-bottom: 11px; border-bottom: 1px solid #DCE6DC; }
+    .mega-col-ico {
+      width: 30px; height: 30px; flex-shrink: 0; display: grid; place-items: center;
+      background: #FFFFFF; border: 1px solid #DCE6DC; border-radius: 6px; color: #12305F;
+    }
+    .mega-col-ico svg { width: 15px; height: 15px; }
+    .mega-col-head .t { display: block; font-size: 14px; font-weight: 700; }
+    .mega-col-head .s { display: block; font-size: 11.5px; font-weight: 400; color: #7A8A7C; margin-top: 2px; white-space: normal; }
+    .mega-list { display: grid; gap: 6px; }
+    .mega-item {
+      display: flex; align-items: center; gap: 9px; padding: 7px 9px; min-width: 0;
+      background: #FFFFFF; border: 1px solid #E6EFE6; border-radius: 6px;
+      font-size: 13px; font-weight: 600; transition: border-color .15s ease;
+    }
+    .mega-item:hover { border-color: #12305F; }
+    .mega-item > span:last-child { overflow: hidden; text-overflow: ellipsis; }
+    .mega-ico {
+      width: 26px; height: 26px; flex-shrink: 0; display: grid; place-items: center;
+      background: #EAF3EA; border-radius: 6px; color: #2E8B3C; transition: all .15s ease;
+    }
+    .mega-ico svg { width: 13px; height: 13px; }
+    .mega-item:hover .mega-ico { background: #12305F; color: #7DCB6B; }
+
+    .mega-cta {
+      margin-top: 18px; background: #12305F; color: #F7FAF7; border-radius: 8px; padding: 16px 20px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap;
+    }
+    .mega-cta .t { font-size: 14.5px; font-weight: 700; white-space: normal; }
+    .mega-cta .d { font-size: 13px; font-weight: 400; color: rgba(247, 250, 247, 0.68); margin-top: 4px; white-space: normal; }
+    .mega-cta-btn {
+      flex-shrink: 0; background: #3EA94B; color: #12305F; font-size: 13.5px; font-weight: 700;
+      padding: 11px 20px; border-radius: 5px; transition: background .15s ease;
+    }
+    .mega-cta-btn:hover { background: #7DCB6B; color: #12305F; }
+
+    .nav-toggle {
+      display: none; order: 2; flex-shrink: 0;
+      width: 44px; height: 44px; place-items: center; cursor: pointer;
+      background: transparent; border: 1px solid #DCE6DC; color: #12305F; font-size: 20px; line-height: 1;
     }
 
-    @keyframes marquee {
-      from {
-        transform: translateX(0)
+    @media (max-width: 900px) {
+      .nav-toggle { display: grid; }
+      .main-nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 0 6px; order: 4; }
+      .main-nav.open { display: flex; }
+      .nav-item { flex-wrap: wrap; position: static; border-top: 1px solid #E6EFE6; }
+      .nav-link { flex: 1 1 auto; padding: 11px 4px; }
+      .drop-toggle { width: 44px; height: 42px; }
+      .drop, .mega {
+        display: none; position: static; width: auto; max-height: none; opacity: 1; visibility: visible;
+        transform: none; pointer-events: auto; box-shadow: none; border: none; overflow: visible;
+        border-left: 2px solid #BFDCBF; border-radius: 0; margin: 0 0 12px 6px; padding: 2px 0 2px 12px;
+        flex-basis: 100%;
       }
-
-      to {
-        transform: translateX(-50%)
-      }
+      .drop::before, .mega::before { content: none; }
+      .nav-item.sub-open > .drop, .nav-item.sub-open > .mega { display: block; transform: none; }
+      .mega-head { display: none; }
+      .mega-cols { grid-template-columns: 1fr; gap: 10px; }
+      .drop-item { padding: 8px 6px; }
     }
 
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none
+    /* ---------- Banner slider ---------- */
+    .banner { position: relative; width: 100%; background: #12305F; overflow: hidden; }
+    .banner-frame { position: relative; width: 100%; aspect-ratio: 1920 / 690; min-height: 240px; }
+    .banner-slide {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      background-size: cover; background-position: center right;
+      opacity: 0; transition: opacity .9s ease;
+    }
+    .banner-slide.active { opacity: 1; }
+    .banner-dots { position: absolute; left: 24px; bottom: 22px; display: flex; align-items: center; gap: 10px; z-index: 2; }
+    .banner-dot {
+      height: 6px; width: 12px; border: none; padding: 0; cursor: pointer;
+      transition: all .25s ease; background: rgba(247,250,247,0.5);
+    }
+    .banner-dot.active { width: 30px; background: #3EA94B; }
+    .banner-arrows { position: absolute; right: 24px; bottom: 22px; display: flex; gap: 8px; z-index: 2; }
+    .banner-arrow {
+      width: 40px; height: 40px; border: 1px solid rgba(247,250,247,0.45);
+      background: rgba(18,48,95,0.7); color: #F7FAF7; font-size: 17px; cursor: pointer;
+      transition: all .15s ease;
+    }
+    .banner-arrow:hover { background: #3EA94B; border-color: #3EA94B; color: #12305F; }
+
+    /* ---------- Hero ---------- */
+    .hero { position: relative; background: #12305F; color: #F7FAF7; }
+    .hero-inner {
+      position: relative; max-width: 1240px; margin: 0 auto;
+      padding: clamp(64px, 7vw, 92px) 28px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: clamp(36px, 5vw, 60px); align-items: center;
+    }
+    .hero-copy { animation: rise 0.7s ease both; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      border: 1px solid rgba(125,203,107,0.45); color: #7DCB6B; padding: 7px 16px;
+      font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; white-space: nowrap;
+    }
+    .hero h1 {
+      font-weight: 500; font-size: clamp(30px, 4.2vw, 52px); line-height: 1.1;
+      margin: 26px 0 0; letter-spacing: -0.015em;
+    }
+    .hero-sub { font-size: 18px; line-height: 1.65; color: rgba(247,250,247,0.72); max-width: 540px; margin: 22px 0 0; }
+    .hero-actions { display: flex; gap: 14px; margin-top: 34px; flex-wrap: wrap; }
+
+    .btn-solid {
+      background: #3EA94B; color: #12305F; padding: 15px 30px; font-weight: 700; font-size: 15px;
+      transition: background .15s ease;
+    }
+    .btn-solid:hover { background: #7DCB6B; color: #12305F; }
+    .btn-ghost {
+      border: 1px solid rgba(247,250,247,0.35); color: #F7FAF7; padding: 15px 30px; font-weight: 600; font-size: 15px;
+      transition: all .15s ease;
+    }
+    .btn-ghost:hover { border-color: #7DCB6B; color: #7DCB6B; }
+
+    .hero-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; align-content: center; }
+    @media (max-width: 640px) { .hero-cards { grid-template-columns: 1fr; } }
+    .navy-card { background: #1A3F73; border: 1px solid #2A5288; padding: 22px 24px; }
+    .navy-card .num { font-size: 40px; color: #7DCB6B; line-height: 1; }
+    .navy-card .lbl { font-size: 14px; color: rgba(247,250,247,0.7); margin-top: 8px; }
+
+    /* ---------- Stats strip ---------- */
+    .stats-strip {
+      margin-top: -46px; position: relative; z-index: 5;
+      background: #FFFFFF; border: 1px solid #DCE6DC;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .stat-cell { padding: 30px 28px; border-right: 1px solid #E6EFE6; }
+    .stat-cell:last-child { border-right: none; }
+    .stat-cell .num { font-size: 42px; line-height: 1; color: #12305F; }
+    .stat-cell .lbl { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #7A8A7C; margin-top: 10px; font-weight: 600; }
+
+    /* ---------- Section headers ---------- */
+    .section { max-width: 1240px; margin: 0 auto; padding: clamp(58px, 8vw, 96px) 28px 0; }
+    .kicker { font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #2E8B3C; font-weight: 700; }
+    .kicker.on-dark { color: #7DCB6B; }
+    .sec-title { font-weight: 500; font-size: clamp(30px, 4vw, 46px); line-height: 1.12; margin: 14px 0 0; letter-spacing: -0.01em; }
+    .sec-head { display: flex; align-items: end; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+    .sec-lede { max-width: 400px; font-size: 16px; line-height: 1.65; color: #5B6480; margin: 0; }
+    .link-more { font-size: 14.5px; font-weight: 700; color: #2E8B3C; border-bottom: 1px solid #3EA94B; padding-bottom: 3px; }
+
+    /* ---------- Specialities ---------- */
+    .spec-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 36px; }
+    .spec-tab {
+      padding: 11px 20px; font-size: 14px; font-weight: 600; cursor: pointer;
+      transition: all .15s ease; border: 1px solid #DCE6DC; background: transparent; color: #5B6480;
+    }
+    .spec-tab.active { border-color: #12305F; background: #12305F; color: #F7FAF7; }
+    .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; margin-top: 26px; }
+    .spec-card { background: #FFFFFF; border: 1px solid #DCE6DC; padding: 24px 24px 26px; transition: border-color .15s ease; }
+    .spec-card:hover { border-color: #12305F; }
+    .spec-card .head { display: flex; align-items: center; gap: 12px; }
+    .spec-ico {
+      width: 36px; height: 36px; flex-shrink: 0;
+      display: grid; place-items: center;
+      background: #F7FAF7; border: 1px solid #DCE6DC; border-radius: 6px; color: #12305F;
+      transition: all .15s ease;
+    }
+    .spec-ico svg { width: 17px; height: 17px; }
+    .spec-card:hover .spec-ico { background: #12305F; border-color: #12305F; color: #7DCB6B; }
+    .spec-card h3 { font-size: 16.5px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+    .spec-card p { font-size: 14px; line-height: 1.6; color: #5B6480; margin: 12px 0 0; }
+
+    /* ---------- About ---------- */
+    .about-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: clamp(40px, 5vw, 64px); align-items: center;
+    }
+    .about-media { position: relative; }
+    .about-media img { width: 100%; height: clamp(300px, 42vw, 480px); object-fit: cover; }
+    .about-badge { position: absolute; right: -18px; bottom: -18px; background: #12305F; color: #F7FAF7; padding: 24px 28px; max-width: 230px; }
+    .about-badge .num { font-size: 34px; color: #7DCB6B; line-height: 1; }
+    .about-badge .lbl { font-size: 13.5px; color: rgba(247,250,247,0.7); margin-top: 8px; line-height: 1.5; }
+    .about-copy p { font-size: 16.5px; line-height: 1.7; color: #5B6480; margin: 20px 0 0; }
+    .about-copy p + p { margin-top: 16px; }
+    .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
+    .value-item { border-left: 2px solid #3EA94B; padding: 4px 0 4px 16px; }
+    .value-item .t { font-weight: 700; font-size: 15px; }
+    .value-item .d { font-size: 13.5px; color: #5B6480; margin-top: 5px; line-height: 1.55; }
+    @media (max-width: 480px) { .values-grid { grid-template-columns: 1fr; } .about-badge { right: 0; } }
+
+    /* ---------- Technology ---------- */
+    .tech-band { margin-top: clamp(58px, 8vw, 96px); background: #12305F; color: #F7FAF7; padding: clamp(58px, 8vw, 90px) 0; }
+    .tech-band .sec-lede { color: rgba(247,250,247,0.65); max-width: 380px; }
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 40px; }
+    .tech-card { background: #1A3F73; border: 1px solid #2A5288; overflow: hidden; transition: border-color .15s ease; }
+    .tech-card:hover { border-color: rgba(125,203,107,0.5); }
+    .tech-card .img { width: 100%; height: 190px; background-size: cover; background-position: center; }
+    .tech-card .body { padding: 22px 24px 26px; }
+    .tech-card .tag { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #7DCB6B; font-weight: 700; }
+    .tech-card h3 { font-size: 18px; font-weight: 700; margin: 10px 0 0; }
+    .tech-card p { font-size: 14px; line-height: 1.6; color: rgba(247,250,247,0.62); margin: 10px 0 0; }
+
+    /* ---------- Rare cases ---------- */
+    .cases-intro { text-align: center; max-width: 640px; margin: 0 auto; }
+    .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 18px; margin-top: 44px; }
+    .case-card { background: #FFFFFF; border: 1px solid #DCE6DC; display: flex; flex-direction: column; overflow: hidden; }
+    .case-card .img { width: 100%; height: 185px; background-size: cover; background-position: center; }
+    .case-card .body { padding: 26px 28px 30px; display: flex; flex-direction: column; flex: 1; }
+    .case-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .case-dept { font-size: 11.5px; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 700; color: #2E8B3C; }
+    .case-badge { font-size: 11.5px; font-weight: 700; background: #EAF3EA; color: #12305F; padding: 6px 12px; }
+    .case-card h3 { font-weight: 500; font-size: 25px; line-height: 1.25; margin: 16px 0 0; }
+    .case-card .outcome { font-size: 14.5px; line-height: 1.65; color: #5B6480; margin: 14px 0 0; }
+    .case-stats { display: flex; gap: 26px; margin-top: auto; padding-top: 20px; border-top: 1px solid #E6EFE6; flex-wrap: wrap; }
+    .case-card .outcome { margin-bottom: 22px; }
+    .case-stats .v { font-size: 17px; font-weight: 700; color: #12305F; }
+    .case-stats .k { font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: #7A8A7C; margin-top: 4px; font-weight: 600; }
+
+    /* ---------- Patient stories (quote theater) ---------- */
+    .stories-theater {
+      margin-top: clamp(58px, 8vw, 96px); background: #12305F; color: #F7FAF7;
+      padding: clamp(58px, 8vw, 90px) 0;
+    }
+    .stories-theater-inner { max-width: 1240px; margin: 0 auto; padding: 0 28px; text-align: center; }
+    .stories-theater .sec-title { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.14; margin: 14px auto 38px; }
+    .theater-stage { position: relative; }
+    .story-panel {
+      display: none; position: relative; overflow: hidden; border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background-size: cover; background-position: center;
+      padding: clamp(40px, 5.5vw, 72px) clamp(24px, 5vw, 80px);
+    }
+    .story-panel.active { display: block; animation: rise .5s ease both; }
+    .story-mark {
+      font-family: 'Newsreader', Georgia, serif; font-size: 84px; line-height: 0.55;
+      color: #3EA94B; margin-bottom: 8px;
+    }
+    .story-quote {
+      font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 300;
+      font-size: clamp(23px, 2.9vw, 37px); line-height: 1.35; letter-spacing: -0.01em;
+      color: #F7FAF7; max-width: 880px; margin: 0 auto;
+    }
+    .story-who { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 34px; }
+    .story-who .avatar {
+      width: 52px; height: 52px; border-radius: 50%; margin-bottom: 8px;
+      background: #3EA94B; color: #12305F; font-weight: 700; font-size: 16px; letter-spacing: 0.04em;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .story-who .name { font-weight: 700; font-size: 16px; }
+    .story-who .meta { font-size: 13.5px; color: rgba(247,250,247,0.6); }
+    .story-pills { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+    .story-pills .pill {
+      display: inline-flex; align-items: center; gap: 9px; padding: 8px 17px; border-radius: 999px;
+      border: 1px solid rgba(125,203,107,0.35); background: rgba(125,203,107,0.08);
+    }
+    .story-pills .k { font-size: 10.5px; letter-spacing: 0.11em; text-transform: uppercase; font-weight: 600; color: rgba(247,250,247,0.55); }
+    .story-pills .v { font-size: 13.5px; font-weight: 700; color: #7DCB6B; }
+    .story-rail { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .story-tab {
+      display: inline-flex; align-items: center; gap: 10px; text-align: left;
+      padding: 7px 18px 7px 8px; border-radius: 999px; cursor: pointer; transition: all .15s ease;
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: rgba(247,250,247,0.75);
+    }
+    .story-tab:hover { border-color: rgba(125,203,107,0.55); color: #F7FAF7; }
+    .story-tab .avatar {
+      width: 34px; height: 34px; border-radius: 50%; flex: none;
+      background: rgba(255,255,255,0.1); color: #7DCB6B; font-weight: 700; font-size: 12px;
+      display: flex; align-items: center; justify-content: center; transition: all .15s ease;
+    }
+    .story-tab .txt { display: flex; flex-direction: column; gap: 2px; }
+    .story-tab .n { font-weight: 700; font-size: 13.5px; }
+    .story-tab .c { font-size: 11.5px; opacity: 0.65; }
+    .story-tab.active { background: #3EA94B; border-color: #3EA94B; color: #12305F; }
+    .story-tab.active .c { opacity: 0.8; }
+    .story-tab.active .avatar { background: #12305F; color: #7DCB6B; }
+    @media (max-width: 640px) {
+      .story-tab .c { display: none; }
+      .story-tab { padding: 6px 14px 6px 7px; }
     }
 
-    .scrollbar-hide {
-      scrollbar-width: none
+    /* ---------- Doctors ---------- */
+    .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 16px; margin-top: 36px; }
+    .doc-card { background: #FFFFFF; border: 1px solid #DCE6DC; padding: 16px 16px 24px; }
+    .doc-card .img { width: 100%; height: 220px; background-size: cover; background-position: center; }
+    .doc-card .name { font-size: 17px; font-weight: 700; margin-top: 18px; padding: 0 8px; }
+    .doc-card .spec { font-size: 13.5px; color: #5B6480; margin-top: 6px; padding: 0 8px; }
+    .doc-card .qual { font-size: 12.5px; color: #7A8A7C; margin-top: 12px; letter-spacing: 0.05em; padding: 0 8px; }
+
+    /* ---------- Founders ---------- */
+    .founders-panel {
+      background: #EAF3EA; border-radius: 10px; padding: clamp(30px, 4vw, 54px);
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: clamp(30px, 4vw, 54px); align-items: center;
     }
+    .founder-quote-mark { font-size: 64px; color: #3EA94B; line-height: 0.6; margin-top: 30px; }
+    .founder-quote {
+      font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400;
+      font-size: clamp(22px, 2.6vw, 30px); line-height: 1.45; letter-spacing: -0.01em;
+      margin: 18px 0 0; color: #12305F; max-width: 560px;
+    }
+    .founder-attrib { font-size: 13.5px; color: #5B6480; margin-top: 22px; }
+    .founder-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-content: center; }
+    .founder-card {
+      background: #FFFFFF; border: 1px solid #DCE6DC; border-radius: 8px; overflow: hidden;
+    }
+    .founder-card .img {
+      width: 100%; height: clamp(220px, 24vw, 300px);
+      background-size: cover; background-position: center top;
+    }
+    .founder-card .body { padding: 16px 18px 20px; }
+    .founder-card .name { font-weight: 700; font-size: 16.5px; }
+    .founder-card .role { font-size: 13.5px; color: #5B6480; margin-top: 4px; line-height: 1.5; }
+    .founder-milestone { background: #12305F; border-radius: 8px; padding: 22px 24px; color: #F7FAF7; grid-column: 1 / -1; }
+    @media (max-width: 480px) { .founder-cards { grid-template-columns: 1fr; } }
+    .founder-milestone .num { font-size: 26px; color: #7DCB6B; line-height: 1; letter-spacing: -0.01em; }
+    .founder-milestone .lbl { font-size: 13.5px; color: rgba(247,250,247,0.72); margin-top: 10px; line-height: 1.55; }
+
+    /* ---------- Health library ---------- */
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; margin-top: 36px; }
+    .blog-card { background: #FFFFFF; border: 1px solid #DCE6DC; overflow: hidden; display: block; transition: border-color .15s ease; }
+    .blog-card:hover { border-color: #3EA94B; }
+    .blog-card .img { width: 100%; height: 170px; background-size: cover; background-position: center; }
+    .blog-card .body { padding: 20px 22px 24px; }
+    .blog-card .cat { font-size: 11.5px; letter-spacing: 0.13em; text-transform: uppercase; color: #2E8B3C; font-weight: 700; }
+    .blog-card h3 { font-size: 16.5px; font-weight: 700; line-height: 1.4; margin: 10px 0 0; letter-spacing: -0.01em; }
+    .blog-card .by { font-size: 12.5px; color: #7A8A7C; margin-top: 14px; }
+
+    /* ---------- Events ---------- */
+    .events-list { margin-top: 36px; border-top: 1px solid #DCE6DC; }
+    .event-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px 32px; align-items: center; padding: 26px 8px; border-bottom: 1px solid #DCE6DC;
+      transition: background .15s ease;
+    }
+    .event-row:hover { background: #EAF3EA; }
+    .event-row .date { font-size: 15px; font-weight: 700; }
+    .event-row .time { font-size: 12.5px; color: #7A8A7C; margin-top: 4px; }
+    .event-row .title { font-size: 17.5px; font-weight: 700; letter-spacing: -0.01em; }
+    .event-row .desc { font-size: 13.5px; color: #5B6480; margin-top: 6px; line-height: 1.55; }
+    .event-row .loc { font-size: 13.5px; color: #5B6480; }
+    .event-row .status-wrap { display: flex; justify-content: flex-end; }
+    .event-row .status { font-size: 12px; font-weight: 700; padding: 7px 14px; background: #12305F; color: #7DCB6B; }
+
+    /* ---------- Contact ---------- */
+    .contact-panel {
+      background: #12305F; color: #F7FAF7; padding: clamp(36px, 5vw, 66px);
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: clamp(34px, 4vw, 60px); align-items: center;
+    }
+    .contact-panel h2 { font-weight: 500; font-size: clamp(30px, 4vw, 48px); line-height: 1.1; margin: 0; }
+    .contact-panel .sub { font-size: 16.5px; line-height: 1.65; color: rgba(247,250,247,0.68); margin: 18px 0 0; max-width: 440px; }
+    .contact-rows { display: grid; gap: 14px; align-content: end; }
+    .contact-row { background: #1A3F73; border: 1px solid #2A5288; padding: 20px 24px; }
+    .contact-row .k { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #7DCB6B; font-weight: 700; }
+    .contact-row .v { font-size: 15.5px; margin-top: 8px; line-height: 1.5; color: rgba(247,250,247,0.88); }
+
+    /* ---------- Footer ---------- */
+    .site-footer { margin-top: clamp(58px, 8vw, 96px); border-top: 1px solid #DCE6DC; background: #F7FAF7; }
+    .footer-grid {
+      max-width: 1240px; margin: 0 auto; padding: 56px 28px 40px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px 48px;
+    }
+    .footer-brand img.lockup { height: 132px; width: auto; }
+    .footer-brand p { font-size: 14px; line-height: 1.65; color: #5B6480; margin: 18px 0 0; max-width: 300px; }
+    .footer-brand img.nabh { height: 54px; width: auto; margin-top: 20px; }
+    .footer-col .h { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #7A8A7C; font-weight: 700; }
+    .footer-col .links { display: grid; gap: 10px; margin-top: 16px; font-size: 14.5px; }
+    .footer-col .links.muted { color: #5B6480; line-height: 1.5; }
+    .footer-bottom { border-top: 1px solid #DCE6DC; }
+    .footer-bottom-inner {
+      max-width: 1240px; margin: 0 auto; padding: 20px 28px;
+      display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+      font-size: 13px; color: #7A8A7C;
+    }
+
+    /* ---------- Soft corners ---------- */
+    .btn-solid, .btn-ghost, .nav-toggle, .spec-tab,
+    .banner-arrow, .hero-badge { border-radius: 5px; }
+
+    .case-badge, .event-row .status { border-radius: 4px; }
+    .banner-dot { border-radius: 3px; }
+    .topbar-live::before { border-radius: 2px; }
+
+    .navy-card, .spec-card, .case-card, .doc-card, .contact-row,
+    .about-media img, .about-badge, .doc-card .img, .event-row { border-radius: 8px; }
+
+    .stats-strip, .tech-card, .blog-card { border-radius: 8px; overflow: hidden; }
+    .contact-panel { border-radius: 10px; }
   </style>
 </head>
 
-<body id="top" class="font-sans bg-white text-ink antialiased [overflow-x:clip] w-full max-w-full relative">
+<body id="top">
 
-  <?php
-  // Primary main-bar menu (matches exact navigation & sub-navigation structure from requirements)
-  $MAIN_MENU = [
-    ['label' => 'About Us', 'href' => '#about', 'children' => ['About Sukhda Healthcare', 'Leadership', 'Infrastructure', 'Why Choose Us', 'Vision and Mission', 'Academics']],
-    ['label' => 'Hospital Networks', 'href' => '#about', 'children' => ['Sukhda Multispeciality Hospital', 'Sukhda MedPark']],
-    ['label' => 'Our Services', 'href' => '#specialties', 'mega' => true],
-    ['label' => 'Doctors', 'href' => '#doctors'],
-    ['label' => 'Patient Stories', 'href' => '#testimonials', 'children' => ['Testimonials', 'Success Stories']],
-  ];
-
-  // Rich metadata for standard dropdown items (icon + descriptive subtitle + anchor target)
-  $CHILD_META = [
-    // About
-    'About Sukhda Healthcare' => ['icon' => 'building-2', 'desc' => 'Our 24+ years of medical excellence', 'href' => '#about'],
-    'Leadership' => ['icon' => 'users', 'desc' => 'Guided by visionary medical pioneers', 'href' => '#about'],
-    'Infrastructure' => ['icon' => 'hospital', 'desc' => 'State-of-the-art modular OTs & ICUs', 'href' => '#about'],
-    'Why Choose Us' => ['icon' => 'award', 'desc' => "Hisar's most trusted multispeciality hub", 'href' => '#about'],
-    'Vision and Mission' => ['icon' => 'compass', 'desc' => 'Our commitment to healing & innovation', 'href' => '#about'],
-    'Academics' => ['icon' => 'graduation-cap', 'desc' => 'DNB program run by the institution', 'href' => '#about'],
-
-    // Hospitals
-    'Sukhda Multispeciality Hospital' => ['icon' => 'building', 'desc' => 'Flagship 250+ bed multispeciality hub, Hisar', 'href' => '#about'],
-    'Sukhda MedPark' => ['icon' => 'tree-pine', 'desc' => 'Ultra-modern super-speciality medical campus', 'href' => '#about'],
-
-    // Doctors
-    'All Doctors' => ['icon' => 'user-round-check', 'desc' => 'Browse our 60+ experienced consultants', 'href' => '#doctors'],
-    'By Hospital' => ['icon' => 'building-2', 'desc' => 'Filter doctors by hospital campus location', 'href' => '#doctors'],
-    'Individual Doctor Pages' => ['icon' => 'stethoscope', 'desc' => 'Detailed clinical profiles & expertise', 'href' => '#doctors'],
-    'Find a Doctor' => ['icon' => 'search', 'desc' => 'Quickly search by name or treatment specialty', 'href' => '#doctors'],
-
-    // Patient Stories
-    'Testimonials' => ['icon' => 'video', 'desc' => 'Watch authentic video recovery journeys', 'href' => '#testimonials'],
-    'Success Stories' => ['icon' => 'sparkles', 'desc' => 'Inspiring medical miracles & breakthroughs', 'href' => '#rare-cases'],
-
-    // Media Centre (Top Bar)
-    'Gallery' => ['icon' => 'images', 'desc' => 'Explore our hospital campus & facility photos', 'href' => '#events'],
-    'Videos' => ['icon' => 'play-square', 'desc' => 'Health talks, procedures & event coverage', 'href' => '#testimonials'],
-
-    // Patient Guide / Health Library (Top Bar)
-    'Blogs' => ['icon' => 'book-open', 'desc' => 'Expert health advice & medical articles', 'href' => '#blogs'],
-    'Symptoms' => ['icon' => 'activity', 'desc' => 'Understand warning signs & early diagnosis', 'href' => '#blogs'],
-    'OPD Schedule' => ['icon' => 'calendar-clock', 'desc' => 'Timings of consultant OPD visits & clinics', 'href' => '#doctors'],
-    'Empanelments' => ['icon' => 'shield-check', 'desc' => 'TPA, Ayushman & corporate insurance partners', 'href' => '#about'],
-    'Rare Cases' => ['icon' => 'trophy', 'desc' => 'Complex & rare clinical achievements', 'href' => '#rare-cases'],
-    'Treatments' => ['icon' => 'shield-plus', 'desc' => 'Comprehensive guide to surgical & medical care', 'href' => '#specialties'],
-    'Conditions' => ['icon' => 'heart-pulse', 'desc' => 'Patient guides on managing chronic diseases', 'href' => '#specialties'],
-    'Breakthrough Cases' => ['icon' => 'trophy', 'desc' => 'Complex & rare clinical achievements', 'href' => '#rare-cases'],
-  ];
-
-  // Local fallback mapping for specialty icons so header mega menu has exact Lucide icons
-  $HEADER_ICON_MAP = [
-    'heart' => 'heart-pulse',
-    'brain' => 'brain',
-    'kidney' => 'droplet',
-    'stomach' => 'circle',
-    'bone' => 'bone',
-    'urology' => 'activity',
-    'ear' => 'ear',
-    'pregnant' => 'baby',
-    'skin' => 'sparkles',
-    'cell' => 'biohazard',
-    'scalpel' => 'scissors',
-    'surgery' => 'scissors',
-    'baby' => 'baby',
-    'ambulance' => 'ambulance',
-    'syringe' => 'syringe',
-    'mind' => 'smile',
-    'tooth' => 'shell',
-    'physio' => 'dumbbell',
-    'lab' => 'flask-conical',
-    'scan' => 'scan',
-    'medicine' => 'pill',
-    'surgery2' => 'scissors',
-  ];
-
-  // Categorize specialties precisely into 3 columns: Treatments, Departments, Specialities
-  $SPEC_TO_CAT_MAP = [
-    'Medical Oncology' => 'Treatments',
-    'Surgical Oncology' => 'Treatments',
-    'Interventional Cardiology' => 'Treatments',
-    'Spine Surgery' => 'Treatments',
-    'Neurosurgery' => 'Treatments',
-    'Orthopedics & Joint Replacement' => 'Treatments',
-    'General & Laparoscopic Surgery' => 'Treatments',
-    'Advanced Laparoscopy' => 'Treatments',
-    'Bariatric Surgery' => 'Treatments',
-    'Anaesthesia & Pain Management' => 'Treatments',
-    'Physiotherapy & Rehabilitation' => 'Treatments',
-
-    'Cancer Care Centre' => 'Departments',
-    'Internal Medicine' => 'Departments',
-    'Emergency & Critical Care' => 'Departments',
-    'Trauma Centre' => 'Departments',
-    'Gynaecology & Women\'s Health' => 'Departments',
-    'Paediatrics & Neonatology' => 'Departments',
-    'Diagnostic Services & Imaging' => 'Departments',
-    'Lab: Pathology & Microbiology' => 'Departments',
-    'Dentistry & Maxillofacial' => 'Departments',
-
-    'Cardiac Sciences' => 'Specialities',
-    'Nephrology & Kidney Care' => 'Specialities',
-    'Gastroenterology & ERCP' => 'Specialities',
-    'Urology & Laparoscopy' => 'Specialities',
-    'Dermatology & Cosmetology' => 'Specialities',
-    'Psychiatry & Mental Health' => 'Specialities',
-    'ENT (Ear, Nose & Throat)' => 'Specialities',
-  ];
-
-  $CATEGORIZED_SPECS = [
-    'Treatments' => [],
-    'Departments' => [],
-    'Specialities' => [],
-  ];
-  foreach ($SPECIALTIES as $s) {
-    $cat = $SPEC_TO_CAT_MAP[$s['name']] ?? 'Treatments';
-    if (isset($CATEGORIZED_SPECS[$cat])) {
-      $CATEGORIZED_SPECS[$cat][] = $s;
-    } else {
-      $CATEGORIZED_SPECS['Treatments'][] = $s;
-    }
-  }
-  $CAT_META = [
-    'Treatments' => ['icon' => 'shield-plus', 'badge' => 'Surgical & Medical Interventions'],
-    'Departments' => ['icon' => 'building-2', 'badge' => 'Core Hospital Clinical & Lab Units'],
-    'Specialities' => ['icon' => 'heart-pulse', 'badge' => 'Organ & System Super-Speciality Care'],
-  ];
-
-  // Upper tier utility navigation menu items & dropdown structure
-  $TOP_MENU = [
-    ['label' => 'Media Centre', 'href' => '#events', 'children' => ['Gallery', 'Videos']],
-    ['label' => 'Patient Guide', 'href' => '#blogs', 'children' => ['Blogs', 'Symptoms', 'OPD Schedule', 'Empanelments', 'Rare Cases']],
-    ['label' => 'Events & Camps', 'href' => '#events'],
-    ['label' => 'CSR', 'href' => '#about'],
-    ['label' => 'Contact Us', 'href' => '#contact'],
-  ];
-  ?>
-
-  <header x-data="{ open:false, m:null, t:null }" class="sticky top-0 z-50 bg-white border-b border-slate-200 w-full">
-
-    <!-- ===== TIER 1: Upper Header Utility & Guide Bar ===== -->
-    <div class="hidden lg:block relative bg-[#0C2B09] text-slate-200 border-b border-[#184614]">
-      <div class="max-w-[1440px] mx-auto px-6 h-10 flex items-center justify-between gap-4 text-[12px]">
-
-        <!-- Left: Quick contact actions -->
-        <div class="flex items-center gap-4 xl:gap-5 shrink-0">
-          <a href="https://wa.me/919996544005" class="inline-flex items-center gap-1.5 hover:text-white transition">
-            <span class="w-4 h-4 bg-[#25D366] grid place-items-center">
-              <i data-lucide="phone" class="w-2.5 h-2.5 text-white"></i>
-            </span>
-            <span class="font-medium">WhatsApp Us</span> <span class="text-slate-400 text-xs">(24/7)</span>
-          </a>
-          <span class="w-px h-3.5 bg-slate-700"></span>
-          <a href="tel:<?= $HOSPITAL['emergency'] ?>" class="inline-flex items-center gap-1.5 font-semibold hover:text-white transition">
-            <span class="w-4 h-4 bg-[#56B929] grid place-items-center">
-              <i data-lucide="phone-call" class="w-2.5 h-2.5 text-white"></i>
-            </span>
-            <span>Emergency: <?= htmlspecialchars($HOSPITAL['emergency']) ?></span>
-          </a>
-        </div>
-
-        <!-- Right: Upper Navigation Links & Dropdowns ($TOP_MENU) -->
-        <div class="flex items-center gap-1 xl:gap-2 ml-auto">
-          <?php foreach ($TOP_MENU as $idx => $topItem): ?>
-            <div class="relative" @mouseenter="t = <?= $idx ?>" @mouseleave="t = null">
-              <a href="<?= $topItem['href'] ?>"
-                class="inline-flex items-center gap-1 py-1 px-2 font-semibold text-slate-300 hover:text-white transition-colors"
-                :class="t === <?= $idx ?> ? 'text-white font-bold' : ''">
-                <span><?= htmlspecialchars($topItem['label']) ?></span>
-                <?php if (!empty($topItem['children'])): ?>
-                  <i data-lucide="chevron-down" class="w-3 h-3 opacity-60 transition-transform duration-200"
-                    :class="t === <?= $idx ?> ? 'rotate-180' : ''"></i>
-                <?php endif; ?>
-              </a>
-
-              <?php if (!empty($topItem['children'])): ?>
-                <!-- Upper Dropdown Box -->
-                <div x-show="t === <?= $idx ?>" x-cloak x-transition:enter="transition ease-out duration-100"
-                  x-transition:enter-start="opacity-0 translate-y-1"
-                  x-transition:enter-end="opacity-100 translate-y-0"
-                  x-transition:leave="transition ease-in duration-75"
-                  x-transition:leave-start="opacity-100 translate-y-0"
-                  x-transition:leave-end="opacity-0 translate-y-1"
-                  class="absolute top-full <?= $idx >= 1 ? 'right-0' : 'left-0' ?> mt-1 w-[260px] bg-white text-slate-900 border border-slate-200 p-1.5 z-50 space-y-0.5">
-                  <?php foreach ($topItem['children'] as $child):
-                    $meta = $CHILD_META[$child] ?? ['icon' => 'chevron-right', 'desc' => '', 'href' => '#'];
-                    ?>
-                    <a href="<?= $meta['href'] ?>"
-                      class="group/tc flex items-center gap-2.5 p-2 hover:bg-slate-100 transition-colors">
-                      <span class="w-6 h-6 border border-slate-200 text-slate-700 grid place-items-center shrink-0 group-hover/tc:bg-slate-900 group-hover/tc:text-white group-hover/tc:border-slate-900 transition-colors">
-                        <i data-lucide="<?= $meta['icon'] ?>" class="w-3 h-3"></i>
-                      </span>
-                      <div class="min-w-0">
-                        <div class="text-[12px] font-semibold text-slate-900">
-                          <?= htmlspecialchars($child) ?>
-                        </div>
-                      </div>
-                    </a>
-                  <?php endforeach; ?>
-                </div>
-              <?php endif; ?>
-            </div>
-          <?php endforeach; ?>
-        </div>
-
+  <!-- ===== Top utility bar ===== -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span class="topbar-live">Emergency &amp; Trauma open 24&times;7</span>
+        <span class="topbar-addr">Delhi Road, Near Bus Stand, Hisar, Haryana</span>
+      </div>
+      <div class="topbar-right">
+        <a class="topbar-mail" href="mailto:<?= htmlspecialchars($HOSPITAL['email']) ?>"><?= htmlspecialchars($HOSPITAL['email']) ?></a>
+        <a class="topbar-tel" href="tel:+919996544005"><?= htmlspecialchars($HOSPITAL['phone']) ?></a>
       </div>
     </div>
+  </div>
 
-    <!-- ===== TIER 2: Main white bar — logo + dropdown menu + actions ===== -->
-    <div class="bg-white border-b border-slate-200">
-      <nav class="max-w-[1440px] mx-auto px-4 lg:px-6 h-20 flex items-center justify-between gap-2 xl:gap-4 relative">
+  <!-- ===== Sticky header ===== -->
+  <?php
+  // Main navigation with dropdowns + services mega menu (ported from the previous site's navbar).
+  // children item: [t => title, i => lucide icon, d => description, h => anchor]
+  $NAV_MENU = [
+    ['label' => 'About Us', 'href' => '#about', 'children' => [
+      ['t' => 'About Sukhda Healthcare', 'i' => 'building-2', 'd' => 'Our 24+ years of medical excellence', 'h' => '#about'],
+      ['t' => 'Leadership', 'i' => 'users', 'd' => 'Guided by visionary medical pioneers', 'h' => '#about'],
+      ['t' => 'Infrastructure', 'i' => 'hospital', 'd' => 'State-of-the-art modular OTs & ICUs', 'h' => '#technology'],
+      ['t' => 'Why Choose Us', 'i' => 'award', 'd' => "Hisar's most trusted speciality hub", 'h' => '#about'],
+      ['t' => 'Vision and Mission', 'i' => 'compass', 'd' => 'Our commitment to healing & innovation', 'h' => '#about'],
+      ['t' => 'Academics', 'i' => 'graduation-cap', 'd' => 'DNB program run by the institution', 'h' => '#about'],
+    ]],
+    ['label' => 'Hospital Networks', 'href' => '#about', 'children' => [
+      ['t' => 'Sukhda Multispeciality Hospital', 'i' => 'building', 'd' => 'Flagship 250+ bed multispeciality hub, Hisar', 'h' => '#about'],
+      ['t' => 'Sukhda MedPark', 'i' => 'tree-pine', 'd' => 'Ultra-modern super-speciality medical campus', 'h' => '#about'],
+    ]],
+    ['label' => 'Our Services', 'href' => '#specialities', 'mega' => true],
+    ['label' => 'Doctors', 'href' => '#doctors'],
+    ['label' => 'Technology', 'href' => '#technology'],
+    ['label' => 'Patient Stories', 'href' => '#stories', 'children' => [
+      ['t' => 'Testimonials', 'i' => 'video', 'd' => 'Authentic patient recovery journeys', 'h' => '#stories'],
+      ['t' => 'Success Stories', 'i' => 'sparkles', 'd' => 'Rare cases & clinical breakthroughs', 'h' => '#cases'],
+    ]],
+    ['label' => 'Events', 'href' => '#events'],
+  ];
 
-        <!-- LEFT: Logo + divider + NABH -->
-        <div class="flex items-center gap-3 shrink-0">
-          <a href="#top" class="flex items-center" aria-label="<?= htmlspecialchars($HOSPITAL['name']) ?>">
-            <img src="assets/images/sukhda-medpark-new-logo.png" alt="<?= htmlspecialchars($HOSPITAL['name']) ?>"
-              class="h-16 lg:h-18 w-auto select-none object-contain">
-          </a>
-          <span class="hidden sm:block w-px h-10 bg-slate-200"></span>
-          <img src="assets/images/nabh.jpg" alt="NABH Accredited" title="NABH Accredited" width="80" height="80"
-            class="hidden sm:block h-12 w-auto border border-slate-200 select-none">
-        </div>
+  $MEGA_CATS = [
+    'Treatments'   => ['icon' => 'shield-plus', 'sub' => 'Surgical & medical interventions'],
+    'Departments'  => ['icon' => 'building-2',  'sub' => 'Core clinical & lab units'],
+    'Specialities' => ['icon' => 'heart-pulse', 'sub' => 'Organ & system speciality care'],
+  ];
+  $MEGA_GROUPS = ['Treatments' => [], 'Departments' => [], 'Specialities' => []];
+  foreach ($SPECS as $sp) {
+    if (isset($MEGA_GROUPS[$sp[1]])) $MEGA_GROUPS[$sp[1]][] = $sp;
+  }
+  ?>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="brand" aria-label="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
+        <img src="assets/images/logo-mark.png" alt="Sukhda Medpark">
+        <span class="brand-text">
+          <span class="l1">SUKHDA</span>
+          <span class="l2">MEDPARK</span>
+          <span class="l3">CANCER &amp; SUPER SPECIALITY HOSPITAL</span>
+        </span>
+      </a>
 
-        <!-- CENTER: Inline dropdown menu -->
-        <ul class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-semibold text-slate-800 ml-auto">
-          <?php foreach ($MAIN_MENU as $i => $item): ?>
-            <li class="<?= !empty($item['mega']) ? 'static' : 'relative' ?>" @mouseenter="m=<?= $i ?>"
-              @mouseleave="m=null">
-              <a href="<?= $item['href'] ?>"
-                class="inline-flex items-center gap-1 px-3 py-2 text-slate-800 hover:text-brand-600 hover:bg-slate-100 transition-colors whitespace-nowrap"
-                :class="m === <?= $i ?> ? 'text-brand-600 bg-slate-100 font-bold' : ''">
-                <?= htmlspecialchars($item['label']) ?>
-                <?php if (!empty($item['children']) || !empty($item['mega'])): ?>
-                  <i data-lucide="chevron-down" class="w-3.5 h-3.5 opacity-60 transition-transform duration-200 shrink-0"
-                    :class="m === <?= $i ?> ? 'rotate-180 text-brand-600' : ''"></i>
-                <?php endif; ?>
-              </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
 
-              <?php if (!empty($item['mega'])): ?>
-                <!-- Mega menu for specialties (Flat clean 1px border) -->
-                <div x-show="m === <?= $i ?>" x-cloak x-transition:enter="transition ease-out duration-150"
-                  x-transition:enter-start="opacity-0 translate-y-1"
-                  x-transition:enter-end="opacity-100 translate-y-0"
-                  x-transition:leave="transition ease-in duration-100"
-                  x-transition:leave-start="opacity-100 translate-y-0"
-                  x-transition:leave-end="opacity-0 translate-y-1"
-                  class="absolute top-full left-4 right-4 lg:left-6 lg:right-6 mt-1 max-w-[1240px] mx-auto bg-white border border-slate-200 p-5 z-50 max-h-[calc(100vh-100px)] overflow-y-auto">
+      <nav class="main-nav" id="mainNav">
+        <?php foreach ($NAV_MENU as $ni => $item):
+          $children = $item['children'] ?? [];
+          $isMega = !empty($item['mega']);
+          $hasPanel = $isMega || $children;
+        ?>
+          <div class="nav-item<?= $isMega ? ' has-mega' : '' ?><?= ($hasPanel && $ni >= 3) ? ' drop-right' : '' ?>">
+            <a class="nav-link" href="<?= $item['href'] ?>"><?= htmlspecialchars($item['label']) ?></a>
+            <?php if ($hasPanel): ?>
+              <button class="drop-toggle" type="button" aria-haspopup="true" aria-expanded="false"
+                aria-label="Open <?= htmlspecialchars($item['label']) ?> menu"><i data-lucide="chevron-down"></i></button>
+            <?php endif; ?>
 
-                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 mb-4 border-b border-slate-200">
-                    <div class="flex flex-wrap items-center gap-2">
-                      <span class="px-2 py-0.5 bg-slate-100 border border-slate-200 text-slate-900 text-[10px] font-bold uppercase tracking-wider">Treatments, Departments &amp; Specialities</span>
-                      <p class="text-xs text-slate-600">Categorized guide across our <?= count($SPECIALTIES) ?> medical centers</p>
-                    </div>
-                    <a href="#specialties" class="inline-flex items-center gap-1 text-xs text-brand-600 font-bold hover:underline">
-                      <span>Explore all departments</span>
-                      <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                    </a>
+            <?php if ($isMega): ?>
+              <div class="mega">
+                <div class="mega-head">
+                  <div class="mega-head-l">
+                    <span class="mega-badge">Treatments, Departments &amp; Specialities</span>
+                    <span class="mega-note">A categorised guide across our clinical departments and speciality centres</span>
                   </div>
-
-                  <!-- Responsive 3-column grid -->
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <?php foreach ($CATEGORIZED_SPECS as $catName => $catItems):
-                      $meta = $CAT_META[$catName] ?? ['icon' => 'stethoscope', 'badge' => 'Specialized Care'];
-                      ?>
-                      <div class="bg-slate-50 p-3 border border-slate-200 flex flex-col justify-between min-w-0">
-                        <div>
-                          <div class="flex items-center justify-between gap-1 pb-2 mb-2 border-b border-slate-200">
-                            <div class="flex items-center gap-1.5 min-w-0">
-                              <span class="w-5 h-5 bg-white border border-slate-300 text-slate-900 grid place-items-center shrink-0">
-                                <i data-lucide="<?= $meta['icon'] ?>" class="w-3 h-3"></i>
-                              </span>
-                              <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider truncate"><?= htmlspecialchars($catName) ?></h4>
-                            </div>
-                          </div>
-                          <div class="space-y-1">
-                            <?php foreach ($catItems as $s):
-                              $sIcon = $HEADER_ICON_MAP[$s['icon']] ?? 'stethoscope';
-                              ?>
-                              <a href="#specialties"
-                                class="group/s flex items-center gap-2 p-1.5 bg-white hover:bg-slate-900 hover:text-white border border-slate-200 transition-colors min-w-0">
-                                <span class="w-5 h-5 bg-slate-100 text-slate-700 group-hover/s:bg-slate-800 group-hover/s:text-white grid place-items-center shrink-0 transition-colors">
-                                  <i data-lucide="<?= $sIcon ?>" class="w-3 h-3"></i>
-                                </span>
-                                <span class="text-xs font-semibold text-slate-800 group-hover/s:text-white truncate flex-1"><?= htmlspecialchars($s['name']) ?></span>
-                              </a>
-                            <?php endforeach; ?>
-                          </div>
-                        </div>
-                      </div>
-                    <?php endforeach; ?>
-                  </div>
-
-                  <!-- Mega menu bottom banner CTA -->
-                  <div class="mt-4 pt-3 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-slate-900 p-3 text-white">
-                    <div class="flex items-center gap-3 min-w-0">
-                      <div class="w-8 h-8 border border-slate-700 bg-slate-800 grid place-items-center shrink-0">
-                        <i data-lucide="shield-plus" class="w-4 h-4 text-brand-400"></i>
-                      </div>
-                      <div class="min-w-0">
-                        <h4 class="text-xs font-bold uppercase tracking-wide truncate">Need help finding the right specialist?</h4>
-                        <p class="text-[11px] text-slate-400 truncate">Our clinical coordinators guide your diagnostic or treatment path 24/7.</p>
-                      </div>
-                    </div>
-                    <a href="#search"
-                      class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase tracking-wider transition-colors shrink-0 whitespace-nowrap">
-                      <span>Consult Specialist</span>
-                      <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                    </a>
-                  </div>
+                  <a class="mega-link" href="#specialities">Explore all departments &rarr;</a>
                 </div>
-              <?php elseif (!empty($item['children'])): ?>
-                <!-- Standard dropdown (Flat opaque clean border) -->
-                <div x-show="m === <?= $i ?>" x-cloak x-transition:enter="transition ease-out duration-150"
-                  x-transition:enter-start="opacity-0 translate-y-1"
-                  x-transition:enter-end="opacity-100 translate-y-0"
-                  x-transition:leave="transition ease-in duration-100"
-                  x-transition:leave-start="opacity-100 translate-y-0"
-                  x-transition:leave-end="opacity-0 translate-y-1"
-                  class="absolute top-full <?= $i >= 2 ? 'right-0' : 'left-0' ?> mt-1 w-[280px] bg-white border border-slate-200 p-1.5 space-y-1 z-50">
-                  <?php foreach ($item['children'] as $c):
-                    $meta = $CHILD_META[$c] ?? ['icon' => 'chevron-right', 'desc' => 'Explore hospital details', 'href' => '#'];
-                    ?>
-                    <a href="<?= $meta['href'] ?>"
-                      class="group/c block p-2 hover:bg-slate-100 border border-transparent hover:border-slate-300 transition-colors">
-                      <div class="flex items-center gap-2.5">
-                        <span class="w-7 h-7 bg-slate-100 border border-slate-200 text-slate-800 grid place-items-center shrink-0 group-hover/c:bg-slate-900 group-hover/c:text-white transition-colors">
-                          <i data-lucide="<?= $meta['icon'] ?>" class="w-3.5 h-3.5"></i>
+                <div class="mega-cols">
+                  <?php foreach ($MEGA_GROUPS as $catName => $catItems): $cm = $MEGA_CATS[$catName]; ?>
+                    <div class="mega-col">
+                      <div class="mega-col-head">
+                        <span class="mega-col-ico"><i data-lucide="<?= $cm['icon'] ?>"></i></span>
+                        <span>
+                          <span class="t"><?= htmlspecialchars($catName) ?></span>
+                          <span class="s"><?= htmlspecialchars($cm['sub']) ?></span>
                         </span>
-                        <div class="flex-1 min-w-0">
-                          <div class="text-xs font-bold text-slate-900 truncate"><?= htmlspecialchars($c) ?></div>
-                        </div>
                       </div>
-                    </a>
+                      <div class="mega-list">
+                        <?php foreach ($catItems as $sp): ?>
+                          <a class="mega-item" href="#specialities">
+                            <span class="mega-ico"><i data-lucide="<?= htmlspecialchars($sp[3]) ?>"></i></span>
+                            <span><?= htmlspecialchars($sp[0]) ?></span>
+                          </a>
+                        <?php endforeach; ?>
+                      </div>
+                    </div>
                   <?php endforeach; ?>
                 </div>
-              <?php endif; ?>
-            </li>
-          <?php endforeach; ?>
-        </ul>
-
-        <!-- RIGHT: CTA + mobile -->
-        <div class="flex items-center gap-2 shrink-0 ml-auto lg:ml-3">
-          <a href="#search"
-            class="hidden sm:inline-flex items-center h-10 px-5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap">
-            Book Appointment
-          </a>
-          <button @click="open=!open"
-            class="lg:hidden w-10 h-10 border border-slate-300 text-slate-800 grid place-items-center"
-            aria-label="Open menu">
-            <i x-show="!open" data-lucide="menu" class="w-5 h-5"></i>
-            <i x-show="open" x-cloak data-lucide="x" class="w-5 h-5"></i>
-          </button>
-        </div>
-      </nav>
-    </div>
-
-    <!-- ===== MOBILE MENU ===== -->
-    <div x-show="open" x-cloak x-transition
-      class="lg:hidden border-t border-brand-100 bg-white max-h-[80vh] overflow-y-auto" x-data="{ mobileSub: null }">
-      <div class="px-5 py-4 space-y-1.5">
-        <?php foreach ($MAIN_MENU as $idx => $item): ?>
-          <div class="rounded-xl border border-transparent transition-all"
-            :class="mobileSub === <?= $idx ?> ? 'bg-brand-50/40 border-brand-100/80 p-1.5' : ''">
-            <div
-              class="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-mist text-ink font-bold transition-colors">
-              <a href="<?= $item['href'] ?>"
-                @click="<?= (!empty($item['children']) || !empty($item['mega'])) ? "mobileSub = (mobileSub === $idx ? null : $idx); \$event.preventDefault();" : "open=false" ?>"
-                class="flex-1 font-bold text-[15px]">
-                <?= htmlspecialchars($item['label']) ?>
-              </a>
-              <?php if (!empty($item['children']) || !empty($item['mega'])): ?>
-                <button type="button" @click="mobileSub = (mobileSub === <?= $idx ?> ? null : <?= $idx ?>)"
-                  class="p-1.5 text-brand-600 rounded-md hover:bg-brand-100/60 transition-colors">
-                  <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-200"
-                    :class="mobileSub === <?= $idx ?> ? 'rotate-180 text-brand-700 font-bold' : ''"></i>
-                </button>
-              <?php else: ?>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-400"></i>
-              <?php endif; ?>
-            </div>
-
-            <?php if (!empty($item['children'])): ?>
-              <div x-show="mobileSub === <?= $idx ?>" x-transition x-cloak
-                class="pl-2 pr-1 py-1.5 space-y-1 border-l-2 border-slate-300 ml-3 my-1">
-                <?php foreach ($item['children'] as $c):
-                  $meta = $CHILD_META[$c] ?? ['icon' => 'chevron-right', 'desc' => '', 'href' => '#'];
-                  ?>
-                  <a href="<?= $meta['href'] ?>" @click="open=false"
-                    class="flex items-center gap-3 px-3 py-2 border border-slate-200 hover:bg-slate-100 text-slate-800 transition-colors">
-                    <span class="w-6 h-6 border border-slate-200 text-slate-700 grid place-items-center shrink-0">
-                      <i data-lucide="<?= $meta['icon'] ?>" class="w-3.5 h-3.5"></i>
-                    </span>
-                    <div class="min-w-0">
-                      <div class="text-xs font-bold truncate"><?= htmlspecialchars($c) ?></div>
-                    </div>
-                  </a>
-                <?php endforeach; ?>
-              </div>
-            <?php elseif (!empty($item['mega'])): ?>
-              <div x-show="mobileSub === <?= $idx ?>" x-transition x-cloak
-                class="pl-2 pr-1 py-1.5 space-y-3 border-l-2 border-slate-300 ml-3 my-1 max-h-[360px] overflow-y-auto">
-                <?php foreach ($CATEGORIZED_SPECS as $cName => $cList): ?>
-                  <div class="space-y-1">
-                    <div class="text-[11px] font-bold uppercase tracking-wider text-slate-900 px-2 pt-1 border-b border-slate-200 pb-1">
-                      <?= htmlspecialchars($cName) ?>
-                    </div>
-                    <?php foreach ($cList as $s):
-                      $sIcon = $HEADER_ICON_MAP[$s['icon']] ?? 'stethoscope';
-                      ?>
-                      <a href="#specialties" @click="open=false"
-                        class="flex items-center gap-2.5 px-2.5 py-1.5 border border-slate-200 hover:bg-slate-100 text-slate-800 transition-colors">
-                        <span class="w-5 h-5 border border-slate-200 text-slate-700 grid place-items-center shrink-0">
-                          <i data-lucide="<?= $sIcon ?>" class="w-3 h-3"></i>
-                        </span>
-                        <span class="text-xs font-bold truncate"><?= htmlspecialchars($s['name']) ?></span>
-                      </a>
-                    <?php endforeach; ?>
+                <div class="mega-cta">
+                  <div>
+                    <div class="t">Need help finding the right department or specialist?</div>
+                    <div class="d">Our 24&times;7 clinical coordinators can guide your exact diagnostic or treatment path.</div>
                   </div>
+                  <a class="mega-cta-btn" href="#contact">Consult a specialist</a>
+                </div>
+              </div>
+            <?php elseif ($children): ?>
+              <div class="drop">
+                <?php foreach ($children as $c): ?>
+                  <a class="drop-item" href="<?= $c['h'] ?>">
+                    <span class="drop-ico"><i data-lucide="<?= $c['i'] ?>"></i></span>
+                    <span>
+                      <span class="t"><?= htmlspecialchars($c['t']) ?></span>
+                      <span class="d"><?= htmlspecialchars($c['d']) ?></span>
+                    </span>
+                  </a>
                 <?php endforeach; ?>
               </div>
             <?php endif; ?>
           </div>
         <?php endforeach; ?>
-
-        <!-- Mobile Top Bar Items -->
-        <div class="pt-2 mt-2 border-t border-slate-200 space-y-1.5">
-          <div class="px-3 text-[11px] font-bold uppercase tracking-wider text-slate-900">Quick Guide &amp; Services</div>
-          <?php foreach ($TOP_MENU as $idx => $tItem): ?>
-            <div class="border border-slate-200 transition-colors"
-              :class="mobileSub === 'top_<?= $idx ?>' ? 'bg-slate-50 p-1.5' : ''">
-              <div class="flex items-center justify-between px-3 py-2 hover:bg-slate-100 text-slate-900 font-medium transition-colors">
-                <a href="<?= $tItem['href'] ?>"
-                  @click="<?= !empty($tItem['children']) ? "mobileSub = (mobileSub === 'top_$idx' ? null : 'top_$idx'); \$event.preventDefault();" : "open=false" ?>"
-                  class="flex-1 font-semibold text-xs uppercase tracking-wider text-slate-900">
-                  <?= htmlspecialchars($tItem['label']) ?>
-                </a>
-                <?php if (!empty($tItem['children'])): ?>
-                  <button type="button" @click="mobileSub = (mobileSub === 'top_<?= $idx ?>' ? null : 'top_<?= $idx ?>')"
-                    class="p-1 text-slate-600 hover:bg-slate-200 transition-colors">
-                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-200"
-                      :class="mobileSub === 'top_<?= $idx ?>' ? 'rotate-180 text-slate-900 font-bold' : ''"></i>
-                  </button>
-                <?php else: ?>
-                  <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                <?php endif; ?>
-              </div>
-
-              <?php if (!empty($tItem['children'])): ?>
-                <div x-show="mobileSub === 'top_<?= $idx ?>'" x-transition x-cloak
-                  class="pl-2 pr-1 py-1.5 space-y-1 border-l-2 border-slate-300 ml-3 my-1">
-                  <?php foreach ($tItem['children'] as $c):
-                    $meta = $CHILD_META[$c] ?? ['icon' => 'chevron-right', 'desc' => '', 'href' => '#'];
-                    ?>
-                    <a href="<?= $meta['href'] ?>" @click="open=false"
-                      class="flex items-center gap-3 px-3 py-2 border border-slate-200 hover:bg-slate-100 text-slate-800 transition-colors">
-                      <span class="w-6 h-6 border border-slate-200 text-slate-700 grid place-items-center shrink-0">
-                        <i data-lucide="<?= $meta['icon'] ?>" class="w-3.5 h-3.5"></i>
-                      </span>
-                      <div class="min-w-0">
-                        <div class="text-xs font-bold truncate"><?= htmlspecialchars($c) ?></div>
-                      </div>
-                    </a>
-                  <?php endforeach; ?>
-                </div>
-              <?php endif; ?>
-            </div>
-          <?php endforeach; ?>
-        </div>
-
-        <div class="pt-4 mt-2 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-2">
-          <a href="tel:<?= $HOSPITAL['emergency'] ?>"
-            class="flex items-center justify-center gap-2 px-4 py-3 bg-slate-900 text-white font-bold text-xs uppercase tracking-wider">
-            <i data-lucide="phone-call" class="w-4 h-4"></i> Emergency 24/7
-          </a>
-          <a href="#search" @click="open=false"
-            class="flex items-center justify-center gap-2 px-4 py-3 bg-brand-600 text-white font-bold text-xs uppercase tracking-wider">
-            Book Appointment
-          </a>
-        </div>
-      </div>
+      </nav>
     </div>
   </header>

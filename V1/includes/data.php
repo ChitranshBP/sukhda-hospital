@@ -348,3 +348,39 @@ $NAV = [
     'Events'        => '#events',
     'Contact'       => '#contact',
 ];
+
+// Departments grid + header mega menu share this list.
+$SPEC_CATS = ['All', 'Treatments', 'Departments', 'Specialities'];
+
+// [name, category, description, lucide icon]
+$SPECS = [
+  // Treatments — surgical & medical interventions
+  ['Medical Oncology', 'Treatments', 'Targeted chemotherapy, immunotherapy, hormonal therapy and supportive onco-care.', 'pill'],
+  ['Surgical Oncology', 'Treatments', 'Organ-preserving tumour resection, micro-vascular reconstruction and cancer surgery.', 'scissors'],
+  ['Interventional Cardiology', 'Treatments', 'Advanced cath lab, angioplasty and 24×7 cardiac care.', 'heart-pulse'],
+  ['Spine Surgery', 'Treatments', 'Microscopic disc decompression, spinal fixation and deformity correction.', 'bone'],
+  ['Neurosurgery', 'Treatments', 'Navigation-assisted surgery for brain tumours, aneurysms and trauma.', 'brain'],
+  ['Orthopaedics & Joint Replacement', 'Treatments', 'Total knee and hip replacement, arthroscopic ligament surgery and trauma.', 'bone'],
+  ['General & Laparoscopic Surgery', 'Treatments', 'Full spectrum of open and laparoscopic abdominal procedures.', 'scissors'],
+  ['Bariatric Surgery', 'Treatments', 'Weight loss and advanced metabolic laparoscopic bypass procedures.', 'scissors'],
+  ['Anaesthesia & Pain Management', 'Treatments', 'Chronic pain clinic, surgical anaesthesia and palliative recovery support.', 'syringe'],
+  ['Physiotherapy & Rehabilitation', 'Treatments', 'Posture therapy, post-op mobility rehab and sports injury recovery.', 'dumbbell'],
+  // Departments — core hospital clinical & lab units
+  ['Internal Medicine', 'Departments', 'Comprehensive adult medical care, multi-system diagnosis and preventive health.', 'stethoscope'],
+  ['Emergency & Critical Care', 'Departments', '24×7 ER, Level-3 ICU vital monitoring and acute emergency triage.', 'ambulance'],
+  ['Trauma Centre', 'Departments', 'Dedicated polytrauma response bay with multidisciplinary surgical triage.', 'ambulance'],
+  ['Cancer Care Centre', 'Departments', 'Multi-disciplinary tumour board, radiation and daycare chemotherapy.', 'biohazard'],
+  ["Gynaecology & Women's Health", 'Departments', 'Gynaecological wellness, painless delivery, high-risk maternity and IVF care.', 'baby'],
+  ['Paediatrics & Neonatology', 'Departments', 'Newborn screening, vaccination clinic and Level-3 NICU.', 'baby'],
+  ['Diagnostic Services & Imaging', 'Departments', 'CT, USG, Colour Doppler, X-ray and advanced imaging protocols.', 'scan'],
+  ['Lab: Pathology & Microbiology', 'Departments', 'NABL accredited lab — round-the-clock biochemistry and microbiology.', 'flask-conical'],
+  ['Dentistry & Maxillofacial', 'Departments', 'Dental implants, maxillofacial trauma repair, root canals and orthodontics.', 'shell'],
+  // Specialities — organ & system super-speciality care
+  ['Cardiac Sciences', 'Specialities', 'Echocardiography, TMT, Holter and preventive heart clinics.', 'heart-pulse'],
+  ['Nephrology & Kidney Care', 'Specialities', 'Dialysis, transplant evaluation, volumetric HDF and renal care.', 'droplet'],
+  ['Gastroenterology & ERCP', 'Specialities', 'Diagnostic and therapeutic GI endoscopy, colonoscopy, ERCP and liver care.', 'circle'],
+  ['Urology & Laparoscopy', 'Specialities', 'Holmium laser stone removal, prostate treatment and uro-oncology.', 'activity'],
+  ['Dermatology & Cosmetology', 'Specialities', 'Skin, hair, laser aesthetics, anti-ageing and clinical allergy treatment.', 'sparkles'],
+  ['Psychiatry & Mental Health', 'Specialities', 'Psychological counselling, stress management and wellness therapy.', 'smile'],
+  ['ENT (Ear, Nose & Throat)', 'Specialities', 'Micro-ear surgery, endoscopic sinus surgery (FESS) and speech therapy.', 'ear'],
+];
