@@ -119,10 +119,33 @@
         var cat = tab.getAttribute('data-cat');
         specTabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
         specCards.forEach(function (card) {
-          card.style.display = (cat === 'All' || card.getAttribute('data-cat') === cat) ? '' : 'none';
+          card.style.display = (card.getAttribute('data-cat') === cat) ? '' : 'none';
         });
       });
     });
+
+    /* ---------- Rare cases: toggle show more / show less ---------- */
+    var casesMoreBtn = document.getElementById('casesMoreBtn');
+    if (casesMoreBtn) {
+      var casesExpanded = false;
+      casesMoreBtn.addEventListener('click', function () {
+        casesExpanded = !casesExpanded;
+        var extraCards = Array.prototype.slice.call(document.querySelectorAll('.case-card[data-case-extra]'));
+        
+        extraCards.forEach(function (card) {
+          card.style.display = casesExpanded ? '' : 'none';
+        });
+
+        casesMoreBtn.textContent = casesExpanded ? 'Show Less' : 'Show More';
+
+        if (!casesExpanded) {
+          var casesSec = document.getElementById('cases');
+          if (casesSec) {
+            casesSec.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    }
 
     /* ---------- Stat counters (count up from 0 on scroll into view) ---------- */
     var statNums = Array.prototype.slice.call(document.querySelectorAll('.stat-num'));
@@ -167,18 +190,103 @@
       });
     }
 
-    /* ---------- Patient story tabs ---------- */
-    var storyTabs = Array.prototype.slice.call(document.querySelectorAll('.story-tab'));
+    /* ---------- Patient story 3D coverflow slider ---------- */
     var storyPanels = Array.prototype.slice.call(document.querySelectorAll('.story-panel'));
-    storyTabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        var idx = tab.getAttribute('data-story');
-        storyTabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
-        storyPanels.forEach(function (p) {
-          p.classList.toggle('active', p.getAttribute('data-story') === idx);
+    var storyDots = Array.prototype.slice.call(document.querySelectorAll('.story-dot'));
+    var storyPrevBtn = document.getElementById('storyPrev');
+    var storyNextBtn = document.getElementById('storyNext');
+    var storyStage = document.getElementById('storyPanels');
+
+    if (storyPanels.length) {
+      var n = storyPanels.length;
+      var centerIndex = Math.floor(n / 2);
+
+      var update3DSlider = function () {
+        storyPanels.forEach(function (panel, i) {
+          panel.classList.remove('position-1', 'position-2', 'position-3', 'position-4', 'position-5', 'position-none', 'active');
+
+          var diff = (i - centerIndex + n) % n;
+          if (diff > n / 2) diff -= n;
+
+          if (diff === 0) {
+            panel.classList.add('position-3', 'active');
+          } else if (diff === -1 || (n <= 4 && diff === n - 1)) {
+            panel.classList.add('position-2');
+          } else if (diff === -2) {
+            panel.classList.add('position-1');
+          } else if (diff === 1) {
+            panel.classList.add('position-4');
+          } else if (diff === 2) {
+            panel.classList.add('position-5');
+          } else {
+            panel.classList.add('position-none');
+          }
+        });
+
+        storyDots.forEach(function (d, i) {
+          d.classList.toggle('active', i === centerIndex);
+        });
+      };
+
+      var scrollLeft = function () {
+        centerIndex = (centerIndex - 1 + n) % n;
+        update3DSlider();
+      };
+
+      var scrollRight = function () {
+        centerIndex = (centerIndex + 1) % n;
+        update3DSlider();
+      };
+
+      var goToStory = function (index) {
+        centerIndex = (index + n) % n;
+        update3DSlider();
+      };
+
+      update3DSlider();
+
+      if (storyPrevBtn) storyPrevBtn.addEventListener('click', scrollLeft);
+      if (storyNextBtn) storyNextBtn.addEventListener('click', scrollRight);
+
+      storyDots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () { goToStory(i); });
+      });
+
+      storyPanels.forEach(function (panel, i) {
+        panel.addEventListener('click', function () {
+          if (i !== centerIndex) {
+            goToStory(i);
+          }
         });
       });
-    });
+
+      if (storyStage) {
+        var xDown = null;
+        var yDown = null;
+        storyStage.addEventListener('touchstart', function(evt) {
+          xDown = evt.touches[0].clientX;
+          yDown = evt.touches[0].clientY;
+        }, { passive: true });
+
+        storyStage.addEventListener('touchmove', function(evt) {
+          if (!xDown || !yDown) return;
+          var xUp = evt.touches[0].clientX;
+          var yUp = evt.touches[0].clientY;
+          var xDiff = xDown - xUp;
+          var yDiff = yDown - yUp;
+
+          if (Math.abs(xDiff) > Math.abs(yDiff) && Math.abs(xDiff) > 30) {
+            if (xDiff > 0) {
+              scrollRight();
+            } else {
+              scrollLeft();
+            }
+            xDown = null;
+            yDown = null;
+          }
+        }, { passive: true });
+      }
+    }
   })();
 </script>
 

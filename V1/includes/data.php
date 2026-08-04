@@ -350,7 +350,7 @@ $NAV = [
 ];
 
 // Departments grid + header mega menu share this list.
-$SPEC_CATS = ['All', 'Treatments', 'Departments', 'Specialities'];
+$SPEC_CATS = ['Treatments', 'Departments', 'Specialities'];
 
 // [name, category, description, lucide icon]
 $SPECS = [

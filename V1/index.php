@@ -46,37 +46,21 @@ $BANNERS = [
       </div>
     </div>
     <div class="hero-cards">
-      <div class="navy-card">
-        <div class="num">28</div>
-        <div class="lbl">specialities &amp; departments, from oncology to neonatal ICU</div>
-      </div>
-      <div class="navy-card">
-        <div class="num">24&times;7</div>
-        <div class="lbl">emergency, trauma bay, cath lab and Level-3 ICU response</div>
-      </div>
+      <?php
+      $STATS = [
+        ['n' => '23+',       'l' => 'Years of care'],
+        ['n' => '120+',      'l' => 'Inpatient beds'],
+        ['n' => '60+',       'l' => 'Consultants'],
+        ['n' => '5,00,000+', 'l' => 'Patients treated'],
+      ];
+      foreach ($STATS as $s):
+      ?>
+        <div class="navy-card">
+          <div class="num stat-num"><?= htmlspecialchars($s['n']) ?></div>
+          <div class="lbl"><?= htmlspecialchars($s['l']) ?></div>
+        </div>
+      <?php endforeach; ?>
     </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     3. STATS STRIP (overlapping the hero)
-============================================================ -->
-<?php
-$STATS = [
-  ['n' => '23+',       'l' => 'Years of care'],
-  ['n' => '120+',      'l' => 'Inpatient beds'],
-  ['n' => '60+',       'l' => 'Consultants'],
-  ['n' => '5,00,000+', 'l' => 'Patients treated'],
-];
-?>
-<section class="wrap">
-  <div class="stats-strip">
-    <?php foreach ($STATS as $s): ?>
-      <div class="stat-cell">
-        <div class="num stat-num"><?= htmlspecialchars($s['n']) ?></div>
-        <div class="lbl"><?= htmlspecialchars($s['l']) ?></div>
-      </div>
-    <?php endforeach; ?>
   </div>
 </section>
 
@@ -97,19 +81,18 @@ $STATS = [
   <div class="spec-tabs" id="specTabs">
     <?php foreach ($SPEC_CATS as $i => $cat): ?>
       <button class="spec-tab<?= $i === 0 ? ' active' : '' ?>" data-cat="<?= htmlspecialchars($cat) ?>">
-        <?= $cat === 'All' ? 'All departments' : htmlspecialchars($cat) ?>
+        <?= htmlspecialchars($cat) ?>
       </button>
     <?php endforeach; ?>
   </div>
 
   <div class="spec-grid" id="specGrid">
     <?php foreach ($SPECS as $sp): ?>
-      <div class="spec-card" data-cat="<?= htmlspecialchars($sp[1]) ?>">
+      <div class="spec-card" data-cat="<?= htmlspecialchars($sp[1]) ?>"<?= $sp[1] === $SPEC_CATS[0] ? '' : ' style="display:none;"' ?>>
         <div class="head">
           <span class="spec-ico"><i data-lucide="<?= htmlspecialchars($sp[3]) ?>"></i></span>
           <h3><?= htmlspecialchars($sp[0]) ?></h3>
         </div>
-        <p><?= htmlspecialchars($sp[2]) ?></p>
       </div>
     <?php endforeach; ?>
   </div>
@@ -236,8 +219,8 @@ $CASES = [
     <h2 class="sec-title">The cases other hospitals refer to us.</h2>
   </div>
   <div class="cases-grid">
-    <?php foreach ($CASES as $c): ?>
-      <div class="case-card">
+    <?php foreach ($CASES as $i => $c): ?>
+      <div class="case-card"<?= $i >= 3 ? ' style="display:none;" data-case-extra' : '' ?>>
         <div class="img" role="img" aria-label="<?= htmlspecialchars($c['dept']) ?>"
           style="background-image: url('<?= htmlspecialchars($c['img']) ?>');"></div>
         <div class="body">
@@ -259,6 +242,11 @@ $CASES = [
       </div>
     <?php endforeach; ?>
   </div>
+  <?php if (count($CASES) > 3): ?>
+  <div class="cases-more">
+    <button type="button" class="cases-more-btn" id="casesMoreBtn">Show More</button>
+  </div>
+  <?php endif; ?>
 </section>
 
 <!-- ============================================================
@@ -298,42 +286,38 @@ $STORIES = [
     <div class="kicker on-dark">Patient Stories</div>
     <h2 class="sec-title">In their own words.</h2>
 
-    <div class="theater-stage" id="storyPanels">
-      <?php foreach ($STORIES as $i => $s): ?>
-        <?php
-        $parts = preg_split('/\s+/', trim($s['name']));
-        $initials = strtoupper(substr($parts[0], 0, 1) . (isset($parts[1]) ? substr($parts[1], 0, 1) : ''));
-        ?>
-        <div class="story-panel<?= $i === 0 ? ' active' : '' ?>" data-story="<?= $i ?>"
-          style="background-image: linear-gradient(rgba(17,42,81,0.95), rgba(18,48,95,0.9)), url('<?= htmlspecialchars($s['poster']) ?>');">
-          <div class="story-mark" aria-hidden="true">&ldquo;</div>
-          <blockquote class="story-quote"><?= htmlspecialchars($s['quote']) ?></blockquote>
-          <div class="story-who">
-            <span class="avatar"><?= htmlspecialchars($initials) ?></span>
-            <span class="name"><?= htmlspecialchars($s['name']) ?></span>
-            <span class="meta"><?= htmlspecialchars($s['meta']) ?></span>
+    <div class="theater-row">
+      <button class="story-arrow prev" id="storyPrev" aria-label="Previous story">&#8249;</button>
+
+      <div class="theater-stage" id="storyPanels">
+        <?php foreach ($STORIES as $i => $s): ?>
+          <?php
+          $parts = preg_split('/\s+/', trim($s['name']));
+          $initials = strtoupper(substr($parts[0], 0, 1) . (isset($parts[1]) ? substr($parts[1], 0, 1) : ''));
+          ?>
+          <div class="story-panel<?= $i === 0 ? ' active' : '' ?>" data-story="<?= $i ?>">
+            <div class="story-mark" aria-hidden="true">&ldquo;</div>
+            <blockquote class="story-quote"><?= htmlspecialchars($s['quote']) ?></blockquote>
+            <div class="story-who">
+              <span class="avatar"><?= htmlspecialchars($initials) ?></span>
+              <span class="name"><?= htmlspecialchars($s['name']) ?></span>
+              <span class="meta"><?= htmlspecialchars($s['meta']) ?></span>
+            </div>
+            <div class="story-pills">
+              <span class="pill"><span class="k">Outcome</span><span class="v"><?= htmlspecialchars($s['outcome']) ?></span></span>
+              <span class="pill"><span class="k">Recovery</span><span class="v"><?= htmlspecialchars($s['recovery']) ?></span></span>
+            </div>
           </div>
-          <div class="story-pills">
-            <span class="pill"><span class="k">Outcome</span><span class="v"><?= htmlspecialchars($s['outcome']) ?></span></span>
-            <span class="pill"><span class="k">Recovery</span><span class="v"><?= htmlspecialchars($s['recovery']) ?></span></span>
-          </div>
-        </div>
-      <?php endforeach; ?>
+        <?php endforeach; ?>
+        <div class="slider-content-background"></div>
+      </div>
+
+      <button class="story-arrow next" id="storyNext" aria-label="Next story">&#8250;</button>
     </div>
 
-    <div class="story-rail" id="storyTabs">
+    <div class="story-dots" id="storyDots">
       <?php foreach ($STORIES as $i => $s): ?>
-        <?php
-        $parts = preg_split('/\s+/', trim($s['name']));
-        $initials = strtoupper(substr($parts[0], 0, 1) . (isset($parts[1]) ? substr($parts[1], 0, 1) : ''));
-        ?>
-        <button class="story-tab<?= $i === 0 ? ' active' : '' ?>" data-story="<?= $i ?>">
-          <span class="avatar"><?= htmlspecialchars($initials) ?></span>
-          <span class="txt">
-            <span class="n"><?= htmlspecialchars($s['name']) ?></span>
-            <span class="c"><?= htmlspecialchars($s['condition']) ?></span>
-          </span>
-        </button>
+        <button class="story-dot<?= $i === 0 ? ' active' : '' ?>" data-story="<?= $i ?>" aria-label="<?= htmlspecialchars($s['name']) ?>'s story"></button>
       <?php endforeach; ?>
     </div>
   </div>
@@ -344,109 +328,218 @@ $STORIES = [
 ============================================================ -->
 <?php
 $FOUNDERS = [
-  ['img' => 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&auto=format&fit=crop', 'name' => 'Dr. Amit Mehta',    'role' => 'MD (AIIMS) · Founder & Director · Internal Medicine'],
-  ['img' => 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&auto=format&fit=crop', 'name' => 'Dr. Manisha Mehta', 'role' => 'MS, DGO · Founder & Director · Gynaecology & Obstetrics'],
+  [
+    'img' => 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&auto=format&fit=crop',
+    'name' => 'Dr. Amit Mehta',
+    'qual' => 'MD (AIIMS)',
+    'spec' => 'Internal Medicine',
+    'role' => 'Founder & Director',
+  ],
+  [
+    'img' => 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&auto=format&fit=crop',
+    'name' => 'Dr. Manisha Mehta',
+    'qual' => 'MS, DGO',
+    'spec' => 'Gynaecology & Obstetrics',
+    'role' => 'Founder & Director',
+  ],
 ];
 ?>
 <section id="founders" class="section">
   <div class="founders-panel">
-    <div>
+    <div class="founders-left">
       <div class="kicker">Our Founders</div>
       <h2 class="sec-title">Two doctors. One promise.</h2>
-      <div class="founder-quote-mark">&ldquo;</div>
-      <p class="founder-quote">We did not build Sukhda to be the biggest hospital in Haryana. We built it so that no
-        family in Hisar would ever have to board a train to Delhi to save someone they love.</p>
-      <div class="founder-attrib">&mdash; Dr. Amit &amp; Dr. Manisha Mehta, on opening the first ward in 2002</div>
+      
+      <div class="founder-quote-card">
+        <div class="founder-quote-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        </div>
+        <blockquote class="founder-quote">We did not build Sukhda to be the biggest hospital in Haryana. We built it so that <strong>no family in Hisar would ever have to board a train to Delhi</strong> to save someone they love.</blockquote>
+        <div class="founder-attrib">
+          <span class="attrib-badge">Founding Promise</span>
+          <span class="attrib-names">Dr. Amit &amp; Dr. Manisha Mehta &middot; 2002</span>
+        </div>
+      </div>
     </div>
+
     <div class="founder-cards">
       <?php foreach ($FOUNDERS as $f): ?>
         <div class="founder-card">
-          <div class="img" role="img" aria-label="<?= htmlspecialchars($f['name']) ?>"
-            style="background-image: url('<?= htmlspecialchars($f['img']) ?>');"></div>
+          <div class="img-wrap">
+            <div class="img" role="img" aria-label="<?= htmlspecialchars($f['name']) ?>"
+              style="background-image: url('<?= htmlspecialchars($f['img']) ?>');"></div>
+            <span class="spec-tag"><?= htmlspecialchars($f['spec']) ?></span>
+          </div>
           <div class="body">
             <div class="name"><?= htmlspecialchars($f['name']) ?></div>
+            <div class="qual-badge"><?= htmlspecialchars($f['qual']) ?></div>
             <div class="role"><?= htmlspecialchars($f['role']) ?></div>
           </div>
         </div>
       <?php endforeach; ?>
+
       <div class="founder-milestone">
-        <div class="num">2002 &rarr; <?= date('Y') ?></div>
-        <div class="lbl">From a small nursing home on Delhi Road to a 120+ bed NABH-accredited cancer &amp; super
-          speciality campus.</div>
+        <div class="milestone-head">
+          <span class="milestone-badge">24+ Years of Excellence</span>
+          <span class="num">2002 &rarr; <?= date('Y') ?></span>
+        </div>
+        <div class="lbl">From a single clinic on Delhi Road to Hisar&rsquo;s premier 120+ bed NABH-accredited cancer &amp; super-speciality medical campus.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     10. HEALTH LIBRARY (blogs)
+     10. HEALTH JOURNAL & CLINICAL INSIGHTS
 ============================================================ -->
 <?php
 $BLOGS = [
-  ['title' => 'The seven silent signs of a heart attack you should never ignore', 'cat' => 'Cardiology',   'author' => 'Dr. Rajiv Sharma', 'read' => '6 min read', 'img' => 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&auto=format&fit=crop'],
-  ['title' => 'Knee replacement at 60+ : what modern surgery looks like today',   'cat' => 'Orthopaedics', 'author' => 'Sukhda Editorial', 'read' => '5 min read', 'img' => 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop'],
-  ["title" => "A parent's guide to fever in newborns — when to rush to NICU",     'cat' => 'Paediatrics',  'author' => 'Dr. Pooja Goyal',  'read' => '4 min read', 'img' => 'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?w=800&auto=format&fit=crop'],
-  ['title' => 'Why annual full-body checkups matter after 35',                    'cat' => 'Wellness',     'author' => 'Sukhda Editorial', 'read' => '4 min read', 'img' => 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop'],
+  [
+    'cat'    => 'CARDIOLOGY',
+    'date'   => 'APR 18, 2026',
+    'title'  => 'The 7 silent signs of a heart attack you should never ignore',
+    'author' => 'Dr. Rajiv Sharma',
+    'read'   => '6 min read',
+    'desc'   => 'Evidence-based medical overview and clinical recommendations prepared by Dr. Rajiv Sharma and the Sukhda specialty board.',
+    'img'    => 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop',
+  ],
+  [
+    'cat'    => 'ORTHOPAEDICS',
+    'date'   => 'APR 09, 2026',
+    'title'  => 'Knee replacement at 60+ : What modern surgery looks like today',
+    'author' => 'Sukhda Editorial',
+    'read'   => '5 min read',
+    'desc'   => 'Evidence-based medical overview and clinical recommendations prepared by Sukhda Editorial and the Sukhda specialty board.',
+    'img'    => 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&auto=format&fit=crop',
+  ],
+  [
+    'cat'    => 'PAEDIATRICS',
+    'date'   => 'MAR 28, 2026',
+    'title'  => "A parent's guide to fever in newborns — when to rush to NICU",
+    'author' => 'Dr. Pooja Goyal',
+    'read'   => '4 min read',
+    'desc'   => 'Evidence-based medical overview and clinical recommendations prepared by Dr. Pooja Goyal and the Sukhda specialty board.',
+    'img'    => 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop',
+  ],
 ];
 ?>
-<section id="library" class="section">
-  <div class="sec-head">
-    <div>
-      <div class="kicker">Health Library</div>
-      <h2 class="sec-title">Written by our doctors.</h2>
+<section id="library" class="section journal-section">
+  <div class="journal-header">
+    <div class="journal-header-left">
+      <div class="journal-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        HEALTH JOURNAL &amp; CLINICAL INSIGHTS
+      </div>
+      <h2 class="sec-title">Stories, science and <em class="title-serif">second opinions.</em></h2>
+      <p class="journal-sub">Peer-reviewed medical articles, early warning symptom guides, and ethical second opinion reviews directly from the senior departmental directors at Sukhda Hospital.</p>
     </div>
-    <a href="#library" class="link-more">All articles</a>
-  </div>
-  <div class="blog-grid">
-    <?php foreach ($BLOGS as $b): ?>
-      <a href="#library" class="blog-card">
-        <div class="img" role="img" aria-label="<?= htmlspecialchars($b['title']) ?>"
-          style="background-image: url('<?= htmlspecialchars($b['img']) ?>');"></div>
-        <div class="body">
-          <div class="cat"><?= htmlspecialchars($b['cat']) ?></div>
-          <h3><?= htmlspecialchars($b['title']) ?></h3>
-          <div class="by"><?= htmlspecialchars($b['author']) ?> &middot; <?= htmlspecialchars($b['read']) ?></div>
-        </div>
+    <div class="journal-header-right">
+      <a href="#contact" class="btn-second-opinion">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        REQUEST SECOND OPINION &darr;
       </a>
+    </div>
+  </div>
+
+  <div class="journal-grid">
+    <?php foreach ($BLOGS as $b): ?>
+      <div class="journal-card">
+        <div class="card-img-wrap">
+          <div class="img" role="img" aria-label="<?= htmlspecialchars($b['title']) ?>"
+            style="background-image: url('<?= htmlspecialchars($b['img']) ?>');"></div>
+          <span class="cat-badge"><?= htmlspecialchars($b['cat']) ?></span>
+          <span class="read-tag"><?= htmlspecialchars($b['read']) ?></span>
+        </div>
+        <div class="body">
+          <div class="date"><?= htmlspecialchars($b['date']) ?></div>
+          <h3 class="title"><?= htmlspecialchars($b['title']) ?></h3>
+          <p class="desc"><?= htmlspecialchars($b['desc']) ?></p>
+          <div class="card-footer">
+            <span class="author">By <strong><?= htmlspecialchars($b['author']) ?></strong></span>
+            <a href="#library" class="read-link">Read &nearr;</a>
+          </div>
+        </div>
+      </div>
     <?php endforeach; ?>
   </div>
 </section>
 
 <!-- ============================================================
-     11. CAMPS & EVENTS
+     11. NEWS & EVENTS
 ============================================================ -->
 <?php
-$EVENTS = [
-  ['date' => 'July 18, 2026',   'time' => '9:00 AM – 2:00 PM',  'title' => 'Free mega heart & blood pressure screening camp',        'desc' => 'Complimentary ECG, blood sugar, BP check and cardiologist consultation.',        'location' => 'OPD Block A, Ground Floor',   'status' => '150 spots left'],
-  ['date' => 'July 26, 2026',   'time' => '10:00 AM – 4:00 PM', 'title' => 'CME workshop: advances in minimal access surgery',       'desc' => 'Accredited CME with live surgical demonstrations and panel discussion.',         'location' => 'MedPark Auditorium, 3rd Floor', 'status' => 'For professionals'],
-  ['date' => 'August 5, 2026',  'time' => '11:00 AM – 1:00 PM', 'title' => 'Healthy motherhood & antenatal wellness masterclass',    'desc' => 'Third-trimester nutrition, painless delivery prep and lactation guidance.',      'location' => 'Women Wellness Wing',          'status' => '40 couples'],
-  ['date' => 'August 14, 2026', 'time' => '9:30 AM – 3:00 PM',  'title' => 'Free joint pain & arthritis assessment camp',            'desc' => 'Free bone mineral density test and expert orthopaedic evaluation.',              'location' => 'Orthopaedics OPD',             'status' => 'Filling fast'],
+$NEWS_UPDATES = [
+  ['date' => '22 APR', 'tag' => 'CAMP',           'title' => 'Sukhda launches free cardiac screening camp across April'],
+  ['date' => '02 APR', 'tag' => 'ACHIEVEMENT',    'title' => 'NABH re-accreditation renewed for 5 more years'],
+  ['date' => '14 MAR', 'tag' => 'INFRASTRUCTURE', 'title' => 'New 128-slice CT scanner inaugurated at radiology wing'],
+  ['date' => '10 MAR', 'tag' => 'EVENT',          'title' => 'World Kidney Day — over 600 patients screened'],
+  ['date' => '28 FEB', 'tag' => 'CAMP',           'title' => 'Free knee replacement camp for senior citizens'],
+  ['date' => '15 FEB', 'tag' => 'INFRASTRUCTURE', 'title' => 'Maternity wing expansion — 12 new birthing suites'],
 ];
 ?>
-<section id="events" class="section">
-  <div class="sec-head">
-    <div>
-      <div class="kicker">Camps &amp; Events</div>
-      <h2 class="sec-title">What's on at the hospital.</h2>
-    </div>
-  </div>
-  <div class="events-list">
-    <?php foreach ($EVENTS as $e): ?>
-      <div class="event-row">
-        <div>
-          <div class="date"><?= htmlspecialchars($e['date']) ?></div>
-          <div class="time"><?= htmlspecialchars($e['time']) ?></div>
-        </div>
-        <div>
-          <div class="title"><?= htmlspecialchars($e['title']) ?></div>
-          <div class="desc"><?= htmlspecialchars($e['desc']) ?></div>
-        </div>
-        <div class="loc"><?= htmlspecialchars($e['location']) ?></div>
-        <div class="status-wrap">
-          <span class="status"><?= htmlspecialchars($e['status']) ?></span>
-        </div>
+<section id="events" class="section news-events-section">
+  <div class="news-events-grid">
+    
+    <!-- Left Column: Kicker, Title, Description & Graphic -->
+    <div class="news-left">
+      <div class="kicker">NEWS &amp; EVENTS</div>
+      <h2 class="sec-title">Recent <em class="title-serif">updates</em><br>from Sukhda.</h2>
+      <p class="news-desc">Camps, milestones and announcements &mdash; a short digest of what&rsquo;s happening this month.</p>
+      
+      <!-- Graphic Illustration -->
+      <div class="news-graphic-wrap">
+        <svg width="220" height="180" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg" class="news-illustration">
+          <circle cx="150" cy="90" r="50" fill="#EBF3FA" />
+          <circle cx="170" cy="65" r="28" fill="#FFEAE4" />
+          <circle cx="170" cy="65" r="16" fill="#FF7A59" opacity="0.8" />
+          
+          <g transform="translate(45, 30) rotate(-6)">
+            <rect x="0" y="0" width="100" height="125" rx="12" fill="#FFFFFF" stroke="#2A5288" stroke-width="2"/>
+            <circle cx="14" cy="14" r="4" fill="#FF5252" />
+            <rect x="26" y="12" width="45" height="4" rx="2" fill="#DCE6DC" />
+            <rect x="14" y="28" width="70" height="4" rx="2" fill="#EAF3EA" />
+            <rect x="14" y="38" width="55" height="4" rx="2" fill="#EAF3EA" />
+          </g>
+
+          <g transform="translate(65, 42)">
+            <rect x="0" y="0" width="115" height="128" rx="14" fill="#FFFFFF" stroke="#2A5288" stroke-width="2.5"/>
+            <rect x="14" y="14" width="40" height="7" rx="3.5" fill="#2A5288" />
+            <rect x="68" y="14" width="22" height="7" rx="3.5" fill="#FF7A59" />
+            <rect x="14" y="32" width="85" height="5" rx="2.5" fill="#EBF3FA" />
+            <rect x="14" y="44" width="75" height="5" rx="2.5" fill="#EBF3FA" />
+            <rect x="14" y="56" width="80" height="5" rx="2.5" fill="#EBF3FA" />
+            <rect x="14" y="76" width="30" height="4" rx="2" fill="#DCE6DC" />
+            <rect x="14" y="94" width="42" height="14" rx="7" fill="#2A5288" />
+            <circle cx="92" cy="101" r="11" fill="#FF7A59" />
+            <path d="M88 101H96M93 98L96 101L93 104" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+
+          <circle cx="42" cy="148" r="4" fill="#2A5288" />
+          <circle cx="190" cy="118" r="3.5" fill="#2A5288" />
+          <circle cx="196" cy="144" r="5" fill="#FF7A59" />
+        </svg>
       </div>
-    <?php endforeach; ?>
+    </div>
+
+    <!-- Right Column: Header bar + News list -->
+    <div class="news-right">
+      <div class="news-head-bar">
+        <span class="news-latest-label">LATEST</span>
+        <a href="#events" class="news-view-all">View all &rarr;</a>
+      </div>
+
+      <div class="news-list">
+        <?php foreach ($NEWS_UPDATES as $item): ?>
+          <a href="#events" class="news-item">
+            <span class="news-date"><?= htmlspecialchars($item['date']) ?></span>
+            <span class="news-badge"><?= htmlspecialchars($item['tag']) ?></span>
+            <span class="news-title"><?= htmlspecialchars($item['title']) ?></span>
+            <span class="news-arrow">&nearr;</span>
+          </a>
+        <?php endforeach; ?>
+      </div>
+    </div>
+
   </div>
 </section>
 
