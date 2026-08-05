@@ -33,34 +33,102 @@ $BANNERS = [
 <!-- ============================================================
      2. HERO — headline + quick stat cards
 ============================================================ -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <div class="hero-badge">NABH Accredited &middot; Since 2002</div>
-      <h1>Advanced cancer &amp; super speciality care, close to home.</h1>
-      <p class="hero-sub">Twenty-three years of surgical precision, critical care and compassion for the families of
-        Hisar and greater Haryana — under one roof.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-solid">Book an appointment</a>
-        <a href="tel:+919996544005" class="btn-ghost">Emergency &middot; <?= htmlspecialchars($HOSPITAL['emergency']) ?></a>
+<section class="hero-redesign">
+  <div class="hero-redesign-container">
+    
+    <!-- Left Column: Copy, Accreditation, Key Highlights & CTAs -->
+    <div class="hero-redesign-left">
+      
+      <div class="hero-tag-pill">
+        <i data-lucide="shield-check"></i>
+        <span>NABH Accredited Cancer &amp; Super Speciality Hospital</span>
+      </div>
+
+      <h1 class="hero-redesign-title">
+        Advanced cancer &amp; <br>
+        <em class="title-serif">super speciality care,</em><br>
+        close to home.
+      </h1>
+
+      <p class="hero-redesign-lede">
+        Twenty-three years of surgical precision, critical care, and compassionate medicine for the families of Hisar and greater Haryana — under one roof.
+      </p>
+
+      <!-- Key Medical Highlights -->
+      <div class="hero-highlights-list">
+        <div class="highlight-item">
+          <span class="highlight-icon"><i data-lucide="stethoscope"></i></span>
+          <div>
+            <strong>28 Clinical Specialities</strong>
+            <small>60+ Full-time expert consultants &amp; surgical specialists</small>
+          </div>
+        </div>
+
+        <div class="highlight-item">
+          <span class="highlight-icon"><i data-lucide="activity"></i></span>
+          <div>
+            <strong>24×7 Emergency &amp; Trauma</strong>
+            <small>Digital Cath Lab, Modular OTs &amp; Level-3 NICU</small>
+          </div>
+        </div>
+
+        <div class="highlight-item">
+          <span class="highlight-icon"><i data-lucide="heart-handshake"></i></span>
+          <div>
+            <strong>Metro-Grade Medicine</strong>
+            <small>Transparent pricing, plain language &amp; cashless TPA</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="hero-redesign-actions">
+        <a href="#contact" class="btn-hero-primary">
+          <i data-lucide="calendar"></i>
+          <span>Book Doctor Appointment</span>
+        </a>
+        <a href="tel:+919996544005" class="btn-hero-secondary">
+          <i data-lucide="phone-call"></i>
+          <span>Emergency: +91-99965-44005</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Featured Hospital Showcase Card & Solid Stat Strip -->
+    <div class="hero-redesign-right">
+      <div class="hero-showcase-card">
+        <div class="showcase-img-wrap">
+          <img src="assets/images/hero-building.jpg" alt="Sukhda Medpark Campus Hisar" class="hero-showcase-img" />
+          <div class="showcase-badge">
+            <i data-lucide="award"></i>
+            <span>Hisar's Premier Hospital Since 2002</span>
+          </div>
+        </div>
+
+        <!-- Solid Stat Strip at the base of the Showcase Card -->
+        <div class="hero-showcase-stats">
+          <div class="showcase-stat-item">
+            <div class="num">23+</div>
+            <div class="lbl">Years Care</div>
+          </div>
+          <div class="showcase-stat-item">
+            <div class="num">120+</div>
+            <div class="lbl">Inpatient Beds</div>
+          </div>
+          <div class="showcase-stat-item">
+            <div class="num">60+</div>
+            <div class="lbl">Consultants</div>
+          </div>
+          <div class="showcase-stat-item">
+            <div class="num">5L+</div>
+            <div class="lbl">Healed Patients</div>
+          </div>
+        </div>
+
       </div>
     </div>
-    <div class="hero-cards">
-      <?php
-      $STATS = [
-        ['n' => '23+',       'l' => 'Years of care'],
-        ['n' => '120+',      'l' => 'Inpatient beds'],
-        ['n' => '60+',       'l' => 'Consultants'],
-        ['n' => '5,00,000+', 'l' => 'Patients treated'],
-      ];
-      foreach ($STATS as $s):
-      ?>
-        <div class="navy-card">
-          <div class="num stat-num"><?= htmlspecialchars($s['n']) ?></div>
-          <div class="lbl"><?= htmlspecialchars($s['l']) ?></div>
-        </div>
-      <?php endforeach; ?>
-    </div>
+
   </div>
 </section>
 
@@ -70,12 +138,13 @@ $BANNERS = [
 <?php /* $SPEC_CATS and $SPECS come from includes/data.php (shared with the header mega menu) */ ?>
 <section id="specialities" class="section">
   <div class="sec-head">
-    <div>
+    <div class="sec-head-left">
       <div class="kicker">Specialities</div>
-      <h2 class="sec-title">Every department, one campus.</h2>
+      <h2 class="sec-title">Every department, <em class="title-serif">one campus.</em></h2>
     </div>
-    <p class="sec-lede">Twenty-eight clinical departments working as one team — so a diagnosis, a surgery and a
-      recovery never need a second hospital.</p>
+    <div class="sec-head-right">
+      <p class="sec-lede">Twenty-eight clinical departments working as one integrated team — so a diagnosis, a surgery, and critical recovery never need a second hospital transfer.</p>
+    </div>
   </div>
 
   <div class="spec-tabs" id="specTabs">
@@ -120,7 +189,7 @@ $VALUES = [
     </div>
     <div class="about-copy">
       <div class="kicker">About Sukhda</div>
-      <h2 class="sec-title">Care &amp; cure for the whole family.</h2>
+      <h2 class="sec-title">Care &amp; cure for the <em class="title-serif">whole family.</em></h2>
       <p>What began as a small nursing home on Delhi Road is now a NABH-accredited cancer and super speciality
         hospital with 120+ beds, a digital cath lab, modular operation theatres and a Level-3 neonatal ICU.</p>
       <p>Our promise has not changed in twenty-three years: metro-grade medicine, explained in plain language, priced
@@ -132,6 +201,72 @@ $VALUES = [
             <div class="d"><?= htmlspecialchars($v['d']) ?></div>
           </div>
         <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. FOUNDERS & LEADERSHIP
+============================================================ -->
+<?php
+$FOUNDERS = [
+  [
+    'img' => 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&auto=format&fit=crop',
+    'name' => 'Dr. Amit Mehta',
+    'qual' => 'MD (AIIMS)',
+    'spec' => 'Internal Medicine',
+    'role' => 'Founder & Director',
+  ],
+  [
+    'img' => 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&auto=format&fit=crop',
+    'name' => 'Dr. Manisha Mehta',
+    'qual' => 'MS, DGO',
+    'spec' => 'Gynaecology & Obstetrics',
+    'role' => 'Founder & Director',
+  ],
+];
+?>
+<section id="founders" class="section">
+  <div class="founders-panel">
+    <div class="founders-left">
+      <div class="kicker">Our Founders</div>
+      <h2 class="sec-title">Two doctors. <em class="title-serif">One promise.</em></h2>
+      
+      <div class="founder-quote-card">
+        <div class="founder-quote-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        </div>
+        <blockquote class="founder-quote">We did not build Sukhda to be the biggest hospital in Haryana. We built it so that <strong>no family in Hisar would ever have to board a train to Delhi</strong> to save someone they love.</blockquote>
+        <div class="founder-attrib">
+          <span class="attrib-badge">Founding Promise</span>
+          <span class="attrib-names">Dr. Amit &amp; Dr. Manisha Mehta &middot; 2002</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-cards">
+      <?php foreach ($FOUNDERS as $f): ?>
+        <div class="founder-card">
+          <div class="img-wrap">
+            <div class="img" role="img" aria-label="<?= htmlspecialchars($f['name']) ?>"
+              style="background-image: url('<?= htmlspecialchars($f['img']) ?>');"></div>
+            <span class="spec-tag"><?= htmlspecialchars($f['spec']) ?></span>
+          </div>
+          <div class="body">
+            <div class="name"><?= htmlspecialchars($f['name']) ?></div>
+            <div class="qual-badge"><?= htmlspecialchars($f['qual']) ?></div>
+            <div class="role"><?= htmlspecialchars($f['role']) ?></div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+
+      <div class="founder-milestone">
+        <div class="milestone-head">
+          <span class="milestone-badge">24+ Years of Excellence</span>
+          <span class="num">2002 &rarr; <?= date('Y') ?></span>
+        </div>
+        <div class="lbl">From a single clinic on Delhi Road to Hisar&rsquo;s premier 120+ bed NABH-accredited cancer &amp; super-speciality medical campus.</div>
       </div>
     </div>
   </div>
@@ -155,12 +290,13 @@ $TECH = [
 <section id="technology" class="tech-band">
   <div class="wrap">
     <div class="sec-head">
-      <div>
+      <div class="sec-head-left">
         <div class="kicker on-dark">Technology &amp; Infrastructure</div>
-        <h2 class="sec-title">Equipment that earns the diagnosis.</h2>
+        <h2 class="sec-title on-dark-title">Equipment that <em class="title-serif">earns the diagnosis.</em></h2>
       </div>
-      <p class="sec-lede">Imaging, surgery and critical care built to tertiary-hospital standards — installed,
-        serviced and staffed around the clock.</p>
+      <div class="sec-head-right">
+        <p class="sec-lede">Imaging, surgery and critical care built to tertiary-hospital standards — installed, serviced and staffed around the clock by senior specialists.</p>
+      </div>
     </div>
     <div class="tech-grid">
       <?php foreach ($TECH as $t): ?>
@@ -177,6 +313,8 @@ $TECH = [
     </div>
   </div>
 </section>
+
+
 
 <!-- ============================================================
      7. RARE & COMPLEX CASES
@@ -214,9 +352,14 @@ $CASES = [
 ];
 ?>
 <section id="cases" class="section">
-  <div class="cases-intro">
-    <div class="kicker">Rare &amp; Complex Cases</div>
-    <h2 class="sec-title">The cases other hospitals refer to us.</h2>
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="kicker">Rare &amp; Complex Cases</div>
+      <h2 class="sec-title">The cases other hospitals <em class="title-serif">refer to us.</em></h2>
+    </div>
+    <div class="sec-head-right">
+      <p class="sec-lede">Tertiary-level surgical rescues, high-risk neonatal survival, and complex multi-speciality board cases treated with precision medicine at Sukhda Hospital.</p>
+    </div>
   </div>
   <div class="cases-grid">
     <?php foreach ($CASES as $i => $c): ?>
@@ -283,8 +426,15 @@ $STORIES = [
 ?>
 <section id="stories" class="stories-theater">
   <div class="stories-theater-inner">
-    <div class="kicker on-dark">Patient Stories</div>
-    <h2 class="sec-title">In their own words.</h2>
+    <div class="sec-head">
+      <div class="sec-head-left">
+        <div class="kicker on-dark">Patient Stories</div>
+        <h2 class="sec-title on-dark-title">Patient voices, <em class="title-serif">real recovery journeys.</em></h2>
+      </div>
+      <div class="sec-head-right">
+        <p class="sec-lede">Real recovery journeys, verified patient testimonials, and clinical success stories shared by families cared for across our surgical and critical departments.</p>
+      </div>
+    </div>
 
     <div class="theater-row">
       <button class="story-arrow prev" id="storyPrev" aria-label="Previous story">&#8249;</button>
@@ -323,71 +473,7 @@ $STORIES = [
   </div>
 </section>
 
-<!-- ============================================================
-     9. FOUNDERS
-============================================================ -->
-<?php
-$FOUNDERS = [
-  [
-    'img' => 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&auto=format&fit=crop',
-    'name' => 'Dr. Amit Mehta',
-    'qual' => 'MD (AIIMS)',
-    'spec' => 'Internal Medicine',
-    'role' => 'Founder & Director',
-  ],
-  [
-    'img' => 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&auto=format&fit=crop',
-    'name' => 'Dr. Manisha Mehta',
-    'qual' => 'MS, DGO',
-    'spec' => 'Gynaecology & Obstetrics',
-    'role' => 'Founder & Director',
-  ],
-];
-?>
-<section id="founders" class="section">
-  <div class="founders-panel">
-    <div class="founders-left">
-      <div class="kicker">Our Founders</div>
-      <h2 class="sec-title">Two doctors. One promise.</h2>
-      
-      <div class="founder-quote-card">
-        <div class="founder-quote-icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-        </div>
-        <blockquote class="founder-quote">We did not build Sukhda to be the biggest hospital in Haryana. We built it so that <strong>no family in Hisar would ever have to board a train to Delhi</strong> to save someone they love.</blockquote>
-        <div class="founder-attrib">
-          <span class="attrib-badge">Founding Promise</span>
-          <span class="attrib-names">Dr. Amit &amp; Dr. Manisha Mehta &middot; 2002</span>
-        </div>
-      </div>
-    </div>
 
-    <div class="founder-cards">
-      <?php foreach ($FOUNDERS as $f): ?>
-        <div class="founder-card">
-          <div class="img-wrap">
-            <div class="img" role="img" aria-label="<?= htmlspecialchars($f['name']) ?>"
-              style="background-image: url('<?= htmlspecialchars($f['img']) ?>');"></div>
-            <span class="spec-tag"><?= htmlspecialchars($f['spec']) ?></span>
-          </div>
-          <div class="body">
-            <div class="name"><?= htmlspecialchars($f['name']) ?></div>
-            <div class="qual-badge"><?= htmlspecialchars($f['qual']) ?></div>
-            <div class="role"><?= htmlspecialchars($f['role']) ?></div>
-          </div>
-        </div>
-      <?php endforeach; ?>
-
-      <div class="founder-milestone">
-        <div class="milestone-head">
-          <span class="milestone-badge">24+ Years of Excellence</span>
-          <span class="num">2002 &rarr; <?= date('Y') ?></span>
-        </div>
-        <div class="lbl">From a single clinic on Delhi Road to Hisar&rsquo;s premier 120+ bed NABH-accredited cancer &amp; super-speciality medical campus.</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============================================================
      10. HEALTH JOURNAL & CLINICAL INSIGHTS
@@ -424,20 +510,13 @@ $BLOGS = [
 ];
 ?>
 <section id="library" class="section journal-section">
-  <div class="journal-header">
-    <div class="journal-header-left">
-      <div class="journal-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        HEALTH JOURNAL &amp; CLINICAL INSIGHTS
-      </div>
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="kicker">Health Journal &amp; Clinical Insights</div>
       <h2 class="sec-title">Stories, science and <em class="title-serif">second opinions.</em></h2>
-      <p class="journal-sub">Peer-reviewed medical articles, early warning symptom guides, and ethical second opinion reviews directly from the senior departmental directors at Sukhda Hospital.</p>
     </div>
-    <div class="journal-header-right">
-      <a href="#contact" class="btn-second-opinion">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
-        REQUEST SECOND OPINION &darr;
-      </a>
+    <div class="sec-head-right">
+      <p class="sec-lede">Peer-reviewed medical articles, early warning symptom guides, and ethical second opinion reviews prepared directly by senior departmental directors at Sukhda Hospital.</p>
     </div>
   </div>
 
@@ -544,34 +623,167 @@ $NEWS_UPDATES = [
 </section>
 
 <!-- ============================================================
-     12. CONTACT CTA
+     12. DOCTOR CONSULTATION & CALLBACK FORM
 ============================================================ -->
-<?php
-$CONTACT_ROWS = [
-  ['k' => 'Address',             'v' => 'Delhi Road, Near Bus Stand, Hisar, Haryana 125001'],
-  ['k' => 'Emergency & Trauma',  'v' => 'Open 24×7 · +91-99965-44005'],
-  ['k' => 'OPD hours',           'v' => '9:00 AM – 8:00 PM, all days'],
-];
-?>
 <section id="contact" class="section">
-  <div class="contact-panel">
-    <div>
-      <h2>Talk to a doctor today.</h2>
-      <p class="sub">OPD runs 9:00 AM &ndash; 8:00 PM, seven days a week. Emergency and trauma never close.</p>
-      <div class="hero-actions">
-        <a href="tel:+919996544005" class="btn-solid">Call <?= htmlspecialchars($HOSPITAL['phone']) ?></a>
-        <a href="mailto:<?= htmlspecialchars($HOSPITAL['email']) ?>" class="btn-ghost">Email the hospital</a>
+  <div class="doc-consult-container">
+    
+    <!-- Left Column: Doctor Visual & Quick Contacts -->
+    <div class="doc-consult-visual">
+      <div class="doc-img-wrapper">
+        <img src="assets/images/doctor-consult.jpg" alt="Sukhda Hospital Doctor Specialist" class="doc-consult-img" />
+        <div class="doc-badge-floating">
+          <span class="pulse-dot"></span>
+          <span>Doctors Available Today</span>
+        </div>
+      </div>
+
+      <div class="doc-consult-info">
+        <h3>Talk directly with a specialist</h3>
+        <p>Our senior doctors and consultants are available 7 days a week for expert medical guidance and personalized care.</p>
+        
+        <div class="doc-quick-contacts">
+          <a href="tel:+919996544005" class="quick-contact-item">
+            <span class="icon-box"><i data-lucide="phone-call"></i></span>
+            <div>
+              <small>EMERGENCY &amp; TRAUMA 24&times;7</small>
+              <strong>+91-99965-44005</strong>
+            </div>
+          </a>
+          <div class="quick-contact-item">
+            <span class="icon-box"><i data-lucide="map-pin"></i></span>
+            <div>
+              <small>HOSPITAL LOCATION</small>
+              <strong>Delhi Road, Near Bus Stand, Hisar</strong>
+            </div>
+          </div>
+          <div class="quick-contact-item">
+            <span class="icon-box"><i data-lucide="clock"></i></span>
+            <div>
+              <small>OPD HOURS</small>
+              <strong>9:00 AM – 8:00 PM (All 7 Days)</strong>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="contact-rows">
-      <?php foreach ($CONTACT_ROWS as $r): ?>
-        <div class="contact-row">
-          <div class="k"><?= htmlspecialchars($r['k']) ?></div>
-          <div class="v"><?= htmlspecialchars($r['v']) ?></div>
+
+    <!-- Right Column: Doctor Contact Form -->
+    <div class="doc-consult-form-card">
+      <div class="form-header">
+        <span class="form-tag"><i data-lucide="user-check"></i> DIRECT DOCTOR CONNECT</span>
+        <h2>Consult <em class="title-serif">Our Doctor</em></h2>
+        <p>Fill out the form below. A doctor or medical coordinator will review your query and call you back promptly.</p>
+      </div>
+
+      <form id="docConsultForm" class="doc-consult-form" onsubmit="handleDocConsultSubmit(event)">
+        <div class="form-row grid-2">
+          <div class="form-group">
+            <label for="patient_name">Full Name <span class="req">*</span></label>
+            <div class="input-with-icon">
+              <span class="icon-box-left"><i data-lucide="user"></i></span>
+              <input type="text" id="patient_name" name="patient_name" placeholder="e.g. Rajesh Kumar" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="patient_phone">Phone Number <span class="req">*</span></label>
+            <div class="input-with-icon">
+              <span class="icon-box-left"><i data-lucide="phone"></i></span>
+              <input type="tel" id="patient_phone" name="patient_phone" placeholder="e.g. 98765 43210" required />
+            </div>
+          </div>
         </div>
-      <?php endforeach; ?>
+
+        <div class="form-row grid-2">
+          <div class="form-group">
+            <label for="patient_email">Email Address <span class="opt">(Optional)</span></label>
+            <div class="input-with-icon">
+              <span class="icon-box-left"><i data-lucide="mail"></i></span>
+              <input type="email" id="patient_email" name="patient_email" placeholder="name@example.com" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="department">Select Specialty <span class="req">*</span></label>
+            <div class="input-with-icon">
+              <span class="icon-box-left"><i data-lucide="activity"></i></span>
+              <select id="department" name="department" required>
+                <option value="" disabled selected>Choose a department...</option>
+                <option value="Cardiology">Cardiology (Heart Care)</option>
+                <option value="Orthopaedics">Orthopaedics &amp; Joint Replacement</option>
+                <option value="General &amp; Laparoscopic Surgery">General &amp; Laparoscopic Surgery</option>
+                <option value="Emergency &amp; ICU">Emergency &amp; Critical Care</option>
+                <option value="General Medicine">General Medicine</option>
+                <option value="Gynaecology &amp; Obstetrics">Gynaecology &amp; Obstetrics</option>
+                <option value="Paediatrics">Paediatrics &amp; Child Care</option>
+                <option value="Urology">Urology &amp; Nephrology</option>
+                <option value="ENT">ENT (Ear, Nose, Throat)</option>
+                <option value="Other / General Query">Other Health Query</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="preferred_time">Preferred Callback Time</label>
+          <div class="input-with-icon">
+            <span class="icon-box-left"><i data-lucide="calendar"></i></span>
+            <select id="preferred_time" name="preferred_time">
+              <option value="As soon as possible (Urgent)">As soon as possible (Urgent)</option>
+              <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
+              <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM - 4:00 PM)</option>
+              <option value="Evening (4:00 PM - 8:00 PM)">Evening (4:00 PM - 8:00 PM)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="patient_message">Brief Description of Concern / Symptoms</label>
+          <div class="input-with-icon">
+            <span class="icon-box-left" style="min-height: 85px;"><i data-lucide="file-text"></i></span>
+            <textarea id="patient_message" name="patient_message" rows="3" placeholder="Describe your health query, symptoms, or requested date..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-consult-submit">
+          <span>Request Doctor Callback</span>
+          <i data-lucide="send"></i>
+        </button>
+      </form>
+
+      <div id="formSuccessAlert" class="form-success-alert" style="display: none;">
+        <div class="success-icon"><i data-lucide="check-circle-2"></i></div>
+        <h3>Request Received Successfully!</h3>
+        <p>Thank you, <strong id="resName">Patient</strong>. Our doctor / care team has received your query and will call you back at <strong id="resPhone">your number</strong> shortly.</p>
+        <button type="button" class="btn-reset-form" onclick="resetDocConsultForm()">Submit Another Query</button>
+      </div>
     </div>
+
   </div>
 </section>
+
+<script>
+function handleDocConsultSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('patient_name').value.trim();
+  const phone = document.getElementById('patient_phone').value.trim();
+  
+  if (name && phone) {
+    document.getElementById('resName').textContent = name;
+    document.getElementById('resPhone').textContent = phone;
+    document.getElementById('docConsultForm').style.display = 'none';
+    const alertBox = document.getElementById('formSuccessAlert');
+    alertBox.style.display = 'block';
+    if (window.lucide) lucide.createIcons();
+  }
+}
+
+function resetDocConsultForm() {
+  document.getElementById('docConsultForm').reset();
+  document.getElementById('docConsultForm').style.display = 'flex';
+  document.getElementById('formSuccessAlert').style.display = 'none';
+}
+</script>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

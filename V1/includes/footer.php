@@ -1,45 +1,85 @@
 <!-- ============================================================
-     FOOTER
+     FOOTER — 3D Rounded Floating Card Design
 ============================================================ -->
 <footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img class="lockup" src="assets/images/logo-lockup.png" alt="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
-      <p>Cancer &amp; super speciality hospital serving Hisar and greater Haryana since 2002.</p>
-      <img class="nabh" src="assets/images/nabh.jpg" alt="NABH accredited">
-    </div>
-    <div class="footer-col">
-      <div class="h">Hospital</div>
-      <div class="links">
-        <a href="#about">About us</a>
-        <a href="#specialities">Specialities</a>
-        <a href="#technology">Technology</a>
-        <a href="#cases">Rare cases</a>
+  <div class="footer-card-container">
+    <div class="footer-card-inner">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & NABH Accreditation -->
+        <div class="footer-brand">
+          <a href="#top" class="footer-logo-wrap" aria-label="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
+            <img class="lockup" src="assets/images/logo-lockup.png" alt="Sukhda Medpark">
+          </a>
+          <p class="footer-brand-desc">Cancer &amp; super speciality hospital serving Hisar and greater Haryana with metro-grade medical excellence since 2002.</p>
+          <div class="footer-cert-badge">
+            <img class="nabh" src="assets/images/nabh.jpg" alt="NABH Accredited">
+            <div class="cert-text">
+              <strong>NABH Accredited</strong>
+              <span>Tertiary Care Standards</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Hospital Links -->
+        <div class="footer-col">
+          <div class="footer-heading">Hospital</div>
+          <div class="footer-links">
+            <a href="#about">About Sukhda</a>
+            <a href="#founders">Our Founders</a>
+            <a href="#specialities">Specialities</a>
+            <a href="#technology">Technology &amp; OTs</a>
+            <a href="#cases">Rare Cases</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Patient Care Links -->
+        <div class="footer-col">
+          <div class="footer-heading">Patient Care</div>
+          <div class="footer-links">
+            <a href="#contact">Book Consultation</a>
+            <a href="#stories">Patient Stories</a>
+            <a href="#events">Camps &amp; Events</a>
+            <a href="#library">Health Journal</a>
+            <a href="#about">Insurance &amp; TPA</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Reach Us & Contact Box -->
+        <div class="footer-col footer-contact-col">
+          <div class="footer-heading">Reach Us 24&times;7</div>
+          <div class="footer-contact-box">
+            <div class="contact-line">
+              <span class="c-icon"><i data-lucide="map-pin"></i></span>
+              <span><?= htmlspecialchars($HOSPITAL['address']) ?></span>
+            </div>
+            <a href="tel:+919996544005" class="contact-line highlight-phone">
+              <span class="c-icon"><i data-lucide="phone-call"></i></span>
+              <div>
+                <small>24&times;7 EMERGENCY HOTLINE</small>
+                <strong>+91-99965-44005</strong>
+              </div>
+            </a>
+            <a href="mailto:<?= htmlspecialchars($HOSPITAL['email']) ?>" class="contact-line">
+              <span class="c-icon"><i data-lucide="mail"></i></span>
+              <span><?= htmlspecialchars($HOSPITAL['email']) ?></span>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="footer-col">
-      <div class="h">Patients</div>
-      <div class="links">
-        <a href="#contact">Book appointment</a>
-        <a href="#stories">Patient stories</a>
-        <a href="#events">Camps &amp; events</a>
-        <a href="#library">Health library</a>
-        <a href="#contact">Insurance &amp; TPA</a>
+
+      <!-- Footer Bottom Bar inside 3D Card -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <span>&copy; <?= date('Y') ?> Sukhda Medpark Cancer &amp; Super Speciality Hospital. All rights reserved.</span>
+          <div class="footer-bottom-links">
+            <a href="#about">Privacy Policy</a>
+            <span>&middot;</span>
+            <a href="#about">Terms of Service</a>
+            <span>&middot;</span>
+            <a href="#about">Patient Rights</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="footer-col">
-      <div class="h">Reach us</div>
-      <div class="links muted">
-        <span><?= htmlspecialchars($HOSPITAL['address']) ?></span>
-        <a href="tel:+919996544005"><?= htmlspecialchars($HOSPITAL['phone']) ?></a>
-        <a href="mailto:<?= htmlspecialchars($HOSPITAL['email']) ?>"><?= htmlspecialchars($HOSPITAL['email']) ?></a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <span>&copy; <?= date('Y') ?> Sukhda Medpark Cancer &amp; Super Speciality Hospital</span>
-      <span>Privacy &middot; Terms &middot; Patient rights</span>
     </div>
   </div>
 </footer>
