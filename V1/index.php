@@ -139,7 +139,7 @@ $BANNERS = [
 <section id="specialities" class="section">
   <div class="sec-head">
     <div class="sec-head-left">
-      <div class="kicker">Specialities</div>
+      <div class="sec-pill"><i data-lucide="stethoscope"></i><span>Specialities</span></div>
       <h2 class="sec-title">Every department, <em class="title-serif">one campus.</em></h2>
     </div>
     <div class="sec-head-right">
@@ -291,7 +291,7 @@ $TECH = [
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-head-left">
-        <div class="kicker on-dark">Technology &amp; Infrastructure</div>
+        <div class="sec-pill on-dark"><i data-lucide="activity"></i><span>Technology &amp; Infrastructure</span></div>
         <h2 class="sec-title on-dark-title">Equipment that <em class="title-serif">earns the diagnosis.</em></h2>
       </div>
       <div class="sec-head-right">
@@ -354,7 +354,7 @@ $CASES = [
 <section id="cases" class="section">
   <div class="sec-head">
     <div class="sec-head-left">
-      <div class="kicker">Rare &amp; Complex Cases</div>
+      <div class="sec-pill"><i data-lucide="award"></i><span>Rare &amp; Complex Cases</span></div>
       <h2 class="sec-title">The cases other hospitals <em class="title-serif">refer to us.</em></h2>
     </div>
     <div class="sec-head-right">
@@ -387,7 +387,7 @@ $CASES = [
   </div>
   <?php if (count($CASES) > 3): ?>
   <div class="cases-more">
-    <button type="button" class="cases-more-btn" id="casesMoreBtn">Show More</button>
+    <button type="button" class="cases-more-btn" id="casesMoreBtn">Show More Cases</button>
   </div>
   <?php endif; ?>
 </section>
@@ -428,7 +428,7 @@ $STORIES = [
   <div class="stories-theater-inner">
     <div class="sec-head">
       <div class="sec-head-left">
-        <div class="kicker on-dark">Patient Stories</div>
+        <div class="sec-pill on-dark"><i data-lucide="heart-handshake"></i><span>Patient Stories</span></div>
         <h2 class="sec-title on-dark-title">Patient voices, <em class="title-serif">real recovery journeys.</em></h2>
       </div>
       <div class="sec-head-right">
@@ -512,7 +512,7 @@ $BLOGS = [
 <section id="library" class="section journal-section">
   <div class="sec-head">
     <div class="sec-head-left">
-      <div class="kicker">Health Journal &amp; Clinical Insights</div>
+      <div class="sec-pill"><i data-lucide="book-open"></i><span>Health Journal &amp; Clinical Insights</span></div>
       <h2 class="sec-title">Stories, science and <em class="title-serif">second opinions.</em></h2>
     </div>
     <div class="sec-head-right">
@@ -561,7 +561,7 @@ $NEWS_UPDATES = [
     
     <!-- Left Column: Kicker, Title, Description & Graphic -->
     <div class="news-left">
-      <div class="kicker">NEWS &amp; EVENTS</div>
+      <div class="sec-pill"><i data-lucide="calendar-clock"></i><span>News &amp; Events</span></div>
       <h2 class="sec-title">Recent <em class="title-serif">updates</em><br>from Sukhda.</h2>
       <p class="news-desc">Camps, milestones and announcements &mdash; a short digest of what&rsquo;s happening this month.</p>
       

@@ -1,16 +1,88 @@
 <!-- ============================================================
-     FOOTER — 3D Rounded Floating Card Design
+     FOOTER — Full Width Corporate Footer
 ============================================================ -->
 <footer class="site-footer">
-  <div class="footer-card-container">
-    <div class="footer-card-inner">
-      <div class="footer-grid">
-        <!-- Col 1: Brand & NABH Accreditation -->
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- Column 1: Patient Support -->
+      <div class="footer-col">
+        <div class="footer-heading">Patient Support</div>
+        <div class="footer-links">
+          <a href="#contact">Book Consultation</a>
+          <a href="#contact">Admission Guide</a>
+          <a href="#stories">Patient Stories</a>
+          <a href="#about">TPA &amp; Insurance</a>
+          <a href="#contact">Visiting Hours</a>
+          <a href="#library">Health Journal</a>
+          <a href="#contact">Preventive Health</a>
+          <a href="#events">Camps &amp; Events</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Centres of Excellence -->
+      <div class="footer-col">
+        <div class="footer-heading">Centres of Excellence</div>
+        <div class="footer-links">
+          <a href="#specialities">Cardiac Sciences</a>
+          <a href="#specialities">Neurosciences</a>
+          <a href="#specialities">Orthopedics</a>
+          <a href="#specialities">Mother &amp; Child Care</a>
+          <a href="#specialities">Gastroenterology</a>
+          <a href="#specialities">Renal Sciences</a>
+          <a href="#specialities">Cancer Care</a>
+        </div>
+      </div>
+
+      <!-- Column 3: Clinical Departments -->
+      <div class="footer-col">
+        <div class="footer-heading">Clinical Departments</div>
+        <div class="footer-links">
+          <a href="#specialities">Internal Medicine</a>
+          <a href="#specialities">Critical Care &amp; ICU</a>
+          <a href="#specialities">Emergency Medicine</a>
+          <a href="#specialities">General Surgery</a>
+          <a href="#specialities">Respiratory Medicine</a>
+          <a href="#specialities">ENT</a>
+          <a href="#specialities">Dental Science</a>
+        </div>
+      </div>
+
+      <!-- Column 4: Diagnostics & Support -->
+      <div class="footer-col">
+        <div class="footer-heading">Diagnostics &amp; Support</div>
+        <div class="footer-links">
+          <a href="#specialities">Ophthalmology</a>
+          <a href="#specialities">Anesthesiology</a>
+          <a href="#technology">Radiology &amp; Imaging</a>
+          <a href="#technology">Laboratory Services</a>
+          <a href="#technology">Physiotherapy</a>
+          <a href="#technology">Blood Bank</a>
+          <a href="#technology">Pharmacy</a>
+        </div>
+      </div>
+
+      <!-- Column 5: Corporate & Info -->
+      <div class="footer-col">
+        <div class="footer-heading">Corporate</div>
+        <div class="footer-links">
+          <a href="#about">About Us</a>
+          <a href="#technology">Infrastructure</a>
+          <a href="#founders">Our Founders</a>
+          <a href="#events">Events</a>
+          <a href="#about">TPA &amp; Insurance</a>
+          <a href="#contact">Careers</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact & Map Section -->
+    <div class="footer-contact-row">
+      <!-- Left Column: Brand + Contact Details -->
+      <div class="footer-contact-left">
         <div class="footer-brand">
           <a href="#top" class="footer-logo-wrap" aria-label="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
             <img class="lockup" src="assets/images/logo-lockup.png" alt="Sukhda Medpark">
           </a>
-          <p class="footer-brand-desc">Cancer &amp; super speciality hospital serving Hisar and greater Haryana with metro-grade medical excellence since 2002.</p>
           <div class="footer-cert-badge">
             <img class="nabh" src="assets/images/nabh.jpg" alt="NABH Accredited">
             <div class="cert-text">
@@ -20,64 +92,53 @@
           </div>
         </div>
 
-        <!-- Col 2: Hospital Links -->
-        <div class="footer-col">
-          <div class="footer-heading">Hospital</div>
-          <div class="footer-links">
-            <a href="#about">About Sukhda</a>
-            <a href="#founders">Our Founders</a>
-            <a href="#specialities">Specialities</a>
-            <a href="#technology">Technology &amp; OTs</a>
-            <a href="#cases">Rare Cases</a>
+        <div class="footer-heading">Reach Us 24&times;7</div>
+        <div class="footer-contact-box">
+          <div class="contact-line">
+            <span class="c-icon"><i data-lucide="map-pin"></i></span>
+            <span><?= htmlspecialchars($HOSPITAL['address']) ?></span>
           </div>
-        </div>
-
-        <!-- Col 3: Patient Care Links -->
-        <div class="footer-col">
-          <div class="footer-heading">Patient Care</div>
-          <div class="footer-links">
-            <a href="#contact">Book Consultation</a>
-            <a href="#stories">Patient Stories</a>
-            <a href="#events">Camps &amp; Events</a>
-            <a href="#library">Health Journal</a>
-            <a href="#about">Insurance &amp; TPA</a>
-          </div>
-        </div>
-
-        <!-- Col 4: Reach Us & Contact Box -->
-        <div class="footer-col footer-contact-col">
-          <div class="footer-heading">Reach Us 24&times;7</div>
-          <div class="footer-contact-box">
-            <div class="contact-line">
-              <span class="c-icon"><i data-lucide="map-pin"></i></span>
-              <span><?= htmlspecialchars($HOSPITAL['address']) ?></span>
+          <a href="tel:<?= htmlspecialchars(str_replace('-', '', $HOSPITAL['phone'])) ?>" class="contact-line">
+            <span class="c-icon"><i data-lucide="phone-call"></i></span>
+            <div>
+              <small>24&times;7 EMERGENCY HOTLINE</small>
+              <strong><?= htmlspecialchars($HOSPITAL['phone']) ?></strong>
             </div>
-            <a href="tel:+919996544005" class="contact-line highlight-phone">
-              <span class="c-icon"><i data-lucide="phone-call"></i></span>
-              <div>
-                <small>24&times;7 EMERGENCY HOTLINE</small>
-                <strong>+91-99965-44005</strong>
-              </div>
-            </a>
-            <a href="mailto:<?= htmlspecialchars($HOSPITAL['email']) ?>" class="contact-line">
-              <span class="c-icon"><i data-lucide="mail"></i></span>
-              <span><?= htmlspecialchars($HOSPITAL['email']) ?></span>
-            </a>
-          </div>
+          </a>
+          <a href="mailto:<?= htmlspecialchars($HOSPITAL['email']) ?>" class="contact-line">
+            <span class="c-icon"><i data-lucide="mail"></i></span>
+            <span><?= htmlspecialchars($HOSPITAL['email']) ?></span>
+          </a>
+        </div>
+
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
         </div>
       </div>
 
-      <!-- Footer Bottom Bar inside 3D Card -->
-      <div class="footer-bottom">
-        <div class="footer-bottom-inner">
-          <span>&copy; <?= date('Y') ?> Sukhda Medpark Cancer &amp; Super Speciality Hospital. All rights reserved.</span>
-          <div class="footer-bottom-links">
-            <a href="#about">Privacy Policy</a>
-            <span>&middot;</span>
-            <a href="#about">Terms of Service</a>
-            <span>&middot;</span>
-            <a href="#about">Patient Rights</a>
-          </div>
+      <!-- Right Column: Google Map -->
+      <div class="footer-map-col">
+        <div class="footer-map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=Sukhda%20Hospital%2C%20Delhi%20Road%2C%20Hisar%2C%20Haryana&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span>&copy; <?= date('Y') ?> <?= htmlspecialchars($HOSPITAL['name']) ?>. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#about">Privacy Policy</a>
+          <span>&middot;</span>
+          <a href="#about">Terms of Service</a>
+          <span>&middot;</span>
+          <a href="#about">Sitemap</a>
         </div>
       </div>
     </div>
