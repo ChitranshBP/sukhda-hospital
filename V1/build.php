@@ -29,20 +29,30 @@ if (is_dir($buildDir)) {
 }
 mkdir($buildDir, 0755, true);
 
-// 2) Render index.php to HTML in an isolated scope
-$html = (function (string $entry): string {
-    ob_start();
-    require $entry;
-    return (string) ob_get_clean();
-})($entry);
+// 2) Render pages to HTML in an isolated scope
+$pages = [
+    'index.php' => 'index.html',
+    'medical-oncology.php' => 'medical-oncology.html'
+];
 
-if ($html === '') {
-    fwrite(STDERR, "✗ index.php produced empty output\n");
-    exit(1);
+foreach ($pages as $source => $output) {
+    $filePath = $root . '/' . $source;
+    if (file_exists($filePath)) {
+        $html = (function (string $entry): string {
+            ob_start();
+            require $entry;
+            return (string) ob_get_clean();
+        })($filePath);
+
+        if ($html === '') {
+            fwrite(STDERR, "✗ {$source} produced empty output\n");
+            exit(1);
+        }
+
+        file_put_contents($buildDir . '/' . $output, $html);
+        echo "  ✓ wrote dist/{$output} (" . number_format(strlen($html)) . " bytes)" . PHP_EOL;
+    }
 }
-
-file_put_contents($buildDir . '/index.html', $html);
-echo "  ✓ wrote dist/index.html (" . number_format(strlen($html)) . " bytes)" . PHP_EOL;
 
 // 3) Recursively copy /assets → /dist/assets
 function copyTree(string $src, string $dst): int {

@@ -1,14 +1,16 @@
-<?php require_once __DIR__ . '/data.php'; ?>
+<?php require __DIR__ . '/data.php'; 
+$page_title = $page_title ?? 'Sukhda Medpark &mdash; Cancer &amp; Super Speciality Hospital, Hisar';
+$page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredited cancer & super speciality hospital. 28 specialities, 60+ expert doctors, 120+ beds, 24x7 emergency & trauma care since 2002.';
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sukhda Medpark &mdash; Cancer &amp; Super Speciality Hospital, Hisar</title>
+  <title><?= htmlspecialchars($page_title) ?></title>
   <meta name="description"
-    content="Sukhda Medpark, Hisar — NABH accredited cancer & super speciality hospital. 28 specialities, 60+ expert doctors, 120+ beds, 24x7 emergency & trauma care since 2002.">
-
+    content="<?= htmlspecialchars($page_description) ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -2124,8 +2126,10 @@
                         </span>
                       </div>
                       <div class="mega-list">
-                        <?php foreach ($catItems as $sp): ?>
-                          <a class="mega-item" href="#specialities">
+                        <?php foreach ($catItems as $sp): 
+                          $href = ($sp[0] === 'Medical Oncology') ? 'medical-oncology.php' : '#specialities';
+                        ?>
+                          <a class="mega-item" href="<?= $href ?>">
                             <span class="mega-ico"><i data-lucide="<?= htmlspecialchars($sp[3]) ?>"></i></span>
                             <span><?= htmlspecialchars($sp[0]) ?></span>
                           </a>
