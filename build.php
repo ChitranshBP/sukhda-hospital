@@ -1,24 +1,27 @@
 <?php
 /**
- * Build script — renders index.php into a static site under dist/
+ * Build script — renders root & V1 into a static site under dist/
  *
  *   Local:    php build.php
  *   Netlify:  configured in netlify.toml (publish = "dist")
  *
- * The output is a single index.html plus a copy of /assets, ready for any
- * static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages, S3, …).
+ * Output supports:
+ *   - https://sukhda-hospital-new.netlify.app/
+ *   - https://sukhda-hospital-new.netlify.app/medical-oncology
+ *   - https://sukhda-hospital-new.netlify.app/V1/
+ *   - https://sukhda-hospital-new.netlify.app/V1/medical-oncology
  */
 
 declare(strict_types=1);
 
 $root      = __DIR__;
 $buildDir  = $root . '/dist';
-$entry     = $root . '/index.php';
 $assetsSrc = $root . '/assets';
+$v1Dir     = $root . '/V1';
 
 echo "▶ Building Sukhda Hospital static site…" . PHP_EOL;
 
-// 1) Clean the previous dist/ so stale files don't ship
+// 1) Clean previous dist/ so stale files don't ship
 if (is_dir($buildDir)) {
     $rii = new RecursiveIteratorIterator(
         new RecursiveDirectoryIterator($buildDir, FilesystemIterator::SKIP_DOTS),
@@ -29,22 +32,16 @@ if (is_dir($buildDir)) {
 }
 mkdir($buildDir, 0755, true);
 
-// 2) Render index.php to HTML in an isolated scope
-$html = (function (string $entry): string {
-    ob_start();
-    require $entry;
-    return (string) ob_get_clean();
-})($entry);
-
-if ($html === '') {
-    fwrite(STDERR, "✗ index.php produced empty output\n");
-    exit(1);
+// 2) Helper to render a page in isolated scope
+function renderPage(string $entry): string {
+    return (function (string $f): string {
+        ob_start();
+        require $f;
+        return (string) ob_get_clean();
+    })($entry);
 }
 
-file_put_contents($buildDir . '/index.html', $html);
-echo "  ✓ wrote dist/index.html (" . number_format(strlen($html)) . " bytes)" . PHP_EOL;
-
-// 3) Recursively copy /assets → /dist/assets
+// 3) Helper to recursively copy directories
 function copyTree(string $src, string $dst): int {
     if (!is_dir($src)) return 0;
     if (!is_dir($dst)) mkdir($dst, 0755, true);
@@ -62,16 +59,67 @@ function copyTree(string $src, string $dst): int {
     }
     return $count;
 }
-$assetCount = copyTree($assetsSrc, $buildDir . '/assets');
-echo "  ✓ copied {$assetCount} asset file(s)" . PHP_EOL;
 
-// 4) Tiny extras: 404 + robots
+// 4) Render root pages
+$rootPages = [
+    'index.php' => 'index.html',
+    'V1/medical-oncology.php' => 'medical-oncology.html',
+];
+
+foreach ($rootPages as $srcRel => $destRel) {
+    $srcPath = $root . '/' . $srcRel;
+    if (file_exists($srcPath)) {
+        $html = renderPage($srcPath);
+        if ($html === '') {
+            fwrite(STDERR, "✗ {$srcRel} produced empty output\n");
+            exit(1);
+        }
+        $destPath = $buildDir . '/' . $destRel;
+        $destDir = dirname($destPath);
+        if (!is_dir($destDir)) mkdir($destDir, 0755, true);
+        file_put_contents($destPath, $html);
+        echo "  ✓ wrote dist/{$destRel} (" . number_format(strlen($html)) . " bytes)" . PHP_EOL;
+    }
+}
+
+// 5) Render V1 pages into dist/V1/
+if (is_dir($v1Dir)) {
+    $v1Pages = [
+        'V1/index.php' => 'V1/index.html',
+        'V1/medical-oncology.php' => 'V1/medical-oncology.html',
+    ];
+    foreach ($v1Pages as $srcRel => $destRel) {
+        $srcPath = $root . '/' . $srcRel;
+        if (file_exists($srcPath)) {
+            $html = renderPage($srcPath);
+            if ($html === '') {
+                fwrite(STDERR, "✗ {$srcRel} produced empty output\n");
+                exit(1);
+            }
+            $destPath = $buildDir . '/' . $destRel;
+            $destDir = dirname($destPath);
+            if (!is_dir($destDir)) mkdir($destDir, 0755, true);
+            file_put_contents($destPath, $html);
+            echo "  ✓ wrote dist/{$destRel} (" . number_format(strlen($html)) . " bytes)" . PHP_EOL;
+        }
+    }
+}
+
+// 6) Copy assets
+$assetCount1 = copyTree($assetsSrc, $buildDir . '/assets');
+$assetCount2 = copyTree($v1Dir . '/assets', $buildDir . '/assets');
+$assetCount3 = copyTree($v1Dir . '/assets', $buildDir . '/V1/assets');
+$totalAssets = $assetCount1 + $assetCount2 + $assetCount3;
+echo "  ✓ copied {$totalAssets} asset file(s)" . PHP_EOL;
+
+// 7) 404 + robots
 file_put_contents($buildDir . '/404.html', <<<HTML
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Page not found</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Page not found — Sukhda Medpark</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>body{font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;background:#F3F7FC;color:#0B1424}.b{text-align:center}.b a{color:#0F4F94;font-weight:600}</style>
-</head><body><div class="b"><h1>404 — Page not found</h1><p>The page you're looking for has moved or doesn't exist.</p><p><a href="/">← Back to homepage</a></p></div></body></html>
+<style>body{font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;background:#F3F7FC;color:#0B1424}.b{text-align:center}.b a{color:#0F4F94;font-weight:600;margin:0 8px}</style>
+</head><body><div class="b"><h1>404 — Page not found</h1><p>The page you're looking for has moved or doesn't exist.</p><p><a href="/">← Homepage</a> &middot; <a href="/V1/">V1 Portal →</a></p></div></body></html>
 HTML);
 file_put_contents($buildDir . '/robots.txt', "User-agent: *\nAllow: /\n");
 
 echo "✔ Build complete → dist/" . PHP_EOL;
+
