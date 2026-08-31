@@ -122,4 +122,3 @@ HTML);
 file_put_contents($buildDir . '/robots.txt', "User-agent: *\nAllow: /\n");
 
 echo "✔ Build complete → dist/" . PHP_EOL;
-
