@@ -413,20 +413,10 @@ $SPECIALTY_PAGES = [
   'Psychiatry & Mental Health'       => '/v1/service/psychiatry-mental-health',
   'ENT (Ear, Nose & Throat)'         => '/v1/service/ent',
 ];
-$GLOBALS['SPECIALTY_PAGES'] = $SPECIALTY_PAGES;
 
 if (!function_exists('get_specialty_url')) {
     function get_specialty_url(string $name): string {
-        $map = $GLOBALS['SPECIALTY_PAGES'] ?? [];
-        if (isset($map[$name])) {
-            return $map[$name];
-        }
-        $clean = trim(strtolower($name));
-        foreach ($map as $k => $url) {
-            if (trim(strtolower($k)) === $clean) {
-                return $url;
-            }
-        }
-        return '/v1/#specialities';
+        global $SPECIALTY_PAGES;
+        return $SPECIALTY_PAGES[$name] ?? '/v1/#specialities';
     }
 }

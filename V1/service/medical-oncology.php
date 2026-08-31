@@ -97,10 +97,10 @@ require dirname(__DIR__) . '/includes/header.php';
 <div class="onco-page-wrap">
 
   <!-- ============================================================
-       1. HERO SECTION (Deep Navy & Emerald with Stats & Badges)
+       1. HERO SECTION (Lighter Ocean Navy & Emerald Accents)
   ============================================================ -->
-  <div style="position: relative; overflow: hidden; background: linear-gradient(140deg, #0B1E3C 0%, #143560 48%, #1D4E7A 100%); color: #F7FAF7; padding: 72px 0 0;">
-    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 82% 22%, rgba(125,203,107,.16) 0%, transparent 52%);"></div>
+  <div style="position: relative; overflow: hidden; background: linear-gradient(140deg, #1B3E6B 0%, #25548B 48%, #3168A6 100%); color: #F7FAF7; padding: 72px 0 0;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 82% 22%, rgba(125,203,107,.24) 0%, transparent 55%), radial-gradient(circle at 12% 88%, rgba(62,169,75,.16) 0%, transparent 50%);"></div>
     <div data-grid-tex="1"></div>
     <div data-pad="1" style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div data-g="hero" style="display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; padding-bottom: 64px;">
@@ -109,11 +109,11 @@ require dirname(__DIR__) . '/includes/header.php';
         <div>
           <div style="display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; margin-bottom: 22px;">
             <a href="/v1/" style="color: #7DCB6B;">Home</a> <span style="opacity: .4;">›</span>
-            <a href="/v1/#specialities" style="color: rgba(247,250,247,.75);">Specialties</a><span style="opacity: .4;">›</span>
+            <a href="/v1/#specialities" style="color: rgba(247,250,247,.85);">Specialties</a><span style="opacity: .4;">›</span>
             <span style="color: #7DCB6B;">Medical Oncology</span>
           </div>
           
-          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(125,203,107,.14); border: 1px solid rgba(125,203,107,.32); color: #7DCB6B; padding: 7px 16px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; margin-bottom: 26px;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(125,203,107,.18); border: 1px solid rgba(125,203,107,.38); color: #7DCB6B; padding: 7px 16px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; margin-bottom: 26px;">
             <i data-lucide="pill" style="width: 15px; height: 15px;"></i>NABH Accredited Cancer Care Centre
           </div>
           
@@ -121,7 +121,7 @@ require dirname(__DIR__) . '/includes/header.php';
             Advanced medical oncology & <em class="serif" style="color: #7DCB6B;">compassionate</em> <em class="serif" style="color: #7DCB6B;">cancer care.</em>
           </h1>
           
-          <p style="font-size: 17.5px; line-height: 1.72; color: rgba(247,250,247,.82); max-width: 540px; margin: 0 0 36px;">
+          <p style="font-size: 17.5px; line-height: 1.72; color: rgba(247,250,247,.9); max-width: 540px; margin: 0 0 36px;">
             Evidence-based chemotherapy, targeted therapy, and immunotherapy protocols guided by a weekly Multidisciplinary Tumour Board — delivered in a dedicated daycare oncology suite.
           </p>
           
@@ -129,34 +129,34 @@ require dirname(__DIR__) . '/includes/header.php';
             <a href="/v1/#contact" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #16A34A, #15803D); color: #FFFFFF; padding: 16px 28px; border-radius: 13px; font-size: 15px; font-weight: 700; box-shadow: 0 16px 34px -12px rgba(22,163,74,.75);">
               <i data-lucide="calendar-check" style="width: 18px; height: 18px;"></i>Book oncology consult
             </a>
-            <a href="tel:<?= htmlspecialchars(str_replace('-', '', $HOSPITAL['phone'])) ?>" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.26); color: #FFFFFF; padding: 16px 28px; border-radius: 13px; font-size: 15px; font-weight: 700; backdrop-filter: blur(6px);">
+            <a href="tel:<?= htmlspecialchars(str_replace('-', '', $HOSPITAL['phone'])) ?>" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.3); color: #FFFFFF; padding: 16px 28px; border-radius: 13px; font-size: 15px; font-weight: 700; backdrop-filter: blur(6px);">
               <i data-lucide="phone" style="width: 18px; height: 18px;"></i><?= htmlspecialchars($HOSPITAL['phone']) ?>
             </a>
           </div>
           
-          <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 13px; font-weight: 500; color: rgba(247,250,247,.68);">
+          <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 13px; font-weight: 500; color: rgba(247,250,247,.78);">
             <span style="display: inline-flex; align-items: center; gap: 7px;"><i data-lucide="badge-check" style="width: 16px; height: 16px; color: #7DCB6B;"></i>Multidisciplinary Tumour Board</span><span style="width: 4px; height: 4px; border-radius: 50%; background: rgba(247,250,247,.3);"></span><span style="display: inline-flex; align-items: center; gap: 7px;"><i data-lucide="badge-check" style="width: 16px; height: 16px; color: #7DCB6B;"></i>Daycare Chemotherapy Suite</span><span style="width: 4px; height: 4px; border-radius: 50%; background: rgba(247,250,247,.3);"></span><span style="display: inline-flex; align-items: center; gap: 7px;"><i data-lucide="badge-check" style="width: 16px; height: 16px; color: #7DCB6B;"></i>NCCN-Aligned Protocols</span>
           </div>
         </div>
 
         <!-- Right Hero Visual Card -->
         <div style="position: relative;">
-          <div style="position: relative; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,.16); box-shadow: 0 28px 60px -20px rgba(0,0,0,.6);">
+          <div style="position: relative; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,.2); box-shadow: 0 28px 60px -20px rgba(0,0,0,.45);">
             <img src="/assets/images/oncology/onco-img-1.jpg" alt="Medical Oncology" style="width: 100%; height: 420px; object-fit: cover; display: block;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(11,30,60,.9) 100%);"></div>
+            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(20,48,84,.88) 100%);"></div>
             
-            <div style="position: absolute; top: 18px; right: 18px; background: rgba(11,30,60,.85); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.18); color: #FFFFFF; padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 6px;">
-              <span style="width: 7px; height: 7px; border-radius: 50%; background: #7DCB6B; box-shadow: 0 0 0 3px rgba(125,203,107,.3);"></span>
+            <div style="position: absolute; top: 18px; right: 18px; background: rgba(20,48,84,.85); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.22); color: #FFFFFF; padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+              <span style="width: 7px; height: 7px; border-radius: 50%; background: #7DCB6B; box-shadow: 0 0 0 3px rgba(125,203,107,.35);"></span>
               NABH Accredited
             </div>
             
-            <div style="position: absolute; bottom: 22px; left: 22px; right: 22px; background: rgba(11,30,60,.88); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.16); border-radius: 16px; padding: 16px 18px; display: flex; align-items: center; gap: 14px;">
+            <div style="position: absolute; bottom: 22px; left: 22px; right: 22px; background: rgba(20,48,84,.88); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.2); border-radius: 16px; padding: 16px 18px; display: flex; align-items: center; gap: 14px;">
               <div style="width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, #16A34A, #15803D); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #FFFFFF;">
                 <i data-lucide="activity" style="width: 22px; height: 22px;"></i>
               </div>
               <div>
                 <div style="font-size: 14px; font-weight: 800; color: #FFFFFF; line-height: 1.25;">Weekly Tumour Board Review</div>
-                <div style="font-size: 12px; color: rgba(247,250,247,.7); margin-top: 2px;">Every protocol validated by medical, surgical and radiation oncologists</div>
+                <div style="font-size: 12px; color: rgba(247,250,247,.8); margin-top: 2px;">Every protocol validated by medical, surgical and radiation oncologists</div>
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@ require dirname(__DIR__) . '/includes/header.php';
     </div>
 
     <!-- 4 Stats Strip -->
-    <div style="border-top: 1px solid rgba(255,255,255,.12); background: rgba(11,30,60,.45); backdrop-filter: blur(8px);">
+    <div style="border-top: 1px solid rgba(255,255,255,.16); background: rgba(22,54,94,.42); backdrop-filter: blur(8px);">
       <div data-pad="1" style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
         <div data-g="stats" style="display: grid; grid-template-columns: repeat(4, 1fr);">
                   <div style="padding: 26px 28px; position: relative;">
