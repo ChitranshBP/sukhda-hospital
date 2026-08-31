@@ -63,8 +63,16 @@ function copyTree(string $src, string $dst): int {
 // 4) Render root pages
 $rootPages = [
     'index.php' => 'index.html',
-    'V1/medical-oncology.php' => 'medical-oncology.html',
 ];
+
+// Add all service pages for root dist/service/
+if (is_dir($v1Dir . '/service')) {
+    foreach (glob($v1Dir . '/service/*.php') as $phpFile) {
+        $base = basename($phpFile);
+        $htmlName = preg_replace('/\.php$/', '.html', $base);
+        $rootPages['V1/service/' . $base] = 'service/' . $htmlName;
+    }
+}
 
 foreach ($rootPages as $srcRel => $destRel) {
     $srcPath = $root . '/' . $srcRel;
@@ -82,12 +90,19 @@ foreach ($rootPages as $srcRel => $destRel) {
     }
 }
 
-// 5) Render V1 pages into dist/V1/
+// 5) Render V1 pages into dist/v1/ and dist/V1/
 if (is_dir($v1Dir)) {
     $v1Pages = [
-        'V1/index.php' => 'V1/index.html',
-        'V1/medical-oncology.php' => 'V1/medical-oncology.html',
+        'V1/index.php' => 'v1/index.html',
     ];
+    if (is_dir($v1Dir . '/service')) {
+        foreach (glob($v1Dir . '/service/*.php') as $phpFile) {
+            $base = basename($phpFile);
+            $htmlName = preg_replace('/\.php$/', '.html', $base);
+            $v1Pages['V1/service/' . $base] = 'v1/service/' . $htmlName;
+        }
+    }
+
     foreach ($v1Pages as $srcRel => $destRel) {
         $srcPath = $root . '/' . $srcRel;
         if (file_exists($srcPath)) {
@@ -96,11 +111,21 @@ if (is_dir($v1Dir)) {
                 fwrite(STDERR, "✗ {$srcRel} produced empty output\n");
                 exit(1);
             }
+            // Write lowercase v1/
             $destPath = $buildDir . '/' . $destRel;
             $destDir = dirname($destPath);
             if (!is_dir($destDir)) mkdir($destDir, 0755, true);
             file_put_contents($destPath, $html);
             echo "  ✓ wrote dist/{$destRel} (" . number_format(strlen($html)) . " bytes)" . PHP_EOL;
+
+            // Also mirror to uppercase V1/ for case-insensitive hosts
+            $destRelUpper = preg_replace('/^v1\//', 'V1/', $destRel);
+            if ($destRelUpper !== $destRel) {
+                $destPathUpper = $buildDir . '/' . $destRelUpper;
+                $destDirUpper = dirname($destPathUpper);
+                if (!is_dir($destDirUpper)) mkdir($destDirUpper, 0755, true);
+                file_put_contents($destPathUpper, $html);
+            }
         }
     }
 }
@@ -108,8 +133,9 @@ if (is_dir($v1Dir)) {
 // 6) Copy assets
 $assetCount1 = copyTree($assetsSrc, $buildDir . '/assets');
 $assetCount2 = copyTree($v1Dir . '/assets', $buildDir . '/assets');
-$assetCount3 = copyTree($v1Dir . '/assets', $buildDir . '/V1/assets');
-$totalAssets = $assetCount1 + $assetCount2 + $assetCount3;
+$assetCount3 = copyTree($v1Dir . '/assets', $buildDir . '/v1/assets');
+$assetCount4 = copyTree($v1Dir . '/assets', $buildDir . '/V1/assets');
+$totalAssets = $assetCount1 + $assetCount2 + $assetCount3 + $assetCount4;
 echo "  ✓ copied {$totalAssets} asset file(s)" . PHP_EOL;
 
 // 7) 404 + robots

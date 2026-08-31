@@ -1,4 +1,6 @@
 # Netlify deployment config
+# Build command runs `php build.php` which renders index.php → dist/index.html
+# and copies /assets so Netlify can serve the result as a static site.
 # Build command runs `php build.php` which renders root & V1 pages into dist/
 # Output supports https://sukhda-hospital-new.netlify.app/ and /V1/
 
@@ -6,15 +8,21 @@
   command  = "php build.php"
   publish  = "dist"
 
+# Netlify's default Ubuntu image ships with PHP 8.x available on PATH; no
+# extra install step is needed. If a future image drops PHP, switch the
+# command to:  apt-get update -qq && apt-get install -y php-cli && php build.php
+
 [build.environment]
   PHP_VERSION = "8.2"
 
+# Long-cache for fingerprintable static assets
 # Long-cache for static assets
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# HTML should always revalidate
 [[headers]]
   for = "/V1/assets/*"
   [headers.values]
@@ -34,35 +42,76 @@
 # V1 folder root redirect
 [[redirects]]
   from   = "/V1"
-  to     = "/V1/"
+  to     = "/v1/"
   status = 301
 
-# V1 Medical Oncology Clean URLs & PHP redirect
 [[redirects]]
-  from   = "/V1/medical-oncology.php"
-  to     = "/V1/medical-oncology.html"
+  from   = "/v1"
+  to     = "/v1/"
+  status = 301
+
+[[redirects]]
+  from   = "/V1/"
+  to     = "/v1/"
+  status = 301
+
+# V1 Services Clean URLs & PHP redirects
+[[redirects]]
+  from   = "/v1/service/:page.php"
+  to     = "/v1/service/:page.html"
+  status = 301
+
+[[redirects]]
+  from   = "/v1/service/:page"
+  to     = "/v1/service/:page.html"
+  status = 200
+
+[[redirects]]
+  from   = "/V1/service/:page.php"
+  to     = "/V1/service/:page.html"
+  status = 301
+
+[[redirects]]
+  from   = "/V1/service/:page"
+  to     = "/V1/service/:page.html"
+  status = 200
+
+# Root Services Clean URLs & PHP redirects
+[[redirects]]
+  from   = "/service/:page.php"
+  to     = "/service/:page.html"
+  status = 301
+
+[[redirects]]
+  from   = "/service/:page"
+  to     = "/service/:page.html"
+  status = 200
+
+# Legacy medical-oncology direct redirects
+[[redirects]]
+  from   = "/v1/medical-oncology"
+  to     = "/v1/service/medical-oncology"
   status = 301
 
 [[redirects]]
   from   = "/V1/medical-oncology"
-  to     = "/V1/medical-oncology.html"
-  status = 200
-
-[[redirects]]
-  from   = "/V1/index.php"
-  to     = "/V1/"
-  status = 301
-
-# Root Medical Oncology Clean URLs & PHP redirect
-[[redirects]]
-  from   = "/medical-oncology.php"
-  to     = "/medical-oncology.html"
+  to     = "/v1/service/medical-oncology"
   status = 301
 
 [[redirects]]
   from   = "/medical-oncology"
-  to     = "/medical-oncology.html"
-  status = 200
+  to     = "/service/medical-oncology"
+  status = 301
+
+[[redirects]]
+  from   = "/V1/index.php"
+  to     = "/v1/"
+  status = 301
+
+[[redirects]]
+  from   = "/v1/index.php"
+  to     = "/v1/"
+  status = 301
 
 [[redirects]]
   from   = "/index.php"
