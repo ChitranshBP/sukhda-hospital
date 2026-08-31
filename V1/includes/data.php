@@ -384,3 +384,39 @@ $SPECS = [
   ['Psychiatry & Mental Health', 'Specialities', 'Psychological counselling, stress management and wellness therapy.', 'smile'],
   ['ENT (Ear, Nose & Throat)', 'Specialities', 'Micro-ear surgery, endoscopic sinus surgery (FESS) and speech therapy.', 'ear'],
 ];
+
+$SPECIALTY_PAGES = [
+  'Medical Oncology'                 => '/service/medical-oncology.php',
+  'Surgical Oncology'                => '/service/surgical-oncology.php',
+  'Interventional Cardiology'        => '/service/interventional-cardiology.php',
+  'Spine Surgery'                    => '/service/spine-surgery.php',
+  'Neurosurgery'                     => '/service/neurosurgery.php',
+  'Orthopaedics & Joint Replacement' => '/service/orthopaedics-joint-replacement.php',
+  'General & Laparoscopic Surgery'   => '/service/general-laparoscopic-surgery.php',
+  'Bariatric Surgery'                => '/service/bariatric-surgery.php',
+  'Anaesthesia & Pain Management'    => '/service/anaesthesia-pain-management.php',
+  'Physiotherapy & Rehabilitation'   => '/service/physiotherapy-rehabilitation.php',
+  'Internal Medicine'                => '/service/internal-medicine.php',
+  'Emergency & Critical Care'        => '/service/emergency-critical-care.php',
+  'Trauma Centre'                    => '/service/trauma-centre.php',
+  'Cancer Care Centre'               => '/service/cancer-care-centre.php',
+  "Gynaecology & Women's Health"     => '/service/gynaecology-womens-health.php',
+  'Paediatrics & Neonatology'        => '/service/paediatrics-neonatology.php',
+  'Diagnostic Services & Imaging'    => '/service/diagnostic-services-imaging.php',
+  'Lab: Pathology & Microbiology'    => '/service/pathology-microbiology.php',
+  'Dentistry & Maxillofacial'        => '/service/dentistry-maxillofacial.php',
+  'Cardiac Sciences'                 => '/service/cardiac-sciences.php',
+  'Nephrology & Kidney Care'         => '/service/nephrology-kidney-care.php',
+  'Gastroenterology & ERCP'          => '/service/gastroenterology-ercp.php',
+  'Urology & Laparoscopy'            => '/service/urology-laparoscopy.php',
+  'Dermatology & Cosmetology'        => '/service/dermatology-cosmetology.php',
+  'Psychiatry & Mental Health'       => '/service/psychiatry-mental-health.php',
+  'ENT (Ear, Nose & Throat)'         => '/service/ent.php',
+];
+
+if (!function_exists('get_specialty_url')) {
+    function get_specialty_url(string $name): string {
+        global $SPECIALTY_PAGES;
+        return $SPECIALTY_PAGES[$name] ?? '/#specialities';
+    }
+}

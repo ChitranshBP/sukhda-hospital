@@ -344,10 +344,10 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
     }
 
     /* ---------- Header ---------- */
-    .site-header { position: sticky; top: 0; z-index: 50; background: #F7FAF7; border-bottom: 1px solid #DCE6DC; }
+    .site-header { position: sticky; top: 0; z-index: 100; background: #F7FAF7; border-bottom: 1px solid #DCE6DC; }
     .header-inner {
-      max-width: 1240px; margin: 0 auto; padding: 14px 28px;
-      display: flex; align-items: center; gap: 12px 24px; flex-wrap: wrap;
+      max-width: 1240px; margin: 0 auto; padding: 12px 28px;
+      display: flex; align-items: center; gap: 12px 24px; position: relative;
     }
     .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
     .brand img { height: 48px; width: auto; }
@@ -362,29 +362,35 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
     }
     .main-nav a:hover { color: #2E8B3C; }
 
-    .nav-item { position: relative; display: flex; align-items: center; gap: 2px; }
+    .nav-item { position: relative; display: flex; align-items: center; gap: 2px; padding: 4px 0; }
     .nav-item.has-mega { position: static; }
-    .nav-link { display: inline-flex; align-items: center; padding: 8px 6px; }
+    .nav-link { display: inline-flex; align-items: center; padding: 10px 8px; }
     .drop-toggle {
       display: grid; place-items: center; width: 18px; height: 18px; padding: 0; margin-left: -2px;
       border: none; background: transparent; color: #7A8A7C; cursor: pointer;
     }
     .drop-toggle svg { width: 14px; height: 14px; transition: transform .18s ease; }
-    .nav-item:hover .drop-toggle svg, .nav-item.sub-open .drop-toggle svg { transform: rotate(180deg); color: #2E8B3C; }
+    .nav-item:hover .drop-toggle svg, .nav-item.is-hovered .drop-toggle svg, .nav-item.sub-open .drop-toggle svg { transform: rotate(180deg); color: #2E8B3C; }
 
     /* ---------- Dropdown + mega panels ---------- */
     .drop, .mega {
-      position: absolute; z-index: 60; background: #FFFFFF; border: 1px solid #DCE6DC;
+      position: absolute; z-index: 120; background: #FFFFFF; border: 1px solid #DCE6DC;
       box-shadow: 0 28px 56px -28px rgba(42, 82, 136, 0.35);
       opacity: 0; visibility: hidden; pointer-events: none;
-      transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
+      transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+      transition-delay: 0.12s;
     }
-    .drop::before, .mega::before { content: ''; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
-    .nav-item:hover > .drop, .nav-item:focus-within > .drop,
-    .nav-item:hover > .mega, .nav-item:focus-within > .mega { opacity: 1; visibility: visible; pointer-events: auto; }
+    .drop::before { content: ''; position: absolute; left: 0; right: 0; top: -25px; height: 25px; z-index: 10; }
+    .mega::before { content: ''; position: absolute; left: -100vw; right: -100vw; top: -30px; height: 30px; z-index: 10; }
 
-    .drop { top: calc(100% + 15px); left: 0; width: 330px; padding: 10px; border-radius: 10px; transform: translateY(10px); }
-    .nav-item:hover > .drop, .nav-item:focus-within > .drop { transform: none; }
+    .nav-item:hover > .drop, .nav-item:focus-within > .drop, .nav-item.is-hovered > .drop,
+    .nav-item:hover > .mega, .nav-item:focus-within > .mega, .nav-item.is-hovered > .mega {
+      opacity: 1; visibility: visible; pointer-events: auto;
+      transition-delay: 0s;
+    }
+
+    .drop { top: calc(100% + 4px); left: 0; width: 330px; padding: 10px; border-radius: 10px; transform: translateY(6px); }
+    .nav-item:hover > .drop, .nav-item:focus-within > .drop, .nav-item.is-hovered > .drop { transform: none; }
     .nav-item.drop-right .drop { left: auto; right: 0; }
 
     .drop-item { display: flex; align-items: flex-start; gap: 11px; padding: 9px 10px; border-radius: 8px; white-space: normal; }
@@ -399,11 +405,11 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
     .drop-item .d { display: block; font-size: 12.5px; font-weight: 400; color: #7A8A7C; margin-top: 3px; line-height: 1.45; }
 
     .mega {
-      top: calc(100% + 1px); left: 50%; transform: translate(-50%, 10px);
+      top: 100%; left: 50%; transform: translate(-50%, 6px);
       width: min(1184px, calc(100vw - 40px)); padding: 22px 24px 24px; border-radius: 12px;
-      max-height: calc(100vh - 150px); overflow-y: auto;
+      max-height: calc(100vh - 120px); overflow-y: auto;
     }
-    .nav-item:hover > .mega, .nav-item:focus-within > .mega { transform: translate(-50%, 0); }
+    .nav-item:hover > .mega, .nav-item:focus-within > .mega, .nav-item.is-hovered > .mega { transform: translate(-50%, 0); }
 
     .mega-head {
       display: flex; align-items: center; justify-content: space-between; gap: 14px 24px; flex-wrap: wrap;
@@ -2082,8 +2088,8 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
   ?>
   <header class="site-header">
     <div class="header-inner">
-      <a href="#top" class="brand" aria-label="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
-        <img src="assets/images/logo-mark.png" alt="Sukhda Medpark">
+      <a href="/" class="brand" aria-label="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
+        <img src="/assets/images/logo-mark.png" alt="Sukhda Medpark">
         <span class="brand-text">
           <span class="l1">SUKHDA</span>
           <span class="l2">MEDPARK</span>
@@ -2127,9 +2133,9 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
                       </div>
                       <div class="mega-list">
                         <?php foreach ($catItems as $sp): 
-                          $href = ($sp[0] === 'Medical Oncology') ? 'medical-oncology.php' : '#specialities';
+                          $href = get_specialty_url($sp[0]);
                         ?>
-                          <a class="mega-item" href="<?= $href ?>">
+                          <a class="mega-item" href="<?= htmlspecialchars($href) ?>">
                             <span class="mega-ico"><i data-lucide="<?= htmlspecialchars($sp[3]) ?>"></i></span>
                             <span><?= htmlspecialchars($sp[0]) ?></span>
                           </a>

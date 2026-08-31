@@ -80,11 +80,11 @@
       <!-- Left Column: Brand + Contact Details -->
       <div class="footer-contact-left">
         <div class="footer-brand">
-          <a href="#top" class="footer-logo-wrap" aria-label="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
-            <img class="lockup" src="assets/images/logo-lockup.png" alt="Sukhda Medpark">
+          <a href="/" class="footer-logo-wrap" aria-label="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
+            <img class="lockup" src="/assets/images/logo-lockup.png" alt="Sukhda Medpark">
           </a>
           <div class="footer-cert-badge">
-            <img class="nabh" src="assets/images/nabh.jpg" alt="NABH Accredited">
+            <img class="nabh" src="/assets/images/nabh.jpg" alt="NABH Accredited">
             <div class="cert-text">
               <strong>NABH Accredited</strong>
               <span>Tertiary Care Standards</span>
@@ -169,7 +169,7 @@
       });
     }
 
-    /* ---------- Nav dropdown toggles (mobile accordion) ---------- */
+    /* ---------- Nav dropdown toggles (mobile accordion + desktop hover intent) ---------- */
     var dropToggles = Array.prototype.slice.call(document.querySelectorAll('.drop-toggle'));
     dropToggles.forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -183,6 +183,21 @@
         });
         item.classList.toggle('sub-open', willOpen);
         btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+    });
+
+    // Desktop hover stability (grace timer to prevent accidental closing)
+    var navHoverItems = Array.prototype.slice.call(document.querySelectorAll('.nav-item'));
+    navHoverItems.forEach(function (item) {
+      var hoverTimer = null;
+      item.addEventListener('mouseenter', function () {
+        if (hoverTimer) clearTimeout(hoverTimer);
+        item.classList.add('is-hovered');
+      });
+      item.addEventListener('mouseleave', function () {
+        hoverTimer = setTimeout(function () {
+          item.classList.remove('is-hovered');
+        }, 150);
       });
     });
 

@@ -1,24 +1,20 @@
 <?php
 /**
- * Build script — renders index.php into a static site under dist/
+ * Build script — renders index.php and all service/*.php pages into static site under dist/
  *
  *   Local:    php build.php
  *   Netlify:  configured in netlify.toml (publish = "dist")
- *
- * The output is a single index.html plus a copy of /assets, ready for any
- * static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages, S3, …).
  */
 
 declare(strict_types=1);
 
 $root      = __DIR__;
 $buildDir  = $root . '/dist';
-$entry     = $root . '/index.php';
 $assetsSrc = $root . '/assets';
 
 echo "▶ Building Sukhda Hospital static site…" . PHP_EOL;
 
-// 1) Clean the previous dist/ so stale files don't ship
+// 1) Clean previous dist/
 if (is_dir($buildDir)) {
     $rii = new RecursiveIteratorIterator(
         new RecursiveDirectoryIterator($buildDir, FilesystemIterator::SKIP_DOTS),
@@ -28,13 +24,23 @@ if (is_dir($buildDir)) {
     rmdir($buildDir);
 }
 mkdir($buildDir, 0755, true);
+mkdir($buildDir . '/service', 0755, true);
 
-// 2) Render pages to HTML in an isolated scope
+// 2) Collect all pages to render
 $pages = [
     'index.php' => 'index.html',
-    'medical-oncology.php' => 'medical-oncology.html'
 ];
 
+if (is_dir($root . '/service')) {
+    foreach (glob($root . '/service/*.php') as $phpFile) {
+        $base = basename($phpFile);
+        $htmlName = preg_replace('/\.php$/', '.html', $base);
+        $pages['service/' . $base] = 'service/' . $htmlName;
+    }
+}
+ksort($pages);
+
+// 3) Render each page in an isolated scope
 foreach ($pages as $source => $output) {
     $filePath = $root . '/' . $source;
     if (file_exists($filePath)) {
@@ -49,12 +55,18 @@ foreach ($pages as $source => $output) {
             exit(1);
         }
 
-        file_put_contents($buildDir . '/' . $output, $html);
+        $outPath = $buildDir . '/' . $output;
+        $outDir = dirname($outPath);
+        if (!is_dir($outDir)) {
+            mkdir($outDir, 0755, true);
+        }
+
+        file_put_contents($outPath, $html);
         echo "  ✓ wrote dist/{$output} (" . number_format(strlen($html)) . " bytes)" . PHP_EOL;
     }
 }
 
-// 3) Recursively copy /assets → /dist/assets
+// 4) Recursively copy /assets → /dist/assets
 function copyTree(string $src, string $dst): int {
     if (!is_dir($src)) return 0;
     if (!is_dir($dst)) mkdir($dst, 0755, true);
@@ -75,7 +87,7 @@ function copyTree(string $src, string $dst): int {
 $assetCount = copyTree($assetsSrc, $buildDir . '/assets');
 echo "  ✓ copied {$assetCount} asset file(s)" . PHP_EOL;
 
-// 4) Tiny extras: 404 + robots
+// 5) Tiny extras: 404 + robots
 file_put_contents($buildDir . '/404.html', <<<HTML
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Page not found</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
