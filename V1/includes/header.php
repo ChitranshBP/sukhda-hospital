@@ -1964,19 +1964,19 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
       <div class="top-utility-right">
         <!-- Media Centre Dropdown -->
         <div class="top-nav-item">
-          <a href="#events" class="top-nav-btn">
+          <a href="/v1/#events" class="top-nav-btn">
             <span>Media Centre</span>
             <i data-lucide="chevron-down"></i>
           </a>
           <div class="top-utility-drop">
-            <a href="#events" class="top-drop-link">
+            <a href="/v1/#events" class="top-drop-link">
               <span class="top-drop-icon"><i data-lucide="images"></i></span>
               <div>
                 <div class="top-drop-title">Gallery</div>
                 <div class="top-drop-sub">Explore our hospital campus &amp; facility photos</div>
               </div>
             </a>
-            <a href="#stories" class="top-drop-link">
+            <a href="/v1/#stories" class="top-drop-link">
               <span class="top-drop-icon"><i data-lucide="play-square"></i></span>
               <div>
                 <div class="top-drop-title">Videos</div>
@@ -1988,40 +1988,40 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
 
         <!-- Patient Guide Dropdown -->
         <div class="top-nav-item drop-align-right">
-          <a href="#library" class="top-nav-btn">
+          <a href="/v1/#library" class="top-nav-btn">
             <span>Patient Guide</span>
             <i data-lucide="chevron-down"></i>
           </a>
           <div class="top-utility-drop">
-            <a href="#library" class="top-drop-link">
+            <a href="/v1/#library" class="top-drop-link">
               <span class="top-drop-icon"><i data-lucide="book-open"></i></span>
               <div>
                 <div class="top-drop-title">Blogs</div>
                 <div class="top-drop-sub">Expert health advice &amp; medical articles</div>
               </div>
             </a>
-            <a href="#library" class="top-drop-link">
+            <a href="/v1/#library" class="top-drop-link">
               <span class="top-drop-icon"><i data-lucide="activity"></i></span>
               <div>
                 <div class="top-drop-title">Symptoms</div>
                 <div class="top-drop-sub">Understand warning signs &amp; early diagnosis</div>
               </div>
             </a>
-            <a href="#contact" class="top-drop-link">
+            <a href="/v1/#contact" class="top-drop-link">
               <span class="top-drop-icon"><i data-lucide="calendar-clock"></i></span>
               <div>
                 <div class="top-drop-title">OPD Schedule</div>
                 <div class="top-drop-sub">Timings of consultant OPD visits &amp; clinics</div>
               </div>
             </a>
-            <a href="#about" class="top-drop-link">
+            <a href="/v1/#about" class="top-drop-link">
               <span class="top-drop-icon"><i data-lucide="shield-check"></i></span>
               <div>
                 <div class="top-drop-title">Empanelments</div>
                 <div class="top-drop-sub">TPA, Ayushman &amp; corporate insurance partners</div>
               </div>
             </a>
-            <a href="#cases" class="top-drop-link">
+            <a href="/v1/#cases" class="top-drop-link">
               <span class="top-drop-icon"><i data-lucide="trophy"></i></span>
               <div>
                 <div class="top-drop-title">Rare Cases</div>
@@ -2033,17 +2033,17 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
 
         <!-- Events & Camps -->
         <div class="top-nav-item">
-          <a href="#events" class="top-nav-btn">Events &amp; Camps</a>
+          <a href="/v1/#events" class="top-nav-btn">Events &amp; Camps</a>
         </div>
 
         <!-- CSR -->
         <div class="top-nav-item">
-          <a href="#about" class="top-nav-btn">CSR</a>
+          <a href="/v1/#about" class="top-nav-btn">CSR</a>
         </div>
 
         <!-- Contact Us -->
         <div class="top-nav-item">
-          <a href="#contact" class="top-nav-btn">Contact Us</a>
+          <a href="/v1/#contact" class="top-nav-btn">Contact Us</a>
         </div>
       </div>
     </div>
@@ -2054,26 +2054,26 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
   // Main navigation with dropdowns + services mega menu (ported from the previous site's navbar).
   // children item: [t => title, i => lucide icon, d => description, h => anchor]
   $NAV_MENU = [
-    ['label' => 'About Us', 'href' => '#about', 'children' => [
-      ['t' => 'About Sukhda Healthcare', 'i' => 'building-2', 'd' => 'Our 24+ years of medical excellence', 'h' => '#about'],
-      ['t' => 'Leadership', 'i' => 'users', 'd' => 'Guided by visionary medical pioneers', 'h' => '#about'],
-      ['t' => 'Infrastructure', 'i' => 'hospital', 'd' => 'State-of-the-art modular OTs & ICUs', 'h' => '#technology'],
-      ['t' => 'Why Choose Us', 'i' => 'award', 'd' => "Hisar's most trusted speciality hub", 'h' => '#about'],
-      ['t' => 'Vision and Mission', 'i' => 'compass', 'd' => 'Our commitment to healing & innovation', 'h' => '#about'],
-      ['t' => 'Academics', 'i' => 'graduation-cap', 'd' => 'DNB program run by the institution', 'h' => '#about'],
+    ['label' => 'About Us', 'href' => '/v1/#about', 'children' => [
+      ['t' => 'About Sukhda Healthcare', 'i' => 'building-2', 'd' => 'Our 24+ years of medical excellence', 'h' => '/v1/#about'],
+      ['t' => 'Leadership', 'i' => 'users', 'd' => 'Guided by visionary medical pioneers', 'h' => '/v1/#about'],
+      ['t' => 'Infrastructure', 'i' => 'hospital', 'd' => 'State-of-the-art modular OTs & ICUs', 'h' => '/v1/#technology'],
+      ['t' => 'Why Choose Us', 'i' => 'award', 'd' => "Hisar's most trusted speciality hub", 'h' => '/v1/#about'],
+      ['t' => 'Vision and Mission', 'i' => 'compass', 'd' => 'Our commitment to healing & innovation', 'h' => '/v1/#about'],
+      ['t' => 'Academics', 'i' => 'graduation-cap', 'd' => 'DNB program run by the institution', 'h' => '/v1/#about'],
     ]],
-    ['label' => 'Hospital Networks', 'href' => '#about', 'children' => [
-      ['t' => 'Sukhda Multispeciality Hospital', 'i' => 'building', 'd' => 'Flagship 250+ bed multispeciality hub, Hisar', 'h' => '#about'],
-      ['t' => 'Sukhda MedPark', 'i' => 'tree-pine', 'd' => 'Ultra-modern super-speciality medical campus', 'h' => '#about'],
+    ['label' => 'Hospital Networks', 'href' => '/v1/#about', 'children' => [
+      ['t' => 'Sukhda Multispeciality Hospital', 'i' => 'building', 'd' => 'Flagship 250+ bed multispeciality hub, Hisar', 'h' => '/v1/#about'],
+      ['t' => 'Sukhda MedPark', 'i' => 'tree-pine', 'd' => 'Ultra-modern super-speciality medical campus', 'h' => '/v1/#about'],
     ]],
-    ['label' => 'Our Services', 'href' => '#specialities', 'mega' => true],
-    ['label' => 'Doctors', 'href' => '#doctors'],
-    ['label' => 'Technology', 'href' => '#technology'],
-    ['label' => 'Patient Stories', 'href' => '#stories', 'children' => [
-      ['t' => 'Testimonials', 'i' => 'video', 'd' => 'Authentic patient recovery journeys', 'h' => '#stories'],
-      ['t' => 'Success Stories', 'i' => 'sparkles', 'd' => 'Rare cases & clinical breakthroughs', 'h' => '#cases'],
+    ['label' => 'Our Services', 'href' => '/v1/#specialities', 'mega' => true],
+    ['label' => 'Doctors', 'href' => '/v1/#doctors'],
+    ['label' => 'Technology', 'href' => '/v1/#technology'],
+    ['label' => 'Patient Stories', 'href' => '/v1/#stories', 'children' => [
+      ['t' => 'Testimonials', 'i' => 'video', 'd' => 'Authentic patient recovery journeys', 'h' => '/v1/#stories'],
+      ['t' => 'Success Stories', 'i' => 'sparkles', 'd' => 'Rare cases & clinical breakthroughs', 'h' => '/v1/#cases'],
     ]],
-    ['label' => 'Events', 'href' => '#events'],
+    ['label' => 'Events', 'href' => '/v1/#events'],
   ];
 
   $MEGA_CATS = [
@@ -2088,7 +2088,7 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
   ?>
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="brand" aria-label="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
+      <a href="/v1/" class="brand" aria-label="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
         <img src="/assets/images/logo-mark.png" alt="Sukhda Medpark">
         <span class="brand-text">
           <span class="l1">SUKHDA</span>
@@ -2119,7 +2119,7 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
                     <span class="mega-badge">Treatments, Departments &amp; Specialities</span>
                     <span class="mega-note">A categorised guide across our clinical departments and speciality centres</span>
                   </div>
-                  <a class="mega-link" href="#specialities">Explore all departments &rarr;</a>
+                  <a class="mega-link" href="/v1/#specialities">Explore all departments &rarr;</a>
                 </div>
                 <div class="mega-cols">
                   <?php foreach ($MEGA_GROUPS as $catName => $catItems): $cm = $MEGA_CATS[$catName]; ?>
@@ -2149,7 +2149,7 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
                     <div class="t">Need help finding the right department or specialist?</div>
                     <div class="d">Our 24&times;7 clinical coordinators can guide your exact diagnostic or treatment path.</div>
                   </div>
-                  <a class="mega-cta-btn" href="#contact">Consult a specialist</a>
+                  <a class="mega-cta-btn" href="/v1/#contact">Consult a specialist</a>
                 </div>
               </div>
             <?php elseif ($children): ?>

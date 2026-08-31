@@ -107,9 +107,9 @@ require dirname(__DIR__) . '/includes/header.php';
         
         <!-- Left Hero Content -->
         <div>
-          <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: rgba(247,250,247,.55); margin-bottom: 26px;">
-            <a href="/" style="color: rgba(247,250,247,.75);">Home</a><span style="opacity: .4;">›</span>
-            <a href="/#specialities" style="color: rgba(247,250,247,.75);">Specialties</a><span style="opacity: .4;">›</span>
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; margin-bottom: 22px;">
+            <a href="/v1/" style="color: #7DCB6B;">Home</a> <span style="opacity: .4;">›</span>
+            <a href="/v1/#specialities" style="color: rgba(247,250,247,.75);">Specialties</a><span style="opacity: .4;">›</span>
             <span style="color: #7DCB6B;">Gynaecology &amp; Women&#039;s Health</span>
           </div>
           
@@ -126,7 +126,7 @@ require dirname(__DIR__) . '/includes/header.php';
           </p>
           
           <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 38px;">
-            <a href="/#contact" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #16A34A, #15803D); color: #FFFFFF; padding: 16px 28px; border-radius: 13px; font-size: 15px; font-weight: 700; box-shadow: 0 16px 34px -12px rgba(22,163,74,.75);">
+            <a href="/v1/#contact" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #16A34A, #15803D); color: #FFFFFF; padding: 16px 28px; border-radius: 13px; font-size: 15px; font-weight: 700; box-shadow: 0 16px 34px -12px rgba(22,163,74,.75);">
               <i data-lucide="calendar-check" style="width: 18px; height: 18px;"></i>Book gynaecology consult
             </a>
             <a href="tel:<?= htmlspecialchars(str_replace('-', '', $HOSPITAL['phone'])) ?>" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.26); color: #FFFFFF; padding: 16px 28px; border-radius: 13px; font-size: 15px; font-weight: 700; backdrop-filter: blur(6px);">
@@ -867,7 +867,7 @@ require dirname(__DIR__) . '/includes/header.php';
           Consult Dr. Manisha Mehta and our gynaecology team for comprehensive maternity and women’s health.
         </p>
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-          <a href="/#contact" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #16A34A, #15803D); color: #FFFFFF; padding: 15px 28px; border-radius: 12px; font-size: 15px; font-weight: 700; box-shadow: 0 14px 30px -10px rgba(22,163,74,.7);">
+          <a href="/v1/#contact" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #16A34A, #15803D); color: #FFFFFF; padding: 15px 28px; border-radius: 12px; font-size: 15px; font-weight: 700; box-shadow: 0 14px 30px -10px rgba(22,163,74,.7);">
             <i data-lucide="calendar-check" style="width: 17px; height: 17px;"></i>Book consultation
           </a>
           <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20would%20like%20to%20consult%20regarding%20Gynaecology &amp; Women&#039;s Health" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.24); color: #FFFFFF; padding: 15px 24px; border-radius: 12px; font-size: 15px; font-weight: 700; backdrop-filter: blur(6px);">

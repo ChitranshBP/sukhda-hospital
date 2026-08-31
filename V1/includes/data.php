@@ -386,37 +386,37 @@ $SPECS = [
 ];
 
 $SPECIALTY_PAGES = [
-  'Medical Oncology'                 => '/service/medical-oncology.php',
-  'Surgical Oncology'                => '/service/surgical-oncology.php',
-  'Interventional Cardiology'        => '/service/interventional-cardiology.php',
-  'Spine Surgery'                    => '/service/spine-surgery.php',
-  'Neurosurgery'                     => '/service/neurosurgery.php',
-  'Orthopaedics & Joint Replacement' => '/service/orthopaedics-joint-replacement.php',
-  'General & Laparoscopic Surgery'   => '/service/general-laparoscopic-surgery.php',
-  'Bariatric Surgery'                => '/service/bariatric-surgery.php',
-  'Anaesthesia & Pain Management'    => '/service/anaesthesia-pain-management.php',
-  'Physiotherapy & Rehabilitation'   => '/service/physiotherapy-rehabilitation.php',
-  'Internal Medicine'                => '/service/internal-medicine.php',
-  'Emergency & Critical Care'        => '/service/emergency-critical-care.php',
-  'Trauma Centre'                    => '/service/trauma-centre.php',
-  'Cancer Care Centre'               => '/service/cancer-care-centre.php',
-  "Gynaecology & Women's Health"     => '/service/gynaecology-womens-health.php',
-  'Paediatrics & Neonatology'        => '/service/paediatrics-neonatology.php',
-  'Diagnostic Services & Imaging'    => '/service/diagnostic-services-imaging.php',
-  'Lab: Pathology & Microbiology'    => '/service/pathology-microbiology.php',
-  'Dentistry & Maxillofacial'        => '/service/dentistry-maxillofacial.php',
-  'Cardiac Sciences'                 => '/service/cardiac-sciences.php',
-  'Nephrology & Kidney Care'         => '/service/nephrology-kidney-care.php',
-  'Gastroenterology & ERCP'          => '/service/gastroenterology-ercp.php',
-  'Urology & Laparoscopy'            => '/service/urology-laparoscopy.php',
-  'Dermatology & Cosmetology'        => '/service/dermatology-cosmetology.php',
-  'Psychiatry & Mental Health'       => '/service/psychiatry-mental-health.php',
-  'ENT (Ear, Nose & Throat)'         => '/service/ent.php',
+  'Medical Oncology'                 => '/v1/service/medical-oncology',
+  'Surgical Oncology'                => '/v1/service/surgical-oncology',
+  'Interventional Cardiology'        => '/v1/service/interventional-cardiology',
+  'Spine Surgery'                    => '/v1/service/spine-surgery',
+  'Neurosurgery'                     => '/v1/service/neurosurgery',
+  'Orthopaedics & Joint Replacement' => '/v1/service/orthopaedics-joint-replacement',
+  'General & Laparoscopic Surgery'   => '/v1/service/general-laparoscopic-surgery',
+  'Bariatric Surgery'                => '/v1/service/bariatric-surgery',
+  'Anaesthesia & Pain Management'    => '/v1/service/anaesthesia-pain-management',
+  'Physiotherapy & Rehabilitation'   => '/v1/service/physiotherapy-rehabilitation',
+  'Internal Medicine'                => '/v1/service/internal-medicine',
+  'Emergency & Critical Care'        => '/v1/service/emergency-critical-care',
+  'Trauma Centre'                    => '/v1/service/trauma-centre',
+  'Cancer Care Centre'               => '/v1/service/cancer-care-centre',
+  "Gynaecology & Women's Health"     => '/v1/service/gynaecology-womens-health',
+  'Paediatrics & Neonatology'        => '/v1/service/paediatrics-neonatology',
+  'Diagnostic Services & Imaging'    => '/v1/service/diagnostic-services-imaging',
+  'Lab: Pathology & Microbiology'    => '/v1/service/pathology-microbiology',
+  'Dentistry & Maxillofacial'        => '/v1/service/dentistry-maxillofacial',
+  'Cardiac Sciences'                 => '/v1/service/cardiac-sciences',
+  'Nephrology & Kidney Care'         => '/v1/service/nephrology-kidney-care',
+  'Gastroenterology & ERCP'          => '/v1/service/gastroenterology-ercp',
+  'Urology & Laparoscopy'            => '/v1/service/urology-laparoscopy',
+  'Dermatology & Cosmetology'        => '/v1/service/dermatology-cosmetology',
+  'Psychiatry & Mental Health'       => '/v1/service/psychiatry-mental-health',
+  'ENT (Ear, Nose & Throat)'         => '/v1/service/ent',
 ];
 
 if (!function_exists('get_specialty_url')) {
     function get_specialty_url(string $name): string {
         global $SPECIALTY_PAGES;
-        return $SPECIALTY_PAGES[$name] ?? '/#specialities';
+        return $SPECIALTY_PAGES[$name] ?? '/v1/#specialities';
     }
 }
