@@ -76,6 +76,27 @@
   to     = "/V1/service/:page.html"
   status = 200
 
+# V1 Service-Redesign Clean URLs & PHP redirects
+[[redirects]]
+  from   = "/v1/service-redesign/:page.php"
+  to     = "/v1/service-redesign/:page.html"
+  status = 301
+
+[[redirects]]
+  from   = "/v1/service-redesign/:page"
+  to     = "/v1/service-redesign/:page.html"
+  status = 200
+
+[[redirects]]
+  from   = "/V1/service-redesign/:page.php"
+  to     = "/V1/service-redesign/:page.html"
+  status = 301
+
+[[redirects]]
+  from   = "/V1/service-redesign/:page"
+  to     = "/V1/service-redesign/:page.html"
+  status = 200
+
 # Root Services Clean URLs & PHP redirects
 [[redirects]]
   from   = "/service/:page.php"
@@ -85,6 +106,16 @@
 [[redirects]]
   from   = "/service/:page"
   to     = "/service/:page.html"
+  status = 200
+
+[[redirects]]
+  from   = "/service-redesign/:page.php"
+  to     = "/service-redesign/:page.html"
+  status = 301
+
+[[redirects]]
+  from   = "/service-redesign/:page"
+  to     = "/service-redesign/:page.html"
   status = 200
 
 # Legacy medical-oncology direct redirects

@@ -37,6 +37,17 @@
   to     = "/service/:page.html"
   status = 200
 
+# Service-redesign folder clean URL redirects
+[[redirects]]
+  from   = "/service-redesign/:page.php"
+  to     = "/service-redesign/:page.html"
+  status = 301
+
+[[redirects]]
+  from   = "/service-redesign/:page"
+  to     = "/service-redesign/:page.html"
+  status = 200
+
 # Dynamic clean URL redirects for root HTML pages
 [[redirects]]
   from   = "/:page.php"

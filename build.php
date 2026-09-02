@@ -73,6 +73,13 @@ if (is_dir($v1Dir . '/service')) {
         $rootPages['V1/service/' . $base] = 'service/' . $htmlName;
     }
 }
+if (is_dir($v1Dir . '/service-redesign')) {
+    foreach (glob($v1Dir . '/service-redesign/*.php') as $phpFile) {
+        $base = basename($phpFile);
+        $htmlName = preg_replace('/\.php$/', '.html', $base);
+        $rootPages['V1/service-redesign/' . $base] = 'service-redesign/' . $htmlName;
+    }
+}
 
 foreach ($rootPages as $srcRel => $destRel) {
     $srcPath = $root . '/' . $srcRel;
@@ -100,6 +107,13 @@ if (is_dir($v1Dir)) {
             $base = basename($phpFile);
             $htmlName = preg_replace('/\.php$/', '.html', $base);
             $v1Pages['V1/service/' . $base] = 'v1/service/' . $htmlName;
+        }
+    }
+    if (is_dir($v1Dir . '/service-redesign')) {
+        foreach (glob($v1Dir . '/service-redesign/*.php') as $phpFile) {
+            $base = basename($phpFile);
+            $htmlName = preg_replace('/\.php$/', '.html', $base);
+            $v1Pages['V1/service-redesign/' . $base] = 'v1/service-redesign/' . $htmlName;
         }
     }
 
