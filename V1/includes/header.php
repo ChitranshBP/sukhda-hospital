@@ -350,11 +350,8 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
       display: flex; align-items: center; gap: 12px 24px; position: relative;
     }
     .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-    .brand img { height: 48px; width: auto; }
-    .brand-text { display: block; line-height: 1; }
-    .brand-text .l1 { display: block; font-size: 22px; font-weight: 700; letter-spacing: 0.06em; color: #2A5288; }
-    .brand-text .l2 { display: block; font-size: 13px; font-weight: 700; letter-spacing: 0.22em; color: #2A5288; margin-top: 4px; }
-    .brand-text .l3 { display: block; font-size: 8.5px; font-weight: 600; letter-spacing: 0.11em; color: #7A8A7C; margin-top: 4px; white-space: nowrap; }
+    .brand img { height: 52px; max-height: 56px; width: auto; object-fit: contain; }
+    .brand-text { display: none; }
 
     .main-nav {
       flex: 1 1 auto; display: flex; align-items: center; justify-content: flex-end;
@@ -2088,13 +2085,8 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
   ?>
   <header class="site-header">
     <div class="header-inner">
-      <a href="/v1/" class="brand" aria-label="Sukhda Medpark — Cancer &amp; Super Speciality Hospital">
-        <img src="/assets/images/logo-mark.png" alt="Sukhda Medpark">
-        <span class="brand-text">
-          <span class="l1">SUKHDA</span>
-          <span class="l2">MEDPARK</span>
-          <span class="l3">CANCER &amp; SUPER SPECIALITY HOSPITAL</span>
-        </span>
+      <a href="/v1/" class="brand" aria-label="Sukhda Multispeciality Hospital">
+        <img src="/assets/images/logo-sukhda.png" alt="Sukhda Multispeciality Hospital">
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
