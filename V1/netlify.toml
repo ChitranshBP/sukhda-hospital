@@ -37,7 +37,7 @@
   to     = "/service/:page.html"
   status = 200
 
-# Service-redesign folder clean URL redirects
+# Service-redesign pages are intentionally accessible only by direct URL.
 [[redirects]]
   from   = "/service-redesign/:page.php"
   to     = "/service-redesign/:page.html"

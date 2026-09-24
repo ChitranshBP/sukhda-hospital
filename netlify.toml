@@ -76,7 +76,7 @@
   to     = "/V1/service/:page.html"
   status = 200
 
-# V1 Service-Redesign Clean URLs & PHP redirects
+# V1 redesign pages are intentionally accessible only by direct URL.
 [[redirects]]
   from   = "/v1/service-redesign/:page.php"
   to     = "/v1/service-redesign/:page.html"

@@ -2125,7 +2125,7 @@ $page_description = $page_description ?? 'Sukhda Medpark, Hisar — NABH accredi
                       </div>
                       <div class="mega-list">
                         <?php foreach ($catItems as $sp): 
-                          $href = get_specialty_url($sp[0]);
+                          $href = $SPECIALTY_PAGES[$sp[0]] ?? '/v1/#specialities';
                         ?>
                           <a class="mega-item" href="<?= htmlspecialchars($href) ?>">
                             <span class="mega-ico"><i data-lucide="<?= htmlspecialchars($sp[3]) ?>"></i></span>

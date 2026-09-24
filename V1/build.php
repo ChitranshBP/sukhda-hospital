@@ -25,6 +25,7 @@ if (is_dir($buildDir)) {
 }
 mkdir($buildDir, 0755, true);
 mkdir($buildDir . '/service', 0755, true);
+mkdir($buildDir . '/service-redesign', 0755, true);
 
 // 2) Collect all pages to render
 $pages = [
@@ -36,6 +37,13 @@ if (is_dir($root . '/service')) {
         $base = basename($phpFile);
         $htmlName = preg_replace('/\.php$/', '.html', $base);
         $pages['service/' . $base] = 'service/' . $htmlName;
+    }
+}
+if (is_dir($root . '/service-redesign')) {
+    foreach (glob($root . '/service-redesign/*.php') as $phpFile) {
+        $base = basename($phpFile);
+        $htmlName = preg_replace('/\.php$/', '.html', $base);
+        $pages['service-redesign/' . $base] = 'service-redesign/' . $htmlName;
     }
 }
 ksort($pages);
