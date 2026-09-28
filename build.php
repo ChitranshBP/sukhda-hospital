@@ -18,6 +18,7 @@ $root      = __DIR__;
 $buildDir  = $root . '/dist';
 $assetsSrc = $root . '/assets';
 $v1Dir     = $root . '/V1';
+$v2Dir     = $root . '/V2';
 
 echo "▶ Building Sukhda Hospital static site…" . PHP_EOL;
 
@@ -144,15 +145,50 @@ if (is_dir($v1Dir)) {
     }
 }
 
-// 6) Copy assets
+// 6) Render every V2 PHP page while preserving its directory structure.
+if (is_dir($v2Dir)) {
+    $v2Pages = [];
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($v2Dir, FilesystemIterator::SKIP_DOTS)
+    );
+
+    foreach ($iterator as $file) {
+        if (!$file->isFile() || strtolower($file->getExtension()) !== 'php') continue;
+
+        $sourceRel = str_replace('\\', '/', substr($file->getPathname(), strlen($root) + 1));
+        $insideV2 = str_replace('\\', '/', substr($file->getPathname(), strlen($v2Dir) + 1));
+        $outputRel = preg_replace('/\.php$/i', '.html', $insideV2);
+        $v2Pages[$sourceRel] = 'v2/' . $outputRel;
+    }
+    ksort($v2Pages);
+
+    foreach ($v2Pages as $srcRel => $destRel) {
+        $html = renderPage($root . '/' . $srcRel);
+        if ($html === '') {
+            fwrite(STDERR, "V2 page {$srcRel} produced empty output\n");
+            exit(1);
+        }
+
+        foreach ([$destRel, preg_replace('/^v2\//', 'V2/', $destRel)] as $output) {
+            $destPath = $buildDir . '/' . $output;
+            if (!is_dir(dirname($destPath))) mkdir(dirname($destPath), 0755, true);
+            file_put_contents($destPath, $html);
+        }
+        echo "  wrote dist/{$destRel} (" . number_format(strlen($html)) . " bytes)" . PHP_EOL;
+    }
+}
+
+// 7) Copy assets
 $assetCount1 = copyTree($assetsSrc, $buildDir . '/assets');
 $assetCount2 = copyTree($v1Dir . '/assets', $buildDir . '/assets');
 $assetCount3 = copyTree($v1Dir . '/assets', $buildDir . '/v1/assets');
 $assetCount4 = copyTree($v1Dir . '/assets', $buildDir . '/V1/assets');
-$totalAssets = $assetCount1 + $assetCount2 + $assetCount3 + $assetCount4;
+$assetCount5 = copyTree($v2Dir . '/assets', $buildDir . '/v2/assets');
+$assetCount6 = copyTree($v2Dir . '/assets', $buildDir . '/V2/assets');
+$totalAssets = $assetCount1 + $assetCount2 + $assetCount3 + $assetCount4 + $assetCount5 + $assetCount6;
 echo "  ✓ copied {$totalAssets} asset file(s)" . PHP_EOL;
 
-// 7) 404 + robots
+// 8) 404 + robots
 file_put_contents($buildDir . '/404.html', <<<HTML
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Page not found — Sukhda Medpark</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">

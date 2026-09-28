@@ -28,6 +28,16 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+[[headers]]
+  for = "/v2/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/V2/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # HTML should revalidate
 [[headers]]
   for = "/*.html"
@@ -53,6 +63,32 @@
 [[redirects]]
   from   = "/V1/"
   to     = "/v1/"
+  status = 301
+
+# V2 folder and nested page redirects
+[[redirects]]
+  from   = "/V2"
+  to     = "/v2/"
+  status = 301
+
+[[redirects]]
+  from   = "/v2"
+  to     = "/v2/"
+  status = 301
+
+[[redirects]]
+  from   = "/V2/*"
+  to     = "/v2/:splat"
+  status = 301
+
+[[redirects]]
+  from   = "/v2/index.php"
+  to     = "/v2/"
+  status = 301
+
+[[redirects]]
+  from   = "/v2/:page/index.php"
+  to     = "/v2/:page/"
   status = 301
 
 # V1 Services Clean URLs & PHP redirects
