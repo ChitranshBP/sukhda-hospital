@@ -393,7 +393,7 @@
         <!-- LEFT: Logo + divider + NABH -->
         <div class="flex items-center gap-2.5 lg:gap-3.5 shrink-0">
           <a href="#top" class="flex items-center" aria-label="<?= htmlspecialchars($HOSPITAL['name']) ?>">
-            <img src="assets/images/logo-sukhda.png" alt="<?= htmlspecialchars($HOSPITAL['name']) ?>" width="831"
+            <img src="assets/images/sukhda-multispeciality-logo.png" alt="<?= htmlspecialchars($HOSPITAL['name']) ?>" width="831"
               height="300" class="h-20 lg:h-20 w-auto select-none">
           </a>
           <span class="hidden sm:block w-px h-16 bg-brand-100"></span>
