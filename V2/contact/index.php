@@ -55,15 +55,17 @@ $empanelledTPA = [
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Contact Us &amp; OPD Booking | Sukhda Healthcare Hisar</title>
-    <meta name="description" content="Contact Sukhda Healthcare in Hisar. 24/7 Emergency Helpline: 01662-249473 / +91-99965-44005. Book specialist OPD appointments, emergency ambulance, and hospital inquiries online.">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Contact Sukhda Healthcare in Hisar. 24/7 Emergency Helpline: 01662-249473 / +91-99965-44005. Book specialist OPD appointments, emergency ambulance, and hospital inquiries online.">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <style>
         :root {
-            --blue: #07356b;
-            --blue-dark: #052347;
-            --green: #078b4b;
-            --green-light: #eaf7f0;
+            --blue: #03205A;
+            --blue-dark: #02163d;
+            --green: #2A8238;
+            --green-light: #eaf5ec;
             --pale: #f2f7fb;
             --muted: #53677f;
             --line: #dce7f0
@@ -143,7 +145,7 @@ $empanelledTPA = [
         /* NAVIGATION */
         .nav {
             height: 80px;
-            box-shadow: 0 2px 9px #07356b19;
+            box-shadow: 0 2px 9px #03205a19;
             position: relative;
             z-index: 100;
             background: #fff
@@ -191,7 +193,7 @@ $empanelledTPA = [
             align-items: center
         }
 
-        .nav-group > a {
+        .nav-group>a {
             display: inline-flex;
             align-items: center;
             gap: 4px
@@ -204,44 +206,162 @@ $empanelledTPA = [
             transition: transform 0.2s ease
         }
 
-        .nav-group:hover .nav-chevron {
-            transform: rotate(180deg)
+        @media(min-width: 901px) {
+            .mobile-menu-head,
+            .mobile-menu-footer,
+            .nav-overlay {
+                display: none !important;
+            }
+
+            .mobile-nav-links {
+                display: flex !important;
+                align-items: center;
+                gap: 26px;
+            }
+
+            .nav-group:hover .nav-chevron {
+                transform: rotate(180deg)
+            }
+
+            .nav-drop {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                min-width: 250px;
+                background: #fff;
+                border: 1px solid var(--line);
+                border-radius: 8px;
+                box-shadow: 0 8px 24px rgba(3, 32, 90, 0.12);
+                padding: 8px 0;
+                z-index: 1000
+            }
+
+            .nav-drop a {
+                display: block;
+                padding: 11px 20px !important;
+                font-size: 14.5px;
+                font-weight: 600;
+                color: var(--blue);
+                border: 0 !important
+            }
+
+            .nav-drop a:hover {
+                background: var(--pale);
+                color: var(--green)
+            }
+
+            .nav-group:hover .nav-drop {
+                display: block
+            }
+
+            .services-drop {
+                min-width: 280px
+            }
         }
 
-        .nav-drop {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            min-width: 250px;
-            background: #fff;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            box-shadow: 0 8px 24px rgba(7, 53, 107, 0.12);
-            padding: 8px 0;
-            z-index: 1000
+        /* STICKY BOTTOM FLOATING PILL CTA */
+        .sticky-bottom-bar {
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 998;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #03205A 0%, #02163d 100%);
+            border: 1.5px solid rgba(255, 255, 255, 0.22);
+            border-radius: 9999px;
+            padding: 6px 14px;
+            box-shadow: 0 10px 30px rgba(3, 32, 90, 0.45), 0 3px 12px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            gap: 2px;
+            max-width: calc(100vw - 28px);
+            width: max-content;
+            animation: stickySlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .nav-drop a {
-            display: block;
-            padding: 11px 20px !important;
-            font-size: 14.5px;
-            font-weight: 600;
-            color: var(--blue);
-            border: 0 !important
+        @keyframes stickySlideUp {
+            from {
+                transform: translate(-50%, 60px);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
         }
 
-        .nav-drop a:hover {
-            background: var(--pale);
-            color: var(--green)
+        .sticky-bar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 14px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.1px;
+            line-height: 1.2;
+            transition: all 0.2s ease;
+            white-space: nowrap;
         }
 
-        .nav-group:hover .nav-drop {
-            display: block
+        .sticky-bar-item svg,
+        .sticky-bar-item i {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 3px;
+            stroke-width: 2.2;
+            color: #ffffff;
+            transition: transform 0.2s ease, color 0.2s ease;
         }
 
-        .services-drop {
-            min-width: 280px
+        .sticky-bar-item:hover,
+        .sticky-bar-item:active {
+            color: #55df8e;
+        }
+
+        .sticky-bar-item:hover svg,
+        .sticky-bar-item:active svg {
+            color: #55df8e;
+            transform: scale(1.12);
+        }
+
+        .sticky-bar-item.whatsapp:hover,
+        .sticky-bar-item.whatsapp:active {
+            color: #25d366;
+        }
+
+        .sticky-bar-item.whatsapp:hover svg,
+        .sticky-bar-item.whatsapp:active svg {
+            color: #25d366;
+        }
+
+        .sticky-bar-divider {
+            width: 1px;
+            height: 22px;
+            background: rgba(255, 255, 255, 0.22);
+            margin: 0 1px;
+            flex-shrink: 0;
+        }
+
+        .nav.open ~ .sticky-bottom-bar {
+            display: none !important;
+        }
+
+        @media(min-width: 901px) {
+            .sticky-bottom-bar {
+                display: none !important;
+            }
+        }
+
+        @media(max-width: 900px) {
+            body {
+                padding-bottom: 74px !important;
+            }
         }
 
         .btn {
@@ -260,7 +380,7 @@ $empanelledTPA = [
 
         .btn:hover {
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(7, 53, 107, 0.15)
+            box-shadow: 0 4px 12px rgba(3, 32, 90, 0.15)
         }
 
         .primary {
@@ -270,8 +390,8 @@ $empanelledTPA = [
         }
 
         .primary:hover {
-            background: #06753f;
-            border-color: #06753f;
+            background: #216a2d;
+            border-color: #216a2d;
             color: #fff
         }
 
@@ -292,7 +412,7 @@ $empanelledTPA = [
 
         /* HERO SECTION */
         .hero {
-            background: linear-gradient(135deg, #052347 0%, #07356b 100%);
+            background: linear-gradient(135deg, #02163d 0%, #03205A 100%);
             color: #fff;
             padding: 50px 0 44px;
             position: relative;
@@ -325,7 +445,7 @@ $empanelledTPA = [
             overflow: hidden;
             box-shadow: 0 20px 44px rgba(0, 0, 0, 0.4);
             border: 3px solid rgba(255, 255, 255, 0.25);
-            background: #052347;
+            background: #02163d;
         }
 
         .hero-img-card img {
@@ -346,7 +466,7 @@ $empanelledTPA = [
             bottom: 16px;
             left: 16px;
             right: 16px;
-            background: rgba(5, 35, 71, 0.94);
+            background: rgba(2, 22, 61, 0.94);
             backdrop-filter: blur(8px);
             border: 1px solid rgba(114, 224, 162, 0.4);
             padding: 12px 16px;
@@ -451,7 +571,7 @@ $empanelledTPA = [
             border-radius: 12px;
             padding: 22px 20px;
             border: 1px solid var(--line);
-            box-shadow: 0 4px 16px rgba(7, 53, 107, 0.06);
+            box-shadow: 0 4px 16px rgba(3, 32, 90, 0.06);
             display: flex;
             flex-direction: column;
             gap: 8px;
@@ -460,7 +580,7 @@ $empanelledTPA = [
 
         .c-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 24px rgba(7, 53, 107, 0.12);
+            box-shadow: 0 10px 24px rgba(3, 32, 90, 0.12);
             border-color: #b7d1e8
         }
 
@@ -554,7 +674,7 @@ $empanelledTPA = [
             border-radius: 14px;
             padding: 36px 32px;
             border: 1px solid var(--line);
-            box-shadow: 0 6px 24px rgba(7, 53, 107, 0.08)
+            box-shadow: 0 6px 24px rgba(3, 32, 90, 0.08)
         }
 
         .form-box h3 {
@@ -609,7 +729,7 @@ $empanelledTPA = [
         .form-group select:focus,
         .form-group textarea:focus {
             border-color: var(--green);
-            box-shadow: 0 0 0 3px rgba(7, 139, 75, 0.15);
+            box-shadow: 0 0 0 3px rgba(42, 130, 56, 0.15);
             background: #fff
         }
 
@@ -649,7 +769,7 @@ $empanelledTPA = [
             border-radius: 12px;
             padding: 26px 24px;
             border: 1px solid var(--line);
-            box-shadow: 0 4px 16px rgba(7, 53, 107, 0.06)
+            box-shadow: 0 4px 16px rgba(3, 32, 90, 0.06)
         }
 
         .info-card h4 {
@@ -710,7 +830,7 @@ $empanelledTPA = [
             border-radius: 12px;
             border: 1px solid var(--line);
             overflow: hidden;
-            box-shadow: 0 4px 18px rgba(7, 53, 107, 0.08);
+            box-shadow: 0 4px 18px rgba(3, 32, 90, 0.08);
             display: flex;
             flex-direction: column;
             transition: transform 0.2s ease, box-shadow 0.2s ease
@@ -718,7 +838,7 @@ $empanelledTPA = [
 
         .branch-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 26px rgba(7, 53, 107, 0.14)
+            box-shadow: 0 10px 26px rgba(3, 32, 90, 0.14)
         }
 
         .branch-header {
@@ -791,7 +911,7 @@ $empanelledTPA = [
             border-radius: 14px;
             overflow: hidden;
             border: 1px solid var(--line);
-            box-shadow: 0 8px 24px rgba(7, 53, 107, 0.1);
+            box-shadow: 0 8px 24px rgba(3, 32, 90, 0.1);
             height: 380px;
             background: #e5edf5;
             position: relative
@@ -863,111 +983,377 @@ $empanelledTPA = [
             color: #06723e
         }
 
-        /* FOOTER */
+        /* PREMIUM FOOTER REDESIGN */
         .footer {
-            background: #fff;
-            padding: 48px 0 0;
-            border-top: 1px solid var(--line)
+            background: linear-gradient(180deg, #03205A 0%, #011338 100%);
+            color: #cbd5e1;
+            padding: 56px 0 0;
+            border-top: 4px solid var(--green);
+            position: relative;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 28% 18% 26% 28%;
-            gap: 28px;
-            padding-bottom: 36px
+            grid-template-columns: 1.35fr 0.9fr 1.35fr 1.15fr;
+            gap: 36px;
+            padding-bottom: 44px;
         }
 
-        .footer-logo {
-            width: 220px;
-            margin-bottom: 14px
+        .footer-brand-wrap {
+            background: #ffffff;
+            padding: 10px 18px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+            margin-bottom: 16px;
+            max-width: 230px;
+        }
+
+        .footer-brand-wrap .footer-logo {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin: 0;
         }
 
         .footer-tagline {
             font-size: 13px;
-            color: var(--muted);
-            line-height: 1.65;
-            margin: 0 0 14px
+            font-weight: 800;
+            color: #68d493;
+            letter-spacing: 0.3px;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+        }
+
+        .footer-desc {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #94a3b8;
+            margin: 0 0 16px;
         }
 
         .footer-nabh-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: #f4f8fc;
-            border: 1px solid var(--line);
-            padding: 7px 14px;
-            border-radius: 6px;
-            font-size: 12.5px;
-            font-weight: 700;
-            color: var(--blue)
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 8px 14px;
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+        }
+
+        .footer-nabh-badge .nabh-icon-img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            border-radius: 4px;
+            background: #fff;
+            padding: 2px;
+            flex-shrink: 0;
+        }
+
+        .footer-nabh-badge b {
+            display: block;
+            font-size: 13px;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .footer-nabh-badge small {
+            display: block;
+            font-size: 11px;
+            color: #94a3b8;
         }
 
         .footer-col h4 {
-            font-size: 14.5px;
-            margin: 0 0 16px;
-            color: var(--blue);
+            font-size: 15px;
+            font-weight: 800;
+            color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: 0.5px
+            letter-spacing: 0.6px;
+            margin: 0 0 18px;
+            position: relative;
+            padding-left: 12px;
         }
 
-        .footer-col a {
-            display: block;
-            font-size: 13px;
-            color: var(--muted);
-            margin-bottom: 9px;
-            transition: color 0.2s ease
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+            width: 3.5px;
+            background: var(--green);
+            border-radius: 2px;
         }
 
-        .footer-col a:hover {
-            color: var(--green)
-        }
-
-        .footer-col p {
-            font-size: 13px;
-            color: var(--muted);
-            margin: 0 0 5px;
-            line-height: 1.5
-        }
-
-        .footer-col b {
-            font-size: 13.5px;
-            color: var(--blue);
-            display: block;
-            margin-top: 4px
-        }
-
-        .footer-contact-line {
+        .footer-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .footer-nav a {
+            display: inline-flex;
+            align-items: center;
             gap: 8px;
-            margin-bottom: 12px !important
+            font-size: 13.5px;
+            color: #cbd5e1;
+            transition: all 0.2s ease;
+            text-decoration: none;
         }
 
-        .footer-contact-line span {
-            font-size: 13px;
-            color: var(--muted)
-        }
-
-        .sign {
-            font-size: 17px;
-            font-weight: 900;
+        .footer-nav a span {
             color: var(--green);
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #ffffff;
+            transform: translateX(4px);
+        }
+
+        .footer-nav a:hover span {
+            color: #68d493;
+        }
+
+        .footer-hospital-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 12px;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .footer-hospital-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(104, 212, 147, 0.35);
+        }
+
+        .f-hosp-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5px;
+        }
+
+        .f-hosp-header i,
+        .f-hosp-header svg {
+            width: 16px;
+            height: 16px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .f-hosp-header b {
+            font-size: 13.5px;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .f-hosp-sub {
+            font-size: 12px;
+            color: #68d493;
+            font-weight: 600;
+            margin: 0 0 4px !important;
+        }
+
+        .footer-hospital-card p {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.45;
+            margin: 0 0 6px;
+        }
+
+        .f-hosp-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #e2e8f0;
+            transition: color 0.2s ease;
+        }
+
+        .f-hosp-phone i,
+        .f-hosp-phone svg {
+            width: 13px;
+            height: 13px;
+            color: var(--green);
+        }
+
+        .f-hosp-phone:hover {
+            color: #68d493;
+        }
+
+        .footer-emergency-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, rgba(42, 130, 56, 0.22) 0%, rgba(3, 32, 90, 0.45) 100%);
+            border: 1px solid rgba(104, 212, 147, 0.35);
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+        }
+
+        .f-emg-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: var(--green);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .f-emg-icon i,
+        .f-emg-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-emergency-box small {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #68d493;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .f-emg-num {
+            display: block;
+            font-size: 16px;
+            font-weight: 900;
+            color: #ffffff;
             line-height: 1.2;
-            margin-top: 16px !important
+            transition: color 0.2s ease;
+        }
+
+        .f-emg-num:hover {
+            color: #68d493;
+        }
+
+        .f-emg-num-sub {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            color: #cbd5e1;
+            margin-top: 2px;
+            transition: color 0.2s ease;
+        }
+
+        .f-emg-num-sub:hover {
+            color: #68d493;
+        }
+
+        .footer-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            margin-bottom: 14px;
+        }
+
+        .f-cnt-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 13px;
+            color: #cbd5e1;
+            padding: 7px 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 7px;
+            transition: all 0.2s ease;
+            word-break: break-all;
+        }
+
+        .f-cnt-item i,
+        .f-cnt-item svg {
+            width: 15px;
+            height: 15px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .f-cnt-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border-color: rgba(104, 212, 147, 0.3);
+        }
+
+        .f-cnt-item.whatsapp:hover {
+            color: #25d366;
+            border-color: rgba(37, 211, 102, 0.4);
+        }
+
+        .f-cnt-item.whatsapp:hover i,
+        .f-cnt-item.whatsapp:hover svg {
+            color: #25d366;
+        }
+
+        .footer-motto {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 800;
+            color: #68d493;
+            padding-top: 4px;
+        }
+
+        .footer-motto i,
+        .footer-motto svg {
+            width: 16px;
+            height: 16px;
         }
 
         .bottom {
-            background: var(--pale);
-            padding: 16px 0;
+            background: #010c22;
+            padding: 18px 0;
             font-size: 13px;
-            color: var(--muted);
-            border-top: 1px solid var(--line)
+            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .bottom .wrap {
             display: flex;
             justify-content: space-between;
-            align-items: center
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .bottom-badges {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            color: #cbd5e1;
+            font-size: 12.5px;
+        }
+
+        .bottom-badges span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bottom-badges span i,
+        .bottom-badges span svg {
+            width: 13px;
+            height: 13px;
+            color: var(--green);
         }
 
         .hamb {
@@ -1019,30 +1405,189 @@ $empanelledTPA = [
                 gap: 24px
             }
 
-            .nav.open .menu {
-                display: flex !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-                position: fixed !important;
-                z-index: 1001;
-                top: 80px !important;
-                right: 0 !important;
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
                 bottom: 0;
-                left: auto !important;
-                width: min(340px, 88vw);
-                max-height: none !important;
-                overflow-y: auto;
-                flex-direction: column !important;
-                align-items: stretch !important;
-                gap: 0 !important;
-                padding: 14px 20px 28px !important;
-                background: #fff;
-                box-shadow: -12px 18px 32px rgba(7, 53, 107, 0.22)
+                background: rgba(3, 32, 90, 0.45);
+                backdrop-filter: blur(2px);
+                z-index: 1004;
             }
 
-            .nav.open .menu a {
-                padding: 14px 0;
-                border-bottom: 1px solid var(--line)
+            .nav.open .nav-overlay {
+                display: block;
+            }
+
+            .menu {
+                position: fixed !important;
+                top: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                left: auto !important;
+                width: min(340px, 86vw) !important;
+                background: #fff !important;
+                z-index: 1005 !important;
+                box-shadow: -10px 0 35px rgba(3, 32, 90, 0.22) !important;
+                transform: translateX(105%) !important;
+                transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: stretch !important;
+                padding: 0 !important;
+                overflow-y: auto !important;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav.open .menu {
+                transform: translateX(0) !important;
+            }
+
+            .mobile-menu-head {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 16px 20px;
+                border-bottom: 1px solid var(--line);
+                background: #f8fafc;
+                position: sticky;
+                top: 0;
+                z-index: 2;
+            }
+
+            .mobile-menu-head img {
+                width: 140px;
+                height: 38px;
+                object-fit: contain;
+                object-position: left;
+            }
+
+            .mobile-close-btn {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid var(--line);
+                color: var(--blue);
+                font-size: 16px;
+                display: grid;
+                place-items: center;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+
+            .mobile-close-btn:hover {
+                background: #eaf5ec;
+                color: var(--green);
+                border-color: var(--green);
+            }
+
+            .mobile-nav-links {
+                display: flex;
+                flex-direction: column;
+                padding: 12px 18px;
+                gap: 2px;
+            }
+
+            .menu a {
+                padding: 12px 8px;
+                font-size: 15.5px;
+                font-weight: 700;
+                color: var(--blue);
+                border-bottom: 1px solid #f0f4f8;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .menu a:hover {
+                color: var(--green);
+            }
+
+            .menu .on:after {
+                display: none;
+            }
+
+            .nav-group {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+                border-bottom: 1px solid #f0f4f8;
+            }
+
+            .nav-group > a {
+                padding: 12px 8px;
+                font-size: 15.5px;
+                font-weight: 700;
+                color: var(--blue);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 0;
+            }
+
+            .nav-group .nav-chevron {
+                transition: transform 0.25s ease;
+                color: #71879f;
+            }
+
+            .nav-group.open > a .nav-chevron {
+                transform: rotate(180deg);
+                color: var(--green);
+            }
+
+            .nav-drop {
+                display: none;
+                position: static !important;
+                min-width: 0 !important;
+                box-shadow: none !important;
+                border: 1px solid #e2edf6 !important;
+                border-radius: 8px !important;
+                background: #f7fafc !important;
+                margin: 0 0 10px !important;
+                padding: 4px 0 !important;
+            }
+
+            .nav-group.open .nav-drop {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            .nav-drop a {
+                padding: 10px 14px !important;
+                font-size: 13.5px !important;
+                font-weight: 600 !important;
+                color: #355070 !important;
+                border-bottom: 1px solid #edf3f8 !important;
+            }
+
+            .nav-drop a:last-child {
+                border-bottom: 0 !important;
+            }
+
+            .nav-drop a:hover {
+                background: #eaf5ec !important;
+                color: var(--green) !important;
+            }
+
+            .mobile-menu-footer {
+                margin-top: auto;
+                padding: 18px 20px;
+                border-top: 1px solid var(--line);
+                background: #f8fafc;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .mobile-menu-footer .btn {
+                width: 100%;
+                justify-content: center;
+                padding: 12px 18px;
+                font-size: 14px;
             }
         }
 
@@ -1052,7 +1597,26 @@ $empanelledTPA = [
             }
 
             .hero h1 {
-                font-size: 32px
+                font-size: 28px;
+                line-height: 1.2;
+            }
+
+            .title,
+            .form-box h3 {
+                font-size: 22px;
+                line-height: 1.28;
+            }
+
+            .kicker {
+                font-size: 11.5px;
+                letter-spacing: 0.7px;
+                margin-bottom: 4px;
+            }
+
+            .sub {
+                font-size: 14.5px;
+                line-height: 1.55;
+                margin: 0 0 18px;
             }
 
             .contact-cards-grid {
@@ -1069,6 +1633,11 @@ $empanelledTPA = [
 
             .form-group.full {
                 grid-column: span 1
+            }
+
+            .branch-header {
+                flex-wrap: wrap;
+                gap: 8px;
             }
 
             .branch-actions {
@@ -1090,6 +1659,23 @@ $empanelledTPA = [
                 text-align: center
             }
         }
+
+        @media(max-width:420px) {
+            .hero h1 {
+                font-size: 25px;
+            }
+
+            .title,
+            .form-box h3 {
+                font-size: 20px;
+                line-height: 1.3;
+            }
+
+            .kicker {
+                font-size: 11px;
+                letter-spacing: 0.5px;
+            }
+        }
     </style>
 </head>
 
@@ -1098,7 +1684,8 @@ $empanelledTPA = [
     <div class="top">
         <div class="wrap">
             <div class="links">
-                <a href="https://wa.me/919996544005" target="_blank"><i data-lucide="message-circle"></i> WhatsApp Us (24/7)</a>
+                <a href="https://wa.me/919996544005" target="_blank"><i data-lucide="message-circle"></i> WhatsApp Us
+                    (24/7)</a>
                 <a href="tel:01662249473"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
             </div>
             <div class="links">
@@ -1113,49 +1700,63 @@ $empanelledTPA = [
     <header class="nav">
         <div class="wrap">
             <a href="../index.php" aria-label="Sukhda Healthcare home">
-                <img class="logo" src="../assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
+                <img class="logo" src="../assets/images/sukhda-multispeciality-logo.png"
+                    alt="Sukhda Multispeciality Hospital Hisar">
             </a>
             <nav class="menu">
-                <span class="nav-group">
-                    <a href="../about/index.php">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="../about/index.php">About Sukhda</a>
-                        <a href="../about/index.php#leadership">Medical Leadership</a>
-                        <a href="../about/index.php#vision">Vision &amp; Mission</a>
-                        <a href="../about/index.php#hospitals">Our Hospitals</a>
-                        <a href="../about/index.php#infrastructure">Infrastructure &amp; Facilities</a>
+                <div class="mobile-menu-head">
+                    <img src="../assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Hospital">
+                    <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
+                </div>
+                <div class="mobile-nav-links">
+                    <span class="nav-group">
+                        <a href="../about/index.php">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="../about/index.php">About Sukhda</a>
+                            <a href="../about/index.php#leadership">Medical Leadership</a>
+                            <a href="../about/index.php#vision">Vision &amp; Mission</a>
+                            <a href="../about/index.php#hospitals">Our Hospitals</a>
+                            <a href="../about/index.php#infrastructure">Infrastructure &amp; Facilities</a>
+                        </span>
                     </span>
-                </span>
-                <span class="nav-group">
-                    <a href="../index.php#hospitals">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="../index.php#hospitals">Sukhda Multispeciality Hospital</a>
-                        <a href="../index.php#hospitals">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
+                    <span class="nav-group">
+                        <a href="../index.php#hospitals">Our Hospitals <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="../index.php#hospitals">Sukhda Multispeciality Hospital</a>
+                            <a href="../index.php#hospitals">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
+                        </span>
                     </span>
-                </span>
-                <span class="nav-group">
-                    <a href="../index.php#specialities">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop services-drop">
-                        <a href="../servicemockup/index.php">Medical Oncology</a>
-                        <a href="../index.php#specialities">Interventional Cardiology</a>
-                        <a href="../index.php#specialities">Critical Care &amp; Medicine</a>
-                        <a href="../index.php#specialities">Neuro Surgery &amp; Spine</a>
-                        <a href="../index.php#specialities">Orthopaedics &amp; Joint Replacement</a>
-                        <a href="../index.php#specialities">Nephrology &amp; Dialysis</a>
-                        <a href="../index.php#specialities">Gastroenterology</a>
-                        <a href="../gynaecology/index.php">Gynaecology &amp; Obstetrics</a>
-                        <a href="../index.php#specialities">Emergency &amp; Trauma Care</a>
-                        <a href="../index.php#specialities">View All 21 Specialities →</a>
+                    <span class="nav-group">
+                        <a href="../index.php#specialities">Our Services <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop services-drop">
+                            <a href="../servicemockup/index.php">Medical Oncology</a>
+                            <a href="../gynaecology/index.php">Gynaecology &amp; Obstetrics</a>
+                            <a href="../index.php#specialities">Interventional Cardiology</a>
+                            <a href="../index.php#specialities">Critical Care &amp; Medicine</a>
+                            <a href="../index.php#specialities">Neuro Surgery &amp; Spine</a>
+                            <a href="../index.php#specialities">Orthopaedics &amp; Joint Replacement</a>
+                            <a href="../index.php#specialities">Nephrology &amp; Dialysis</a>
+                            <a href="../index.php#specialities">Gastroenterology</a>
+                            <a href="../index.php#specialities">Emergency &amp; Trauma Care</a>
+                            <a href="../index.php#specialities">View All 21 Specialities →</a>
+                        </span>
                     </span>
-                </span>
-                <a href="../index.php#doctors">Doctors</a>
-                <a href="../index.php#infrastructure">Technology</a>
-                <a href="../index.php#cases">Case Stories</a>
-                <a href="../index.php#patients">Testimonials</a>
+                    <a href="../index.php#doctors">Doctors</a>
+                    <a href="../index.php#infrastructure">Technology</a>
+                    <a href="../index.php#cases">Case Stories</a>
+                    <a href="../index.php#patients">Testimonials</a>
+                </div>
+                <div class="mobile-menu-footer">
+                    <a class="btn primary" href="#appointment-form"><i data-lucide="calendar-days"></i>Book Appointment</a>
+                    <a class="btn" href="tel:01662249473" style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473</a>
+                </div>
             </nav>
             <a class="btn primary" href="#appointment-form"><i data-lucide="calendar-days"></i>Book Appointment</a>
             <button class="hamb" aria-label="Open menu">☰</button>
         </div>
+        <div class="nav-overlay"></div>
     </header>
 
     <!-- HERO -->
@@ -1171,17 +1772,22 @@ $empanelledTPA = [
                         <span>HISAR, HARYANA</span>
                     </div>
                     <h1>Get in Touch with<br><span>Sukhda Healthcare Team</span></h1>
-                    <p>Whether you require urgent emergency care, specialist OPD doctor consultations, or guidance regarding cashless TPA insurance — our dedicated medical and patient-care coordination team is available round-the-clock.</p>
+                    <p>Whether you require urgent emergency care, specialist OPD doctor consultations, or guidance
+                        regarding cashless TPA insurance — our dedicated medical and patient-care coordination team is
+                        available round-the-clock.</p>
 
                     <div class="hero-actions">
-                        <a class="btn primary" href="#appointment-form"><i data-lucide="calendar-days"></i>Book OPD Appointment</a>
-                        <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i>24/7 Helpline: 01662-249473</a>
+                        <a class="btn primary" href="#appointment-form"><i data-lucide="calendar-days"></i>Book OPD
+                            Appointment</a>
+                        <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i>24/7 Helpline:
+                            01662-249473</a>
                     </div>
                 </div>
 
                 <div class="hero-media">
                     <div class="hero-img-card">
-                        <img src="../assets/images/doctor-consult.jpg" alt="Sukhda Hospital Doctor Consultation and Patient Helpdesk">
+                        <img src="../assets/images/doctor-consult.jpg"
+                            alt="Sukhda Hospital Doctor Consultation and Patient Helpdesk">
                         <div class="hero-badge-float">
                             <i data-lucide="clock"></i>
                             <div>
@@ -1236,10 +1842,12 @@ $empanelledTPA = [
             <div class="form-box">
                 <div class="kicker">ONLINE APPOINTMENT &amp; INQUIRY</div>
                 <h3>Book a Doctor Consultation</h3>
-                <p>Fill out the details below and our hospital patient coordinator will confirm your appointment slot via call/SMS.</p>
+                <p>Fill out the details below and our hospital patient coordinator will confirm your appointment slot
+                    via call/SMS.</p>
 
                 <div id="formSuccess" class="form-success-alert">
-                    ✓ Thank you! Your appointment request has been submitted. Our team will contact you shortly to confirm your time slot.
+                    ✓ Thank you! Your appointment request has been submitted. Our team will contact you shortly to
+                    confirm your time slot.
                 </div>
 
                 <form id="contactForm" onsubmit="handleFormSubmit(event)">
@@ -1262,8 +1870,10 @@ $empanelledTPA = [
                         <div class="form-group">
                             <label for="pHospital">Select Hospital Unit *</label>
                             <select id="pHospital" required>
-                                <option value="Sukhda Multispeciality Hospital (Delhi Road)">Sukhda Multispeciality Hospital (Delhi Road)</option>
-                                <option value="Sukhda MedPark (Cancer & Super Speciality)">Sukhda MedPark (Cancer &amp; Super Speciality)</option>
+                                <option value="Sukhda Multispeciality Hospital (Delhi Road)">Sukhda Multispeciality
+                                    Hospital (Delhi Road)</option>
+                                <option value="Sukhda MedPark (Cancer & Super Speciality)">Sukhda MedPark (Cancer &amp;
+                                    Super Speciality)</option>
                             </select>
                         </div>
 
@@ -1284,7 +1894,8 @@ $empanelledTPA = [
 
                         <div class="form-group full">
                             <label for="pMessage">Brief Reason for Visit / Symptoms</label>
-                            <textarea id="pMessage" placeholder="Describe symptoms or specific doctor preference..."></textarea>
+                            <textarea id="pMessage"
+                                placeholder="Describe symptoms or specific doctor preference..."></textarea>
                         </div>
 
                         <div class="form-group full">
@@ -1339,7 +1950,8 @@ $empanelledTPA = [
                 <div class="info-card">
                     <h4><i data-lucide="map-pin"></i> How to Reach Us</h4>
                     <p style="font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 12px">
-                        Sukhda Healthcare is conveniently situated in the heart of Hisar along <b>Delhi Road (NH-9)</b>, easily accessible from all transport hubs:
+                        Sukhda Healthcare is conveniently situated in the heart of Hisar along <b>Delhi Road (NH-9)</b>,
+                        easily accessible from all transport hubs:
                     </p>
                     <div class="timing-row">
                         <span>Hisar Railway Station</span>
@@ -1363,7 +1975,8 @@ $empanelledTPA = [
         <div class="wrap">
             <div class="kicker">HOSPITAL UNITS IN HISAR</div>
             <h2 class="title">Our Hospital Locations &amp; Direct Desks</h2>
-            <p class="sub">Two well-connected branches providing end-to-end multispeciality and super speciality medical solutions.</p>
+            <p class="sub">Two well-connected branches providing end-to-end multispeciality and super speciality medical
+                solutions.</p>
 
             <div class="branches-grid">
                 <!-- MULTISPECIALITY -->
@@ -1394,7 +2007,9 @@ $empanelledTPA = [
                             <i data-lucide="phone-call"></i>
                             <div>
                                 <b>Emergency Line (24/7):</b><br>
-                                <a href="tel:01662249473" style="color:var(--green);font-weight:800">01662-249473</a> &nbsp;/&nbsp; <a href="tel:+919996544005" style="color:var(--green);font-weight:800">+91-99965-44005</a>
+                                <a href="tel:01662249473" style="color:var(--green);font-weight:800">01662-249473</a>
+                                &nbsp;/&nbsp; <a href="tel:+919996544005"
+                                    style="color:var(--green);font-weight:800">+91-99965-44005</a>
                             </div>
                         </div>
                         <div class="branch-line">
@@ -1405,8 +2020,10 @@ $empanelledTPA = [
                             </div>
                         </div>
                         <div class="branch-actions">
-                            <a class="btn primary small" href="tel:01662249473"><i data-lucide="phone-call"></i>Call Hospital</a>
-                            <a class="btn small" href="https://maps.google.com/?q=Sukhda+Hospital+Delhi+Road+Hisar" target="_blank"><i data-lucide="navigation"></i>Get Directions</a>
+                            <a class="btn primary small" href="tel:01662249473"><i data-lucide="phone-call"></i>Call
+                                Hospital</a>
+                            <a class="btn small" href="https://maps.google.com/?q=Sukhda+Hospital+Delhi+Road+Hisar"
+                                target="_blank"><i data-lucide="navigation"></i>Get Directions</a>
                         </div>
                     </div>
                 </article>
@@ -1439,7 +2056,8 @@ $empanelledTPA = [
                             <i data-lucide="phone-call"></i>
                             <div>
                                 <b>Direct Helpline (24/7):</b><br>
-                                <a href="tel:+919996544005" style="color:var(--green);font-weight:800">+91-99965-44005</a>
+                                <a href="tel:+919996544005"
+                                    style="color:var(--green);font-weight:800">+91-99965-44005</a>
                             </div>
                         </div>
                         <div class="branch-line">
@@ -1450,8 +2068,10 @@ $empanelledTPA = [
                             </div>
                         </div>
                         <div class="branch-actions">
-                            <a class="btn primary small" href="tel:+919996544005"><i data-lucide="phone-call"></i>Call MedPark</a>
-                            <a class="btn small" href="../servicemockup/index.php"><i data-lucide="external-link"></i>Cancer Care Details</a>
+                            <a class="btn primary small" href="tel:+919996544005"><i data-lucide="phone-call"></i>Call
+                                MedPark</a>
+                            <a class="btn small" href="../servicemockup/index.php"><i
+                                    data-lucide="external-link"></i>Cancer Care Details</a>
                         </div>
                     </div>
                 </article>
@@ -1459,18 +2079,7 @@ $empanelledTPA = [
         </div>
     </section>
 
-    <!-- SECTION 3: MAP EMBED -->
-    <section class="map-section">
-        <div class="wrap">
-            <div class="kicker">LOCATION MAP</div>
-            <h2 class="title">Find Us on Google Maps</h2>
-            <p class="sub">Easily accessible on Delhi Road, Hisar with dedicated parking and rapid ambulance arrival bay.</p>
 
-            <div class="map-frame-box">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3483.5677894228913!2d75.728956!3d29.147895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391233261a8b98e7%3A0xb30e70402b9e67b2!2sSukhda%20Hospital!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sukhda Hospital Hisar Location Map"></iframe>
-            </div>
-        </div>
-    </section>
 
     <!-- CASHLESS / EMPANELLED STRIP -->
     <section class="empanelled-section" id="empanelled">
@@ -1492,95 +2101,193 @@ $empanelledTPA = [
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="wrap">
-            <div class="footer-grid">
-                <div>
-                    <img class="footer-logo" src="../assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Multispeciality Hospital">
-                    <p class="footer-tagline">Providing quality, compassionate, and affordable multi &amp; super speciality medical care across Hisar and surrounding regions since 2002.</p>
-                    <div class="footer-nabh-badge">
-                        <img src="../assets/images/nabh.jpg" alt="NABH Accredited" style="width:26px;height:26px;object-fit:contain">
-                        <span>NABH Accredited Quality Healthcare</span>
+        <div class="wrap footer-grid">
+            <div>
+                <div class="footer-brand-wrap">
+                    <img class="footer-logo" src="../assets/images/sukhda-multispeciality-logo.png"
+                        alt="Sukhda Multispeciality Hospital Hisar">
+                </div>
+                <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
+                <p class="footer-desc">Providing quality, compassionate, and advanced medical care across Hisar and surrounding regions since 2002 with dedicated emergency and OPD facilities.</p>
+                <div class="footer-nabh-badge">
+                    <img src="../assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
+                    <div>
+                        <b>NABH Accredited</b>
+                        <small>Highest Healthcare Quality Standards</small>
                     </div>
                 </div>
+            </div>
 
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <a href="../index.php">Home</a>
-                    <a href="../about/index.php">About Sukhda</a>
-                    <a href="../about/index.php#leadership">Medical Leadership</a>
-                    <a href="../about/index.php#vision">Vision &amp; Mission</a>
-                    <a href="../index.php#hospitals">Our Hospitals</a>
-                    <a href="../index.php#specialities">Centres of Excellence</a>
-                    <a href="../index.php#doctors">Our Doctors</a>
-                </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-nav">
+                    <li><a href="../index.php"><span>›</span> Home</a></li>
+                    <li><a href="../about/index.php"><span>›</span> About Sukhda</a></li>
+                    <li><a href="../about/index.php#leadership"><span>›</span> Medical Leadership</a></li>
+                    <li><a href="../about/index.php#vision"><span>›</span> Vision &amp; Mission</a></li>
+                    <li><a href="../index.php#hospitals"><span>›</span> Our Hospitals</a></li>
+                    <li><a href="../index.php#specialities"><span>›</span> Centres of Excellence</a></li>
+                    <li><a href="../index.php#doctors"><span>›</span> Our Doctors</a></li>
+                    <li><a href="#appointment-form"><span>›</span> Book Appointment</a></li>
+                </ul>
+            </div>
 
-                <div class="footer-col">
-                    <h4>Our Hospitals</h4>
-                    <b>Sukhda Multispeciality Hospital</b>
+            <div class="footer-col">
+                <h4>Our Hospitals</h4>
+                <div class="footer-hospital-card">
+                    <div class="f-hosp-header">
+                        <i data-lucide="building-2"></i>
+                        <b>Sukhda Multispeciality Hospital</b>
+                    </div>
                     <p>Delhi Road, Model Town, Hisar, Haryana 125005</p>
-                    <p>Phone: 01662-249473 / 249474</p>
-                    <br>
-                    <b>Sukhda MedPark (Cancer &amp; Super Speciality)</b>
-                    <p>Hisar, Haryana</p>
-                    <p>Helpline: +91-99965-44005</p>
+                    <a href="tel:01662249473" class="f-hosp-phone"><i data-lucide="phone"></i> 01662-249473 / 248473</a>
                 </div>
+                <div class="footer-hospital-card">
+                    <div class="f-hosp-header">
+                        <i data-lucide="activity"></i>
+                        <b>Sukhda MedPark</b>
+                    </div>
+                    <p class="f-hosp-sub">Cancer &amp; Super Speciality Hospital</p>
+                    <p>Delhi Road, Hisar, Haryana – 125005</p>
+                    <a href="tel:+919996544005" class="f-hosp-phone"><i data-lucide="phone"></i> +91-99965-44005</a>
+                </div>
+            </div>
 
-                <div class="footer-col">
-                    <h4>24×7 Emergency &amp; OPD</h4>
-                    <div class="footer-contact-line">
-                        <i data-lucide="phone-call" style="width:18px;color:var(--green);flex-shrink:0;margin-top:2px"></i>
-                        <span><b>24/7 Emergency:</b> 01662-249473 / +91-99965-44005</span>
+            <div class="footer-col">
+                <h4>24×7 Emergency &amp; OPD</h4>
+                <div class="footer-emergency-box">
+                    <div class="f-emg-icon"><i data-lucide="phone-call"></i></div>
+                    <div>
+                        <small>24×7 Emergency Helpline</small>
+                        <a href="tel:01662249473" class="f-emg-num">01662-249473</a>
+                        <a href="tel:+919996544005" class="f-emg-num-sub">+91 99965-44005</a>
                     </div>
-                    <div class="footer-contact-line">
-                        <i data-lucide="mail" style="width:18px;color:var(--green);flex-shrink:0;margin-top:2px"></i>
+                </div>
+                <div class="footer-contact-list">
+                    <a href="mailto:info@sukhdahospitalhisar.com" class="f-cnt-item">
+                        <i data-lucide="mail"></i>
                         <span>info@sukhdahospitalhisar.com</span>
-                    </div>
-                    <div class="footer-contact-line">
-                        <i data-lucide="map-pin" style="width:18px;color:var(--green);flex-shrink:0;margin-top:2px"></i>
-                        <span>Delhi Road, Hisar, Haryana - 125005</span>
-                    </div>
-                    <p class="sign">Care &amp; Cure for Whole Family Under One Roof</p>
+                    </a>
+                    <a href="https://wa.me/919996544005" target="_blank" class="f-cnt-item whatsapp">
+                        <i data-lucide="message-circle"></i>
+                        <span>WhatsApp: +91 99965-44005</span>
+                    </a>
+                </div>
+                <div class="footer-motto">
+                    <i data-lucide="heart-handshake"></i>
+                    <span>Care &amp; Cure for Whole Family</span>
                 </div>
             </div>
         </div>
         <div class="bottom">
             <div class="wrap">
                 <span>© <?= $year ?> Sukhda Healthcare. All rights reserved.</span>
-                <span>Delhi Road, Hisar (Haryana) • NABH Accredited • Emergency Helpline: 01662-249473</span>
+                <div class="bottom-badges">
+                    <span><i data-lucide="map-pin"></i> Delhi Road, Hisar</span>
+                    <span><i data-lucide="shield-check"></i> NABH Accredited</span>
+                    <span><i data-lucide="phone"></i> 24×7 ER: 01662-249473</span>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- STICKY BOTTOM FLOATING PILL CTA -->
+    <div class="sticky-bottom-bar" aria-label="Quick Actions">
+        <a href="#appointment-form" class="sticky-bar-item">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="4" rx="3"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line>
+                <line x1="8" x2="8" y1="2" y2="6"></line>
+                <line x1="3" x2="21" y1="10" y2="10"></line>
+                <path d="m9 16 2 2 4-4"></path>
+            </svg>
+            <span>Book Now</span>
+        </a>
+        <div class="sticky-bar-divider"></div>
+        <a href="tel:01662249473" class="sticky-bar-item">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>Call Now</span>
+        </a>
+        <div class="sticky-bar-divider"></div>
+        <a href="https://wa.me/919996544005" target="_blank" rel="noopener" class="sticky-bar-item whatsapp">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6-.1.49-.3 1.47-1.2 1.68-1.72.2-.52.2-1 .14-1.12-.05-.13-.21-.21-.46-.33z"/>
+            </svg>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
     <!-- SCRIPTS -->
     <script>
-        if (window.lucide) lucide.createIcons({ attrs: { 'stroke-width': 1.8 } });
+        const renderIcons = () => {
+            if (window.lucide) lucide.createIcons({ attrs: { 'stroke-width': 1.8 } });
+        };
+        renderIcons();
+        document.addEventListener('DOMContentLoaded', renderIcons);
+        window.addEventListener('load', renderIcons);
 
-        // Mobile Menu Toggle
-        (() => {
-            const nav = document.querySelector('.nav'), button = document.querySelector('.hamb'), menu = document.querySelector('.menu');
+        // Mobile Menu Drawer & Accordion Toggle
+        (function () {
+            const nav = document.querySelector('.nav');
+            const button = document.querySelector('.hamb');
+            const closeBtn = document.querySelector('.mobile-close-btn');
+            const overlay = document.querySelector('.nav-overlay');
+            const menu = document.querySelector('.menu');
             if (!nav || !button || !menu) return;
+
             menu.id = 'mobile-menu';
             button.type = 'button';
             button.setAttribute('aria-controls', menu.id);
             button.setAttribute('aria-expanded', 'false');
             button.setAttribute('aria-label', 'Open menu');
+
             const close = () => {
                 nav.classList.remove('open');
+                document.body.style.overflow = '';
                 button.setAttribute('aria-expanded', 'false');
                 button.setAttribute('aria-label', 'Open menu');
                 button.blur();
             };
+            const openMenu = () => {
+                nav.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                button.setAttribute('aria-expanded', 'true');
+                button.setAttribute('aria-label', 'Close menu');
+            };
+
             button.onclick = e => {
                 e.preventDefault();
                 e.stopPropagation();
-                const open = !nav.classList.contains('open');
-                nav.classList.toggle('open', open);
-                button.setAttribute('aria-expanded', String(open));
-                button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-                if (!open) button.blur();
+                nav.classList.contains('open') ? close() : openMenu();
             };
-            menu.onclick = e => { if (e.target.closest('a')) close(); };
-            document.addEventListener('click', e => { if (nav.classList.contains('open') && !nav.contains(e.target)) close(); });
+            if (closeBtn) closeBtn.onclick = e => { e.preventDefault(); close(); };
+            if (overlay) overlay.onclick = e => { e.preventDefault(); close(); };
+
+            const navGroups = menu.querySelectorAll('.nav-group');
+            navGroups.forEach(group => {
+                const parentLink = group.querySelector(':scope > a');
+                if (!parentLink) return;
+                parentLink.addEventListener('click', e => {
+                    if (window.innerWidth <= 900) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const isOpen = group.classList.contains('open');
+                        navGroups.forEach(g => { if (g !== group) g.classList.remove('open'); });
+                        group.classList.toggle('open', !isOpen);
+                    }
+                });
+            });
+
+            menu.addEventListener('click', e => {
+                const a = e.target.closest('a');
+                if (!a) return;
+                if (a.closest('.nav-drop') || !a.closest('.nav-group')) {
+                    close();
+                }
+            });
+
             document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
         })();
 

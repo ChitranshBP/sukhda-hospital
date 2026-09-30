@@ -28,32 +28,32 @@
           },
           colors: {
             brand: {
-              50: '#EAF2FB',
-              100: '#CFE0F4',
-              200: '#9FC1E9',
-              300: '#6BA1DD',
-              400: '#3F84CD',
-              500: '#1F66B5',   // primary blue
-              600: '#0F4F94',   // deep blue — main brand
-              700: '#0B3D74',
-              800: '#082D58',
-              900: '#051D3C',
+              50: '#EBF2FB',
+              100: '#D0E0F5',
+              200: '#9DBEEA',
+              300: '#6496DB',
+              400: '#326CC3',
+              500: '#03205A',   // primary blue
+              600: '#03205A',   // primary blue — main brand
+              700: '#021844',
+              800: '#021233',
+              900: '#010B20',
             },
             coral: {
-              50: '#FBF5E8',
-              100: '#F4E5C5',
-              300: '#DCC084',
-              500: '#C9A86A',   // logo champagne gold
-              600: '#A88349',   // darker on hover
-              700: '#8D6E3A',   // deepest, for text on light bg
+              50: '#F0F9F2',
+              100: '#DDF2E2',
+              300: '#7DC88B',
+              500: '#2A8238',   // secondary green
+              600: '#216A2D',   // darker on hover
+              700: '#195123',   // deepest, for text on light bg
             },
             sand: '#FBF6EE',
             ink: '#0B1424',
             mist: '#F3F7FC',
           },
           boxShadow: {
-            'soft': '0 6px 24px -8px rgba(15, 79, 148, 0.20)',
-            'glow': '0 20px 50px -20px rgba(15, 79, 148, 0.50)',
+            'soft': '0 6px 24px -8px rgba(3, 32, 90, 0.20)',
+            'glow': '0 20px 50px -20px rgba(3, 32, 90, 0.50)',
           },
           keyframes: {
             fadeUp: { '0%': { opacity: 0, transform: 'translateY(18px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
