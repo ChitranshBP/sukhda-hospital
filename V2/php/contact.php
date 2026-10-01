@@ -133,7 +133,7 @@ $empanelledTPA = [
         }
 
         .links a:hover {
-            color: #72e0a2
+            color: #2A8238
         }
 
         .links span+span,
@@ -707,7 +707,7 @@ $empanelledTPA = [
             right: 16px;
             background: rgba(2, 22, 61, 0.94);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(114, 224, 162, 0.4);
+            border: 1px solid rgba(42, 130, 56, 0.4);
             padding: 14px 18px;
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -720,7 +720,7 @@ $empanelledTPA = [
         .hero-badge-float i, .hero-badge-float svg {
             width: 28px;
             height: 28px;
-            color: #72e0a2;
+            color: #2A8238;
             flex-shrink: 0;
         }
 
@@ -748,7 +748,7 @@ $empanelledTPA = [
         }
 
         .crumb a {
-            color: #72e0a2;
+            color: #2A8238;
         }
 
         .crumb a:hover {
@@ -756,7 +756,7 @@ $empanelledTPA = [
         }
 
         .eyebrow {
-            color: #72e0a2;
+            color: #2A8238;
             font-weight: 900;
             font-size: 14px;
             letter-spacing: 1px;
@@ -768,8 +768,8 @@ $empanelledTPA = [
         }
 
         .eyebrow-badge {
-            background: rgba(114, 224, 162, 0.15);
-            border: 1px solid rgba(114, 224, 162, 0.4);
+            background: rgba(42, 130, 56, 0.15);
+            border: 1px solid rgba(42, 130, 56, 0.4);
             padding: 5px 14px;
             border-radius: 20px;
         }
@@ -783,7 +783,7 @@ $empanelledTPA = [
         }
 
         .hero h1 span {
-            color: #72e0a2;
+            color: #2A8238;
         }
 
         .hero p {

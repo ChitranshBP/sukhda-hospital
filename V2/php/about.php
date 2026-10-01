@@ -109,7 +109,7 @@ $empanelledTPA = [
         }
 
         .links a:hover {
-            color: #72e0a2
+            color: #2A8238
         }
 
         .links span+span,
@@ -667,7 +667,7 @@ $empanelledTPA = [
         }
 
         .crumb a {
-            color: #72e0a2;
+            color: #2A8238;
         }
 
         .crumb a:hover {
@@ -675,7 +675,7 @@ $empanelledTPA = [
         }
 
         .eyebrow {
-            color: #72e0a2;
+            color: #2A8238;
             font-weight: 900;
             font-size: 12.5px;
             letter-spacing: 0.9px;
@@ -687,8 +687,8 @@ $empanelledTPA = [
         }
 
         .eyebrow-badge {
-            background: rgba(114, 224, 162, 0.16);
-            border: 1px solid rgba(114, 224, 162, 0.45);
+            background: rgba(42, 130, 56, 0.16);
+            border: 1px solid rgba(42, 130, 56, 0.45);
             padding: 4px 12px;
             border-radius: 20px;
         }
@@ -701,7 +701,7 @@ $empanelledTPA = [
         }
 
         .hero h1 span {
-            color: #72e0a2;
+            color: #2A8238;
         }
 
         .hero p {
@@ -741,7 +741,7 @@ $empanelledTPA = [
             gap: 6px;
             font-size: 11px;
             font-weight: 800;
-            color: #72e0a2;
+            color: #2A8238;
             letter-spacing: 0.8px;
             text-transform: uppercase;
             margin-bottom: 6px;
@@ -779,7 +779,7 @@ $empanelledTPA = [
 
         .hh-item:hover {
             transform: translateY(-2px);
-            border-color: rgba(114, 224, 162, 0.5);
+            border-color: rgba(42, 130, 56, 0.5);
             background: rgba(255, 255, 255, 0.1);
         }
 
@@ -787,12 +787,12 @@ $empanelledTPA = [
             width: 40px;
             height: 40px;
             border-radius: 10px;
-            background: rgba(114, 224, 162, 0.16);
-            border: 1px solid rgba(114, 224, 162, 0.35);
+            background: rgba(42, 130, 56, 0.16);
+            border: 1px solid rgba(42, 130, 56, 0.35);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #72e0a2;
+            color: #2A8238;
             flex-shrink: 0;
         }
 
@@ -827,9 +827,9 @@ $empanelledTPA = [
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: rgba(114, 224, 162, 0.12);
-            border: 1px solid rgba(114, 224, 162, 0.3);
-            color: #72e0a2;
+            background: rgba(42, 130, 56, 0.12);
+            border: 1px solid rgba(42, 130, 56, 0.3);
+            color: #2A8238;
             padding: 5px 11px;
             border-radius: 20px;
             font-size: 11.5px;

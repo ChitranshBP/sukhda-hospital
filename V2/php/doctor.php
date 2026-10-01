@@ -1384,7 +1384,7 @@ $empanelledTPA = [
         }
 
         .links a:hover {
-            color: #72e0a2;
+            color: #2A8238;
         }
 
         .links a+a,

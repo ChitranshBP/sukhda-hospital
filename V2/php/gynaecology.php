@@ -201,7 +201,7 @@ $empanelledTPA = [
         }
 
         .links a:hover {
-            color: #72e0a2
+            color: #2A8238
         }
 
         .links span+span,
@@ -773,7 +773,7 @@ $empanelledTPA = [
             right: 16px;
             background: rgba(2, 22, 61, 0.94);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(114, 224, 162, 0.4);
+            border: 1px solid rgba(42, 130, 56, 0.4);
             padding: 12px 16px;
             border-radius: 10px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -787,7 +787,7 @@ $empanelledTPA = [
         .hero-badge-float i {
             width: 26px;
             height: 26px;
-            color: #72e0a2;
+            color: #2A8238;
             flex-shrink: 0;
         }
 
@@ -814,7 +814,7 @@ $empanelledTPA = [
         }
 
         .crumb a {
-            color: #72e0a2;
+            color: #2A8238;
         }
 
         .crumb a:hover {
@@ -822,7 +822,7 @@ $empanelledTPA = [
         }
 
         .eyebrow {
-            color: #72e0a2;
+            color: #2A8238;
             font-weight: 900;
             font-size: 13px;
             letter-spacing: 0.9px;
@@ -834,8 +834,8 @@ $empanelledTPA = [
         }
 
         .eyebrow-badge {
-            background: rgba(114, 224, 162, 0.15);
-            border: 1px solid rgba(114, 224, 162, 0.4);
+            background: rgba(42, 130, 56, 0.15);
+            border: 1px solid rgba(42, 130, 56, 0.4);
             padding: 4px 12px;
             border-radius: 20px;
         }
@@ -848,7 +848,7 @@ $empanelledTPA = [
         }
 
         .hero h1 span {
-            color: #72e0a2;
+            color: #2A8238;
         }
 
         .hero p {
@@ -884,7 +884,7 @@ $empanelledTPA = [
         .hero-stat-card b {
             font-size: 22px;
             display: block;
-            color: #72e0a2;
+            color: #2A8238;
             line-height: 1.1;
         }
 
@@ -1081,7 +1081,7 @@ $empanelledTPA = [
 
         .cond-item svg,
         .cond-item i {
-            color: #72e0a2;
+            color: #2A8238;
             width: 16px;
             height: 16px;
             flex-shrink: 0
@@ -2430,7 +2430,7 @@ $empanelledTPA = [
         <div class="wrap">
             <div class="conditions-panel">
                 <div>
-                    <div class="eyebrow" style="color:#72e0a2">CONDITIONS WE TREAT</div>
+                    <div class="eyebrow" style="color:#2A8238">CONDITIONS WE TREAT</div>
                     <h2>Expert Treatment Across All Gynaecological &amp; Obstetric Conditions</h2>
                     <p>Our specialists utilise modern diagnostic ultrasound, colour Doppler, CT imaging, and minimally invasive techniques to achieve optimal clinical outcomes.</p>
                     <a class="btn white small" href="contact.php"><i data-lucide="calendar-days"></i>Book Appointment</a>
