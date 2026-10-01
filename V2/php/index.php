@@ -876,15 +876,24 @@ function embedded_image(string $relativePath): string
             background: var(--pale)
         }
 
+        .title,
+        .heading h2,
+        .services-heading h2 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.25;
+            color: var(--blue);
+            margin: 0
+        }
+
         .title {
-            font-size: 38px;
-            margin: 0 0 12px
+            margin: 0 0 10px
         }
 
         .sub {
             color: var(--muted);
-            margin: 0 0 28px;
-            font-size: 19px;
+            margin: 0 0 26px;
+            font-size: 16.5px;
             line-height: 1.6
         }
 
@@ -951,11 +960,11 @@ function embedded_image(string $relativePath): string
         }
 
         .h-info h3 {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 800;
             margin: 0 0 12px;
             color: var(--blue);
-            line-height: 1.25
+            line-height: 1.28
         }
 
         .h-info p {
@@ -1001,11 +1010,6 @@ function embedded_image(string $relativePath): string
             justify-content: space-between;
             align-items: end;
             margin-bottom: 16px
-        }
-
-        .heading h2 {
-            margin: 0;
-            font-size: 26px
         }
 
         .more {
