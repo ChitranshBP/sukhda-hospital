@@ -3368,8 +3368,8 @@ $empanelledTPA = [
     <div class="top">
         <div class="wrap">
             <div class="links">
-                <a href="https://wa.me/919996544005" target="_blank"><i data-lucide="message-circle"></i> WhatsApp Us (24/7)</a>
-                <a href="tel:01662249473"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
+                <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><i data-lucide="message-circle" style="color:#25D366"></i> WhatsApp Us (24/7)</a>
+                <a href="tel:01662249473" class="top-emergency" style="color:#ff4d4f"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
             </div>
             <div class="links">
                 <a href="index.php#empanelled">Cashless / TPA</a>

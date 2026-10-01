@@ -83,6 +83,29 @@
         .links a:hover {
             color: #2A8238
         }
+        .links a.top-wa i,
+        .links a.top-wa svg,
+        .links a[href*="wa.me"] i,
+        .links a[href*="wa.me"] svg {
+            color: #25D366 !important;
+        }
+
+        .links a.top-wa:hover,
+        .links a[href*="wa.me"]:hover {
+            color: #25D366 !important;
+        }
+
+        .links a.top-emergency,
+        .links a[href^="tel:"],
+        .top-links a[href^="tel:"] {
+            color: #ff4d4f !important;
+        }
+
+        .links a.top-emergency:hover,
+        .links a[href^="tel:"]:hover,
+        .top-links a[href^="tel:"]:hover {
+            color: #ff7875 !important;
+        }
 
         .links span+span,
         .links a+a {
@@ -2095,8 +2118,8 @@
     <div class="top">
         <div class="wrap">
             <div class="links">
-                <a href="https://wa.me/919996544005" target="_blank"><i data-lucide="message-circle"></i> WhatsApp Us (24/7)</a>
-                <a href="tel:01662249473"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
+                <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><i data-lucide="message-circle" style="color:#25D366"></i> WhatsApp Us (24/7)</a>
+                <a href="tel:01662249473" class="top-emergency" style="color:#ff4d4f"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
             </div>
             <div class="links">
                 <a href="index.html#empanelled">Cashless / TPA</a>

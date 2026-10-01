@@ -295,8 +295,8 @@
           </a>
           <span class="w-px h-4 bg-white/20"></span>
           <a href="tel:<?= $HOSPITAL['emergency'] ?>"
-            class="inline-flex items-center gap-1.5 font-bold hover:text-coral-200 transition">
-            <span class="w-5 h-5 rounded-full bg-coral-500 grid place-items-center shadow-sm animate-pulse">
+            class="inline-flex items-center gap-1.5 font-bold text-red-400 hover:text-red-300 transition">
+            <span class="w-5 h-5 rounded-full bg-red-500 grid place-items-center shadow-sm animate-pulse">
               <i data-lucide="phone-call" class="w-3 h-3 text-white"></i>
             </span>
             <span><?= htmlspecialchars($HOSPITAL['emergency']) ?></span> <span
