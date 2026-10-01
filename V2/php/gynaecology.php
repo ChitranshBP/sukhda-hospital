@@ -150,7 +150,7 @@ $empanelledTPA = [
         body {
             margin: 0;
             color: var(--blue);
-            font: 16px/1.55 'Nunito Sans', sans-serif;
+            font: 16.5px/1.6 'Nunito Sans', sans-serif;
             background: #fff;
             overflow-x: hidden
         }
@@ -172,10 +172,10 @@ $empanelledTPA = [
 
         /* TOP BAR */
         .top {
-            height: 40px;
+            height: 42px;
             background: var(--blue);
             color: #fff;
-            font-size: 13px
+            font-size: 14px
         }
 
         .top .wrap,
@@ -230,7 +230,7 @@ $empanelledTPA = [
             display: flex;
             gap: 30px;
             align-items: center;
-            font-size: 15.5px;
+            font-size: 16px;
             font-weight: 700
         }
 
@@ -308,7 +308,7 @@ $empanelledTPA = [
             .nav-drop a {
                 display: block;
                 padding: 11px 20px !important;
-                font-size: 14.5px;
+                font-size: 15px;
                 font-weight: 600;
                 color: var(--blue);
                 border: 0 !important
@@ -676,9 +676,9 @@ $empanelledTPA = [
             align-items: center;
             justify-content: center;
             border: 1px solid #aebfd0;
-            padding: 13px 24px;
-            border-radius: 7px;
-            font-size: 15px;
+            padding: 13px 26px;
+            border-radius: 8px;
+            font-size: 16px;
             font-weight: 800;
             cursor: pointer;
             transition: all 0.2s ease
@@ -712,8 +712,9 @@ $empanelledTPA = [
         }
 
         .small {
-            padding: 10px 22px;
-            font-size: 13px
+            padding: 11px 22px;
+            font-size: 14px;
+            font-weight: 800;
         }
 
         /* HERO SECTION */
@@ -793,19 +794,19 @@ $empanelledTPA = [
 
         .hero-badge-float b {
             display: block;
-            font-size: 14px;
+            font-size: 15.5px;
             color: #fff;
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         .hero-badge-float small {
             display: block;
-            font-size: 12px;
+            font-size: 13.5px;
             color: #b9d3eb;
         }
 
         .crumb {
-            font-size: 13px;
+            font-size: 14.5px;
             color: #b9d3eb;
             margin-bottom: 14px;
             display: flex;
@@ -824,8 +825,8 @@ $empanelledTPA = [
         .eyebrow {
             color: #2A8238;
             font-weight: 900;
-            font-size: 13px;
-            letter-spacing: 0.9px;
+            font-size: 14px;
+            letter-spacing: 1px;
             margin-bottom: 10px;
             display: inline-flex;
             align-items: center;
@@ -841,8 +842,9 @@ $empanelledTPA = [
         }
 
         .hero h1 {
-            font-size: 40px;
-            line-height: 1.18;
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.2;
             margin: 8px 0 16px;
             letter-spacing: -0.5px;
         }
@@ -852,8 +854,8 @@ $empanelledTPA = [
         }
 
         .hero p {
-            font-size: 16.5px;
-            line-height: 1.65;
+            font-size: 18px;
+            line-height: 1.68;
             color: #dce7f0;
             max-width: 100%;
             margin: 0 0 24px;
@@ -882,14 +884,15 @@ $empanelledTPA = [
         }
 
         .hero-stat-card b {
-            font-size: 22px;
+            font-size: 26px;
+            font-weight: 900;
             display: block;
             color: #2A8238;
             line-height: 1.1;
         }
 
         .hero-stat-card small {
-            font-size: 13px;
+            font-size: 14.5px;
             color: #dce7f0;
         }
 
@@ -904,15 +907,17 @@ $empanelledTPA = [
 
         .kicker {
             color: var(--green);
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 900;
-            letter-spacing: 1px;
+            letter-spacing: 1.1px;
             text-transform: uppercase;
             margin-bottom: 6px
         }
 
         .title {
-            font-size: 30px;
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.25;
             margin: 0 0 10px;
             color: var(--blue)
         }
@@ -920,8 +925,8 @@ $empanelledTPA = [
         .sub {
             color: var(--muted);
             margin: 0 0 28px;
-            font-size: 15.5px;
-            line-height: 1.55
+            font-size: 17.5px;
+            line-height: 1.6
         }
 
         /* 2-COL INTRO */
@@ -934,8 +939,8 @@ $empanelledTPA = [
 
         .intro-copy p {
             color: var(--muted);
-            line-height: 1.75;
-            font-size: 16px;
+            line-height: 1.7;
+            font-size: 17px;
             margin: 0 0 18px
         }
 
@@ -950,7 +955,7 @@ $empanelledTPA = [
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 14.5px;
+            font-size: 16px;
             font-weight: 700;
             color: var(--blue)
         }
@@ -1024,13 +1029,14 @@ $empanelledTPA = [
         }
 
         .service-card h3 {
-            font-size: 18.5px;
+            font-size: 20px;
+            font-weight: 800;
             margin: 0 0 8px;
             color: var(--blue)
         }
 
         .service-card p {
-            font-size: 14px;
+            font-size: 15.5px;
             color: var(--muted);
             line-height: 1.6;
             margin: 0
@@ -1050,7 +1056,8 @@ $empanelledTPA = [
 
         .conditions-panel h2 {
             font-size: 32px;
-            line-height: 1.2;
+            font-weight: 800;
+            line-height: 1.25;
             margin: 6px 0 14px
         }
 
@@ -1058,7 +1065,7 @@ $empanelledTPA = [
             color: #dce7f0;
             line-height: 1.65;
             margin: 0 0 20px;
-            font-size: 15.5px
+            font-size: 17px
         }
 
         .cond-grid {
@@ -1071,8 +1078,8 @@ $empanelledTPA = [
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.18);
             border-radius: 8px;
-            padding: 10px 14px;
-            font-size: 14px;
+            padding: 11px 16px;
+            font-size: 15px;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -1109,22 +1116,23 @@ $empanelledTPA = [
 
         .journey-step:before {
             content: '0' counter(journey-counter);
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 900;
             color: var(--green);
             margin-bottom: 12px
         }
 
         .journey-step h4 {
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: 800;
             margin: 0 0 8px;
             color: var(--blue)
         }
 
         .journey-step p {
-            font-size: 13px;
+            font-size: 14.5px;
             color: var(--muted);
-            line-height: 1.5;
+            line-height: 1.55;
             margin: 0
         }
 
@@ -1141,9 +1149,9 @@ $empanelledTPA = [
             border-radius: 14px;
             border: 1px solid var(--line);
             box-shadow: 0 4px 20px rgba(3, 32, 90, 0.06);
-            padding: 18px 20px;
+            padding: 20px 22px;
             gap: 20px;
-            max-width: 540px;
+            max-width: 580px;
             width: 100%;
             transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
@@ -1155,8 +1163,8 @@ $empanelledTPA = [
         }
 
         .doc-photo-box {
-            width: 120px;
-            height: 135px;
+            width: 130px;
+            height: 145px;
             border-radius: 10px;
             overflow: hidden;
             flex-shrink: 0;
@@ -1181,18 +1189,18 @@ $empanelledTPA = [
         .doc-pill {
             display: inline-block;
             align-self: flex-start;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             color: var(--green);
             background: #e9f5ee;
-            padding: 3px 9px;
+            padding: 4px 10px;
             border-radius: 20px;
         }
 
         .doc-info-box h3 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 800;
             color: var(--blue);
             margin: 2px 0 0;
@@ -1200,13 +1208,13 @@ $empanelledTPA = [
         }
 
         .doc-qual {
-            font-size: 12.5px;
+            font-size: 14.5px;
             font-weight: 700;
             color: var(--muted);
         }
 
         .doc-spec-text {
-            font-size: 12px;
+            font-size: 13.5px;
             color: #4a637d;
             margin: 4px 0 10px;
             display: flex;
@@ -1224,8 +1232,8 @@ $empanelledTPA = [
 
         .doc-info-box .btn {
             align-self: flex-start;
-            padding: 8px 16px;
-            font-size: 12.5px;
+            padding: 9px 18px;
+            font-size: 13.5px;
             border-radius: 7px;
         }
 
@@ -1246,8 +1254,8 @@ $empanelledTPA = [
         }
 
         .faq-item summary {
-            padding: 18px 20px;
-            font-size: 16px;
+            padding: 19px 22px;
+            font-size: 17.5px;
             font-weight: 800;
             color: var(--blue);
             cursor: pointer;
@@ -1268,7 +1276,7 @@ $empanelledTPA = [
 
         .faq-item summary:after {
             content: '+';
-            font-size: 22px;
+            font-size: 24px;
             color: var(--green);
             font-weight: 700;
             line-height: 1
@@ -1279,8 +1287,8 @@ $empanelledTPA = [
         }
 
         .faq-content {
-            padding: 0 20px 20px;
-            font-size: 14.5px;
+            padding: 0 22px 22px;
+            font-size: 16px;
             color: var(--muted);
             line-height: 1.65
         }
@@ -1308,15 +1316,16 @@ $empanelledTPA = [
         }
 
         .cta h2 {
-            font-size: 30px;
+            font-size: 32px;
+            font-weight: 800;
             margin: 0 0 8px;
-            line-height: 1.18
+            line-height: 1.25
         }
 
         .cta p {
-            font-size: 15px;
+            font-size: 16.5px;
             color: #dbe7f2;
-            line-height: 1.5;
+            line-height: 1.6;
             margin: 0
         }
 
@@ -1343,14 +1352,15 @@ $empanelledTPA = [
 
         .emp-head h4 {
             margin: 0;
-            font-size: 15px;
+            font-size: 17px;
+            font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.6px;
             color: var(--blue)
         }
 
         .emp-head span {
-            font-size: 13px;
+            font-size: 14.5px;
             color: var(--green);
             font-weight: 700
         }
@@ -1365,8 +1375,8 @@ $empanelledTPA = [
             background: #f4f8fc;
             border: 1px solid #d4e3f0;
             border-radius: 6px;
-            padding: 8px 14px;
-            font-size: 13px;
+            padding: 9px 16px;
+            font-size: 14.5px;
             font-weight: 700;
             color: var(--blue);
             display: inline-flex;
@@ -1421,7 +1431,7 @@ $empanelledTPA = [
         }
 
         .footer-tagline {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 800;
             color: #68d493;
             letter-spacing: 0.3px;
@@ -1430,8 +1440,8 @@ $empanelledTPA = [
         }
 
         .footer-desc {
-            font-size: 13.5px;
-            line-height: 1.6;
+            font-size: 14.5px;
+            line-height: 1.65;
             color: #94a3b8;
             margin: 0 0 16px;
         }
@@ -1459,19 +1469,19 @@ $empanelledTPA = [
 
         .footer-nabh-badge b {
             display: block;
-            font-size: 13px;
+            font-size: 14px;
             color: #ffffff;
             line-height: 1.2;
         }
 
         .footer-nabh-badge small {
             display: block;
-            font-size: 11px;
+            font-size: 12px;
             color: #94a3b8;
         }
 
         .footer-col h4 {
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 800;
             color: #ffffff;
             text-transform: uppercase;
@@ -1505,7 +1515,7 @@ $empanelledTPA = [
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-size: 13.5px;
+            font-size: 14.5px;
             color: #cbd5e1;
             transition: all 0.2s ease;
             text-decoration: none;
@@ -1513,7 +1523,7 @@ $empanelledTPA = [
 
         .footer-nav a span {
             color: var(--green);
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 800;
             transition: transform 0.2s ease;
         }
@@ -1557,22 +1567,22 @@ $empanelledTPA = [
         }
 
         .f-hosp-header b {
-            font-size: 13.5px;
+            font-size: 14.5px;
             color: #ffffff;
             line-height: 1.3;
         }
 
         .f-hosp-sub {
-            font-size: 12px;
+            font-size: 13px;
             color: #68d493;
             font-weight: 600;
             margin: 0 0 4px !important;
         }
 
         .footer-hospital-card p {
-            font-size: 12.5px;
+            font-size: 13.5px;
             color: #94a3b8;
-            line-height: 1.45;
+            line-height: 1.5;
             margin: 0 0 6px;
         }
 
@@ -1580,7 +1590,7 @@ $empanelledTPA = [
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 12.5px;
+            font-size: 13.5px;
             font-weight: 700;
             color: #e2e8f0;
             transition: color 0.2s ease;
@@ -1627,7 +1637,7 @@ $empanelledTPA = [
 
         .footer-emergency-box small {
             display: block;
-            font-size: 11px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.6px;
             color: #68d493;
@@ -1637,7 +1647,7 @@ $empanelledTPA = [
 
         .f-emg-num {
             display: block;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 900;
             color: #ffffff;
             line-height: 1.2;
@@ -1650,7 +1660,7 @@ $empanelledTPA = [
 
         .f-emg-num-sub {
             display: block;
-            font-size: 12px;
+            font-size: 13.5px;
             font-weight: 700;
             color: #cbd5e1;
             margin-top: 2px;
@@ -1672,7 +1682,7 @@ $empanelledTPA = [
             display: flex;
             align-items: center;
             gap: 9px;
-            font-size: 13px;
+            font-size: 14px;
             color: #cbd5e1;
             padding: 7px 10px;
             background: rgba(255, 255, 255, 0.03);
@@ -1710,7 +1720,7 @@ $empanelledTPA = [
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 800;
             color: #68d493;
             padding-top: 4px;
@@ -1725,7 +1735,7 @@ $empanelledTPA = [
         .bottom {
             background: #010c22;
             padding: 18px 0;
-            font-size: 13px;
+            font-size: 14px;
             color: #94a3b8;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
@@ -1744,7 +1754,7 @@ $empanelledTPA = [
             gap: 14px;
             flex-wrap: wrap;
             color: #cbd5e1;
-            font-size: 12.5px;
+            font-size: 13.5px;
         }
 
         .bottom-badges span {
@@ -2109,7 +2119,7 @@ $empanelledTPA = [
             }
 
             .hero h1 {
-                font-size: 28px;
+                font-size: 30px;
                 line-height: 1.2;
             }
 
@@ -2128,19 +2138,19 @@ $empanelledTPA = [
 
             .title,
             .conditions-panel h2 {
-                font-size: 22px;
+                font-size: 24px;
                 line-height: 1.28;
             }
 
             .kicker,
             .eyebrow {
-                font-size: 11.5px;
+                font-size: 12.5px;
                 letter-spacing: 0.7px;
                 margin-bottom: 4px;
             }
 
             .sub {
-                font-size: 14.5px;
+                font-size: 15.5px;
                 line-height: 1.55;
                 margin: 0 0 18px;
             }
@@ -2182,18 +2192,18 @@ $empanelledTPA = [
 
         @media(max-width:420px) {
             .hero h1 {
-                font-size: 25px;
+                font-size: 26px;
             }
 
             .title,
             .conditions-panel h2 {
-                font-size: 20px;
+                font-size: 22px;
                 line-height: 1.3;
             }
 
             .kicker,
             .eyebrow {
-                font-size: 11px;
+                font-size: 12px;
                 letter-spacing: 0.5px;
             }
         }
