@@ -82,7 +82,7 @@ $empanelledTPA = [
         body {
             margin: 0;
             color: var(--blue);
-            font: 16px/1.55 'Nunito Sans', sans-serif;
+            font: 16.5px/1.6 'Nunito Sans', sans-serif;
             background: #fff;
             overflow-x: hidden
         }
@@ -104,10 +104,10 @@ $empanelledTPA = [
 
         /* TOP BAR */
         .top {
-            height: 40px;
+            height: 42px;
             background: var(--blue);
             color: #fff;
-            font-size: 13px
+            font-size: 14px
         }
 
         .top .wrap,
@@ -162,7 +162,7 @@ $empanelledTPA = [
             display: flex;
             gap: 30px;
             align-items: center;
-            font-size: 15.5px;
+            font-size: 16px;
             font-weight: 700
         }
 
@@ -608,9 +608,9 @@ $empanelledTPA = [
             align-items: center;
             justify-content: center;
             border: 1px solid #aebfd0;
-            padding: 13px 24px;
-            border-radius: 7px;
-            font-size: 15px;
+            padding: 13px 26px;
+            border-radius: 8px;
+            font-size: 16px;
             font-weight: 800;
             cursor: pointer;
             transition: all 0.2s ease
@@ -644,15 +644,16 @@ $empanelledTPA = [
         }
 
         .small {
-            padding: 10px 22px;
-            font-size: 13px
+            padding: 11px 22px;
+            font-size: 14.5px;
+            font-weight: 800;
         }
 
         /* HERO SECTION */
         .hero {
             background: linear-gradient(135deg, #02163d 0%, #03205A 100%);
             color: #fff;
-            padding: 50px 0 44px;
+            padding: 56px 0 50px;
             position: relative;
             overflow: hidden;
         }
@@ -660,9 +661,9 @@ $empanelledTPA = [
         .hero-top-grid {
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
-            gap: 40px;
+            gap: 44px;
             align-items: center;
-            margin-bottom: 36px;
+            margin-bottom: 40px;
         }
 
         .hero-copy {
@@ -707,42 +708,43 @@ $empanelledTPA = [
             background: rgba(2, 22, 61, 0.94);
             backdrop-filter: blur(8px);
             border: 1px solid rgba(114, 224, 162, 0.4);
-            padding: 12px 16px;
-            border-radius: 10px;
+            padding: 14px 18px;
+            border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             z-index: 2;
         }
 
-        .hero-badge-float i {
-            width: 26px;
-            height: 26px;
+        .hero-badge-float i, .hero-badge-float svg {
+            width: 28px;
+            height: 28px;
             color: #72e0a2;
             flex-shrink: 0;
         }
 
         .hero-badge-float b {
             display: block;
-            font-size: 14px;
+            font-size: 15.5px;
             color: #fff;
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         .hero-badge-float small {
             display: block;
-            font-size: 12px;
+            font-size: 13.5px;
             color: #b9d3eb;
+            margin-top: 2px;
         }
 
         .crumb {
-            font-size: 13px;
+            font-size: 14.5px;
             color: #b9d3eb;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .crumb a {
@@ -756,27 +758,28 @@ $empanelledTPA = [
         .eyebrow {
             color: #72e0a2;
             font-weight: 900;
-            font-size: 13px;
-            letter-spacing: 0.9px;
-            margin-bottom: 10px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             text-transform: uppercase;
         }
 
         .eyebrow-badge {
             background: rgba(114, 224, 162, 0.15);
             border: 1px solid rgba(114, 224, 162, 0.4);
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 20px;
         }
 
         .hero h1 {
-            font-size: 40px;
-            line-height: 1.18;
-            margin: 8px 0 16px;
+            font-size: 42px;
+            line-height: 1.2;
+            margin: 8px 0 18px;
             letter-spacing: -0.5px;
+            font-weight: 900;
         }
 
         .hero h1 span {
@@ -784,11 +787,11 @@ $empanelledTPA = [
         }
 
         .hero p {
-            font-size: 16.5px;
-            line-height: 1.65;
+            font-size: 18px;
+            line-height: 1.68;
             color: #dce7f0;
             max-width: 100%;
-            margin: 0 0 24px;
+            margin: 0 0 28px;
         }
 
         .hero-actions {
@@ -801,18 +804,18 @@ $empanelledTPA = [
         .contact-cards-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px
+            gap: 22px
         }
 
         .c-card {
             background: #fff;
-            border-radius: 12px;
-            padding: 22px 20px;
+            border-radius: 14px;
+            padding: 24px 22px;
             border: 1px solid var(--line);
             box-shadow: 0 4px 16px rgba(3, 32, 90, 0.06);
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             transition: transform 0.2s ease, box-shadow 0.2s ease
         }
 
@@ -823,9 +826,9 @@ $empanelledTPA = [
         }
 
         .c-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
             background: #eaf3fb;
             color: var(--blue);
             display: flex;
@@ -844,33 +847,36 @@ $empanelledTPA = [
             color: var(--green)
         }
 
-        .c-icon i {
-            width: 22px;
-            height: 22px
+        .c-icon i, .c-icon svg {
+            width: 24px;
+            height: 24px
         }
 
         .c-card h4 {
             margin: 0;
-            font-size: 14px;
+            font-size: 14.5px;
+            font-weight: 800;
             color: var(--muted);
             text-transform: uppercase;
-            letter-spacing: 0.5px
+            letter-spacing: 0.6px
         }
 
         .c-card b {
-            font-size: 16.5px;
+            font-size: 18.5px;
+            font-weight: 900;
             color: var(--blue);
             line-height: 1.25
         }
 
         .c-card small {
-            font-size: 12.5px;
+            font-size: 13.5px;
+            font-weight: 600;
             color: var(--muted)
         }
 
         /* SECTIONS */
         .section {
-            padding: 60px 0
+            padding: 68px 0
         }
 
         .soft {
@@ -879,64 +885,68 @@ $empanelledTPA = [
 
         .kicker {
             color: var(--green);
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 900;
-            letter-spacing: 1px;
+            letter-spacing: 1.1px;
             text-transform: uppercase;
-            margin-bottom: 6px
+            margin-bottom: 8px
         }
 
         .title {
-            font-size: 30px;
-            margin: 0 0 10px;
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.25;
+            margin: 0 0 12px;
             color: var(--blue)
         }
 
         .sub {
             color: var(--muted);
-            margin: 0 0 28px;
-            font-size: 15.5px;
-            line-height: 1.55
+            margin: 0 0 32px;
+            font-size: 17.5px;
+            line-height: 1.6
         }
 
         /* FORM & INFO LAYOUT */
         .contact-layout {
             display: grid;
             grid-template-columns: 1.25fr 0.95fr;
-            gap: 40px;
+            gap: 44px;
             align-items: flex-start
         }
 
         .form-box {
             background: #fff;
-            border-radius: 14px;
-            padding: 36px 32px;
+            border-radius: 16px;
+            padding: 40px 36px;
             border: 1px solid var(--line);
             box-shadow: 0 6px 24px rgba(3, 32, 90, 0.08)
         }
 
         .form-box h3 {
-            font-size: 23px;
-            margin: 0 0 8px;
+            font-size: 26px;
+            font-weight: 800;
+            margin: 0 0 10px;
             color: var(--blue)
         }
 
         .form-box p {
-            font-size: 14.5px;
+            font-size: 16px;
+            line-height: 1.6;
             color: var(--muted);
-            margin: 0 0 24px
+            margin: 0 0 26px
         }
 
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 18px
+            gap: 20px
         }
 
         .form-group {
             display: flex;
             flex-direction: column;
-            gap: 6px
+            gap: 8px
         }
 
         .form-group.full {
@@ -944,7 +954,7 @@ $empanelledTPA = [
         }
 
         .form-group label {
-            font-size: 13.5px;
+            font-size: 15px;
             font-weight: 700;
             color: var(--blue)
         }
@@ -953,10 +963,10 @@ $empanelledTPA = [
         .form-group select,
         .form-group textarea {
             font-family: inherit;
-            font-size: 14.5px;
-            padding: 12px 14px;
+            font-size: 15.5px;
+            padding: 13px 16px;
             border: 1px solid #c9d9e8;
-            border-radius: 8px;
+            border-radius: 9px;
             background: #fdfdfd;
             color: var(--blue);
             outline: none;
@@ -973,14 +983,15 @@ $empanelledTPA = [
 
         .form-group textarea {
             resize: vertical;
-            min-height: 100px
+            min-height: 110px
         }
 
         .form-submit-btn {
             width: 100%;
-            padding: 15px;
-            font-size: 16px;
-            margin-top: 8px
+            padding: 16px;
+            font-size: 17px;
+            font-weight: 800;
+            margin-top: 10px
         }
 
         .form-success-alert {
@@ -988,49 +999,51 @@ $empanelledTPA = [
             background: #eaf7f0;
             border: 1px solid #8fe0b2;
             color: #06723e;
-            padding: 14px 18px;
-            border-radius: 8px;
-            font-size: 14.5px;
+            padding: 16px 20px;
+            border-radius: 10px;
+            font-size: 16px;
             font-weight: 700;
-            margin-bottom: 20px
+            line-height: 1.5;
+            margin-bottom: 24px
         }
 
         /* SIDEBAR / TIMINGS & INFO */
         .info-sidebar {
             display: flex;
             flex-direction: column;
-            gap: 24px
+            gap: 26px
         }
 
         .info-card {
             background: #fff;
-            border-radius: 12px;
-            padding: 26px 24px;
+            border-radius: 14px;
+            padding: 30px 28px;
             border: 1px solid var(--line);
             box-shadow: 0 4px 16px rgba(3, 32, 90, 0.06)
         }
 
         .info-card h4 {
-            font-size: 18px;
-            margin: 0 0 16px;
+            font-size: 21px;
+            font-weight: 800;
+            margin: 0 0 18px;
             color: var(--blue);
             display: flex;
             align-items: center;
-            gap: 8px
+            gap: 10px
         }
 
-        .info-card h4 i {
+        .info-card h4 i, .info-card h4 svg {
             color: var(--green);
-            width: 20px;
-            height: 20px
+            width: 22px;
+            height: 22px
         }
 
         .timing-row {
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px dashed var(--line);
-            font-size: 14px
+            font-size: 15.5px
         }
 
         .timing-row:last-child {
@@ -1044,15 +1057,15 @@ $empanelledTPA = [
 
         .timing-row span:last-child {
             color: var(--blue);
-            font-weight: 700
+            font-weight: 800
         }
 
         .emergency-pill-tag {
             background: #fee2e2;
             color: #b91c1c;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 13px;
             font-weight: 800
         }
 
@@ -1060,12 +1073,12 @@ $empanelledTPA = [
         .branches-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 28px
+            gap: 32px
         }
 
         .branch-card {
             background: #fff;
-            border-radius: 12px;
+            border-radius: 14px;
             border: 1px solid var(--line);
             overflow: hidden;
             box-shadow: 0 4px 18px rgba(3, 32, 90, 0.08);
@@ -1080,7 +1093,7 @@ $empanelledTPA = [
         }
 
         .branch-header {
-            padding: 22px 24px;
+            padding: 24px 28px;
             background: linear-gradient(135deg, #f8fbfe 0%, #edf5fc 100%);
             border-bottom: 1px solid var(--line);
             display: flex;
@@ -1089,8 +1102,9 @@ $empanelledTPA = [
         }
 
         .branch-header h3 {
-            font-size: 19px;
-            margin: 0 0 4px;
+            font-size: 22px;
+            font-weight: 800;
+            margin: 0 0 6px;
             color: var(--blue)
         }
 
@@ -1098,17 +1112,17 @@ $empanelledTPA = [
             background: #eaf7f0;
             border: 1px solid #bfe8cf;
             color: #06723e;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 11.5px;
+            font-size: 13px;
             font-weight: 800
         }
 
         .branch-body {
-            padding: 24px;
+            padding: 28px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 18px;
             flex-grow: 1;
             justify-content: space-between
         }
@@ -1116,41 +1130,43 @@ $empanelledTPA = [
         .branch-line {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
-            font-size: 14.5px;
+            gap: 14px;
+            font-size: 16px;
+            line-height: 1.6;
             color: var(--muted)
         }
 
-        .branch-line i {
-            width: 20px;
-            height: 20px;
+        .branch-line i, .branch-line svg {
+            width: 22px;
+            height: 22px;
             color: var(--green);
             flex-shrink: 0;
-            margin-top: 2px
+            margin-top: 3px
         }
 
         .branch-line b {
-            color: var(--blue)
+            color: var(--blue);
+            font-size: 16.5px;
         }
 
         .branch-actions {
             display: flex;
-            gap: 12px;
-            margin-top: 8px
+            gap: 14px;
+            margin-top: 10px
         }
 
         /* MAP SECTION */
         .map-section {
             background: #fff;
-            padding: 0 0 60px
+            padding: 0 0 68px
         }
 
         .map-frame-box {
-            border-radius: 14px;
+            border-radius: 16px;
             overflow: hidden;
             border: 1px solid var(--line);
             box-shadow: 0 8px 24px rgba(3, 32, 90, 0.1);
-            height: 380px;
+            height: 400px;
             background: #e5edf5;
             position: relative
         }
@@ -1166,26 +1182,27 @@ $empanelledTPA = [
             background: #fff;
             border-top: 1px solid var(--line);
             border-bottom: 1px solid var(--line);
-            padding: 28px 0
+            padding: 34px 0
         }
 
         .emp-head {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 14px
+            margin-bottom: 18px
         }
 
         .emp-head h4 {
             margin: 0;
-            font-size: 15px;
+            font-size: 17px;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.6px;
+            letter-spacing: 0.7px;
             color: var(--blue)
         }
 
         .emp-head span {
-            font-size: 13px;
+            font-size: 14.5px;
             color: var(--green);
             font-weight: 700
         }
@@ -1193,25 +1210,25 @@ $empanelledTPA = [
         .emp-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px
+            gap: 12px
         }
 
         .emp-pill {
             background: #f4f8fc;
             border: 1px solid #d4e3f0;
-            border-radius: 6px;
-            padding: 8px 14px;
-            font-size: 13px;
+            border-radius: 8px;
+            padding: 9px 16px;
+            font-size: 14.5px;
             font-weight: 700;
             color: var(--blue);
             display: inline-flex;
             align-items: center;
-            gap: 7px
+            gap: 8px
         }
 
-        .emp-pill i {
-            width: 15px;
-            height: 15px;
+        .emp-pill i, .emp-pill svg {
+            width: 17px;
+            height: 17px;
             color: var(--green)
         }
 
@@ -1225,7 +1242,7 @@ $empanelledTPA = [
         .footer {
             background: linear-gradient(180deg, #03205A 0%, #011338 100%);
             color: #cbd5e1;
-            padding: 56px 0 0;
+            padding: 60px 0 0;
             border-top: 4px solid var(--green);
             position: relative;
         }
@@ -1233,8 +1250,8 @@ $empanelledTPA = [
         .footer-grid {
             display: grid;
             grid-template-columns: 1.35fr 0.9fr 1.35fr 1.15fr;
-            gap: 36px;
-            padding-bottom: 44px;
+            gap: 40px;
+            padding-bottom: 48px;
         }
 
         .footer-brand-wrap {
@@ -1243,7 +1260,7 @@ $empanelledTPA = [
             border-radius: 10px;
             display: inline-block;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             max-width: 230px;
         }
 
@@ -1255,35 +1272,35 @@ $empanelledTPA = [
         }
 
         .footer-tagline {
-            font-size: 13px;
+            font-size: 14.5px;
             font-weight: 800;
             color: #68d493;
-            letter-spacing: 0.3px;
-            margin: 0 0 10px;
+            letter-spacing: 0.4px;
+            margin: 0 0 12px;
             text-transform: uppercase;
         }
 
         .footer-desc {
-            font-size: 13.5px;
-            line-height: 1.6;
+            font-size: 14.5px;
+            line-height: 1.65;
             color: #94a3b8;
-            margin: 0 0 16px;
+            margin: 0 0 18px;
         }
 
         .footer-nabh-badge {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(255, 255, 255, 0.12);
-            padding: 8px 14px;
-            border-radius: 8px;
+            padding: 10px 16px;
+            border-radius: 10px;
             backdrop-filter: blur(4px);
         }
 
         .footer-nabh-badge .nabh-icon-img {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             object-fit: contain;
             border-radius: 4px;
             background: #fff;
@@ -1293,26 +1310,27 @@ $empanelledTPA = [
 
         .footer-nabh-badge b {
             display: block;
-            font-size: 13px;
+            font-size: 14.5px;
             color: #ffffff;
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         .footer-nabh-badge small {
             display: block;
-            font-size: 11px;
+            font-size: 12.5px;
             color: #94a3b8;
+            margin-top: 2px;
         }
 
         .footer-col h4 {
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 800;
             color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: 0.6px;
-            margin: 0 0 18px;
+            letter-spacing: 0.7px;
+            margin: 0 0 20px;
             position: relative;
-            padding-left: 12px;
+            padding-left: 14px;
         }
 
         .footer-col h4::before {
@@ -1321,7 +1339,7 @@ $empanelledTPA = [
             left: 0;
             top: 2px;
             bottom: 2px;
-            width: 3.5px;
+            width: 4px;
             background: var(--green);
             border-radius: 2px;
         }
@@ -1332,14 +1350,14 @@ $empanelledTPA = [
             margin: 0;
             display: flex;
             flex-direction: column;
-            gap: 9px;
+            gap: 11px;
         }
 
         .footer-nav a {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            font-size: 13.5px;
+            gap: 9px;
+            font-size: 15px;
             color: #cbd5e1;
             transition: all 0.2s ease;
             text-decoration: none;
@@ -1347,7 +1365,7 @@ $empanelledTPA = [
 
         .footer-nav a span {
             color: var(--green);
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 800;
             transition: transform 0.2s ease;
         }
@@ -1364,9 +1382,9 @@ $empanelledTPA = [
         .footer-hospital-card {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 10px;
-            padding: 12px 14px;
-            margin-bottom: 12px;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
             transition: border-color 0.2s ease, background 0.2s ease;
         }
 
@@ -1378,43 +1396,43 @@ $empanelledTPA = [
         .f-hosp-header {
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 5px;
+            gap: 9px;
+            margin-bottom: 6px;
         }
 
         .f-hosp-header i,
         .f-hosp-header svg {
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
             color: var(--green);
             flex-shrink: 0;
         }
 
         .f-hosp-header b {
-            font-size: 13.5px;
+            font-size: 15px;
             color: #ffffff;
             line-height: 1.3;
         }
 
         .f-hosp-sub {
-            font-size: 12px;
+            font-size: 13px;
             color: #68d493;
             font-weight: 600;
-            margin: 0 0 4px !important;
+            margin: 0 0 5px !important;
         }
 
         .footer-hospital-card p {
-            font-size: 12.5px;
+            font-size: 13.5px;
             color: #94a3b8;
-            line-height: 1.45;
-            margin: 0 0 6px;
+            line-height: 1.5;
+            margin: 0 0 8px;
         }
 
         .f-hosp-phone {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            font-size: 12.5px;
+            gap: 7px;
+            font-size: 14px;
             font-weight: 700;
             color: #e2e8f0;
             transition: color 0.2s ease;
@@ -1422,8 +1440,8 @@ $empanelledTPA = [
 
         .f-hosp-phone i,
         .f-hosp-phone svg {
-            width: 13px;
-            height: 13px;
+            width: 15px;
+            height: 15px;
             color: var(--green);
         }
 
@@ -1434,18 +1452,18 @@ $empanelledTPA = [
         .footer-emergency-box {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             background: linear-gradient(135deg, rgba(42, 130, 56, 0.22) 0%, rgba(3, 32, 90, 0.45) 100%);
             border: 1px solid rgba(104, 212, 147, 0.35);
-            padding: 12px 14px;
-            border-radius: 10px;
-            margin-bottom: 14px;
+            padding: 14px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
         }
 
         .f-emg-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 8px;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
             background: var(--green);
             color: #fff;
             display: grid;
@@ -1455,26 +1473,26 @@ $empanelledTPA = [
 
         .f-emg-icon i,
         .f-emg-icon svg {
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
         }
 
         .footer-emergency-box small {
             display: block;
-            font-size: 11px;
+            font-size: 12.5px;
             text-transform: uppercase;
-            letter-spacing: 0.6px;
+            letter-spacing: 0.7px;
             color: #68d493;
-            font-weight: 700;
-            margin-bottom: 2px;
+            font-weight: 800;
+            margin-bottom: 3px;
         }
 
         .f-emg-num {
             display: block;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 900;
             color: #ffffff;
-            line-height: 1.2;
+            line-height: 1.25;
             transition: color 0.2s ease;
         }
 
@@ -1484,10 +1502,10 @@ $empanelledTPA = [
 
         .f-emg-num-sub {
             display: block;
-            font-size: 12px;
+            font-size: 13.5px;
             font-weight: 700;
             color: #cbd5e1;
-            margin-top: 2px;
+            margin-top: 3px;
             transition: color 0.2s ease;
         }
 
@@ -1498,28 +1516,28 @@ $empanelledTPA = [
         .footer-contact-list {
             display: flex;
             flex-direction: column;
-            gap: 9px;
-            margin-bottom: 14px;
+            gap: 10px;
+            margin-bottom: 16px;
         }
 
         .f-cnt-item {
             display: flex;
             align-items: center;
-            gap: 9px;
-            font-size: 13px;
+            gap: 10px;
+            font-size: 14px;
             color: #cbd5e1;
-            padding: 7px 10px;
+            padding: 8px 12px;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.07);
-            border-radius: 7px;
+            border-radius: 8px;
             transition: all 0.2s ease;
             word-break: break-all;
         }
 
         .f-cnt-item i,
         .f-cnt-item svg {
-            width: 15px;
-            height: 15px;
+            width: 17px;
+            height: 17px;
             color: var(--green);
             flex-shrink: 0;
         }
@@ -1543,8 +1561,8 @@ $empanelledTPA = [
         .footer-motto {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 13px;
+            gap: 9px;
+            font-size: 14.5px;
             font-weight: 800;
             color: #68d493;
             padding-top: 4px;
@@ -1552,14 +1570,14 @@ $empanelledTPA = [
 
         .footer-motto i,
         .footer-motto svg {
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
         }
 
         .bottom {
             background: #010c22;
-            padding: 18px 0;
-            font-size: 13px;
+            padding: 20px 0;
+            font-size: 14px;
             color: #94a3b8;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
@@ -1575,22 +1593,22 @@ $empanelledTPA = [
         .bottom-badges {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 16px;
             flex-wrap: wrap;
             color: #cbd5e1;
-            font-size: 12.5px;
+            font-size: 13.5px;
         }
 
         .bottom-badges span {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
         }
 
         .bottom-badges span i,
         .bottom-badges span svg {
-            width: 13px;
-            height: 13px;
+            width: 15px;
+            height: 15px;
             color: var(--green);
         }
 
@@ -1796,7 +1814,7 @@ $empanelledTPA = [
 
             .nav-drop a {
                 padding: 10px 14px !important;
-                font-size: 13.5px !important;
+                font-size: 14.5px !important;
                 font-weight: 600 !important;
                 color: #355070 !important;
                 border-bottom: 1px solid #edf3f8 !important;
@@ -1866,12 +1884,12 @@ $empanelledTPA = [
             }
 
             .services-mega .mega-col-title {
-                font-size: 13px !important;
+                font-size: 13.5px !important;
                 font-weight: 800 !important;
             }
 
             .services-mega .mega-col-sub {
-                font-size: 10.5px !important;
+                font-size: 11px !important;
             }
 
             .services-mega .mega-links-grid {
@@ -1882,7 +1900,7 @@ $empanelledTPA = [
 
             .services-mega .mega-links-grid a {
                 padding: 8px 10px !important;
-                font-size: 13px !important;
+                font-size: 13.5px !important;
                 border-bottom: 1px solid #edf3f8 !important;
                 border-radius: 0 !important;
             }
@@ -1915,7 +1933,7 @@ $empanelledTPA = [
                 width: 100%;
                 justify-content: center;
                 padding: 12px 18px;
-                font-size: 14px;
+                font-size: 15px;
             }
         }
 
@@ -1925,26 +1943,30 @@ $empanelledTPA = [
             }
 
             .hero h1 {
-                font-size: 28px;
-                line-height: 1.2;
+                font-size: 32px;
+                line-height: 1.22;
             }
 
-            .title,
+            .title {
+                font-size: 26px;
+                line-height: 1.25;
+            }
+
             .form-box h3 {
-                font-size: 22px;
+                font-size: 24px;
                 line-height: 1.28;
             }
 
             .kicker {
-                font-size: 11.5px;
-                letter-spacing: 0.7px;
-                margin-bottom: 4px;
+                font-size: 13px;
+                letter-spacing: 0.8px;
+                margin-bottom: 6px;
             }
 
             .sub {
-                font-size: 14.5px;
+                font-size: 15.5px;
                 line-height: 1.55;
-                margin: 0 0 18px;
+                margin: 0 0 20px;
             }
 
             .contact-cards-grid {
@@ -1952,7 +1974,7 @@ $empanelledTPA = [
             }
 
             .form-box {
-                padding: 24px 20px
+                padding: 28px 22px
             }
 
             .form-grid {
@@ -1978,30 +2000,34 @@ $empanelledTPA = [
 
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 24px
+                gap: 28px
             }
 
             .bottom .wrap {
                 flex-direction: column;
-                gap: 8px;
+                gap: 10px;
                 text-align: center
             }
         }
 
         @media(max-width:420px) {
             .hero h1 {
-                font-size: 25px;
+                font-size: 28px;
             }
 
-            .title,
+            .title {
+                font-size: 24px;
+                line-height: 1.28;
+            }
+
             .form-box h3 {
-                font-size: 20px;
+                font-size: 22px;
                 line-height: 1.3;
             }
 
             .kicker {
-                font-size: 11px;
-                letter-spacing: 0.5px;
+                font-size: 12px;
+                letter-spacing: 0.6px;
             }
         }
     </style>
@@ -2123,7 +2149,7 @@ $empanelledTPA = [
                 </div>
                 <div class="mobile-menu-footer">
                     <a class="btn primary" href="#appointment-form"><i data-lucide="calendar-days"></i>Book Appointment</a>
-                    <a class="btn" href="tel:01662249473" style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473</a>
+                    <a class="btn" href="tel:01662249473" style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:14.5px;font-weight:700"><i data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473</a>
                 </div>
             </nav>
             <a class="btn primary" href="#appointment-form"><i data-lucide="calendar-days"></i>Book Appointment</a>
@@ -2322,7 +2348,7 @@ $empanelledTPA = [
                 <!-- REACH US CARD -->
                 <div class="info-card">
                     <h4><i data-lucide="map-pin"></i> How to Reach Us</h4>
-                    <p style="font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 12px">
+                    <p style="font-size:15.5px;color:var(--muted);line-height:1.65;margin:0 0 14px">
                         Sukhda Healthcare is conveniently situated in the heart of Hisar along <b>Delhi Road (NH-9)</b>,
                         easily accessible from all transport hubs:
                     </p>
@@ -2357,7 +2383,7 @@ $empanelledTPA = [
                     <div class="branch-header">
                         <div>
                             <h3>Sukhda Multispeciality Hospital</h3>
-                            <small style="color:var(--muted)">Comprehensive Family &amp; Emergency Care</small>
+                            <small style="color:var(--muted);font-size:14.5px;font-weight:600">Comprehensive Family &amp; Emergency Care</small>
                         </div>
                         <span class="branch-badge">NABH Accredited</span>
                     </div>
@@ -2380,9 +2406,9 @@ $empanelledTPA = [
                             <i data-lucide="phone-call"></i>
                             <div>
                                 <b>Emergency Line (24/7):</b><br>
-                                <a href="tel:01662249473" style="color:var(--green);font-weight:800">01662-249473</a>
+                                <a href="tel:01662249473" style="color:var(--green);font-weight:800;font-size:16.5px">01662-249473</a>
                                 &nbsp;/&nbsp; <a href="tel:+919996544005"
-                                    style="color:var(--green);font-weight:800">+91-99965-44005</a>
+                                    style="color:var(--green);font-weight:800;font-size:16.5px">+91-99965-44005</a>
                             </div>
                         </div>
                         <div class="branch-line">
@@ -2406,7 +2432,7 @@ $empanelledTPA = [
                     <div class="branch-header">
                         <div>
                             <h3>Sukhda MedPark Hospital</h3>
-                            <small style="color:var(--muted)">Cancer &amp; Super Speciality Centre</small>
+                            <small style="color:var(--muted);font-size:14.5px;font-weight:600">Cancer &amp; Super Speciality Centre</small>
                         </div>
                         <span class="branch-badge">Super Speciality</span>
                     </div>
@@ -2430,7 +2456,7 @@ $empanelledTPA = [
                             <div>
                                 <b>Direct Helpline (24/7):</b><br>
                                 <a href="tel:+919996544005"
-                                    style="color:var(--green);font-weight:800">+91-99965-44005</a>
+                                    style="color:var(--green);font-weight:800;font-size:16.5px">+91-99965-44005</a>
                             </div>
                         </div>
                         <div class="branch-line">
