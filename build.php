@@ -145,8 +145,21 @@ if (is_dir($v1Dir)) {
     }
 }
 
-// 6) Render every V2 PHP page while preserving its directory structure.
+// 6) Render every V2 PHP and HTML page while preserving its directory structure.
 if (is_dir($v2Dir)) {
+    // A) Process all static .html files in V2
+    foreach (glob($v2Dir . '/*.html') as $htmlFile) {
+        $base = basename($htmlFile);
+        $content = file_get_contents($htmlFile);
+        foreach (['v2/' . $base, 'V2/' . $base] as $outRel) {
+            $destPath = $buildDir . '/' . $outRel;
+            if (!is_dir(dirname($destPath))) mkdir(dirname($destPath), 0755, true);
+            file_put_contents($destPath, $content);
+        }
+        echo "  copied dist/v2/{$base} (" . number_format(strlen($content)) . " bytes)" . PHP_EOL;
+    }
+
+    // B) Process all .php files in V2
     $v2Pages = [];
     $iterator = new RecursiveIteratorIterator(
         new RecursiveDirectoryIterator($v2Dir, FilesystemIterator::SKIP_DOTS)
