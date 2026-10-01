@@ -158,23 +158,26 @@ if (is_dir($v2Dir)) {
         $sourceRel = str_replace('\\', '/', substr($file->getPathname(), strlen($root) + 1));
         $insideV2 = str_replace('\\', '/', substr($file->getPathname(), strlen($v2Dir) + 1));
         $outputRel = preg_replace('/\.php$/i', '.html', $insideV2);
-        $v2Pages[$sourceRel] = 'v2/' . $outputRel;
+        $v2Pages[$sourceRel] = [
+            'html' => 'v2/' . $outputRel,
+            'php'  => 'v2/' . $insideV2
+        ];
     }
     ksort($v2Pages);
 
-    foreach ($v2Pages as $srcRel => $destRel) {
+    foreach ($v2Pages as $srcRel => $dests) {
         $html = renderPage($root . '/' . $srcRel);
         if ($html === '') {
             fwrite(STDERR, "V2 page {$srcRel} produced empty output\n");
             exit(1);
         }
 
-        foreach ([$destRel, preg_replace('/^v2\//', 'V2/', $destRel)] as $output) {
+        foreach ([$dests['html'], preg_replace('/^v2\//', 'V2/', $dests['html']), $dests['php'], preg_replace('/^v2\//', 'V2/', $dests['php'])] as $output) {
             $destPath = $buildDir . '/' . $output;
             if (!is_dir(dirname($destPath))) mkdir(dirname($destPath), 0755, true);
             file_put_contents($destPath, $html);
         }
-        echo "  wrote dist/{$destRel} (" . number_format(strlen($html)) . " bytes)" . PHP_EOL;
+        echo "  wrote dist/{$dests['html']} & dist/{$dests['php']} (" . number_format(strlen($html)) . " bytes)" . PHP_EOL;
     }
 }
 

@@ -65,7 +65,7 @@
   to     = "/v1/"
   status = 301
 
-# V2 folder and nested page redirects
+# V2 folder and page redirects
 [[redirects]]
   from   = "/V2"
   to     = "/v2/"
@@ -77,8 +77,8 @@
   status = 301
 
 [[redirects]]
-  from   = "/V2/*"
-  to     = "/v2/:splat"
+  from   = "/V2/"
+  to     = "/v2/"
   status = 301
 
 [[redirects]]
@@ -87,8 +87,33 @@
   status = 301
 
 [[redirects]]
-  from   = "/v2/:page/index.php"
-  to     = "/v2/:page/"
+  from   = "/V2/index.php"
+  to     = "/v2/"
+  status = 301
+
+[[redirects]]
+  from   = "/v2/:page.php"
+  to     = "/v2/:page.html"
+  status = 200
+
+[[redirects]]
+  from   = "/V2/:page.php"
+  to     = "/v2/:page.html"
+  status = 200
+
+[[redirects]]
+  from   = "/v2/:page"
+  to     = "/v2/:page.html"
+  status = 200
+
+[[redirects]]
+  from   = "/V2/:page"
+  to     = "/v2/:page.html"
+  status = 200
+
+[[redirects]]
+  from   = "/V2/*"
+  to     = "/v2/:splat"
   status = 301
 
 # V1 Services Clean URLs & PHP redirects
