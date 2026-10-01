@@ -895,7 +895,7 @@
         }
 
         .more {
-            font-size: 13.5px;
+            font-size: 15px;
             font-weight: 800;
             white-space: nowrap;
             display: inline-flex;
@@ -995,13 +995,13 @@
         }
 
         .service {
-            flex: 0 0 178px;
-            min-width: 178px;
+            flex: 0 0 195px;
+            min-width: 195px;
             scroll-snap-align: start;
             text-align: center;
             background: #fff;
-            padding: 18px 12px 16px;
-            min-height: 152px;
+            padding: 20px 14px 18px;
+            min-height: 168px;
             border-radius: 12px;
             box-shadow: 0 3px 12px #03205a12;
             border: 1px solid rgba(220, 231, 240, 0.6);
@@ -1032,25 +1032,25 @@
         }
 
         .service i {
-            width: 42px;
-            height: 42px
+            width: 44px;
+            height: 44px
         }
 
         .service b {
             display: block;
-            font-size: 13px;
-            font-weight: 700;
+            font-size: 15px;
+            font-weight: 800;
             line-height: 1.35;
-            margin: 8px 0 6px;
+            margin: 9px 0 8px;
             color: var(--blue)
         }
 
         .pill {
             background: #dcedfa;
             color: #17649b;
-            border-radius: 4px;
-            padding: 4px 10px;
-            font-size: 10.5px;
+            border-radius: 5px;
+            padding: 5px 12px;
+            font-size: 12px;
             font-weight: 800;
             letter-spacing: 0.2px;
             display: inline-block
@@ -1235,33 +1235,33 @@
         }
 
         .doctor-card {
-            flex: 0 0 315px;
-            min-width: 315px;
+            flex: 0 0 350px;
+            min-width: 350px;
             scroll-snap-align: start;
             background: #fff;
-            border-radius: 12px;
+            border-radius: 14px;
             border: 1px solid var(--line);
             overflow: hidden;
-            box-shadow: 0 4px 16px rgba(3, 32, 90, 0.05);
+            box-shadow: 0 4px 16px rgba(3, 32, 90, 0.06);
             display: flex;
             flex-direction: row;
             align-items: center;
-            padding: 10px 14px 10px 10px;
-            gap: 14px;
+            padding: 12px 16px 12px 12px;
+            gap: 16px;
             transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
         }
 
         .doctor-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 22px rgba(3, 32, 90, 0.12);
+            box-shadow: 0 8px 24px rgba(3, 32, 90, 0.14);
             border-color: #b7d1e8;
         }
 
         .doctor-photo {
-            width: 86px;
-            height: 94px;
+            width: 94px;
+            height: 104px;
             flex-shrink: 0;
-            border-radius: 8px;
+            border-radius: 10px;
             background: #f1f5f9;
             overflow: hidden;
             position: relative;
@@ -1284,26 +1284,26 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 3px;
+            gap: 4px;
             min-width: 0;
             flex-grow: 1;
         }
 
         .doctor-body h3 {
-            font-size: 15.5px;
+            font-size: 17.5px;
             font-weight: 800;
             color: var(--blue);
             margin: 0;
-            line-height: 1.25;
+            line-height: 1.28;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
         .doc-spec {
-            font-size: 12.8px;
-            color: #475569;
-            font-weight: 600;
+            font-size: 14.5px;
+            color: #334155;
+            font-weight: 700;
             line-height: 1.35;
             margin: 0;
             white-space: nowrap;
@@ -1312,9 +1312,9 @@
         }
 
         .doc-hosp {
-            font-size: 12px;
+            font-size: 13.5px;
             color: #64748b;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 1.3;
             margin: 0;
             white-space: nowrap;
@@ -1326,43 +1326,45 @@
         .facilities {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 18px
+            gap: 20px
         }
 
         .facility {
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             background: #fff;
-            box-shadow: 0 4px 14px #03205a12;
+            box-shadow: 0 4px 16px rgba(3, 32, 90, 0.08);
             border: 1px solid var(--line);
             transition: transform 0.2s ease, box-shadow 0.2s ease
         }
 
         .facility:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(3, 32, 90, 0.16)
+            box-shadow: 0 10px 24px rgba(3, 32, 90, 0.16)
         }
 
         .facility img {
-            height: 125px;
+            height: 145px;
             object-fit: cover
         }
 
         .facility div {
-            padding: 12px 14px
+            padding: 16px 18px
         }
 
         .facility b {
             display: block;
-            font-size: 14px;
+            font-size: 16.5px;
+            font-weight: 800;
             color: var(--blue);
-            margin-bottom: 4px
+            margin-bottom: 6px;
+            line-height: 1.3
         }
 
         .facility small {
-            font-size: 12px;
-            color: var(--muted);
-            line-height: 1.4;
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.5;
             display: block
         }
 
@@ -1370,24 +1372,24 @@
         .cases {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px
+            gap: 24px
         }
 
         .case {
             display: grid;
             grid-template-columns: 40% 60%;
-            min-height: 135px;
-            border-radius: 10px;
+            min-height: 155px;
+            border-radius: 14px;
             overflow: hidden;
             background: #fff;
             border: 1px solid var(--line);
-            box-shadow: 0 4px 14px #03205a12;
+            box-shadow: 0 4px 16px rgba(3, 32, 90, 0.08);
             transition: transform 0.2s ease, box-shadow 0.2s ease
         }
 
         .case:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 22px rgba(3, 32, 90, 0.16)
+            box-shadow: 0 10px 24px rgba(3, 32, 90, 0.16)
         }
 
         .case img {
@@ -1396,25 +1398,26 @@
         }
 
         .case div {
-            padding: 16px
+            padding: 20px 22px
         }
 
         .case h3 {
-            font-size: 15.5px;
-            margin: 0 0 7px;
+            font-size: 18px;
+            font-weight: 800;
+            margin: 0 0 8px;
             color: var(--blue);
             line-height: 1.3
         }
 
         .case p {
-            font-size: 12.5px;
-            color: var(--muted);
-            line-height: 1.45;
-            margin: 0 0 10px
+            font-size: 14.5px;
+            color: #475569;
+            line-height: 1.55;
+            margin: 0 0 12px
         }
 
         .case a {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 800;
             color: var(--green)
         }
