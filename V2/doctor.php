@@ -6,7 +6,7 @@ $allDoctors = [
     'dr-amit-mehta' => [
         'slug'         => 'dr-amit-mehta',
         'name'         => 'Dr. Amit Mehta',
-        'photo'        => '../assets/images/doctors/dr-amit-mehta.jpg',
+        'photo'        => 'assets/images/doctors/dr-amit-mehta.jpg',
         'degrees'      => 'MD (Internal Medicine, AIIMS New Delhi) · MBBS',
         'role'         => 'Founder & Director — Head of Internal Medicine & Critical Care',
         'department'   => 'Internal Medicine & Critical Care',
@@ -135,7 +135,7 @@ $allDoctors = [
     'dr-nidhi-mehta' => [
         'slug'         => 'dr-nidhi-mehta',
         'name'         => 'Dr. Nidhi Mehta',
-        'photo'        => '../assets/images/doctors/dr-nidhi-mehta.jpg',
+        'photo'        => 'assets/images/doctors/dr-nidhi-mehta.jpg',
         'degrees'      => 'M.B.B.S, D.G.O, D.N.B (Obstetrics & Gynaecology)',
         'role'         => 'Senior Consultant — Obstetrics, Gynaecology & Laparoscopic Surgery',
         'department'   => 'Gynaecology & Obstetrics',
@@ -211,7 +211,7 @@ $allDoctors = [
     'dr-ankur-kamra' => [
         'slug'         => 'dr-ankur-kamra',
         'name'         => 'Dr. Ankur Kamra',
-        'photo'        => '../assets/images/doctors/dr-ankur-kamra.jpg',
+        'photo'        => 'assets/images/doctors/dr-ankur-kamra.jpg',
         'degrees'      => 'DM (Cardiology), MD (Medicine), MBBS',
         'role'         => 'Senior Consultant — Interventional Cardiology',
         'department'   => 'Interventional Cardiology',
@@ -286,7 +286,7 @@ $allDoctors = [
     'dr-trivikrama-rao' => [
         'slug'         => 'dr-trivikrama-rao',
         'name'         => 'Dr. Trivikrama Rao',
-        'photo'        => '../assets/images/doctors/dr-trivikrama-rao.jpg',
+        'photo'        => 'assets/images/doctors/dr-trivikrama-rao.jpg',
         'degrees'      => 'DrNB (Medical Oncology), MD (Medicine), MBBS',
         'role'         => 'Lead Consultant & Head — Medical Oncology',
         'department'   => 'Medical Oncology (Cancer Care)',
@@ -362,7 +362,7 @@ $allDoctors = [
     'dr-amit-kumar-garg' => [
         'slug'         => 'dr-amit-kumar-garg',
         'name'         => 'Dr. Amit Kumar Garg',
-        'photo'        => '../assets/images/doctors/dr-amit-kumar-garg.jpg',
+        'photo'        => 'assets/images/doctors/dr-amit-kumar-garg.jpg',
         'degrees'      => 'M.S. (Surgery), M.Ch / DNB (Surgical Oncology), MBBS',
         'role'         => 'Senior Consultant — Surgical Oncology',
         'department'   => 'Surgical Oncology',
@@ -437,7 +437,7 @@ $allDoctors = [
     'dr-arun-dua' => [
         'slug'         => 'dr-arun-dua',
         'name'         => 'Dr. Arun Dua',
-        'photo'        => '../assets/images/doctors/dr-arun-dua.jpg',
+        'photo'        => 'assets/images/doctors/dr-arun-dua.jpg',
         'degrees'      => 'DrNB (Nephrology), MD (Medicine), MBBS',
         'role'         => 'Senior Consultant & Head — Nephrology & Dialysis',
         'department'   => 'Nephrology & Dialysis',
@@ -512,7 +512,7 @@ $allDoctors = [
     'dr-bharath' => [
         'slug'         => 'dr-bharath',
         'name'         => 'Dr. Bharath',
-        'photo'        => '../assets/images/doctors/dr-bharath.jpg',
+        'photo'        => 'assets/images/doctors/dr-bharath.jpg',
         'degrees'      => 'DM (Gastroenterology), MD (Medicine), MBBS',
         'role'         => 'Senior Consultant — Gastroenterology & Hepatology',
         'department'   => 'Gastroenterology & Hepatology',
@@ -587,7 +587,7 @@ $allDoctors = [
     'dr-deepam-das' => [
         'slug'         => 'dr-deepam-das',
         'name'         => 'Dr. Deepam Das',
-        'photo'        => '../assets/images/doctors/dr-deepam-das.jpg',
+        'photo'        => 'assets/images/doctors/dr-deepam-das.jpg',
         'degrees'      => 'M.S. (General Surgery), FIAGES (Laparoscopic Surgery), MBBS',
         'role'         => 'Consultant — Advanced Laparoscopy & General Surgery',
         'department'   => 'Laparoscopic Surgery',
@@ -662,7 +662,7 @@ $allDoctors = [
     'dr-pankaj-sharma' => [
         'slug'         => 'dr-pankaj-sharma',
         'name'         => 'Dr. Pankaj Sharma',
-        'photo'        => '../assets/images/doctors/dr-pankaj-sharma.jpg',
+        'photo'        => 'assets/images/doctors/dr-pankaj-sharma.jpg',
         'degrees'      => 'M.S. (Orthopaedics), Fellow in Joint Replacement & Arthroscopy, MBBS',
         'role'         => 'Senior Consultant — Orthopaedics & Joint Replacement',
         'department'   => 'Orthopaedics & Joint Replacement',
@@ -738,7 +738,7 @@ $allDoctors = [
     'dr-joginder-silayach' => [
         'slug'         => 'dr-joginder-silayach',
         'name'         => 'Dr. Joginder Silayach',
-        'photo'        => '../assets/images/doctors/dr-joginder-silayach.jpg',
+        'photo'        => 'assets/images/doctors/dr-joginder-silayach.jpg',
         'degrees'      => 'M.D. (Paediatrics & Neonatology), MBBS',
         'role'         => 'Senior Consultant — Paediatrics & Level-3 NICU',
         'department'   => 'Paediatrics & Neonatology',
@@ -814,7 +814,7 @@ $allDoctors = [
     'dr-devilal' => [
         'slug'         => 'dr-devilal',
         'name'         => 'Dr. Devilal',
-        'photo'        => '../assets/images/doctors/dr-devilal.jpg',
+        'photo'        => 'assets/images/doctors/dr-devilal.jpg',
         'degrees'      => 'D.A. (Anaesthesiology & Critical Care), MBBS',
         'role'         => 'Consultant — Anaesthesia & Emergency Critical Care',
         'department'   => 'Anaesthesia & Critical Care',
@@ -889,7 +889,7 @@ $allDoctors = [
     'dr-parveen' => [
         'slug'         => 'dr-parveen',
         'name'         => 'Dr. Parveen',
-        'photo'        => '../assets/images/doctors/dr-parveen.jpg',
+        'photo'        => 'assets/images/doctors/dr-parveen.jpg',
         'degrees'      => 'D.N.B. (Anesthesiology), MBBS',
         'role'         => 'Consultant — Anaesthesiology & Pain Management',
         'department'   => 'Anaesthesiology & Pain Care',
@@ -964,7 +964,7 @@ $allDoctors = [
     'dr-anil-bansal' => [
         'slug'         => 'dr-anil-bansal',
         'name'         => 'Dr. Anil Bansal',
-        'photo'        => '../assets/images/doctors/dr-anil-bansal.jpg',
+        'photo'        => 'assets/images/doctors/dr-anil-bansal.jpg',
         'degrees'      => 'M.B.B.S, DMRD (Radiodiagnosis)',
         'role'         => 'Senior Consultant — CT Scan & Digital Radiology',
         'department'   => 'Radiology & Imaging',
@@ -1039,7 +1039,7 @@ $allDoctors = [
     'dr-shubham-mehta' => [
         'slug'         => 'dr-shubham-mehta',
         'name'         => 'Dr. Shubham Mehta',
-        'photo'        => '../assets/images/doctors/dr-shubham-mehta.jpg',
+        'photo'        => 'assets/images/doctors/dr-shubham-mehta.jpg',
         'degrees'      => 'M.D. (Psychiatry), MBBS',
         'role'         => 'Consultant — Psychiatry & Mental Health',
         'department'   => 'Psychiatry & Mental Health',
@@ -1114,7 +1114,7 @@ $allDoctors = [
     'dr-sanjeet-sahu' => [
         'slug'         => 'dr-sanjeet-sahu',
         'name'         => 'Dr. Sanjeet Sahu',
-        'photo'        => '../assets/images/doctors/dr-sanjeet-sahu.jpg',
+        'photo'        => 'assets/images/doctors/dr-sanjeet-sahu.jpg',
         'degrees'      => 'B.P.T, M.P.T (Musculoskeletal & Sports Physiotherapy), MIAP',
         'role'         => 'Head — Department of Physiotherapy & Rehabilitation',
         'department'   => 'Physiotherapy & Rehabilitation',
@@ -1189,7 +1189,7 @@ $allDoctors = [
     'dr-manisha-mehta' => [
         'slug'         => 'dr-manisha-mehta',
         'name'         => 'Dr. Manisha Mehta',
-        'photo'        => '../assets/images/doctors/dr-manisha-mehta.jpg',
+        'photo'        => 'assets/images/doctors/dr-manisha-mehta.jpg',
         'degrees'      => 'M.S. (Obstetrics & Gynaecology), D.G.O, MBBS',
         'role'         => 'Co-Founder & Director — Gynaecology & Clinical Governance',
         'department'   => 'Gynaecology & Obstetrics',
@@ -1402,21 +1402,24 @@ $empanelledTPA = [
         }
 
         .logo {
-            width: 210px;
+            width: 230px;
+            height: 62px;
             object-fit: contain;
+            object-position: left center;
         }
 
         .menu {
             display: flex;
+            gap: 30px;
             align-items: center;
-            gap: 28px;
+            font-size: 15.5px;
             font-weight: 700;
-            font-size: 14.5px;
         }
 
         .menu a {
             padding: 28px 0;
-            transition: color 0.2s;
+            position: relative;
+            transition: color 0.2s ease;
             color: var(--blue);
             display: inline-flex;
             align-items: center;
@@ -1425,6 +1428,16 @@ $empanelledTPA = [
 
         .menu a:hover {
             color: var(--green);
+        }
+
+        .menu .on:after {
+            content: '';
+            height: 3px;
+            background: var(--green);
+            position: absolute;
+            bottom: 14px;
+            left: 0;
+            right: 0;
         }
 
         .nav-group {
@@ -3349,52 +3362,52 @@ $empanelledTPA = [
 
 <body>
 
-    <!-- 1. TOP NOTIFICATION BAR -->
+    <!-- TOP BAR -->
     <div class="top">
         <div class="wrap">
             <div class="links">
-                <a href="tel:01662249473"><i data-lucide="phone-call" style="width:14px;height:14px;color:#68d493"></i> 24/7 ER: 01662-249473</a>
-                <a href="tel:+919996544005"><i data-lucide="phone" style="width:14px;height:14px;color:#68d493"></i> OPD: +91-99965-44005</a>
-                <a href="mailto:info@sukhdahospitalhisar.com"><i data-lucide="mail" style="width:14px;height:14px;color:#68d493"></i> info@sukhdahospitalhisar.com</a>
+                <a href="https://wa.me/919996544005" target="_blank"><i data-lucide="message-circle"></i> WhatsApp Us (24/7)</a>
+                <a href="tel:01662249473"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
             </div>
             <div class="links">
-                <span><i data-lucide="map-pin" style="width:14px;height:14px;color:#68d493"></i> Delhi Road, Hisar</span>
-                <span><i data-lucide="shield-check" style="width:14px;height:14px;color:#68d493"></i> NABH Accredited</span>
+                <a href="index.php#empanelled">Cashless / TPA</a>
+                <a href="index.php#specialities">OPD Schedule</a>
+                <a href="contact.php">Contact Us</a>
             </div>
         </div>
     </div>
 
-    <!-- 2. MAIN HEADER NAVIGATION -->
-    <header class="nav" id="headerNav">
+    <!-- HEADER / NAVIGATION -->
+    <header class="nav">
         <div class="wrap">
-            <a href="../index.php">
-                <img class="logo" src="../assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
+            <a href="index.php" aria-label="Sukhda Healthcare home">
+                <img class="logo" src="assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
             </a>
-            <nav class="menu" id="mainMenu">
+            <nav class="menu">
                 <div class="mobile-menu-head">
-                    <img src="../assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Hospital">
-                    <button type="button" class="mobile-close-btn" id="menuCloseBtn" aria-label="Close menu">✕</button>
+                    <img src="assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Hospital">
+                    <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
                 </div>
                 <div class="mobile-nav-links">
                     <span class="nav-group">
-                        <a href="../about/index.php">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="about.php">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <span class="nav-drop">
-                            <a href="../about/index.php">About Sukhda</a>
-                            <a href="../about/index.php#leadership">Medical Leadership</a>
-                            <a href="../about/index.php#why">Why Choose Us</a>
-                            <a href="../about/index.php#infrastructure">Infrastructure &amp; Facilities</a>
-                            <a href="../about/index.php#vision">Vision &amp; Mission</a>
+                            <a href="about.php">About Sukhda</a>
+                            <a href="about.php#leadership">Medical Leadership</a>
+                            <a href="index.php#why">Why Choose Us</a>
+                            <a href="index.php#infrastructure">Infrastructure &amp; Facilities</a>
+                            <a href="about.php#vision">Vision &amp; Mission</a>
                         </span>
                     </span>
                     <span class="nav-group">
-                        <a href="../index.php#hospitals">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="index.php#hospitals">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <span class="nav-drop">
-                            <a href="../index.php#hospitals">Sukhda Multispeciality Hospital</a>
-                            <a href="../index.php#hospitals">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
+                            <a href="index.php#hospitals">Sukhda Multispeciality Hospital</a>
+                            <a href="index.php#hospitals">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
                         </span>
                     </span>
                     <span class="nav-group mega-group">
-                        <a href="../index.php#specialities">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="index.php#specialities">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <div class="nav-drop services-mega">
                             <div class="mega-body">
                                 <div class="mega-col">
@@ -3406,20 +3419,20 @@ $empanelledTPA = [
                                         </div>
                                     </div>
                                     <div class="mega-links-grid">
-                                        <a href="../gynaecology/index.php"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="bone"></i><span>Arthroscopy &amp; Joint Replacement</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="baby"></i><span>Paediatrics &amp; Neonatology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="shield-check"></i><span>Advanced Laparoscopy &amp; Bariatric</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="scan"></i><span>CT &amp; Radiology Imaging</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="zap"></i><span>Emergency &amp; Trauma Care (24×7)</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="stethoscope"></i><span>Internal Medicine &amp; Critical Care</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="heart"></i><span>Psychiatry &amp; Mental Health</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="smile"></i><span>Dentistry &amp; Maxillofacial</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehab</span></a>
+                                        <a href="gynaecology.php"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="bone"></i><span>Arthroscopy &amp; Joint Replacement</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="baby"></i><span>Paediatrics &amp; Neonatology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="shield-check"></i><span>Advanced Laparoscopy &amp; Bariatric</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="scan"></i><span>CT &amp; Radiology Imaging</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="zap"></i><span>Emergency &amp; Trauma Care (24×7)</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="stethoscope"></i><span>Internal Medicine &amp; Critical Care</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="heart"></i><span>Psychiatry &amp; Mental Health</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="smile"></i><span>Dentistry &amp; Maxillofacial</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehab</span></a>
                                     </div>
                                 </div>
                                 <div class="mega-col medpark-col">
@@ -3431,30 +3444,32 @@ $empanelledTPA = [
                                         </div>
                                     </div>
                                     <div class="mega-links-grid single-col">
-                                        <a href="../servicemockup/index.php" class="featured-service">
+                                        <a href="servicemockup.php" class="featured-service">
                                             <i data-lucide="ribbon"></i>
                                             <div>
                                                 <b>Medical Oncology (Chemo &amp; Daycare)</b>
                                                 <small>Chemotherapy, Daycare Suite &amp; Immunotherapy</small>
                                             </div>
                                         </a>
-                                        <a href="../index.php#specialities"><i data-lucide="shield-alert"></i><span>Surgical Oncology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="brain"></i><span>Neuro Surgery &amp; Spine</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="stethoscope"></i><span>Critical Care &amp; Tumour Board</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="shield-alert"></i><span>Surgical Oncology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="brain"></i><span>Neuro Surgery &amp; Spine</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="stethoscope"></i><span>Critical Care &amp; Tumour Board</span></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="mega-footer">
-                                <a href="../index.php#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services →</a>
+                                <a href="index.php#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services →</a>
                                 <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24×7 ER: <b>01662-249473</b> | MedPark: <b>+91-99965-44005</b></div>
                             </div>
                         </div>
                     </span>
-                    <a href="../index.php#doctors">Our Doctors</a>
-                    <a href="../contact/index.php">Contact &amp; OPD</a>
+                    <a class="on" href="index.php#doctors">Our Doctors</a>
+                    <a href="index.php#infrastructure">Technology</a>
+                    <a href="index.php#cases">Case Stories</a>
+                    <a href="contact.php">Contact Us</a>
                 </div>
                 <div class="mobile-menu-footer">
                     <a class="btn primary" href="#appointment"><i data-lucide="calendar-days"></i>Book Appointment</a>
@@ -3462,18 +3477,18 @@ $empanelledTPA = [
                 </div>
             </nav>
             <a class="btn primary" href="#appointment"><i data-lucide="calendar-days"></i>Book Appointment</a>
-            <button class="hamb" id="menuOpenBtn" aria-label="Open navigation menu">☰</button>
+            <button class="hamb" aria-label="Open menu">☰</button>
         </div>
-        <div class="nav-overlay" id="navOverlay"></div>
+        <div class="nav-overlay"></div>
     </header>
 
     <!-- 3. DOCTOR PROFILE HERO SECTION -->
     <section class="doctor-hero">
         <div class="wrap">
             <div class="crumb">
-                <a href="../index.php">Home</a>
+                <a href="index.php">Home</a>
                 <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
-                <a href="../index.php#doctors">Doctors</a>
+                <a href="index.php#doctors">Doctors</a>
                 <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
                 <span><?= htmlspecialchars($doc['name']) ?></span>
             </div>
@@ -3651,7 +3666,7 @@ $empanelledTPA = [
                             <h3>Book OPD Appointment</h3>
                             <p>Direct consultation with <?= htmlspecialchars($doc['name']) ?></p>
                         </div>
-                        <form action="../contact/index.php" method="GET">
+                        <form action="contact.php" method="GET">
                             <input type="hidden" name="doctor" value="<?= htmlspecialchars($doc['slug']) ?>">
                             
                             <div class="form-group">
@@ -3777,7 +3792,7 @@ $empanelledTPA = [
                             <h4><?= htmlspecialchars($cDoc['name']) ?></h4>
                             <div class="col-deg"><?= htmlspecialchars($cDoc['degrees']) ?></div>
                             <div class="col-spec"><?= htmlspecialchars($cDoc['role']) ?></div>
-                            <a href="index.php?doc=<?= urlencode($cSlug) ?>" class="btn-profile">View Profile →</a>
+                            <a href="doctor.php?doc=<?= urlencode($cSlug) ?>" class="btn-profile">View Profile →</a>
                         </div>
                     </article>
                 <?php endforeach; ?>
@@ -3805,14 +3820,14 @@ $empanelledTPA = [
         <div class="wrap footer-grid">
             <div>
                 <div class="footer-brand-wrap">
-                    <img class="footer-logo" src="../assets/images/sukhda-multispeciality-logo.png"
+                    <img class="footer-logo" src="assets/images/sukhda-multispeciality-logo.png"
                         alt="Sukhda Multispeciality Hospital Hisar">
                 </div>
                 <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
                 <p class="footer-desc">Delivering advanced multispeciality care and comprehensive cancer management with
                     trusted specialists, 24×7 trauma ICU, and NABH accredited standards in Hisar.</p>
                 <div class="footer-nabh-badge">
-                    <img src="../assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
+                    <img src="assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
                     <div>
                         <b>NABH Accredited</b>
                         <small>Highest Healthcare Quality Standards</small>
@@ -3822,11 +3837,11 @@ $empanelledTPA = [
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul class="footer-nav">
-                    <li><a href="../index.php"><span>›</span> Home</a></li>
-                    <li><a href="../about/index.php"><span>›</span> About Sukhda</a></li>
-                    <li><a href="../index.php#hospitals"><span>›</span> Our Hospitals</a></li>
-                    <li><a href="../index.php#specialities"><span>›</span> Centres of Excellence</a></li>
-                    <li><a href="../index.php#doctors"><span>›</span> Our Doctors</a></li>
+                    <li><a href="index.php"><span>›</span> Home</a></li>
+                    <li><a href="about.php"><span>›</span> About Sukhda</a></li>
+                    <li><a href="index.php#hospitals"><span>›</span> Our Hospitals</a></li>
+                    <li><a href="index.php#specialities"><span>›</span> Centres of Excellence</a></li>
+                    <li><a href="index.php#doctors"><span>›</span> Our Doctors</a></li>
                     <li><a href="#appointment"><span>›</span> Book Appointment</a></li>
                 </ul>
             </div>
@@ -3914,45 +3929,70 @@ $empanelledTPA = [
     <script>
         lucide.createIcons();
 
-        // Mobile Menu Toggling
-        const menuOpenBtn = document.getElementById('menuOpenBtn');
-        const menuCloseBtn = document.getElementById('menuCloseBtn');
-        const navOverlay = document.getElementById('navOverlay');
-        const headerNav = document.getElementById('headerNav');
+        // Mobile Navigation Handler
+        (() => {
+            const nav = document.querySelector('.nav');
+            const button = document.querySelector('.hamb');
+            const closeBtn = document.querySelector('.mobile-close-btn');
+            const overlay = document.querySelector('.nav-overlay');
+            const menu = document.querySelector('.menu');
+            if (!nav || !button || !menu) return;
 
-        function toggleMenu() {
-            headerNav.classList.toggle('open');
-            document.body.style.overflow = headerNav.classList.contains('open') ? 'hidden' : '';
-        }
+            menu.id = 'mobile-menu';
+            button.type = 'button';
+            button.setAttribute('aria-controls', menu.id);
+            button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-label', 'Open menu');
 
-        if (menuOpenBtn) menuOpenBtn.addEventListener('click', toggleMenu);
-        if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
-        if (navOverlay) navOverlay.addEventListener('click', toggleMenu);
+            const close = () => {
+                nav.classList.remove('open');
+                document.body.style.overflow = '';
+                button.setAttribute('aria-expanded', 'false');
+                button.setAttribute('aria-label', 'Open menu');
+                button.blur();
+            };
 
-        // Mobile nav accordion toggle
-        document.querySelectorAll('.nav-group').forEach(group => {
-            const parentLink = group.querySelector(':scope > a');
-            if (!parentLink) return;
-            parentLink.addEventListener('click', e => {
-                if (window.innerWidth <= 900) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const isOpen = group.classList.contains('open');
-                    document.querySelectorAll('.nav-group').forEach(g => { if (g !== group) g.classList.remove('open'); });
-                    group.classList.toggle('open', !isOpen);
-                }
+            const open = () => {
+                nav.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                button.setAttribute('aria-expanded', 'true');
+                button.setAttribute('aria-label', 'Close menu');
+            };
+
+            button.onclick = e => {
+                e.preventDefault();
+                e.stopPropagation();
+                nav.classList.contains('open') ? close() : open();
+            };
+
+            if (closeBtn) closeBtn.onclick = e => { e.preventDefault(); close(); };
+            if (overlay) overlay.onclick = e => { e.preventDefault(); close(); };
+
+            const navGroups = menu.querySelectorAll('.nav-group');
+            navGroups.forEach(group => {
+                const parentLink = group.querySelector(':scope > a');
+                if (!parentLink) return;
+                parentLink.addEventListener('click', e => {
+                    if (window.innerWidth <= 900) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const isOpen = group.classList.contains('open');
+                        navGroups.forEach(g => { if (g !== group) g.classList.remove('open'); });
+                        group.classList.toggle('open', !isOpen);
+                    }
+                });
             });
-        });
 
-        // Close menu on nav item click
-        document.querySelectorAll('.mobile-nav-links a').forEach(a => {
-            a.addEventListener('click', () => {
+            menu.addEventListener('click', e => {
+                const a = e.target.closest('a');
+                if (!a) return;
                 if (a.closest('.nav-drop') || !a.closest('.nav-group')) {
-                    headerNav.classList.remove('open');
-                    document.body.style.overflow = '';
+                    close();
                 }
             });
-        });
+
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+        })();
     </script>
 </body>
 </html>

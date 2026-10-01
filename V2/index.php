@@ -2649,7 +2649,7 @@ function embedded_image(string $relativePath): string
             <div class="links">
                 <a href="#empanelled">Cashless / TPA</a>
                 <a href="#specialities">OPD Schedule</a>
-                <a href="contact/index.php">Contact Us</a>
+                <a href="contact.php">Contact Us</a>
             </div>
         </div>
     </div>
@@ -2668,13 +2668,13 @@ function embedded_image(string $relativePath): string
                 </div>
                 <div class="mobile-nav-links">
                     <span class="nav-group">
-                        <a href="about/index.php">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="about.php">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <span class="nav-drop">
-                            <a href="about/index.php">About Sukhda</a>
-                            <a href="about/index.php#leadership">Medical Leadership</a>
+                            <a href="about.php">About Sukhda</a>
+                            <a href="about.php#leadership">Medical Leadership</a>
                             <a href="#why">Why Choose Us</a>
                             <a href="#infrastructure">Infrastructure & Facilities</a>
-                            <a href="about/index.php#vision">Vision & Mission</a>
+                            <a href="about.php#vision">Vision & Mission</a>
                         </span>
                     </span>
                     <span class="nav-group">
@@ -2697,7 +2697,7 @@ function embedded_image(string $relativePath): string
                                         </div>
                                     </div>
                                     <div class="mega-links-grid">
-                                        <a href="gynaecology/index.php"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                        <a href="gynaecology.php"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
                                         <a href="#specialities"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
                                         <a href="#specialities"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
                                         <a href="#specialities"><i data-lucide="bone"></i><span>Arthroscopy &amp; Joint Replacement</span></a>
@@ -2722,7 +2722,7 @@ function embedded_image(string $relativePath): string
                                         </div>
                                     </div>
                                     <div class="mega-links-grid single-col">
-                                        <a href="servicemockup/index.php" class="featured-service">
+                                        <a href="servicemockup.php" class="featured-service">
                                             <i data-lucide="ribbon"></i>
                                             <div>
                                                 <b>Medical Oncology (Chemo &amp; Daycare)</b>
@@ -2750,14 +2750,14 @@ function embedded_image(string $relativePath): string
                     <a href="#patients">Testimonials</a>
                 </div>
                 <div class="mobile-menu-footer">
-                    <a class="btn primary" href="contact/index.php"><i data-lucide="calendar-days"></i>Book
+                    <a class="btn primary" href="contact.php"><i data-lucide="calendar-days"></i>Book
                         Appointment</a>
                     <a class="btn" href="tel:01662249473"
                         style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i
                             data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473</a>
                 </div>
             </nav>
-            <a class="btn primary" href="contact/index.php"><i data-lucide="calendar-days"></i>Book Appointment</a>
+            <a class="btn primary" href="contact.php"><i data-lucide="calendar-days"></i>Book Appointment</a>
             <button class="hamb" aria-label="Open menu">☰</button>
         </div>
         <div class="nav-overlay"></div>
@@ -2776,7 +2776,7 @@ function embedded_image(string $relativePath): string
                     Sukhda Healthcare provides complete multi &amp; super speciality care under one trusted brand.
                     Combining compassionate healing with modern technology for a healthier, stronger Hisar.</p>
                 <div class="actions">
-                    <a class="btn primary" href="contact/index.php"><i data-lucide="calendar-days"></i>Book
+                    <a class="btn primary" href="contact.php"><i data-lucide="calendar-days"></i>Book
                         Appointment</a>
                     <a class="btn" href="tel:01662249473"><i data-lucide="phone-call"></i>Emergency: 01662-249473</a>
                 </div>
@@ -2825,7 +2825,7 @@ function embedded_image(string $relativePath): string
                         Assessor)</b>, Sukhda has expanded into a 100-bedded NABH-accredited network with <b>Sukhda
                         Multispeciality Hospital</b> and <b>Sukhda MedPark (Cancer &amp; Super Speciality Hospital)</b>,
                     delivering top-tier healthcare at affordable cost across Haryana, Punjab, and Rajasthan.</p>
-                <a class="btn small primary" href="about/index.php">Our Story &amp; Leadership →</a>
+                <a class="btn small primary" href="about.php">Our Story &amp; Leadership →</a>
             </div>
             <div class="about-stats">
                 <div class="about-stat-card">
@@ -2998,7 +2998,7 @@ function embedded_image(string $relativePath): string
                             <span><i data-lucide="check-circle-2"></i>Neuro Surgery &amp; Spine</span>
                             <span><i data-lucide="check-circle-2"></i>Gastroenterology &amp; Hepatology</span>
                         </div>
-                        <a class="btn primary small" href="servicemockup/index.php">Explore Cancer Care →</a>
+                        <a class="btn primary small" href="servicemockup.php">Explore Cancer Care →</a>
                     </div>
                 </article>
             </div>
@@ -3014,7 +3014,7 @@ function embedded_image(string $relativePath): string
                     <h2>Our 21 Clinical Specialities &amp; Services</h2>
                 </div>
                 <div class="services-nav">
-                    <a class="more" href="about/index.php">View All Departments →</a>
+                    <a class="more" href="about.php">View All Departments →</a>
                     <div class="slider-arrows">
                         <button type="button" class="slide-btn" id="servicesPrev" aria-label="Previous service">
                             <i data-lucide="chevron-left"></i>
@@ -3030,11 +3030,11 @@ function embedded_image(string $relativePath): string
                     <?php foreach ($services as $i => $s):
                         $tag = $s[2];
                         $tagClass = ($tag === 'MedPark') ? 'pill-medpark' : (($tag === 'Both Locations' || $tag === 'Both') ? 'pill-both' : 'pill-multi');
-                        $link = 'contact/index.php';
+                        $link = 'contact.php';
                         if ($s[1] === 'Medical Oncology (Chemo & Daycare)')
-                            $link = 'servicemockup/index.php';
+                            $link = 'servicemockup.php';
                         if ($s[1] === 'Gynaecology & Obstetrics')
-                            $link = 'gynaecology/index.php';
+                            $link = 'gynaecology.php';
                         ?>
                         <a href="<?= $link ?>" class="service">
                             <div class="service-icon"><i data-lucide="<?= $s[0] ?>"></i></div>
@@ -3073,7 +3073,7 @@ function embedded_image(string $relativePath): string
                     <?php foreach ($doctors as $d): 
                         $docSlug = basename($d[0], '.jpg');
                     ?>
-                        <a href="doctor/index.php?doc=<?= $docSlug ?>" class="doctor-card">
+                        <a href="doctor.php?doc=<?= $docSlug ?>" class="doctor-card">
                             <div class="doctor-photo">
                                 <img src="<?= embedded_image($d[0]) ?>" alt="<?= htmlspecialchars($d[1]) ?>">
                             </div>
@@ -3097,7 +3097,7 @@ function embedded_image(string $relativePath): string
                     <div class="kicker">MODERN FACILITIES</div>
                     <h2>Infrastructure &amp; Medical Technology</h2>
                 </div>
-                <a class="more" href="about/index.php#infrastructure">View Technology Tour →</a>
+                <a class="more" href="about.php#infrastructure">View Technology Tour →</a>
             </div>
             <div class="facilities">
                 <?php foreach ($infra as $f): ?>
@@ -3253,13 +3253,13 @@ function embedded_image(string $relativePath): string
                 <h4>Quick Links</h4>
                 <ul class="footer-nav">
                     <li><a href="#"><span>›</span> Home</a></li>
-                    <li><a href="about/index.php"><span>›</span> About Sukhda</a></li>
+                    <li><a href="about.php"><span>›</span> About Sukhda</a></li>
                     <li><a href="#hospitals"><span>›</span> Our Hospitals</a></li>
                     <li><a href="#specialities"><span>›</span> Specialities &amp; OPD</a></li>
                     <li><a href="#doctors"><span>›</span> Our Doctors</a></li>
                     <li><a href="#empanelled"><span>›</span> Cashless TPA &amp; Insurance</a></li>
                     <li><a href="#patients"><span>›</span> Patient Stories</a></li>
-                    <li><a href="contact/index.php"><span>›</span> Contact &amp; Appointments</a></li>
+                    <li><a href="contact.php"><span>›</span> Contact &amp; Appointments</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -3322,7 +3322,7 @@ function embedded_image(string $relativePath): string
 
     <!-- STICKY BOTTOM FLOATING PILL CTA -->
     <div class="sticky-bottom-bar" aria-label="Quick Actions">
-        <a href="contact/index.php" class="sticky-bar-item">
+        <a href="contact.php" class="sticky-bar-item">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect width="18" height="18" x="3" y="4" rx="3"></rect>

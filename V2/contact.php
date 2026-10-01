@@ -1,6 +1,30 @@
 <?php
 $year = date('Y');
 
+$specialities = [
+    'Internal Medicine & Critical Care',
+    'Interventional Cardiology',
+    'Medical Oncology (Chemotherapy)',
+    'Surgical Oncology',
+    'Radiation Oncology (LINAC)',
+    'Neuro Surgery & Spine',
+    'Nephrology & Dialysis',
+    'Gastroenterology & Hepatology',
+    'Advanced Laparoscopy & Urology',
+    'Arthroscopy & Joint Replacement',
+    'Gynaecology & Obstetrics',
+    'Paediatrics & Neonatology',
+    'ENT (Ear, Nose & Throat)',
+    'Dermatology & Cosmetology',
+    'CT & Radiology Imaging',
+    'Emergency Medicine & Trauma (24×7)',
+    'Psychiatry & Mental Health',
+    'Dentistry & Maxillofacial Surgery',
+    'Physiotherapy & Rehabilitation',
+    'Pathology & Microbiology Lab',
+    'Anesthesiology & Pain Management'
+];
+
 $empanelledGov = [
     'Ayushman Bharat (PM-JAY)',
     'CGHS (Central Govt Health Scheme)',
@@ -30,9 +54,9 @@ $empanelledTPA = [
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>About Us | Sukhda Healthcare - Multispeciality & Super Speciality Hospitals in Hisar</title>
+    <title>Contact Us &amp; OPD Booking | Sukhda Healthcare Hisar</title>
     <meta name="description"
-        content="Learn about Sukhda Healthcare in Hisar. Founded in 2002 by Dr. Amit Mehta (MD Medicine, AIIMS New Delhi) and Dr. Manisha Mehta (NABH Assessor). Discover our history, vision, mission, leadership, and infrastructure.">
+        content="Contact Sukhda Healthcare in Hisar. 24/7 Emergency Helpline: 01662-249473 / +91-99965-44005. Book specialist OPD appointments, emergency ambulance, and hospital inquiries online.">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
@@ -626,35 +650,90 @@ $empanelledTPA = [
 
         /* HERO SECTION */
         .hero {
-            background: radial-gradient(circle at 85% 25%, rgba(42, 130, 56, 0.22) 0%, transparent 55%),
-                        radial-gradient(circle at 15% 85%, rgba(3, 32, 90, 0.35) 0%, transparent 60%),
-                        linear-gradient(135deg, #02163d 0%, #03205A 100%);
+            background: linear-gradient(135deg, #02163d 0%, #03205A 100%);
             color: #fff;
-            padding: 56px 0 52px;
+            padding: 50px 0 44px;
             position: relative;
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.8;
-            pointer-events: none;
-        }
-
-        .hero .wrap {
+        .hero-top-grid {
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
-            gap: 46px;
+            gap: 40px;
             align-items: center;
-            position: relative;
-            z-index: 2;
+            margin-bottom: 36px;
         }
 
         .hero-copy {
             width: 100%;
+        }
+
+        .hero-media {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-img-card {
+            position: relative;
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 44px rgba(0, 0, 0, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.25);
+            background: #02163d;
+        }
+
+        .hero-img-card img {
+            width: 100%;
+            height: auto;
+            max-height: 380px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-img-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .hero-badge-float {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            background: rgba(2, 22, 61, 0.94);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(114, 224, 162, 0.4);
+            padding: 12px 16px;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 2;
+        }
+
+        .hero-badge-float i {
+            width: 26px;
+            height: 26px;
+            color: #72e0a2;
+            flex-shrink: 0;
+        }
+
+        .hero-badge-float b {
+            display: block;
+            font-size: 14px;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .hero-badge-float small {
+            display: block;
+            font-size: 12px;
+            color: #b9d3eb;
         }
 
         .crumb {
@@ -677,9 +756,9 @@ $empanelledTPA = [
         .eyebrow {
             color: #72e0a2;
             font-weight: 900;
-            font-size: 12.5px;
+            font-size: 13px;
             letter-spacing: 0.9px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -687,16 +766,16 @@ $empanelledTPA = [
         }
 
         .eyebrow-badge {
-            background: rgba(114, 224, 162, 0.16);
-            border: 1px solid rgba(114, 224, 162, 0.45);
+            background: rgba(114, 224, 162, 0.15);
+            border: 1px solid rgba(114, 224, 162, 0.4);
             padding: 4px 12px;
             border-radius: 20px;
         }
 
         .hero h1 {
-            font-size: 42px;
+            font-size: 40px;
             line-height: 1.18;
-            margin: 10px 0 16px;
+            margin: 8px 0 16px;
             letter-spacing: -0.5px;
         }
 
@@ -706,139 +785,87 @@ $empanelledTPA = [
 
         .hero p {
             font-size: 16.5px;
-            line-height: 1.68;
+            line-height: 1.65;
             color: #dce7f0;
-            margin: 0 0 26px;
+            max-width: 100%;
+            margin: 0 0 24px;
         }
 
         .hero-actions {
             display: flex;
             gap: 14px;
-            margin-bottom: 0;
             flex-wrap: wrap;
         }
 
-        /* HIGHLIGHTS CARD */
-        .hero-highlights-card {
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border-radius: 18px;
-            padding: 28px 26px;
-            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
-        }
-
-        .hh-header {
-            margin-bottom: 20px;
-            padding-bottom: 14px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        }
-
-        .hh-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 11px;
-            font-weight: 800;
-            color: #72e0a2;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
-
-        .hh-badge i {
-            width: 14px;
-            height: 14px;
-        }
-
-        .hh-header h3 {
-            margin: 0;
-            font-size: 21px;
-            color: #fff;
-            font-weight: 800;
-        }
-
-        .hh-grid {
+        /* QUICK CONTACT CARDS */
+        .contact-cards-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            margin-bottom: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px
         }
 
-        .hh-item {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+        .c-card {
+            background: #fff;
             border-radius: 12px;
-            padding: 13px 14px;
+            padding: 22px 20px;
+            border: 1px solid var(--line);
+            box-shadow: 0 4px 16px rgba(3, 32, 90, 0.06);
             display: flex;
-            align-items: center;
-            gap: 12px;
-            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+            flex-direction: column;
+            gap: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease
         }
 
-        .hh-item:hover {
-            transform: translateY(-2px);
-            border-color: rgba(114, 224, 162, 0.5);
-            background: rgba(255, 255, 255, 0.1);
+        .c-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(3, 32, 90, 0.12);
+            border-color: #b7d1e8
         }
 
-        .hh-icon {
-            width: 40px;
-            height: 40px;
+        .c-icon {
+            width: 44px;
+            height: 44px;
             border-radius: 10px;
-            background: rgba(114, 224, 162, 0.16);
-            border: 1px solid rgba(114, 224, 162, 0.35);
+            background: #eaf3fb;
+            color: var(--blue);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #72e0a2;
-            flex-shrink: 0;
+            margin-bottom: 4px
         }
 
-        .hh-icon i {
-            width: 20px;
-            height: 20px;
+        .c-card.emergency .c-icon {
+            background: #fee2e2;
+            color: #dc2626
         }
 
-        .hh-item b {
-            display: block;
-            font-size: 17px;
-            color: #fff;
-            line-height: 1.15;
+        .c-card.whatsapp .c-icon {
+            background: #eaf7f0;
+            color: var(--green)
         }
 
-        .hh-item small {
-            display: block;
-            font-size: 11.5px;
-            color: #b9d3eb;
-            margin-top: 3px;
+        .c-icon i {
+            width: 22px;
+            height: 22px
         }
 
-        .hh-footer {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            padding-top: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        .c-card h4 {
+            margin: 0;
+            font-size: 14px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px
         }
 
-        .hh-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(114, 224, 162, 0.12);
-            border: 1px solid rgba(114, 224, 162, 0.3);
-            color: #72e0a2;
-            padding: 5px 11px;
-            border-radius: 20px;
-            font-size: 11.5px;
-            font-weight: 700;
+        .c-card b {
+            font-size: 16.5px;
+            color: var(--blue);
+            line-height: 1.25
         }
 
-        .hh-tag i {
-            width: 13px;
-            height: 13px;
+        .c-card small {
+            font-size: 12.5px;
+            color: var(--muted)
         }
 
         /* SECTIONS */
@@ -867,425 +894,271 @@ $empanelledTPA = [
 
         .sub {
             color: var(--muted);
-            margin: 0 0 24px;
+            margin: 0 0 28px;
             font-size: 15.5px;
             line-height: 1.55
         }
 
-        /* STORY 2-COL */
-        .story-grid {
+        /* FORM & INFO LAYOUT */
+        .contact-layout {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 48px;
-            align-items: center
+            grid-template-columns: 1.25fr 0.95fr;
+            gap: 40px;
+            align-items: flex-start
         }
 
-        .story-copy p {
-            color: var(--muted);
-            line-height: 1.75;
-            font-size: 16px;
-            margin: 0 0 18px
-        }
-
-        .story-badge-strip {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px
-        }
-
-        .story-badge {
-            background: var(--pale);
-            border: 1px solid var(--line);
-            padding: 8px 14px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--blue);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px
-        }
-
-        .story-badge i {
-            width: 16px;
-            height: 16px;
-            color: var(--green)
-        }
-
-        .story-media {
-            position: relative
-        }
-
-        .story-img-wrap {
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 16px 36px rgba(3, 32, 90, 0.14);
-            border: 4px solid #fff
-        }
-
-        .story-img-wrap img {
-            height: 380px;
-            object-fit: cover
-        }
-
-        .quote-box {
-            border-left: 4px solid var(--green);
-            background: #fff;
-            padding: 18px 22px;
-            border-radius: 0 10px 10px 0;
-            box-shadow: 0 4px 14px rgba(3, 32, 90, 0.08);
-            margin-top: 22px;
-            font-size: 16.5px;
-            font-weight: 700;
-            color: var(--blue);
-            font-style: italic
-        }
-
-        /* VISION & MISSION */
-        .vm-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 26px;
-            margin-bottom: 36px
-        }
-
-        .vm-card {
+        .form-box {
             background: #fff;
             border-radius: 14px;
-            padding: 32px 28px;
+            padding: 36px 32px;
             border: 1px solid var(--line);
-            box-shadow: 0 4px 18px rgba(3, 32, 90, 0.08);
-            position: relative;
-            overflow: hidden
+            box-shadow: 0 6px 24px rgba(3, 32, 90, 0.08)
         }
 
-        .vm-card.vision-card {
-            border-top: 5px solid var(--green)
-        }
-
-        .vm-card.mission-card {
-            border-top: 5px solid var(--blue)
-        }
-
-        .vm-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 10px;
-            background: var(--green-light);
-            color: var(--green);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px
-        }
-
-        .vm-card.mission-card .vm-icon {
-            background: #eaf3fb;
-            color: var(--blue)
-        }
-
-        .vm-icon i {
-            width: 26px;
-            height: 26px
-        }
-
-        .vm-card h3 {
-            font-size: 22px;
-            margin: 0 0 10px;
-            color: var(--blue)
-        }
-
-        .vm-card p {
-            font-size: 15.5px;
-            line-height: 1.65;
-            color: var(--muted);
-            margin: 0
-        }
-
-        /* CORE VALUES */
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px
-        }
-
-        .val-card {
-            background: #fff;
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            padding: 24px 20px;
-            box-shadow: 0 3px 12px rgba(3, 32, 90, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease
-        }
-
-        .val-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 22px rgba(3, 32, 90, 0.12);
-            border-color: #b7d1e8
-        }
-
-        .val-card i {
-            width: 32px;
-            height: 32px;
-            color: var(--green);
-            margin-bottom: 12px
-        }
-
-        .val-card h4 {
-            font-size: 17px;
+        .form-box h3 {
+            font-size: 23px;
             margin: 0 0 8px;
             color: var(--blue)
         }
 
-        .val-card p {
-            font-size: 13.5px;
+        .form-box p {
+            font-size: 14.5px;
             color: var(--muted);
-            line-height: 1.5;
-            margin: 0
+            margin: 0 0 24px
         }
 
-        /* DIRECTORS / LEADERSHIP */
-        .directors-grid {
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px
+        }
+
+        .form-group.full {
+            grid-column: span 2
+        }
+
+        .form-group label {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--blue)
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            font-family: inherit;
+            font-size: 14.5px;
+            padding: 12px 14px;
+            border: 1px solid #c9d9e8;
+            border-radius: 8px;
+            background: #fdfdfd;
+            color: var(--blue);
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px rgba(42, 130, 56, 0.15);
+            background: #fff
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            margin-top: 8px
+        }
+
+        .form-success-alert {
+            display: none;
+            background: #eaf7f0;
+            border: 1px solid #8fe0b2;
+            color: #06723e;
+            padding: 14px 18px;
+            border-radius: 8px;
+            font-size: 14.5px;
+            font-weight: 700;
+            margin-bottom: 20px
+        }
+
+        /* SIDEBAR / TIMINGS & INFO */
+        .info-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px
+        }
+
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 26px 24px;
+            border: 1px solid var(--line);
+            box-shadow: 0 4px 16px rgba(3, 32, 90, 0.06)
+        }
+
+        .info-card h4 {
+            font-size: 18px;
+            margin: 0 0 16px;
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .info-card h4 i {
+            color: var(--green);
+            width: 20px;
+            height: 20px
+        }
+
+        .timing-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--line);
+            font-size: 14px
+        }
+
+        .timing-row:last-child {
+            border-bottom: 0
+        }
+
+        .timing-row span:first-child {
+            color: var(--muted);
+            font-weight: 600
+        }
+
+        .timing-row span:last-child {
+            color: var(--blue);
+            font-weight: 700
+        }
+
+        .emergency-pill-tag {
+            background: #fee2e2;
+            color: #b91c1c;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 800
+        }
+
+        /* BRANCHES 2-COL */
+        .branches-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 28px
         }
 
-        .director-card {
+        .branch-card {
             background: #fff;
-            border-radius: 14px;
+            border-radius: 12px;
             border: 1px solid var(--line);
             overflow: hidden;
-            box-shadow: 0 6px 22px rgba(3, 32, 90, 0.08);
+            box-shadow: 0 4px 18px rgba(3, 32, 90, 0.08);
             display: flex;
             flex-direction: column;
             transition: transform 0.2s ease, box-shadow 0.2s ease
         }
 
-        .director-card:hover {
+        .branch-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 28px rgba(3, 32, 90, 0.14)
+            box-shadow: 0 10px 26px rgba(3, 32, 90, 0.14)
         }
 
-        .dir-top {
-            display: flex;
-            gap: 20px;
-            padding: 24px;
+        .branch-header {
+            padding: 22px 24px;
             background: linear-gradient(135deg, #f8fbfe 0%, #edf5fc 100%);
             border-bottom: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
             align-items: center
         }
 
-        .dir-photo {
-            width: 110px;
-            height: 130px;
-            border-radius: 10px;
-            object-fit: cover;
-            border: 3px solid #fff;
-            box-shadow: 0 4px 12px rgba(3, 32, 90, 0.15);
-            flex-shrink: 0
-        }
-
-        .dir-meta h3 {
-            font-size: 21px;
+        .branch-header h3 {
+            font-size: 19px;
             margin: 0 0 4px;
             color: var(--blue)
         }
 
-        .dir-title {
-            font-size: 13.5px;
-            color: var(--green);
-            font-weight: 800;
-            margin-bottom: 6px
-        }
-
-        .dir-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px
-        }
-
-        .dir-badge {
+        .branch-badge {
             background: #eaf7f0;
             border: 1px solid #bfe8cf;
             color: #06723e;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 700
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11.5px;
+            font-weight: 800
         }
 
-        .dir-body {
+        .branch-body {
             padding: 24px;
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            flex-grow: 1
+            gap: 16px;
+            flex-grow: 1;
+            justify-content: space-between
         }
 
-        .dir-body h4 {
+        .branch-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
             font-size: 14.5px;
-            margin: 0;
-            color: var(--blue);
-            text-transform: uppercase;
-            letter-spacing: 0.5px
+            color: var(--muted)
         }
 
-        .dir-body p {
-            font-size: 14.5px;
-            line-height: 1.65;
-            color: var(--muted);
-            margin: 0
+        .branch-line i {
+            width: 20px;
+            height: 20px;
+            color: var(--green);
+            flex-shrink: 0;
+            margin-top: 2px
         }
 
-        .dir-msg {
-            background: #f8fbfe;
-            border-left: 3px solid var(--green);
-            padding: 14px 16px;
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-            font-size: 14px;
-            color: #274567;
-            line-height: 1.55
+        .branch-line b {
+            color: var(--blue)
         }
 
-        /* HOSPITALS NETWORK */
-        .hospital-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 26px
+        .branch-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px
         }
 
-        .hospital {
-            display: grid;
-            grid-template-columns: 46% 54%;
+        /* MAP SECTION */
+        .map-section {
             background: #fff;
-            border-radius: 12px;
+            padding: 0 0 60px
+        }
+
+        .map-frame-box {
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 4px 18px #03205a12;
             border: 1px solid var(--line);
-            transition: transform 0.25s ease, box-shadow 0.25s ease
-        }
-
-        .hospital:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 28px rgba(3, 32, 90, 0.16)
-        }
-
-        .photo {
+            box-shadow: 0 8px 24px rgba(3, 32, 90, 0.1);
+            height: 380px;
+            background: #e5edf5;
             position: relative
         }
 
-        .photo img {
+        .map-frame-box iframe {
+            width: 100%;
             height: 100%;
-            object-fit: cover
-        }
-
-        .place {
-            position: absolute;
-            left: 14px;
-            bottom: 14px;
-            background: rgba(3, 32, 90, 0.9);
-            backdrop-filter: blur(4px);
-            color: #fff;
-            font-size: 12px;
-            line-height: 1.35;
-            padding: 6px 11px;
-            border-radius: 6px;
-            font-weight: 600
-        }
-
-        .h-info {
-            padding: 24px
-        }
-
-        .h-logo {
-            width: 145px;
-            height: 42px;
-            object-fit: contain;
-            object-position: left center;
-            margin-bottom: 12px
-        }
-
-        .h-info h3 {
-            font-size: 18.5px;
-            margin: 0 0 8px;
-            color: var(--blue)
-        }
-
-        .h-info p {
-            font-size: 13.5px;
-            line-height: 1.55;
-            color: var(--muted);
-            margin: 0 0 16px
-        }
-
-        .checks {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-bottom: 20px
-        }
-
-        .checks span {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--blue)
-        }
-
-        .checks i {
-            width: 16px;
-            height: 16px;
-            color: var(--green);
-            flex-shrink: 0
-        }
-
-        /* INFRASTRUCTURE */
-        .facilities {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 18px
-        }
-
-        .facility {
-            border-radius: 10px;
-            overflow: hidden;
-            background: #fff;
-            box-shadow: 0 4px 14px #03205a12;
-            border: 1px solid var(--line);
-            transition: transform 0.2s ease, box-shadow 0.2s ease
-        }
-
-        .facility:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(3, 32, 90, 0.16)
-        }
-
-        .facility img {
-            height: 125px;
-            object-fit: cover
-        }
-
-        .facility div {
-            padding: 12px 14px
-        }
-
-        .facility b {
-            display: block;
-            font-size: 14px;
-            color: var(--blue);
-            margin-bottom: 4px
-        }
-
-        .facility small {
-            font-size: 12px;
-            color: var(--muted);
-            line-height: 1.4;
-            display: block
+            border: 0
         }
 
         /* EMPANELLED CASHLESS STRIP */
@@ -1346,47 +1219,6 @@ $empanelledTPA = [
             background: #eaf7f0;
             border-color: #bfe8cf;
             color: #06723e
-        }
-
-        /* CTA SECTION */
-        .cta {
-            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
-            color: #fff;
-            padding: 42px 0
-        }
-
-        .cta .wrap {
-            display: grid;
-            grid-template-columns: 100px 1fr auto;
-            gap: 32px;
-            align-items: center
-        }
-
-        .cta-visual img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid rgba(255, 255, 255, 0.3)
-        }
-
-        .cta h2 {
-            font-size: 30px;
-            margin: 0 0 8px;
-            line-height: 1.18
-        }
-
-        .cta p {
-            font-size: 15px;
-            color: #dbe7f2;
-            line-height: 1.5;
-            margin: 0
-        }
-
-        .cta .actions {
-            margin: 0;
-            display: flex;
-            gap: 12px
         }
 
         /* PREMIUM FOOTER REDESIGN */
@@ -1775,12 +1607,8 @@ $empanelledTPA = [
 
         /* RESPONSIVE MEDIA QUERIES */
         @media(max-width:1100px) {
-            .values-grid {
+            .contact-cards-grid {
                 grid-template-columns: repeat(2, 1fr)
-            }
-
-            .facilities {
-                grid-template-columns: repeat(3, 1fr)
             }
 
             .footer-grid {
@@ -1804,30 +1632,15 @@ $empanelledTPA = [
                 display: block
             }
 
-            .hero .wrap,
-            .story-grid,
-            .vm-grid,
-            .directors-grid,
-            .hospital-grid {
+            .hero-top-grid,
+            .contact-layout {
                 grid-template-columns: 1fr;
                 gap: 28px
             }
 
-            .facilities {
-                grid-template-columns: 1fr 1fr
-            }
-
-            .cta .wrap {
+            .branches-grid {
                 grid-template-columns: 1fr;
-                text-align: center
-            }
-
-            .cta-visual {
-                margin: auto
-            }
-
-            .cta .actions {
-                justify-content: center
+                gap: 24px
             }
 
             .nav-overlay {
@@ -2116,12 +1929,8 @@ $empanelledTPA = [
                 line-height: 1.2;
             }
 
-            .hh-grid {
-                grid-template-columns: 1fr;
-                gap: 10px
-            }
-
-            .title {
+            .title,
+            .form-box h3 {
                 font-size: 22px;
                 line-height: 1.28;
             }
@@ -2138,29 +1947,33 @@ $empanelledTPA = [
                 margin: 0 0 18px;
             }
 
-            .values-grid {
+            .contact-cards-grid {
                 grid-template-columns: 1fr
             }
 
-            .facilities {
+            .form-box {
+                padding: 24px 20px
+            }
+
+            .form-grid {
                 grid-template-columns: 1fr
             }
 
-            .dir-top {
-                flex-direction: column;
-                text-align: center
+            .form-group.full {
+                grid-column: span 1
             }
 
-            .dir-badges {
-                justify-content: center
+            .branch-header {
+                flex-wrap: wrap;
+                gap: 8px;
             }
 
-            .hospital {
-                grid-template-columns: 1fr
+            .branch-actions {
+                flex-direction: column
             }
 
-            .photo {
-                height: 190px
+            .branch-actions .btn {
+                width: 100%
             }
 
             .footer-grid {
@@ -2180,7 +1993,8 @@ $empanelledTPA = [
                 font-size: 25px;
             }
 
-            .title {
+            .title,
+            .form-box h3 {
                 font-size: 20px;
                 line-height: 1.3;
             }
@@ -2203,9 +2017,9 @@ $empanelledTPA = [
                 <a href="tel:01662249473"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
             </div>
             <div class="links">
-                <a href="../index.php#empanelled">Cashless / TPA</a>
-                <a href="../index.php#specialities">OPD Schedule</a>
-                <a href="../contact/index.php">Contact Us</a>
+                <a href="index.php#empanelled">Cashless / TPA</a>
+                <a href="index.php#specialities">OPD Schedule</a>
+                <a href="index.php">Contact Us</a>
             </div>
         </div>
     </div>
@@ -2213,36 +2027,36 @@ $empanelledTPA = [
     <!-- HEADER / NAVIGATION -->
     <header class="nav">
         <div class="wrap">
-            <a href="../index.php" aria-label="Sukhda Healthcare home">
-                <img class="logo" src="../assets/images/sukhda-multispeciality-logo.png"
+            <a href="index.php" aria-label="Sukhda Healthcare home">
+                <img class="logo" src="assets/images/sukhda-multispeciality-logo.png"
                     alt="Sukhda Multispeciality Hospital Hisar">
             </a>
             <nav class="menu">
                 <div class="mobile-menu-head">
-                    <img src="../assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Hospital">
+                    <img src="assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Hospital">
                     <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
                 </div>
                 <div class="mobile-nav-links">
                     <span class="nav-group">
-                        <a class="on" href="index.php">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="about.php">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <span class="nav-drop">
-                            <a href="index.php">About Sukhda</a>
-                            <a href="#leadership">Medical Leadership</a>
-                            <a href="#vision">Vision &amp; Mission</a>
-                            <a href="#hospitals">Our Hospitals</a>
-                            <a href="#infrastructure">Infrastructure &amp; Facilities</a>
+                            <a href="about.php">About Sukhda</a>
+                            <a href="about.php#leadership">Medical Leadership</a>
+                            <a href="about.php#vision">Vision &amp; Mission</a>
+                            <a href="about.php#hospitals">Our Hospitals</a>
+                            <a href="about.php#infrastructure">Infrastructure &amp; Facilities</a>
                         </span>
                     </span>
                     <span class="nav-group">
-                        <a href="../index.php#hospitals">Our Hospitals <i data-lucide="chevron-down"
+                        <a href="index.php#hospitals">Our Hospitals <i data-lucide="chevron-down"
                                 class="nav-chevron"></i></a>
                         <span class="nav-drop">
-                            <a href="../index.php#hospitals">Sukhda Multispeciality Hospital</a>
-                            <a href="../index.php#hospitals">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
+                            <a href="index.php#hospitals">Sukhda Multispeciality Hospital</a>
+                            <a href="index.php#hospitals">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
                         </span>
                     </span>
                     <span class="nav-group mega-group">
-                        <a href="../index.php#specialities">Our Services <i data-lucide="chevron-down"
+                        <a href="index.php#specialities">Our Services <i data-lucide="chevron-down"
                                 class="nav-chevron"></i></a>
                         <div class="nav-drop services-mega">
                             <div class="mega-body">
@@ -2255,20 +2069,20 @@ $empanelledTPA = [
                                         </div>
                                     </div>
                                     <div class="mega-links-grid">
-                                        <a href="../gynaecology/index.php"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="bone"></i><span>Arthroscopy &amp; Joint Replacement</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="baby"></i><span>Paediatrics &amp; Neonatology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="shield-check"></i><span>Advanced Laparoscopy &amp; Bariatric</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="scan"></i><span>CT &amp; Radiology Imaging</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="zap"></i><span>Emergency &amp; Trauma Care (24×7)</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="stethoscope"></i><span>Internal Medicine &amp; Critical Care</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="heart"></i><span>Psychiatry &amp; Mental Health</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="smile"></i><span>Dentistry &amp; Maxillofacial</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehab</span></a>
+                                        <a href="gynaecology.php"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="bone"></i><span>Arthroscopy &amp; Joint Replacement</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="baby"></i><span>Paediatrics &amp; Neonatology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="shield-check"></i><span>Advanced Laparoscopy &amp; Bariatric</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="scan"></i><span>CT &amp; Radiology Imaging</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="zap"></i><span>Emergency &amp; Trauma Care (24×7)</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="stethoscope"></i><span>Internal Medicine &amp; Critical Care</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="heart"></i><span>Psychiatry &amp; Mental Health</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="smile"></i><span>Dentistry &amp; Maxillofacial</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehab</span></a>
                                     </div>
                                 </div>
                                 <div class="mega-col medpark-col">
@@ -2280,39 +2094,39 @@ $empanelledTPA = [
                                         </div>
                                     </div>
                                     <div class="mega-links-grid single-col">
-                                        <a href="../servicemockup/index.php" class="featured-service">
+                                        <a href="servicemockup.php" class="featured-service">
                                             <i data-lucide="ribbon"></i>
                                             <div>
                                                 <b>Medical Oncology (Chemo &amp; Daycare)</b>
                                                 <small>Chemotherapy, Daycare Suite &amp; Immunotherapy</small>
                                             </div>
                                         </a>
-                                        <a href="../index.php#specialities"><i data-lucide="shield-alert"></i><span>Surgical Oncology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="brain"></i><span>Neuro Surgery &amp; Spine</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
-                                        <a href="../index.php#specialities"><i data-lucide="stethoscope"></i><span>Critical Care &amp; Tumour Board</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="shield-alert"></i><span>Surgical Oncology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="brain"></i><span>Neuro Surgery &amp; Spine</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
+                                        <a href="index.php#specialities"><i data-lucide="stethoscope"></i><span>Critical Care &amp; Tumour Board</span></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="mega-footer">
-                                <a href="../index.php#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services →</a>
+                                <a href="index.php#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services →</a>
                                 <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24×7 ER: <b>01662-249473</b> | MedPark: <b>+91-99965-44005</b></div>
                             </div>
                         </div>
                     </span>
-                    <a href="../index.php#doctors">Doctors</a>
-                    <a href="#infrastructure">Technology</a>
-                    <a href="../index.php#cases">Case Stories</a>
-                    <a href="../index.php#patients">Testimonials</a>
+                    <a href="index.php#doctors">Doctors</a>
+                    <a href="index.php#infrastructure">Technology</a>
+                    <a href="index.php#cases">Case Stories</a>
+                    <a href="index.php#patients">Testimonials</a>
                 </div>
                 <div class="mobile-menu-footer">
-                    <a class="btn primary" href="../contact/index.php"><i data-lucide="calendar-days"></i>Book Appointment</a>
+                    <a class="btn primary" href="#appointment-form"><i data-lucide="calendar-days"></i>Book Appointment</a>
                     <a class="btn" href="tel:01662249473" style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473</a>
                 </div>
             </nav>
-            <a class="btn primary" href="../contact/index.php"><i data-lucide="calendar-days"></i>Book Appointment</a>
+            <a class="btn primary" href="#appointment-form"><i data-lucide="calendar-days"></i>Book Appointment</a>
             <button class="hamb" aria-label="Open menu">☰</button>
         </div>
         <div class="nav-overlay"></div>
@@ -2321,236 +2135,316 @@ $empanelledTPA = [
     <!-- HERO -->
     <section class="hero">
         <div class="wrap">
-            <div class="hero-copy">
-                <div class="crumb">
-                    <a href="../index.php">Home</a> <span>›</span> <span>About Us</span>
-                </div>
-                <div class="eyebrow">
-                    <span class="eyebrow-badge">NABH ACCREDITED HEALTHCARE NETWORK</span>
-                    <span>ESTABLISHED NOVEMBER 2002</span>
-                </div>
-                <h1>Two Decades of Clinical Excellence,<br><span>Compassion &amp; Quality Care</span></h1>
-                <p>From a focused 20-bed hospital in 2002 to a 100-bedded NABH accredited multispeciality and cancer
-                    care network, Sukhda Healthcare is built on the founding promise of <i>"Care and Cure for Whole
-                        Family Under One Roof"</i>.</p>
+            <div class="hero-top-grid">
+                <div class="hero-copy">
+                    <div class="crumb">
+                        <a href="index.php">Home</a> <span>›</span> <span>Contact Us</span>
+                    </div>
+                    <div class="eyebrow">
+                        <span class="eyebrow-badge">24/7 EMERGENCY &amp; OPD BOOKINGS</span>
+                        <span>HISAR, HARYANA</span>
+                    </div>
+                    <h1>Get in Touch with<br><span>Sukhda Healthcare Team</span></h1>
+                    <p>Whether you require urgent emergency care, specialist OPD doctor consultations, or guidance
+                        regarding cashless TPA insurance — our dedicated medical and patient-care coordination team is
+                        available round-the-clock.</p>
 
-                <div class="hero-actions">
-                    <a class="btn primary" href="../contact/index.php"><i data-lucide="calendar-days"></i>Book
-                        Consultation</a>
-                    <a class="btn white" href="#leadership"><i data-lucide="award"></i>Meet Leadership</a>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#appointment-form"><i data-lucide="calendar-days"></i>Book OPD
+                            Appointment</a>
+                        <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i>24/7 Helpline:
+                            01662-249473</a>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <div class="hero-img-card">
+                        <img src="assets/images/doctor-consult.jpg"
+                            alt="Sukhda Hospital Doctor Consultation and Patient Helpdesk">
+                        <div class="hero-badge-float">
+                            <i data-lucide="clock"></i>
+                            <div>
+                                <b>24/7 Emergency &amp; OPD Assistance</b>
+                                <small>Rapid Helpdesk • Call +91-99965-44005</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="hero-highlights-card">
-                <div class="hh-header">
-                    <div class="hh-badge"><i data-lucide="shield-check"></i> INSTITUTIONAL SNAPSHOT</div>
-                    <h3>Healthcare Legacy at a Glance</h3>
+            <div class="contact-cards-grid">
+                <!-- EMERGENCY -->
+                <div class="c-card emergency">
+                    <div class="c-icon"><i data-lucide="phone-call"></i></div>
+                    <h4>24/7 Emergency Helpline</h4>
+                    <b>+91-99965-44005</b>
+                    <small>Instant ambulance &amp; ICU team response</small>
                 </div>
-                <div class="hh-grid">
-                    <div class="hh-item">
-                        <div class="hh-icon"><i data-lucide="calendar"></i></div>
-                        <div>
-                            <b>Nov 2002</b>
-                            <small>Founded in Hisar (22+ Yrs)</small>
-                        </div>
-                    </div>
-                    <div class="hh-item">
-                        <div class="hh-icon"><i data-lucide="building-2"></i></div>
-                        <div>
-                            <b>100+ Beds</b>
-                            <small>Across 2 Modern Hospitals</small>
-                        </div>
-                    </div>
-                    <div class="hh-item">
-                        <div class="hh-icon"><i data-lucide="users"></i></div>
-                        <div>
-                            <b>50,000+</b>
-                            <small>Patients Treated Regionally</small>
-                        </div>
-                    </div>
-                    <div class="hh-item">
-                        <div class="hh-icon"><i data-lucide="award"></i></div>
-                        <div>
-                            <b>NABH</b>
-                            <small>Accredited Quality Care</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="hh-footer">
-                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> AIIMS Clinical Heritage</span>
-                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> 24/7 ICU &amp; Trauma</span>
-                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> MedPark Cancer Wing</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- SECTION 1: STORY & ORIGIN -->
-    <section class="section">
-        <div class="wrap story-grid">
-            <div class="story-copy">
-                <div class="kicker">ABOUT SUKHDA HEALTHCARE</div>
-                <h2 class="title">Care and Cure for Whole Family Under One Roof</h2>
-                <p>Sukhda Multispeciality Hospital is the brainchild of <b>Dr. Amit Mehta, MD Medicine (AIIMS, New
-                        Delhi)</b>. After studying and gaining rich clinical experience from premier institutes of India
-                    like <b>AIIMS, New Delhi</b> and <b>PGIMER, Chandigarh</b>, Dr. Mehta decided to return to his
-                    native place Hisar to serve his community.</p>
-                <p>He joined Jindal Institute of Medical Sciences (JIMS) in February 1994 and worked tirelessly for nine
-                    years as <b>Head of the Department of Internal Medicine &amp; Critical Care</b>. For his exemplary
-                    healthcare contributions, he was bestowed with the prestigious <b>"Vikas Ratan Gold Award"</b> in
-                    the year 2002.</p>
-                <p>In November 2002, under the visionary leadership of Dr. Amit Mehta and <b>Dr. Manisha Mehta (NABH
-                        Certified Assessor)</b>, Sukhda made a humble beginning as a 20-bedded hospital with the sole
-                    mission of providing <i>"Care and Cure for Whole Family Under One Roof"</i> without compromising
-                    quality.</p>
-                <p>Today, this vision has metamorphosed into a premier 100-bedded network comprising <b>Sukhda
-                        Multispeciality Hospital</b> and <b>Sukhda MedPark (Cancer &amp; Super Speciality Hospital)</b>,
-                    catering to patients from across Haryana (Sirsa, Fatehabad, Hansi, Jind, Barwala, Uklana, Narwana,
-                    Tohana), Rajasthan (Bhadra, Rajgarh, Churu), and Punjab (Bhatinda, Mansa).</p>
-                <div class="story-badge-strip">
-                    <span class="story-badge"><i data-lucide="check-circle-2"></i> AIIMS &amp; PGIMER Clinical
-                        Heritage</span>
-                    <span class="story-badge"><i data-lucide="check-circle-2"></i> NABH Accredited Standards</span>
-                    <span class="story-badge"><i data-lucide="check-circle-2"></i> 24/7 ICU &amp; Emergency
-                        Helpline</span>
+                <!-- RECEPTION / LANDLINE -->
+                <div class="c-card">
+                    <div class="c-icon"><i data-lucide="phone"></i></div>
+                    <h4>Hospital Reception</h4>
+                    <b>01662-249473, 248473</b>
+                    <small>OPD appointments &amp; general inquiry</small>
                 </div>
-            </div>
-            <div class="story-media">
-                <div class="story-img-wrap">
-                    <img src="../assets/images/doctor-patient-hero.jpg"
-                        alt="Doctor and Patient Consultation at Sukhda Hospital">
+
+                <!-- WHATSAPP -->
+                <div class="c-card whatsapp">
+                    <div class="c-icon"><i data-lucide="message-circle"></i></div>
+                    <h4>WhatsApp Support</h4>
+                    <b>+91-99965-44005</b>
+                    <small>Chat with patient coordinator</small>
                 </div>
-                <div class="quote-box">
-                    "Since inception, our goal has been to facilitate cost-effective medical services at par with top
-                    national institutions — with uncompromised clinical quality and genuine human empathy."
+
+                <!-- EMAIL -->
+                <div class="c-card">
+                    <div class="c-icon"><i data-lucide="mail"></i></div>
+                    <h4>Email Inquiries</h4>
+                    <b>info@sukhdahospitalhisar.com</b>
+                    <small>Reports &amp; administrative queries</small>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: VISION, MISSION & VALUES -->
-    <section class="section soft" id="vision">
-        <div class="wrap">
-            <div class="kicker">GUIDING PHILOSOPHY</div>
-            <h2 class="title">Vision, Mission &amp; Core Values</h2>
-            <p class="sub">The enduring principles that define every patient interaction, clinical decision, and
-                operational standard at Sukhda.</p>
+    <!-- SECTION 1: APPOINTMENT FORM & TIMINGS -->
+    <section class="section" id="appointment-form">
+        <div class="wrap contact-layout">
+            <!-- FORM -->
+            <div class="form-box">
+                <div class="kicker">ONLINE APPOINTMENT &amp; INQUIRY</div>
+                <h3>Book a Doctor Consultation</h3>
+                <p>Fill out the details below and our hospital patient coordinator will confirm your appointment slot
+                    via call/SMS.</p>
 
-            <div class="vm-grid">
-                <div class="vm-card vision-card">
-                    <div class="vm-icon"><i data-lucide="eye"></i></div>
-                    <h3>Our Vision</h3>
-                    <p>To be a recognised centre of excellence for providing <b>"Quality Healthcare at Affordable
-                            Cost"</b>, setting benchmark standards in patient safety, advanced technology, and
-                        compassionate healing for the northern region.</p>
+                <div id="formSuccess" class="form-success-alert">
+                    ✓ Thank you! Your appointment request has been submitted. Our team will contact you shortly to
+                    confirm your time slot.
                 </div>
-                <div class="vm-card mission-card">
-                    <div class="vm-icon"><i data-lucide="target"></i></div>
-                    <h3>Our Mission</h3>
-                    <p>Sukhda Multispeciality Hospital is committed to provide <b>"Care and Cure for Whole Family Under
-                            One Roof"</b> through a team of qualified, experienced doctors and dedicated nursing,
-                        paramedical, and support staff supported by state-of-the-art medical and diagnostic services.
+
+                <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="pName">Patient Full Name *</label>
+                            <input type="text" id="pName" required placeholder="e.g. Rahul Sharma">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pPhone">Contact Number (Mobile) *</label>
+                            <input type="tel" id="pPhone" required placeholder="e.g. +91 98765 43210">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pEmail">Email Address (Optional)</label>
+                            <input type="email" id="pEmail" placeholder="e.g. name@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pHospital">Select Hospital Unit *</label>
+                            <select id="pHospital" required>
+                                <option value="Sukhda Multispeciality Hospital (Delhi Road)">Sukhda Multispeciality
+                                    Hospital (Delhi Road)</option>
+                                <option value="Sukhda MedPark (Cancer & Super Speciality)">Sukhda MedPark (Cancer &amp;
+                                    Super Speciality)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pDept">Speciality / Department *</label>
+                            <select id="pDept" required>
+                                <option value="">-- Choose Department --</option>
+                                <?php foreach ($specialities as $dept): ?>
+                                    <option value="<?= htmlspecialchars($dept) ?>"><?= htmlspecialchars($dept) ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pDate">Preferred Date *</label>
+                            <input type="date" id="pDate" required value="<?= date('Y-m-d') ?>">
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="pMessage">Brief Reason for Visit / Symptoms</label>
+                            <textarea id="pMessage"
+                                placeholder="Describe symptoms or specific doctor preference..."></textarea>
+                        </div>
+
+                        <div class="form-group full">
+                            <button type="submit" class="btn primary form-submit-btn">
+                                <i data-lucide="check-circle"></i> Submit Appointment Request
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- SIDEBAR: TIMINGS & EMERGENCY -->
+            <div class="info-sidebar">
+                <!-- TIMINGS CARD -->
+                <div class="info-card">
+                    <h4><i data-lucide="clock"></i> OPD &amp; Service Timings</h4>
+                    <div class="timing-row">
+                        <span>Emergency &amp; Trauma (24/7)</span>
+                        <span class="emergency-pill-tag">Open 24 Hours</span>
+                    </div>
+                    <div class="timing-row">
+                        <span>ICU &amp; Critical Care</span>
+                        <span class="emergency-pill-tag">Round the Clock</span>
+                    </div>
+                    <div class="timing-row">
+                        <span>Morning OPD Hours</span>
+                        <span>09:00 AM – 02:00 PM</span>
+                    </div>
+                    <div class="timing-row">
+                        <span>Evening OPD Hours</span>
+                        <span>05:00 PM – 07:30 PM</span>
+                    </div>
+                    <div class="timing-row">
+                        <span>Sunday Consultations</span>
+                        <span>10:00 AM – 02:00 PM</span>
+                    </div>
+                    <div class="timing-row">
+                        <span>CT Scan &amp; Digital X-Ray</span>
+                        <span>24/7 Available</span>
+                    </div>
+                    <div class="timing-row">
+                        <span>Pathology Lab &amp; Blood</span>
+                        <span>24/7 Available</span>
+                    </div>
+                    <div class="timing-row">
+                        <span>In-house Pharmacy</span>
+                        <span>24 Hours Open</span>
+                    </div>
+                </div>
+
+                <!-- REACH US CARD -->
+                <div class="info-card">
+                    <h4><i data-lucide="map-pin"></i> How to Reach Us</h4>
+                    <p style="font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 12px">
+                        Sukhda Healthcare is conveniently situated in the heart of Hisar along <b>Delhi Road (NH-9)</b>,
+                        easily accessible from all transport hubs:
                     </p>
-                </div>
-            </div>
-
-            <div class="values-grid">
-                <div class="val-card">
-                    <i data-lucide="heart-handshake"></i>
-                    <h4>Dignity &amp; Equity</h4>
-                    <p>We practice dignity and equity in all relationships, providing opportunities for patients and
-                        healthcare staff to realise their full potential.</p>
-                </div>
-                <div class="val-card">
-                    <i data-lucide="shield-check"></i>
-                    <h4>Patient Rights &amp; Centricity</h4>
-                    <p>We manage all operations with deep concern for patient rights, safety, transparency, and clinical
-                        ethics in a comfortable environment.</p>
-                </div>
-                <div class="val-card">
-                    <i data-lucide="sparkles"></i>
-                    <h4>Technological Innovation</h4>
-                    <p>We continuously stay updated with latest technological advancements (Clear Stent Live Cath Lab,
-                        LINAC, CT) and managerial expertise.</p>
-                </div>
-                <div class="val-card">
-                    <i data-lucide="wallet"></i>
-                    <h4>Affordable &amp; Effective</h4>
-                    <p>We inculcate cost-consciousness and effective, efficient service delivery keeping patient
-                        affordability and transparency at the core.</p>
+                    <div class="timing-row">
+                        <span>Hisar Railway Station</span>
+                        <span>~ 3.5 km (10 mins)</span>
+                    </div>
+                    <div class="timing-row">
+                        <span>Hisar Main Bus Stand</span>
+                        <span>~ 2.8 km (8 mins)</span>
+                    </div>
+                    <div class="timing-row">
+                        <span>Delhi Road Bus Stop</span>
+                        <span>Within 200 metres</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 3: DIRECTORS / LEADERSHIP -->
-    <section class="section" id="leadership">
+    <!-- SECTION 2: OUR TWO HOSPITAL LOCATIONS -->
+    <section class="section soft" id="branches">
         <div class="wrap">
-            <div class="kicker">EXECUTIVE &amp; CLINICAL LEADERSHIP</div>
-            <h2 class="title">Messages from the Directors' Desk</h2>
-            <p class="sub">Guided by medical expertise, administrative foresight, and an unwavering commitment to
-                patient well-being.</p>
+            <div class="kicker">HOSPITAL UNITS IN HISAR</div>
+            <h2 class="title">Our Hospital Locations &amp; Direct Desks</h2>
+            <p class="sub">Two well-connected branches providing end-to-end multispeciality and super speciality medical
+                solutions.</p>
 
-            <div class="directors-grid">
-                <!-- DR. AMIT MEHTA -->
-                <article class="director-card">
-                    <div class="dir-top">
-                        <img class="dir-photo" src="../assets/images/doctors/dr-amit-mehta.jpg"
-                            alt="Dr. Amit Mehta - Director Sukhda Hospital">
-                        <div class="dir-meta">
-                            <h3>Dr. Amit Mehta</h3>
-                            <div class="dir-title">Director &amp; Head of Internal Medicine &amp; Critical Care</div>
-                            <div class="dir-badges">
-                                <span class="dir-badge">MD Medicine (AIIMS, New Delhi)</span>
-                                <span class="dir-badge">Ex-PGIMER Chandigarh</span>
-                                <span class="dir-badge">Vikas Ratan Gold Awardee</span>
+            <div class="branches-grid">
+                <!-- MULTISPECIALITY -->
+                <article class="branch-card">
+                    <div class="branch-header">
+                        <div>
+                            <h3>Sukhda Multispeciality Hospital</h3>
+                            <small style="color:var(--muted)">Comprehensive Family &amp; Emergency Care</small>
+                        </div>
+                        <span class="branch-badge">NABH Accredited</span>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-line">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <b>Address:</b><br>
+                                Delhi Road, Model Town, Hisar (Haryana) - 125005
                             </div>
                         </div>
-                    </div>
-                    <div class="dir-body">
-                        <h4>Professional Profile</h4>
-                        <p>After graduating from premier institutes AIIMS New Delhi and PGIMER Chandigarh, Dr. Mehta
-                            headed Internal Medicine &amp; Critical Care at Jindal Hospital for 9 years before founding
-                            Sukhda in 2002. He has spearheaded critical care protocols, intensive care management, and
-                            ethical clinical governance across Haryana.</p>
-                        <div class="dir-msg">
-                            "At Sukhda Multispeciality Hospital, we foster, promote, and practice high-quality, ethical,
-                            and evidence-based medicine. Our team is committed to deliver best healthcare services with
-                            a human touch — acknowledging and respecting cultural diversity, dignity, and every
-                            patient's unique needs."
-                        </div>
-                        <div style="margin-top: 18px;">
-                            <a href="../doctor/index.php?doc=dr-amit-mehta" class="btn small primary" style="display:inline-flex;align-items:center;gap:6px">View Clinical Profile &amp; OPD Timings →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- DR. MANISHA MEHTA -->
-                <article class="director-card">
-                    <div class="dir-top">
-                        <img class="dir-photo" src="../assets/images/doctors/dr-manisha-mehta.jpg"
-                            alt="Dr. Manisha Mehta - Director Sukhda Hospital">
-                        <div class="dir-meta">
-                            <h3>Dr. Manisha Mehta</h3>
-                            <div class="dir-title">Director &amp; Healthcare Quality Administrator</div>
-                            <div class="dir-badges">
-                                <span class="dir-badge">NABH Certified Assessor (2019)</span>
-                                <span class="dir-badge">23+ Years Healthcare Management</span>
-                                <span class="dir-badge">Hospital Quality Head</span>
+                        <div class="branch-line">
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <b>Telephone / Reception:</b><br>
+                                01662-249473, 248473, +91-99966-48483
                             </div>
                         </div>
+                        <div class="branch-line">
+                            <i data-lucide="phone-call"></i>
+                            <div>
+                                <b>Emergency Line (24/7):</b><br>
+                                <a href="tel:01662249473" style="color:var(--green);font-weight:800">01662-249473</a>
+                                &nbsp;/&nbsp; <a href="tel:+919996544005"
+                                    style="color:var(--green);font-weight:800">+91-99965-44005</a>
+                            </div>
+                        </div>
+                        <div class="branch-line">
+                            <i data-lucide="mail"></i>
+                            <div>
+                                <b>Email:</b><br>
+                                sukhdahospital@gmail.com / info@sukhdahospitalhisar.com
+                            </div>
+                        </div>
+                        <div class="branch-actions">
+                            <a class="btn primary small" href="tel:01662249473"><i data-lucide="phone-call"></i>Call
+                                Hospital</a>
+                            <a class="btn small" href="https://maps.google.com/?q=Sukhda+Hospital+Delhi+Road+Hisar"
+                                target="_blank"><i data-lucide="navigation"></i>Get Directions</a>
+                        </div>
                     </div>
-                    <div class="dir-body">
-                        <h4>Professional Profile</h4>
-                        <p>With over 23 years of healthcare administration and facility oversight, Dr. Manisha Mehta
-                            leads Sukhda's quality compliance, NABH regulatory protocols, patient safety initiatives,
-                            and operational excellence. Her leadership ensures clinical transparency and continuous
-                            infrastructure modernisation.</p>
-                        <div class="dir-msg">
-                            "Everything we do revolves around our patients and their families. We continuously challenge
-                            ourselves to bring greater accessibility, affordability, and reliability in healthcare
-                            delivery with an unrelenting focus on quality, patient-centricity, and delightful healing
-                            experiences."
+                </article>
+
+                <!-- MEDPARK -->
+                <article class="branch-card">
+                    <div class="branch-header">
+                        <div>
+                            <h3>Sukhda MedPark Hospital</h3>
+                            <small style="color:var(--muted)">Cancer &amp; Super Speciality Centre</small>
+                        </div>
+                        <span class="branch-badge">Super Speciality</span>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-line">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <b>Address:</b><br>
+                                Hisar (Haryana) - 125005
+                            </div>
+                        </div>
+                        <div class="branch-line">
+                            <i data-lucide="shield-plus"></i>
+                            <div>
+                                <b>Specialities:</b><br>
+                                Medical &amp; Surgical Oncology, LINAC Radiation, Cath Lab &amp; Cardiology, Neuro Spine
+                            </div>
+                        </div>
+                        <div class="branch-line">
+                            <i data-lucide="phone-call"></i>
+                            <div>
+                                <b>Direct Helpline (24/7):</b><br>
+                                <a href="tel:+919996544005"
+                                    style="color:var(--green);font-weight:800">+91-99965-44005</a>
+                            </div>
+                        </div>
+                        <div class="branch-line">
+                            <i data-lucide="message-circle"></i>
+                            <div>
+                                <b>WhatsApp Coordinator:</b><br>
+                                +91-99965-44005
+                            </div>
+                        </div>
+                        <div class="branch-actions">
+                            <a class="btn primary small" href="tel:+919996544005"><i data-lucide="phone-call"></i>Call
+                                MedPark</a>
+                            <a class="btn small" href="servicemockup.php"><i
+                                    data-lucide="external-link"></i>Cancer Care Details</a>
                         </div>
                     </div>
                 </article>
@@ -2558,68 +2452,6 @@ $empanelledTPA = [
         </div>
     </section>
 
-    <!-- SECTION 4: OUR HOSPITALS NETWORK -->
-    <section class="section soft" id="hospitals">
-        <div class="wrap">
-            <div class="kicker">TWO HOSPITALS • ONE COMMITMENT</div>
-            <h2 class="title">Our Hospital Network in Hisar</h2>
-            <p class="sub">Two state-of-the-art facilities working as one unified healthcare ecosystem for complete
-                patient care.</p>
-
-            <div class="hospital-grid">
-                <!-- HOSPITAL 1 -->
-                <article class="hospital">
-                    <div class="photo">
-                        <img src="../assets/images/sukhda-multispecialty-hospital.jpg"
-                            alt="Sukhda Multispeciality Hospital">
-                        <div class="place">DELHI ROAD, HISAR<br>NABH ACCREDITED</div>
-                    </div>
-                    <div class="h-info">
-                        <img class="h-logo" src="../assets/images/sukhda-multispeciality-logo.png"
-                            alt="Sukhda Multispeciality Hospital">
-                        <h3>Sukhda Multispeciality Hospital</h3>
-                        <p>Complete multispeciality care with advanced 24/7 ICU, emergency trauma care, mother &amp;
-                            child care, laparoscopic surgery, nephrology, joint replacements, and comprehensive
-                            diagnostics.</p>
-                        <div class="checks">
-                            <span><i data-lucide="check"></i> 24/7 ICU &amp; Emergency</span>
-                            <span><i data-lucide="check"></i> Internal Medicine</span>
-                            <span><i data-lucide="check"></i> Nephrology &amp; Dialysis</span>
-                            <span><i data-lucide="check"></i> Laparoscopy &amp; Urology</span>
-                            <span><i data-lucide="check"></i> Gynaecology &amp; NICU</span>
-                            <span><i data-lucide="check"></i> Joint Replacement</span>
-                        </div>
-                        <a class="btn small primary" href="../index.php#specialities">Explore Multispeciality Services
-                            →</a>
-                    </div>
-                </article>
-
-                <!-- HOSPITAL 2 -->
-                <article class="hospital">
-                    <div class="photo">
-                        <img src="../assets/images/oncology/medical-oncology-redesign.jpg" alt="Sukhda MedPark">
-                        <div class="place">HISAR<br>SUPER SPECIALITY &amp; CANCER</div>
-                    </div>
-                    <div class="h-info">
-                        <img class="h-logo" src="../assets/images/sukhda-medpark-logo.png" alt="Sukhda MedPark">
-                        <h3>Sukhda MedPark Hospital</h3>
-                        <p>Hisar's dedicated super speciality &amp; comprehensive cancer institute offering chemotherapy
-                            daycare, surgical oncology, radiation oncology (LINAC), cardiology with Cath Lab, and neuro
-                            spine surgery.</p>
-                        <div class="checks">
-                            <span><i data-lucide="check"></i> Internal Medicine</span>
-                            <span><i data-lucide="check"></i> Medical Oncology &amp; Chemo</span>
-                            <span><i data-lucide="check"></i> Surgical Oncology</span>
-                            <span><i data-lucide="check"></i> Radiation Oncology (LINAC)</span>
-                            <span><i data-lucide="check"></i> Cardiology &amp; Cath Lab</span>
-                            <span><i data-lucide="check"></i> Neuro &amp; Spine Surgery</span>
-                        </div>
-                        <a class="btn small primary" href="../servicemockup/index.php">Explore MedPark Cancer Care →</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
 
 
     <!-- CASHLESS / EMPANELLED STRIP -->
@@ -2640,38 +2472,18 @@ $empanelledTPA = [
         </div>
     </section>
 
-    <!-- CTA SECTION -->
-    <section class="cta" id="contact">
-        <div class="wrap">
-            <div class="cta-visual">
-                <img src="../assets/images/logo-mark.png" alt="Sukhda Healthcare Logo Mark">
-            </div>
-            <div>
-                <h2>Need Specialist Medical Consultation or Emergency Care?</h2>
-                <p>Speak with our 24/7 patient helpline or visit our Delhi Road hospital in Hisar for immediate
-                    assistance.</p>
-            </div>
-            <div class="actions">
-                <a class="btn primary" href="tel:01662249473"><i data-lucide="phone-call"></i>Call Helpline:
-                    01662-249473</a>
-                <a class="btn white" href="https://wa.me/919996544005" target="_blank"><i
-                        data-lucide="message-circle"></i>WhatsApp Us</a>
-            </div>
-        </div>
-    </section>
-
     <!-- FOOTER -->
     <footer class="footer">
         <div class="wrap footer-grid">
             <div>
                 <div class="footer-brand-wrap">
-                    <img class="footer-logo" src="../assets/images/sukhda-multispeciality-logo.png"
+                    <img class="footer-logo" src="assets/images/sukhda-multispeciality-logo.png"
                         alt="Sukhda Multispeciality Hospital Hisar">
                 </div>
                 <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
-                <p class="footer-desc">Providing quality, compassionate, and advanced medical care across Hisar and surrounding regions since 2002 under experienced medical leadership.</p>
+                <p class="footer-desc">Providing quality, compassionate, and advanced medical care across Hisar and surrounding regions since 2002 with dedicated emergency and OPD facilities.</p>
                 <div class="footer-nabh-badge">
-                    <img src="../assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
+                    <img src="assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
                     <div>
                         <b>NABH Accredited</b>
                         <small>Highest Healthcare Quality Standards</small>
@@ -2682,14 +2494,14 @@ $empanelledTPA = [
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul class="footer-nav">
-                    <li><a href="../index.php"><span>›</span> Home</a></li>
-                    <li><a href="index.php"><span>›</span> About Sukhda</a></li>
-                    <li><a href="#leadership"><span>›</span> Medical Leadership</a></li>
-                    <li><a href="#vision"><span>›</span> Vision &amp; Mission</a></li>
-                    <li><a href="#hospitals"><span>›</span> Our Hospitals</a></li>
-                    <li><a href="../index.php#specialities"><span>›</span> Centres of Excellence</a></li>
-                    <li><a href="../index.php#doctors"><span>›</span> Our Doctors</a></li>
-                    <li><a href="../contact/index.php"><span>›</span> Contact Us</a></li>
+                    <li><a href="index.php"><span>›</span> Home</a></li>
+                    <li><a href="about.php"><span>›</span> About Sukhda</a></li>
+                    <li><a href="about.php#leadership"><span>›</span> Medical Leadership</a></li>
+                    <li><a href="about.php#vision"><span>›</span> Vision &amp; Mission</a></li>
+                    <li><a href="index.php#hospitals"><span>›</span> Our Hospitals</a></li>
+                    <li><a href="index.php#specialities"><span>›</span> Centres of Excellence</a></li>
+                    <li><a href="index.php#doctors"><span>›</span> Our Doctors</a></li>
+                    <li><a href="#appointment-form"><span>›</span> Book Appointment</a></li>
                 </ul>
             </div>
 
@@ -2754,7 +2566,7 @@ $empanelledTPA = [
 
     <!-- STICKY BOTTOM FLOATING PILL CTA -->
     <div class="sticky-bottom-bar" aria-label="Quick Actions">
-        <a href="../contact/index.php" class="sticky-bar-item">
+        <a href="#appointment-form" class="sticky-bar-item">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect width="18" height="18" x="3" y="4" rx="3"></rect>
                 <line x1="16" x2="16" y1="2" y2="6"></line>
@@ -2851,6 +2663,17 @@ $empanelledTPA = [
 
             document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
         })();
+
+        // Form Submit Simulation
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const successBox = document.getElementById('formSuccess');
+            if (successBox) {
+                successBox.style.display = 'block';
+                successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            document.getElementById('contactForm').reset();
+        }
     </script>
 </body>
 
