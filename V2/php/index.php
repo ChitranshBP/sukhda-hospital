@@ -2952,6 +2952,7 @@ function embedded_image(string $relativePath): string
     <!-- 4. BRANCHES (OUR HOSPITALS) -->
     <section class="section" id="hospitals">
         <div class="wrap">
+            <div class="kicker">OUR HOSPITALS</div>
             <h2 class="title">Our Hospital Network</h2>
             <p class="sub">Two specialised hospitals in Hisar working together as one connected healthcare ecosystem.
             </p>
