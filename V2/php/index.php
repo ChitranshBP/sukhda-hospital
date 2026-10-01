@@ -1263,31 +1263,31 @@ function embedded_image(string $relativePath): string
         .why {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 18px
+            gap: 20px
         }
 
         .why article {
             display: flex;
-            gap: 16px;
-            padding: 18px 20px;
+            gap: 18px;
+            padding: 22px 24px;
             background: #fff;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 1px solid var(--line);
-            box-shadow: 0 2px 8px rgba(3, 32, 90, 0.05);
+            box-shadow: 0 3px 12px rgba(3, 32, 90, 0.06);
             align-items: flex-start;
             transition: transform 0.2s ease, box-shadow 0.2s ease
         }
 
         .why article:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(3, 32, 90, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(3, 32, 90, 0.12);
             border-color: #b9d3eb
         }
 
         .why-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 8px;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
             background: #eaf3fb;
             color: var(--blue);
             display: flex;
@@ -1302,8 +1302,8 @@ function embedded_image(string $relativePath): string
         }
 
         .why-icon svg {
-            width: 24px;
-            height: 24px;
+            width: 26px;
+            height: 26px;
             fill: none;
             stroke: currentColor;
             stroke-width: 2;
@@ -1312,16 +1312,18 @@ function embedded_image(string $relativePath): string
         }
 
         .why b {
-            font-size: 15.5px;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 1.3;
             display: block;
             color: var(--blue);
-            margin-bottom: 4px
+            margin-bottom: 6px
         }
 
         .why small {
-            font-size: 13px;
-            line-height: 1.45;
-            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.55;
+            color: #475569;
             display: block
         }
 
