@@ -282,6 +282,985 @@ $allDoctors = [
                 'quote'   => 'Dr. Ankur Kamra performed my emergency stent within 40 minutes of reaching the hospital. His team saved my life!'
             ]
         ]
+    ],
+    'dr-trivikrama-rao' => [
+        'slug'         => 'dr-trivikrama-rao',
+        'name'         => 'Dr. Trivikrama Rao',
+        'photo'        => '../assets/images/doctors/dr-trivikrama-rao.jpg',
+        'degrees'      => 'DrNB (Medical Oncology), MD (Medicine), MBBS',
+        'role'         => 'Lead Consultant & Head — Medical Oncology',
+        'department'   => 'Medical Oncology (Cancer Care)',
+        'experience'   => '16+ Years',
+        'patients'     => '22,000+',
+        'rating'       => '4.98',
+        'reviews_count'=> '860+',
+        'hospitals'    => 'Sukhda MedPark (Cancer & Super Speciality Hospital)',
+        'location_tag' => 'MedPark',
+        'languages'    => 'English, Hindi, Telugu',
+        'summary'      => 'Renowned Medical Oncologist specializing in precision chemotherapy, targeted therapy, immunotherapy, and multidisciplinary solid tumour management.',
+        'about'        => 'Dr. Trivikrama Rao heads the Department of Medical Oncology at Sukhda MedPark. He brings extensive expertise in managing solid malignancies and haematological cancers with evidence-based chemotherapy, immunotherapy, and biologic protocols.<br><br>Under his leadership, Sukhda MedPark runs weekly Tumour Board meetings and a dedicated modern daycare chemotherapy lounge ensuring zero-delay, compassionate oncological support.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda MedPark (Cancer Hospital)',
+                'address'  => 'Delhi Road, Hisar (Opp. Green Belt)',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '10:00 AM – 04:00 PM',
+                'type'     => 'Cancer OPD & Daycare Chemo Rounds',
+                'room'     => 'Oncology Suite 01'
+            ]
+        ],
+        'specializations' => [
+            'Systemic & Daycare Chemotherapy',
+            'Targeted Therapy & Precision Oncology',
+            'Immunotherapy & Biological Cancer Therapies',
+            'Breast, Lung, GI & Gynaecological Cancers',
+            'Lymphomas, Leukemias & Multiple Myeloma',
+            'Multidisciplinary Tumour Board Planning'
+        ],
+        'education' => [
+            [
+                'degree'      => 'DrNB — Medical Oncology',
+                'institution' => 'Premier National Apex Cancer Institute',
+                'year'        => '2014',
+                'desc'        => 'Super-speciality doctorate in systemic cancer therapeutics and clinical trials.'
+            ],
+            [
+                'degree'      => 'MD (Internal Medicine) & MBBS',
+                'institution' => 'Top Medical University',
+                'year'        => '2010',
+                'desc'        => 'Post-graduate distinction in systemic diagnosis and clinical care.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Lead Medical Oncologist',
+                'org'    => 'Sukhda MedPark Hospital',
+                'period' => '2018 – Present',
+                'desc'   => 'Heading comprehensive medical oncology and daycare chemotherapy operations.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Society of Medical and Paediatric Oncology (ISMPO)',
+            'European Society for Medical Oncology (ESMO)',
+            'American Society of Clinical Oncology (ASCO)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Excellence in Oncology Care',
+                'body'  => 'Awarded for delivering protocolized, affordable cancer care and patient-centric chemotherapy protocols in Western Haryana.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Baljeet Singh',
+                'place'   => 'Sirsa',
+                'service' => 'Daycare Chemotherapy',
+                'quote'   => 'Dr. Trivikrama Rao gave us hope when my wife was diagnosed with stage-3 breast cancer. His gentle demeanor and precise treatment plan helped her recover fully.'
+            ]
+        ]
+    ],
+    'dr-amit-kumar-garg' => [
+        'slug'         => 'dr-amit-kumar-garg',
+        'name'         => 'Dr. Amit Kumar Garg',
+        'photo'        => '../assets/images/doctors/dr-amit-kumar-garg.jpg',
+        'degrees'      => 'M.S. (Surgery), M.Ch / DNB (Surgical Oncology), MBBS',
+        'role'         => 'Senior Consultant — Surgical Oncology',
+        'department'   => 'Surgical Oncology',
+        'experience'   => '14+ Years',
+        'patients'     => '18,000+',
+        'rating'       => '4.93',
+        'reviews_count'=> '740+',
+        'hospitals'    => 'Sukhda MedPark (Cancer & Super Speciality Hospital)',
+        'location_tag' => 'MedPark',
+        'languages'    => 'English, Hindi',
+        'summary'      => 'Expert Surgical Oncologist specializing in organ-preserving cancer resections, gastrointestinal cancer surgeries, breast oncoplasty, and head & neck oncosurgery.',
+        'about'        => 'Dr. Amit Kumar Garg is a senior surgical oncologist at Sukhda MedPark with advanced fellowship training in complex oncological resections. He specializes in radical cancer surgeries, minimally invasive thoraco-laparoscopic cancer operations, and reconstructive oncosurgery.<br><br>He has performed hundreds of complex tumor resections supported by Sukhda’s ultra-clean modular operation theatres and multi-bed surgical ICUs.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda MedPark (Cancer Hospital)',
+                'address'  => 'Delhi Road, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '11:00 AM – 03:00 PM',
+                'type'     => 'Surgical Onco OPD & OT Consults',
+                'room'     => 'Surgical Suite 03'
+            ]
+        ],
+        'specializations' => [
+            'Breast Cancer Surgery & Sentinel Node Biopsy',
+            'Gastrointestinal (GI) & Colorectal Oncosurgery',
+            'Head & Neck Tumor Resection & Reconstruction',
+            'Gynaecological Malignancy Surgeries',
+            'Thoracic & Esophageal Cancer Excision',
+            'Skin & Soft Tissue Sarcoma Resection'
+        ],
+        'education' => [
+            [
+                'degree'      => 'DNB / M.Ch — Surgical Oncology',
+                'institution' => 'Apex Cancer Centre & Research Institute',
+                'year'        => '2015',
+                'desc'        => 'Specialized surgical fellowship in advanced oncological procedures.'
+            ],
+            [
+                'degree'      => 'M.S. (General Surgery) & MBBS',
+                'institution' => 'Premier Medical College',
+                'year'        => '2011',
+                'desc'        => 'Honours in operative surgery and clinical trauma management.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Senior Consultant Surgical Oncologist',
+                'org'    => 'Sukhda MedPark Hospital',
+                'period' => '2019 – Present',
+                'desc'   => 'Spearheading operative cancer surgeries and onco-reconstructive procedures.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Association of Surgical Oncology (IASO)',
+            'Association of Surgeons of India (ASI)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Distinguished Cancer Surgeon',
+                'body'  => 'Recognized for high success rates and organ-sparing surgical oncology interventions.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Geeta Rani',
+                'place'   => 'Jind, Haryana',
+                'service' => 'Oncological Excision',
+                'quote'   => 'Dr. Amit Kumar Garg performed my tumor removal surgery with great care and precision. I am completely tumor-free today!'
+            ]
+        ]
+    ],
+    'dr-arun-dua' => [
+        'slug'         => 'dr-arun-dua',
+        'name'         => 'Dr. Arun Dua',
+        'photo'        => '../assets/images/doctors/dr-arun-dua.jpg',
+        'degrees'      => 'DrNB (Nephrology), MD (Medicine), MBBS',
+        'role'         => 'Senior Consultant & Head — Nephrology & Dialysis',
+        'department'   => 'Nephrology & Dialysis',
+        'experience'   => '17+ Years',
+        'patients'     => '35,000+',
+        'rating'       => '4.95',
+        'reviews_count'=> '890+',
+        'hospitals'    => 'Sukhda Multispeciality Hospital',
+        'location_tag' => 'Multispeciality',
+        'languages'    => 'English, Hindi, Punjabi',
+        'summary'      => 'Senior Nephrologist with vast clinical acumen in acute kidney injury, chronic kidney disease (CKD), hemodialysis management, and renal hypertension.',
+        'about'        => 'Dr. Arun Dua leads the Department of Nephrology and Dialysis at Sukhda Multispeciality Hospital. He brings over 17 years of clinical experience in preserving kidney function and managing complex renal disorders.<br><br>He supervises Sukhda’s 7-bed high-flux dialysis unit, ensuring strict infection control, biocompatible dialyzers, and continuous nephrology oversight.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda Multispeciality Hospital',
+                'address'  => 'Delhi Road, Model Town, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '10:00 AM – 02:00 PM',
+                'type'     => 'Nephrology OPD & Dialysis Unit Rounds',
+                'room'     => 'Room 105, 1st Floor'
+            ]
+        ],
+        'specializations' => [
+            'Chronic Kidney Disease (CKD) Management',
+            'Acute Kidney Injury & ICU Renal Support',
+            'Hemodialysis & Volumetric Hemodiafiltration',
+            'Diabetic Nephropathy & Renal Hypertension',
+            'Glomerulonephritis & Nephrotic Syndrome',
+            'Kidney Transplant Pre & Post Evaluation'
+        ],
+        'education' => [
+            [
+                'degree'      => 'DrNB — Nephrology',
+                'institution' => 'Premier Institute of Kidney Diseases',
+                'year'        => '2012',
+                'desc'        => 'Super-speciality doctorate in advanced nephrology and dialysis management.'
+            ],
+            [
+                'degree'      => 'MD (Internal Medicine) & MBBS',
+                'institution' => 'Top Medical University',
+                'year'        => '2007',
+                'desc'        => 'Graduated with academic honours in adult medicine.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Head of Nephrology & Dialysis',
+                'org'    => 'Sukhda Multispeciality Hospital',
+                'period' => '2015 – Present',
+                'desc'   => 'Leading clinical nephrology, acute dialysis, and renal failure management.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Society of Nephrology (ISN)',
+            'International Society of Nephrology (ISN Global)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Excellence in Renal Care',
+                'body'  => 'Recognized for establishing high-quality, infection-free dialysis services in Hisar.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Karamjit Singh',
+                'place'   => 'Hisar',
+                'service' => 'Renal Dialysis Care',
+                'quote'   => 'Dr. Arun Dua has been managing my kidney treatment for 4 years. His advice and the caring dialysis staff make every session smooth.'
+            ]
+        ]
+    ],
+    'dr-bharath' => [
+        'slug'         => 'dr-bharath',
+        'name'         => 'Dr. Bharath',
+        'photo'        => '../assets/images/doctors/dr-bharath.jpg',
+        'degrees'      => 'DM (Gastroenterology), MD (Medicine), MBBS',
+        'role'         => 'Senior Consultant — Gastroenterology & Hepatology',
+        'department'   => 'Gastroenterology & Hepatology',
+        'experience'   => '13+ Years',
+        'patients'     => '24,000+',
+        'rating'       => '4.92',
+        'reviews_count'=> '680+',
+        'hospitals'    => 'Sukhda MedPark (Super Speciality)',
+        'location_tag' => 'MedPark',
+        'languages'    => 'English, Hindi, Kannada',
+        'summary'      => 'Experienced Gastroenterologist specializing in diagnostic and therapeutic GI endoscopy, colonoscopy, ERCP, liver cirrhosis, pancreatitis, and IBD.',
+        'about'        => 'Dr. Bharath is a senior gastroenterologist and hepatologist at Sukhda MedPark. He specializes in advanced therapeutic endoscopic procedures, GI bleeding management, liver care, and digestive tract disorders.<br><br>He operates modern HD endoscopy suites with advanced fluoroscopy for bile duct stone extraction, ERCP stenting, and polypectomies.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda MedPark (Super Speciality)',
+                'address'  => 'Delhi Road, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '11:00 AM – 03:00 PM',
+                'type'     => 'Gastro OPD & Endoscopy Procedures',
+                'room'     => 'Endoscopy Suite 02'
+            ]
+        ],
+        'specializations' => [
+            'Upper GI Endoscopy & Colonoscopy',
+            'ERCP & Biliary Stenting',
+            'Liver Cirrhosis, Hepatitis & Fatty Liver',
+            'Pancreatitis & Gallbladder Stone Complications',
+            'Inflammatory Bowel Disease (Ulcerative Colitis & Crohn’s)',
+            'GERD, Acid Peptic Disease & Dyspepsia'
+        ],
+        'education' => [
+            [
+                'degree'      => 'DM — Gastroenterology',
+                'institution' => 'Premier Institute of Digestive Diseases',
+                'year'        => '2015',
+                'desc'        => 'Super-speciality doctorate in advanced endoscopy and luminal gastroenterology.'
+            ],
+            [
+                'degree'      => 'MD (Medicine) & MBBS',
+                'institution' => 'Top Medical University',
+                'year'        => '2011',
+                'desc'        => 'Distinction in internal medicine and gastroenterology rotations.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Senior Consultant Gastroenterologist',
+                'org'    => 'Sukhda MedPark',
+                'period' => '2019 – Present',
+                'desc'   => 'Leading therapeutic GI endoscopy, ERCP, and comprehensive hepatology clinics.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Society of Gastroenterology (ISG)',
+            'Society of Gastrointestinal Endoscopy of India (SGEI)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Pioneer in Therapeutic Endoscopy',
+                'body'  => 'Honoured for emergency GI bleed management and painless colonoscopy services.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Mohammed Rafiq',
+                'place'   => 'Sirsa',
+                'service' => 'Therapeutic ERCP',
+                'quote'   => 'Dr. Bharath removed my bile duct stone via endoscopy without any open surgery. I was discharged in 2 days pain-free!'
+            ]
+        ]
+    ],
+    'dr-deepam-das' => [
+        'slug'         => 'dr-deepam-das',
+        'name'         => 'Dr. Deepam Das',
+        'photo'        => '../assets/images/doctors/dr-deepam-das.jpg',
+        'degrees'      => 'M.S. (General Surgery), FIAGES (Laparoscopic Surgery), MBBS',
+        'role'         => 'Consultant — Advanced Laparoscopy & General Surgery',
+        'department'   => 'Laparoscopic Surgery',
+        'experience'   => '12+ Years',
+        'patients'     => '20,000+',
+        'rating'       => '4.91',
+        'reviews_count'=> '610+',
+        'hospitals'    => 'Sukhda Multispeciality Hospital',
+        'location_tag' => 'Multispeciality',
+        'languages'    => 'English, Hindi, Bengali',
+        'summary'      => 'Accomplished keyhole laparoscopic surgeon specializing in gallbladder stones, complex hernia repair (TEP/TAPP), laparoscopic appendectomy, and surgical trauma.',
+        'about'        => 'Dr. Deepam Das is a skilled consultant laparoscopic and general surgeon at Sukhda Multispeciality Hospital. He brings over a decade of experience in minimally invasive keyhole operations resulting in faster patient recovery and minimal scars.<br><br>He has performed over 3,500 successful laparoscopic surgeries including advanced hernia repairs, gallbladder removals, and emergency surgical interventions.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda Multispeciality Hospital',
+                'address'  => 'Delhi Road, Model Town, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '10:00 AM – 02:00 PM',
+                'type'     => 'Surgical OPD & Daycare Procedures',
+                'room'     => 'Room 108, 1st Floor'
+            ]
+        ],
+        'specializations' => [
+            'Laparoscopic Cholecystectomy (Gallbladder Stones)',
+            'Laparoscopic Inguinal & Ventral Hernia Repair (TEP/TAPP)',
+            'Laparoscopic Appendectomy & Diagnostic Laparoscopy',
+            'Laser Proctology (Piles, Fistula & Fissure)',
+            'Emergency Abdominal Trauma Surgeries',
+            'Thyroid & Soft Tissue Excision Surgeries'
+        ],
+        'education' => [
+            [
+                'degree'      => 'M.S. — General Surgery',
+                'institution' => 'Premier Medical College',
+                'year'        => '2013',
+                'desc'        => 'Post-graduate specialization in operative surgery and trauma care.'
+            ],
+            [
+                'degree'      => 'FIAGES Fellowship & MBBS',
+                'institution' => 'Indian Association of Gastrointestinal Endo Surgeons',
+                'year'        => '2016',
+                'desc'        => 'Advanced fellowship training in minimal access laparoscopic surgery.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Consultant Laparoscopic Surgeon',
+                'org'    => 'Sukhda Multispeciality Hospital',
+                'period' => '2017 – Present',
+                'desc'   => 'Performing routine and emergency laparoscopic keyhole surgeries.'
+            ]
+        ],
+        'memberships' => [
+            'Association of Surgeons of India (ASI)',
+            'Indian Association of Gastrointestinal Endo Surgeons (IAGES)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Excellence in Minimal Access Surgery',
+                'body'  => 'Honoured for rapid recovery protocols in daycare laparoscopic procedures.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Naveen Goyal',
+                'place'   => 'Hisar',
+                'service' => 'Laparoscopic Hernia Surgery',
+                'quote'   => 'Dr. Deepam Das explained the keyhole procedure clearly. I was walking the same evening and resumed work in 4 days.'
+            ]
+        ]
+    ],
+    'dr-pankaj-sharma' => [
+        'slug'         => 'dr-pankaj-sharma',
+        'name'         => 'Dr. Pankaj Sharma',
+        'photo'        => '../assets/images/doctors/dr-pankaj-sharma.jpg',
+        'degrees'      => 'M.S. (Orthopaedics), Fellow in Joint Replacement & Arthroscopy, MBBS',
+        'role'         => 'Senior Consultant — Orthopaedics & Joint Replacement',
+        'department'   => 'Orthopaedics & Joint Replacement',
+        'experience'   => '16+ Years',
+        'patients'     => '32,000+',
+        'rating'       => '4.96',
+        'reviews_count'=> '1,040+',
+        'hospitals'    => 'Sukhda Multispeciality Hospital',
+        'location_tag' => 'Multispeciality',
+        'languages'    => 'English, Hindi',
+        'summary'      => 'Premier Orthopaedic Surgeon specializing in Total Knee Replacement (TKR), Total Hip Replacement (THR), arthroscopic ACL reconstruction, and complex trauma surgery.',
+        'about'        => 'Dr. Pankaj Sharma leads the Orthopaedics & Joint Replacement wing at Sukhda Multispeciality Hospital. He brings 16+ years of clinical expertise in joint reconstruction, sports injuries, and complex fracture management.<br><br>Equipped with laminar-flow sterile operation theatres, Dr. Sharma uses advanced implant alignment systems to ensure long-lasting joint mobility and painless rehabilitation.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda Multispeciality Hospital',
+                'address'  => 'Delhi Road, Model Town, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '10:30 AM – 02:30 PM',
+                'type'     => 'Ortho & Joint Clinic OPD',
+                'room'     => 'Room 102, Ground Floor'
+            ]
+        ],
+        'specializations' => [
+            'Total Knee Replacement (TKR) & Revision Knee Surgeries',
+            'Total Hip Replacement (THR) & Hemiarthroplasty',
+            'Arthroscopic ACL / PCL Ligament Reconstruction',
+            'Complex Pelvic-Acetabular & Polytrauma Fractures',
+            'Spine Disc Decompression & Sciatica Care',
+            'Osteoarthritis, Osteoporosis & Rheumatoid Arthritis Care'
+        ],
+        'education' => [
+            [
+                'degree'      => 'M.S. — Orthopaedics',
+                'institution' => 'Premier Apex Orthopaedic Institute',
+                'year'        => '2010',
+                'desc'        => 'Advanced post-graduate clinical training in trauma, joint replacements, and bone pathology.'
+            ],
+            [
+                'degree'      => 'Fellowship in Arthroscopy & Joint Replacement',
+                'institution' => 'Apex Joint Care Foundation',
+                'year'        => '2012',
+                'desc'        => 'Hands-on fellowship in primary and revision knee-hip arthroplasty.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Senior Consultant Orthopaedic Surgeon',
+                'org'    => 'Sukhda Multispeciality Hospital',
+                'period' => '2015 – Present',
+                'desc'   => 'Leading the joint replacement centre and 24/7 polytrauma orthopaedic team.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Orthopaedic Association (IOA)',
+            'Indian Arthroscopy Society (IAS)',
+            'Haryana Orthopaedic Association (HOA)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Best Joint Replacement Surgeon',
+                'body'  => 'Conferred for performing over 2,000 successful knee and hip replacements with excellent mobility outcomes.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Vikas Kumar',
+                'place'   => 'Fatehabad',
+                'service' => 'Total Knee Replacement',
+                'quote'   => 'Knee replacement done by Dr. Pankaj Sharma in March. I was walking pain-free within 4 weeks. He gave me back my active mornings.'
+            ]
+        ]
+    ],
+    'dr-joginder-silayach' => [
+        'slug'         => 'dr-joginder-silayach',
+        'name'         => 'Dr. Joginder Silayach',
+        'photo'        => '../assets/images/doctors/dr-joginder-silayach.jpg',
+        'degrees'      => 'M.D. (Paediatrics & Neonatology), MBBS',
+        'role'         => 'Senior Consultant — Paediatrics & Level-3 NICU',
+        'department'   => 'Paediatrics & Neonatology',
+        'experience'   => '18+ Years',
+        'patients'     => '40,000+',
+        'rating'       => '4.97',
+        'reviews_count'=> '1,250+',
+        'hospitals'    => 'Sukhda Multispeciality Hospital',
+        'location_tag' => 'Multispeciality',
+        'languages'    => 'English, Hindi, Haryanvi',
+        'summary'      => 'Leading Paediatrician and Neonatologist leading Sukhda’s 24/7 Level-3 NICU, managing premature infant resuscitation, childhood respiratory illnesses, and immunizations.',
+        'about'        => 'Dr. Joginder Silayach is a senior paediatrician and neonatologist at Sukhda Multispeciality Hospital. He brings 18+ years of dedicated experience caring for newborns, infants, children, and adolescents.<br><br>He heads the state-of-the-art Level-3 Neonatal Intensive Care Unit (NICU), saving hundreds of premature, low-birth-weight babies with modern phototherapy, CPAP, and high-frequency ventilation.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda Multispeciality Hospital',
+                'address'  => 'Delhi Road, Model Town, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '10:00 AM – 02:00 PM & 05:00 PM – 07:00 PM',
+                'type'     => 'Paediatric OPD & Vaccination Clinic',
+                'room'     => 'Paediatric Clinic 106'
+            ]
+        ],
+        'specializations' => [
+            'Level-3 Neonatal ICU (NICU) & Premature Baby Care',
+            'Childhood Asthma & Severe Respiratory Infections',
+            'Pediatric Growth, Nutrition & Developmental Monitoring',
+            'Universal Vaccination & Immunization Schedules',
+            'Neonatal Jaundice & Phototherapy Protocols',
+            'Pediatric Infectious Illnesses & Tropical Fevers'
+        ],
+        'education' => [
+            [
+                'degree'      => 'M.D. — Paediatrics & Neonatology',
+                'institution' => 'Premier Apex Paediatric Institute',
+                'year'        => '2008',
+                'desc'        => 'Specialized doctorate in neonatology, pediatric critical care, and developmental genetics.'
+            ],
+            [
+                'degree'      => 'MBBS',
+                'institution' => 'Top Medical University',
+                'year'        => '2004',
+                'desc'        => 'Graduated with distinctions in pediatrics and social medicine.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Head of Paediatrics & NICU',
+                'org'    => 'Sukhda Multispeciality Hospital',
+                'period' => '2012 – Present',
+                'desc'   => 'Managing pediatric OPD, 24/7 neonatal intensive care, and child health clinics.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Academy of Pediatrics (IAP)',
+            'National Neonatology Forum (NNF)',
+            'Indian Medical Association (IMA)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Excellence in Neonatal Care Award',
+                'body'  => 'Recognized for highest survival rates in critically ill and extremely low birth weight neonates in Hisar.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Sunita Devi',
+                'place'   => 'Hansi',
+                'service' => 'Level-3 NICU Care',
+                'quote'   => 'My granddaughter was born premature at 29 weeks. Dr. Joginder Silayach and the NICU staff treated her like their own child. Today she is completely healthy!'
+            ]
+        ]
+    ],
+    'dr-devilal' => [
+        'slug'         => 'dr-devilal',
+        'name'         => 'Dr. Devilal',
+        'photo'        => '../assets/images/doctors/dr-devilal.jpg',
+        'degrees'      => 'D.A. (Anaesthesiology & Critical Care), MBBS',
+        'role'         => 'Consultant — Anaesthesia & Emergency Critical Care',
+        'department'   => 'Anaesthesia & Critical Care',
+        'experience'   => '15+ Years',
+        'patients'     => '25,000+',
+        'rating'       => '4.90',
+        'reviews_count'=> '520+',
+        'hospitals'    => 'Sukhda Multispeciality Hospital',
+        'location_tag' => 'Multispeciality',
+        'languages'    => 'English, Hindi',
+        'summary'      => 'Critical Care & Anaesthesia specialist managing multi-bed surgical ICUs, advanced mechanical ventilation, invasive monitoring, and trauma resuscitation.',
+        'about'        => 'Dr. Devilal is a consultant anaesthesiologist and intensivist at Sukhda Multispeciality Hospital. He brings 15+ years of clinical acumen in surgical peri-operative care, trauma resuscitation, and multi-organ intensive care management.<br><br>He oversees surgical anaesthetic safety for high-risk cardiac, neuro, and onco-surgeries in Sukhda’s modular operation theatres.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda Multispeciality Hospital',
+                'address'  => 'Delhi Road, Model Town, Hisar',
+                'days'     => 'Monday to Saturday (24/7 On-Call)',
+                'timings'  => '09:00 AM – 01:00 PM (PAC & ICU)',
+                'type'     => 'Pre-Anaesthesia Checkup (PAC) & ICU',
+                'room'     => 'PAC Clinic & Level-3 ICU'
+            ]
+        ],
+        'specializations' => [
+            'General, Spinal & Epidural Anaesthesia',
+            'Level-3 Multi-bed ICU & Mechanical Ventilation',
+            'Pre-Anaesthetic Fitness Assessment (PAC)',
+            'Emergency Airway & Central Line Interventions',
+            'Sepsis, ARDS & Trauma Resuscitation',
+            'Post-Operative Hemodynamic Monitoring'
+        ],
+        'education' => [
+            [
+                'degree'      => 'D.A. — Anaesthesiology',
+                'institution' => 'Premier Medical College',
+                'year'        => '2010',
+                'desc'        => 'Post-graduate diploma in surgical anaesthesia and intensive care.'
+            ],
+            [
+                'degree'      => 'MBBS',
+                'institution' => 'Medical University Network',
+                'year'        => '2006',
+                'desc'        => 'Graduated with high honours across clinical rotations.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Consultant Anaesthesiologist & Intensivist',
+                'org'    => 'Sukhda Multispeciality Hospital',
+                'period' => '2014 – Present',
+                'desc'   => 'Managing OT surgical anaesthesia and ICU resuscitation protocols.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Society of Anaesthesiologists (ISA)',
+            'Indian Society of Critical Care Medicine (ISCCM)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Clinical Safety Champion',
+                'body'  => 'Recognized for achieving exemplary safety standards in high-risk geriatric and pediatric surgical anaesthesia.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Surender Malik',
+                'place'   => 'Hisar',
+                'service' => 'ICU & Surgical Anaesthesia',
+                'quote'   => 'Dr. Devilal managed my father’s anaesthesia and critical care during a major emergency abdominal surgery with utmost confidence and success.'
+            ]
+        ]
+    ],
+    'dr-parveen' => [
+        'slug'         => 'dr-parveen',
+        'name'         => 'Dr. Parveen',
+        'photo'        => '../assets/images/doctors/dr-parveen.jpg',
+        'degrees'      => 'D.N.B. (Anesthesiology), MBBS',
+        'role'         => 'Consultant — Anaesthesiology & Pain Management',
+        'department'   => 'Anaesthesiology & Pain Care',
+        'experience'   => '11+ Years',
+        'patients'     => '18,000+',
+        'rating'       => '4.89',
+        'reviews_count'=> '430+',
+        'hospitals'    => 'Sukhda Multispeciality Hospital',
+        'location_tag' => 'Multispeciality',
+        'languages'    => 'English, Hindi',
+        'summary'      => 'Expert in general, neuro and regional anaesthesia, painless epidural labor analgesia, post-operative multimodal pain relief, and acute critical care.',
+        'about'        => 'Dr. Parveen is a consultant anaesthesiologist and pain management specialist at Sukhda Multispeciality Hospital. He brings 11+ years of expertise in nerve block techniques, acute pain relief, and painless delivery analgesia.<br><br>He coordinates pain-free surgical recovery protocols across ortho, gynae, and general surgical procedures.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda Multispeciality Hospital',
+                'address'  => 'Delhi Road, Model Town, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '11:00 AM – 03:00 PM',
+                'type'     => 'Pain Management & PAC Clinic',
+                'room'     => 'Pain Clinic 107'
+            ]
+        ],
+        'specializations' => [
+            'Painless Normal Delivery (Labor Epidural Analgesia)',
+            'Ultrasound-Guided Regional Nerve Blocks',
+            'Multimodal Post-Surgical Pain Management',
+            'Chronic Back Pain & Sciatica Nerve Blocks',
+            'Neuro & Orthopaedic Surgical Anaesthesia',
+            'Daycare Procedural Sedation'
+        ],
+        'education' => [
+            [
+                'degree'      => 'DNB — Anesthesiology',
+                'institution' => 'National Board of Examinations (NBE), New Delhi',
+                'year'        => '2015',
+                'desc'        => 'Accredited post-graduate specialization in modern anaesthetic protocols and pain medicine.'
+            ],
+            [
+                'degree'      => 'MBBS',
+                'institution' => 'Premier Medical College',
+                'year'        => '2011',
+                'desc'        => 'Completed MBBS with distinctions in pharmacology and surgery.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Consultant Anaesthesiologist',
+                'org'    => 'Sukhda Multispeciality Hospital',
+                'period' => '2017 – Present',
+                'desc'   => 'Overseeing labor epidural services and acute pain management.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Society of Anaesthesiologists (ISA)',
+            'Indian Society for Study of Pain (ISSP)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Painless Delivery Excellence',
+                'body'  => 'Honoured for pioneering comfortable epidural analgesia for mothers in Western Haryana.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Meenakshi Jain',
+                'place'   => 'Hisar',
+                'service' => 'Labor Epidural Analgesia',
+                'quote'   => 'Dr. Parveen’s painless epidural made my childbirth completely stress-free. I felt no labor pain at all!'
+            ]
+        ]
+    ],
+    'dr-anil-bansal' => [
+        'slug'         => 'dr-anil-bansal',
+        'name'         => 'Dr. Anil Bansal',
+        'photo'        => '../assets/images/doctors/dr-anil-bansal.jpg',
+        'degrees'      => 'M.B.B.S, DMRD (Radiodiagnosis)',
+        'role'         => 'Senior Consultant — CT Scan & Digital Radiology',
+        'department'   => 'Radiology & Imaging',
+        'experience'   => '24+ Years',
+        'patients'     => '60,000+',
+        'rating'       => '4.94',
+        'reviews_count'=> '910+',
+        'hospitals'    => 'Sukhda Multispeciality Hospital',
+        'location_tag' => 'Multispeciality',
+        'languages'    => 'English, Hindi',
+        'summary'      => 'Senior Radiologist heading Sukhda’s high-precision 32-slice CT scanning unit, 4D Ultrasonography, Colour Doppler investigations, and image-guided biopsies.',
+        'about'        => 'Dr. Anil Bansal is a veteran radiologist with over 24 years of clinical diagnostic experience. He heads the Department of Radiology and Diagnostic Imaging at Sukhda Multispeciality Hospital.<br><br>His diagnostic precision across CT angiography, neuro-imaging, trauma whole-body scans, and antenatal anomaly sonographies provides the clinical backbone for accurate surgical and medical decision-making.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda Multispeciality Hospital',
+                'address'  => 'Delhi Road, Model Town, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '09:30 AM – 02:30 PM & 05:00 PM – 07:00 PM',
+                'type'     => 'CT Scan & Ultrasound Reporting',
+                'room'     => 'Diagnostic Imaging Wing'
+            ]
+        ],
+        'specializations' => [
+            '32-Slice CT Angiography & Whole-Body Scans',
+            '4D Pregnancy Anomaly Scans & Level-II USG',
+            'Colour Doppler Studies (Carotid, Peripheral & Renal)',
+            'High-Resolution Chest CT (HRCT) for Lungs',
+            'USG & CT-Guided Diagnostic Biopsies / FNAC',
+            'Emergency Trauma Neuro-Cranial Imaging'
+        ],
+        'education' => [
+            [
+                'degree'      => 'DMRD — Radiodiagnosis',
+                'institution' => 'Premier Apex Medical University',
+                'year'        => '2001',
+                'desc'        => 'Specialized post-graduate training in cross-sectional imaging, Doppler, and CT diagnostics.'
+            ],
+            [
+                'degree'      => 'MBBS',
+                'institution' => 'Top Medical College',
+                'year'        => '1997',
+                'desc'        => 'Graduated with high honours in anatomy and diagnostic pathology.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Head of Radiology & Imaging',
+                'org'    => 'Sukhda Multispeciality Hospital',
+                'period' => '2004 – Present',
+                'desc'   => 'Supervising high-resolution diagnostic imaging, CT scan suite, and digital radiology.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Radiological and Imaging Association (IRIA)',
+            'Indian Medical Association (IMA)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Excellence in Diagnostic Imaging',
+                'body'  => 'Recognized for fast turnaround times and high diagnostic accuracy in emergency trauma CT scans.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Ashok Singla',
+                'place'   => 'Hisar',
+                'service' => 'CT Angiography & HRCT Scan',
+                'quote'   => 'Dr. Anil Bansal’s accurate CT report detected my hidden lung issue in time for treatment. Very courteous and thorough doctor.'
+            ]
+        ]
+    ],
+    'dr-shubham-mehta' => [
+        'slug'         => 'dr-shubham-mehta',
+        'name'         => 'Dr. Shubham Mehta',
+        'photo'        => '../assets/images/doctors/dr-shubham-mehta.jpg',
+        'degrees'      => 'M.D. (Psychiatry), MBBS',
+        'role'         => 'Consultant — Psychiatry & Mental Health',
+        'department'   => 'Psychiatry & Mental Health',
+        'experience'   => '8+ Years',
+        'patients'     => '12,000+',
+        'rating'       => '4.93',
+        'reviews_count'=> '490+',
+        'hospitals'    => 'Sukhda Multispeciality Hospital',
+        'location_tag' => 'Multispeciality',
+        'languages'    => 'English, Hindi, Punjabi',
+        'summary'      => 'Compassionate Psychiatrist offering evidence-based psychiatric interventions, clinical depression care, anxiety & panic disorders, de-addiction, and adolescent wellness.',
+        'about'        => 'Dr. Shubham Mehta is a consultant psychiatrist heading the Department of Mental Health & De-Addiction at Sukhda Multispeciality Hospital. He is dedicated to destigmatizing mental health and providing confidential, compassionate therapeutic care.<br><br>His practice combines evidence-based pharmacotherapy with cognitive behavioral counseling for stress, mood disorders, insomnia, obsessive-compulsive disorders (OCD), and substance de-addiction.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda Multispeciality Hospital',
+                'address'  => 'Delhi Road, Model Town, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '10:00 AM – 02:00 PM',
+                'type'     => 'Psychiatric Consultation & Counseling',
+                'room'     => 'Mental Wellness Suite 109'
+            ]
+        ],
+        'specializations' => [
+            'Clinical Depression, Bipolar & Mood Disorders',
+            'Anxiety, Panic Attacks & Phobia Management',
+            'Obsessive-Compulsive Disorder (OCD)',
+            'Substance De-Addiction (Alcohol, Tobacco, Opioids)',
+            'Adolescent Behavioral Health & Exam Stress',
+            'Sleep Disorders & Chronic Insomnia Therapy'
+        ],
+        'education' => [
+            [
+                'degree'      => 'M.D. — Psychiatry',
+                'institution' => 'Premier Apex Psychiatric Institute',
+                'year'        => '2018',
+                'desc'        => 'Specialized doctorate in adult and adolescent psychiatry, neuropsychiatry, and psychotherapy.'
+            ],
+            [
+                'degree'      => 'MBBS',
+                'institution' => 'Top Medical University',
+                'year'        => '2014',
+                'desc'        => 'Graduated with academic distinctions in psychiatry and forensic medicine.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Consultant Psychiatrist',
+                'org'    => 'Sukhda Multispeciality Hospital',
+                'period' => '2019 – Present',
+                'desc'   => 'Providing daily outpatient psychiatric consultations, counseling, and de-addiction programs.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Psychiatric Society (IPS)',
+            'Indian Medical Association (IMA)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Youth Mental Health Advocate',
+                'body'  => 'Awarded for community mental health awareness and youth stress management initiatives across Haryana.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Rohit Verma',
+                'place'   => 'Hisar',
+                'service' => 'Anxiety & Stress Counseling',
+                'quote'   => 'Dr. Shubham Mehta listened to my struggles patiently without any judgment. His guidance helped me overcome crippling anxiety completely.'
+            ]
+        ]
+    ],
+    'dr-sanjeet-sahu' => [
+        'slug'         => 'dr-sanjeet-sahu',
+        'name'         => 'Dr. Sanjeet Sahu',
+        'photo'        => '../assets/images/doctors/dr-sanjeet-sahu.jpg',
+        'degrees'      => 'B.P.T, M.P.T (Musculoskeletal & Sports Physiotherapy), MIAP',
+        'role'         => 'Head — Department of Physiotherapy & Rehabilitation',
+        'department'   => 'Physiotherapy & Rehabilitation',
+        'experience'   => '14+ Years',
+        'patients'     => '28,000+',
+        'rating'       => '4.95',
+        'reviews_count'=> '780+',
+        'hospitals'    => 'Sukhda Multispeciality Hospital',
+        'location_tag' => 'Multispeciality',
+        'languages'    => 'English, Hindi',
+        'summary'      => 'Expert Physiotherapist specializing in post-joint replacement mobility rehabilitation, stroke & neuro-rehab, cervical-lumbar traction, and sports injury recovery.',
+        'about'        => 'Dr. Sanjeet Sahu is the Head of the Department of Physiotherapy & Physical Rehabilitation at Sukhda Multispeciality Hospital. He brings 14+ years of expertise in restoring movement and relieving pain for surgical, orthopaedic, and neurological patients.<br><br>The department is equipped with modern electrotherapy, shortwave diathermy (SWD), cervical-lumbar motorized traction, ultrasound therapy, and customized kinetic exercise gyms.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda Multispeciality Hospital',
+                'address'  => 'Delhi Road, Model Town, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '09:00 AM – 01:00 PM & 04:00 PM – 07:00 PM',
+                'type'     => 'Physical Rehab & Exercise Sessions',
+                'room'     => 'Physiotherapy Centre, Ground Floor'
+            ]
+        ],
+        'specializations' => [
+            'Post-Knee & Hip Replacement (TKR/THR) Rehabilitation',
+            'Cervical Spondylosis, Sciatica & Lumbar Slip Disc',
+            'Stroke & Hemiplegia Neuro-Rehabilitation',
+            'Sports Injury & Ligament Strain Recovery',
+            'Frozen Shoulder & Post-Fracture Stiffness Therapy',
+            'Geriatric Balance, Posture & Gait Training'
+        ],
+        'education' => [
+            [
+                'degree'      => 'M.P.T. — Musculoskeletal Physiotherapy',
+                'institution' => 'Premier Apex Physiotherapy Institute',
+                'year'        => '2012',
+                'desc'        => 'Post-graduate specialization in sports rehabilitation, orthopaedic manual therapy, and biomechanics.'
+            ],
+            [
+                'degree'      => 'B.P.T. (Bachelor of Physiotherapy)',
+                'institution' => 'Top Health Sciences University',
+                'year'        => '2008',
+                'desc'        => 'Completed 4.5-year clinical degree with honours in kinesiology.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Head of Physiotherapy',
+                'org'    => 'Sukhda Multispeciality Hospital',
+                'period' => '2014 – Present',
+                'desc'   => 'Managing outpatient rehab, inpatient post-op mobilization, and therapeutic exercise clinics.'
+            ]
+        ],
+        'memberships' => [
+            'Indian Association of Physiotherapists (MIAP)',
+            'Haryana Physiotherapy Council'
+        ],
+        'awards' => [
+            [
+                'title' => 'Excellence in Physical Rehabilitation',
+                'body'  => 'Conferred for achieving fastest post-operative functional recovery times for joint replacement patients.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Kamlesh Devi',
+                'place'   => 'Hisar',
+                'service' => 'Post-TKR Knee Rehabilitation',
+                'quote'   => 'Dr. Sanjeet Sahu’s physiotherapy sessions made my knee replacement recovery fast and pain-free. I was able to climb stairs without support in 3 weeks!'
+            ]
+        ]
+    ],
+    'dr-manisha-mehta' => [
+        'slug'         => 'dr-manisha-mehta',
+        'name'         => 'Dr. Manisha Mehta',
+        'photo'        => '../assets/images/doctors/dr-manisha-mehta.jpg',
+        'degrees'      => 'M.S. (Obstetrics & Gynaecology), D.G.O, MBBS',
+        'role'         => 'Co-Founder & Director — Gynaecology & Clinical Governance',
+        'department'   => 'Gynaecology & Obstetrics',
+        'experience'   => '24+ Years',
+        'patients'     => '55,000+',
+        'rating'       => '4.96',
+        'reviews_count'=> '1,420+',
+        'hospitals'    => 'Sukhda Multispeciality Hospital',
+        'location_tag' => 'Multispeciality',
+        'languages'    => 'English, Hindi, Punjabi',
+        'summary'      => 'Co-Founder of Sukhda Healthcare with over 24 years of dedicated leadership in women\'s health, maternity excellence, and ethical clinical quality systems.',
+        'about'        => 'Dr. Manisha Mehta is the Co-Founder and Director of Sukhda Healthcare, heading clinical governance and women\'s healthcare services across the network. Established in 2002 alongside Dr. Amit Mehta, Dr. Manisha Mehta has guided thousands of safe deliveries and championed compassionate maternity care in Western Haryana.<br><br>Her clinical acumen spans complex obstetric surgeries, high-risk pregnancy monitoring, preventive oncology for women, and patient-first clinical standards that earned Sukhda its NABH accreditation.',
+        'opd_schedule' => [
+            [
+                'hospital' => 'Sukhda Multispeciality Hospital',
+                'address'  => 'Delhi Road, Model Town, Hisar',
+                'days'     => 'Monday to Saturday',
+                'timings'  => '10:00 AM – 02:00 PM',
+                'type'     => 'Senior Consultant Maternity & Gynae OPD',
+                'room'     => 'Director Suite 102, 1st Floor'
+            ]
+        ],
+        'specializations' => [
+            'Comprehensive Maternity & Antenatal Clinical Care',
+            'High-Risk Pregnancy & Recurrent Miscarriage Workup',
+            'Women’s Preventive Health & Cervical Cancer Screening',
+            'Menopausal Health & Hormone Replacement Advice',
+            'Adolescent Reproductive Wellness & PCOD Care',
+            'Clinical Quality & Patient Safety Governance'
+        ],
+        'education' => [
+            [
+                'degree'      => 'M.S. — Obstetrics & Gynaecology',
+                'institution' => 'Premier Apex Medical University',
+                'year'        => '1998',
+                'desc'        => 'Post-graduate specialization in operative obstetrics, maternal health, and fetal wellbeing.'
+            ],
+            [
+                'degree'      => 'D.G.O & MBBS',
+                'institution' => 'Top Medical College Network',
+                'year'        => '1994',
+                'desc'        => 'Graduated with distinctions across clinical rotatory internships.'
+            ]
+        ],
+        'experience_timeline' => [
+            [
+                'role'   => 'Co-Founder & Director',
+                'org'    => 'Sukhda Multispeciality Hospital',
+                'period' => '2002 – Present',
+                'desc'   => 'Directing maternal health services, patient experience, and NABH healthcare protocols.'
+            ]
+        ],
+        'memberships' => [
+            'Federation of Obstetric and Gynaecological Societies of India (FOGSI)',
+            'Indian Menopause Society (IMS)',
+            'Indian Medical Association (IMA)'
+        ],
+        'awards' => [
+            [
+                'title' => 'Women Healthcare Leadership Award',
+                'body'  => 'Honoured for two decades of outstanding contribution to safe maternity and patient-first healthcare in Haryana.'
+            ]
+        ],
+        'testimonials' => [
+            [
+                'name'    => 'Anita Yadav',
+                'place'   => 'Bhiwani',
+                'service' => 'Maternity & Childbirth',
+                'quote'   => 'Dr. Manisha Mehta made my pregnancy journey calm, joyful, and completely safe. The hospital care is exceptional!'
+            ]
+        ]
     ]
 ];
 
@@ -2785,45 +3764,23 @@ $empanelledTPA = [
             <p class="section-sub">Consult specialized doctors across oncology, cardiology, obstetrics, nephrology, and surgery.</p>
 
             <div class="other-docs-grid">
-                <article class="colleague-card">
-                    <img class="colleague-img" src="../assets/images/doctors/dr-amit-mehta.jpg" alt="Dr. Amit Mehta">
-                    <div class="colleague-body">
-                        <h4>Dr. Amit Mehta</h4>
-                        <div class="col-deg">MD (AIIMS) · MBBS</div>
-                        <div class="col-spec">Director — Internal Medicine &amp; Critical Care</div>
-                        <a href="index.php?doc=dr-amit-mehta" class="btn-profile">View Profile →</a>
-                    </div>
-                </article>
-
-                <article class="colleague-card">
-                    <img class="colleague-img" src="../assets/images/doctors/dr-nidhi-mehta.jpg" alt="Dr. Nidhi Mehta">
-                    <div class="colleague-body">
-                        <h4>Dr. Nidhi Mehta</h4>
-                        <div class="col-deg">M.B.B.S, D.G.O, D.N.B</div>
-                        <div class="col-spec">Senior Consultant — Obstetrics &amp; Gynaecology</div>
-                        <a href="index.php?doc=dr-nidhi-mehta" class="btn-profile">View Profile →</a>
-                    </div>
-                </article>
-
-                <article class="colleague-card">
-                    <img class="colleague-img" src="../assets/images/doctors/dr-ankur-kamra.jpg" alt="Dr. Ankur Kamra">
-                    <div class="colleague-body">
-                        <h4>Dr. Ankur Kamra</h4>
-                        <div class="col-deg">DM (Cardiology) · MD</div>
-                        <div class="col-spec">Senior Consultant — Interventional Cardiology</div>
-                        <a href="index.php?doc=dr-ankur-kamra" class="btn-profile">View Profile →</a>
-                    </div>
-                </article>
-
-                <article class="colleague-card">
-                    <img class="colleague-img" src="../assets/images/doctors/dr-trivikrama-rao.jpg" alt="Dr. Trivikrama Rao">
-                    <div class="colleague-body">
-                        <h4>Dr. Trivikrama Rao</h4>
-                        <div class="col-deg">DrNB (Medical Oncology)</div>
-                        <div class="col-spec">Senior Consultant — Medical Oncology (MedPark)</div>
-                        <a href="../servicemockup/index.php" class="btn-profile">Explore Cancer Care →</a>
-                    </div>
-                </article>
+                <?php
+                $colleagueCount = 0;
+                foreach ($allDoctors as $cSlug => $cDoc):
+                    if ($cSlug === $reqDoc) continue;
+                    if ($colleagueCount >= 4) break;
+                    $colleagueCount++;
+                ?>
+                    <article class="colleague-card">
+                        <img class="colleague-img" src="<?= htmlspecialchars($cDoc['photo']) ?>" alt="<?= htmlspecialchars($cDoc['name']) ?>">
+                        <div class="colleague-body">
+                            <h4><?= htmlspecialchars($cDoc['name']) ?></h4>
+                            <div class="col-deg"><?= htmlspecialchars($cDoc['degrees']) ?></div>
+                            <div class="col-spec"><?= htmlspecialchars($cDoc['role']) ?></div>
+                            <a href="index.php?doc=<?= urlencode($cSlug) ?>" class="btn-profile">View Profile →</a>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>

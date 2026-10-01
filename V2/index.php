@@ -3071,9 +3071,7 @@ function embedded_image(string $relativePath): string
             <div class="doctors-slider-wrap">
                 <div class="doctors-track" id="docsTrack">
                     <?php foreach ($doctors as $d): 
-                        $docSlug = 'dr-amit-mehta';
-                        if ($d[1] === 'Dr. Nidhi Mehta') $docSlug = 'dr-nidhi-mehta';
-                        if ($d[1] === 'Dr. Ankur Kamra') $docSlug = 'dr-ankur-kamra';
+                        $docSlug = basename($d[0], '.jpg');
                     ?>
                         <a href="doctor/index.php?doc=<?= $docSlug ?>" class="doctor-card">
                             <div class="doctor-photo">
