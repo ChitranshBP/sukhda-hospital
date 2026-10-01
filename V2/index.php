@@ -324,6 +324,244 @@ function embedded_image(string $relativePath): string
             .services-drop {
                 min-width: 280px;
             }
+
+            /* MEGA MENU FOR OUR SERVICES */
+            .nav-group.mega-group {
+                position: relative;
+            }
+
+            .services-mega {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 820px;
+                max-width: calc(100vw - 32px);
+                background: #ffffff;
+                border: 1px solid #d8e5f2;
+                border-radius: 14px;
+                box-shadow: 0 20px 48px rgba(3, 32, 90, 0.18), 0 4px 14px rgba(3, 32, 90, 0.06);
+                padding: 0;
+                z-index: 1000;
+                overflow: hidden;
+                animation: megaFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+
+            @keyframes megaFadeIn {
+                from {
+                    opacity: 0;
+                    transform: translate(-50%, 8px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                }
+            }
+
+            .nav-group:hover .services-mega {
+                display: block;
+            }
+
+            .mega-body {
+                display: grid;
+                grid-template-columns: 1.16fr 0.94fr;
+                background: #fff;
+            }
+
+            .mega-col {
+                padding: 18px 20px 16px;
+            }
+
+            .mega-col.medpark-col {
+                background: #f7faff;
+                border-left: 1px solid #e3edf7;
+            }
+
+            .mega-col-header {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 12px;
+                padding-bottom: 10px;
+                border-bottom: 1.5px solid #edf3f8;
+            }
+
+            .mega-col.medpark-col .mega-col-header {
+                border-bottom-color: #dce7f3;
+            }
+
+            .mega-col-icon {
+                width: 34px;
+                height: 34px;
+                border-radius: 8px;
+                background: #eaf5ec;
+                color: var(--green);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+
+            .mega-col-icon i, .mega-col-icon svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .mega-col-icon.medpark {
+                background: #e8f0fe;
+                color: var(--blue);
+            }
+
+            .mega-col-title {
+                font-size: 13.5px;
+                font-weight: 800;
+                color: var(--blue);
+                line-height: 1.25;
+                letter-spacing: -0.2px;
+            }
+
+            .mega-col-sub {
+                font-size: 11px;
+                font-weight: 600;
+                color: var(--muted);
+                margin-top: 1px;
+            }
+
+            .mega-links-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 3px 8px;
+            }
+
+            .mega-links-grid.single-col {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .mega-links-grid a {
+                display: flex !important;
+                align-items: center !important;
+                gap: 7px !important;
+                padding: 6.5px 8px !important;
+                font-size: 12.5px !important;
+                font-weight: 600 !important;
+                color: #355070 !important;
+                border-radius: 6px !important;
+                border: 0 !important;
+                transition: all 0.16s ease !important;
+                text-decoration: none !important;
+                line-height: 1.25 !important;
+            }
+
+            .mega-links-grid a i, .mega-links-grid a svg {
+                width: 14px !important;
+                height: 14px !important;
+                color: var(--green) !important;
+                flex-shrink: 0 !important;
+                stroke-width: 2.2 !important;
+            }
+
+            .mega-links-grid a:hover {
+                background: #eaf5ec !important;
+                color: var(--green) !important;
+                transform: translateX(2px);
+            }
+
+            .mega-col.medpark-col .mega-links-grid a i,
+            .mega-col.medpark-col .mega-links-grid a svg {
+                color: #0d6efd !important;
+            }
+
+            .mega-col.medpark-col .mega-links-grid a:hover {
+                background: #eef4ff !important;
+                color: var(--blue) !important;
+            }
+
+            .mega-links-grid a.featured-service {
+                background: #ffffff !important;
+                border: 1px solid #c9dcf0 !important;
+                border-left: 3.5px solid var(--green) !important;
+                padding: 8px 10px !important;
+                border-radius: 7px !important;
+                box-shadow: 0 2px 6px rgba(3, 32, 90, 0.05) !important;
+                margin-bottom: 3px;
+            }
+
+            .mega-links-grid a.featured-service i,
+            .mega-links-grid a.featured-service svg {
+                color: var(--green) !important;
+                width: 18px !important;
+                height: 18px !important;
+            }
+
+            .mega-links-grid a.featured-service b {
+                display: block;
+                font-size: 12.5px;
+                color: var(--blue);
+                font-weight: 800;
+            }
+
+            .mega-links-grid a.featured-service small {
+                display: block;
+                font-size: 10px;
+                color: var(--muted);
+                font-weight: 600;
+                margin-top: 1px;
+            }
+
+            .mega-links-grid a.featured-service:hover {
+                border-color: var(--green) !important;
+                border-left-color: var(--green) !important;
+                background: #f0faf2 !important;
+            }
+
+            .mega-links-grid a.featured-service:hover b {
+                color: var(--green) !important;
+            }
+
+            .mega-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 9px 20px;
+                background: #f1f6fa;
+                border-top: 1px solid #e1ecf6;
+                font-size: 12px;
+            }
+
+            .mega-view-all {
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 6px !important;
+                color: var(--green) !important;
+                font-weight: 800 !important;
+                font-size: 12px !important;
+                padding: 0 !important;
+                border: 0 !important;
+                background: transparent !important;
+            }
+
+            .mega-view-all:hover {
+                background: transparent !important;
+                text-decoration: underline !important;
+            }
+
+            .mega-emergency-tag {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                color: var(--blue);
+                font-size: 11.5px;
+                font-weight: 600;
+            }
+
+            .mega-emergency-tag i, .mega-emergency-tag svg {
+                width: 13px;
+                height: 13px;
+                color: var(--green);
+            }
         }
 
         /* STICKY BOTTOM FLOATING PILL CTA */
@@ -2081,6 +2319,96 @@ function embedded_image(string $relativePath): string
                 color: var(--green) !important;
             }
 
+            /* MOBILE SERVICES MEGA ACCORDION */
+            .nav-group.open .services-mega {
+                display: flex !important;
+                flex-direction: column !important;
+                position: static !important;
+                transform: none !important;
+                width: 100% !important;
+                box-shadow: none !important;
+                border: 1px solid #e2edf6 !important;
+                border-radius: 8px !important;
+                margin: 0 0 10px !important;
+                padding: 0 !important;
+                background: #f7fafc !important;
+                overflow: hidden !important;
+                animation: none !important;
+            }
+
+            .services-mega .mega-body {
+                display: flex !important;
+                flex-direction: column !important;
+                background: transparent !important;
+            }
+
+            .services-mega .mega-col {
+                padding: 12px 14px !important;
+            }
+
+            .services-mega .mega-col.medpark-col {
+                border-left: 0 !important;
+                border-top: 1px solid #e2edf6 !important;
+                background: #f1f7fc !important;
+            }
+
+            .services-mega .mega-col-header {
+                display: flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+                margin-bottom: 8px !important;
+                padding-bottom: 8px !important;
+                border-bottom: 1px solid #e2edf6 !important;
+            }
+
+            .services-mega .mega-col-icon {
+                width: 28px !important;
+                height: 28px !important;
+                border-radius: 6px !important;
+            }
+
+            .services-mega .mega-col-icon i,
+            .services-mega .mega-col-icon svg {
+                width: 15px !important;
+                height: 15px !important;
+            }
+
+            .services-mega .mega-col-title {
+                font-size: 13px !important;
+                font-weight: 800 !important;
+            }
+
+            .services-mega .mega-col-sub {
+                font-size: 10.5px !important;
+            }
+
+            .services-mega .mega-links-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0 !important;
+            }
+
+            .services-mega .mega-links-grid a {
+                padding: 8px 10px !important;
+                font-size: 13px !important;
+                border-bottom: 1px solid #edf3f8 !important;
+                border-radius: 0 !important;
+            }
+
+            .services-mega .mega-links-grid a:last-child {
+                border-bottom: 0 !important;
+            }
+
+            .services-mega .mega-footer {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 8px !important;
+                padding: 10px 14px !important;
+                background: #edf4fa !important;
+                border-top: 1px solid #dce7f2 !important;
+            }
+
             .mobile-menu-footer {
                 margin-top: auto;
                 padding: 18px 20px;
@@ -2356,20 +2684,65 @@ function embedded_image(string $relativePath): string
                             <a href="#hospitals">Sukhda MedPark (Cancer & Super Speciality)</a>
                         </span>
                     </span>
-                    <span class="nav-group">
+                    <span class="nav-group mega-group">
                         <a href="#specialities">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                        <span class="nav-drop services-drop">
-                            <a href="servicemockup/index.php">Medical Oncology</a>
-                            <a href="gynaecology/index.php">Gynaecology &amp; Obstetrics</a>
-                            <a href="#specialities">Interventional Cardiology</a>
-                            <a href="#specialities">Critical Care &amp; Medicine</a>
-                            <a href="#specialities">Neuro Surgery &amp; Spine</a>
-                            <a href="#specialities">Orthopaedics &amp; Joint Replacement</a>
-                            <a href="#specialities">Nephrology &amp; Dialysis</a>
-                            <a href="#specialities">Gastroenterology</a>
-                            <a href="#specialities">Emergency &amp; Trauma Care</a>
-                            <a href="#specialities">View All 21 Specialities →</a>
-                        </span>
+                        <div class="nav-drop services-mega">
+                            <div class="mega-body">
+                                <div class="mega-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                            <div class="mega-col-sub">Comprehensive Multispeciality &amp; Emergency Hub</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid">
+                                        <a href="gynaecology/index.php"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                        <a href="#specialities"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
+                                        <a href="#specialities"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
+                                        <a href="#specialities"><i data-lucide="bone"></i><span>Arthroscopy &amp; Joint Replacement</span></a>
+                                        <a href="#specialities"><i data-lucide="baby"></i><span>Paediatrics &amp; Neonatology</span></a>
+                                        <a href="#specialities"><i data-lucide="shield-check"></i><span>Advanced Laparoscopy &amp; Bariatric</span></a>
+                                        <a href="#specialities"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
+                                        <a href="#specialities"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
+                                        <a href="#specialities"><i data-lucide="scan"></i><span>CT &amp; Radiology Imaging</span></a>
+                                        <a href="#specialities"><i data-lucide="zap"></i><span>Emergency &amp; Trauma Care (24×7)</span></a>
+                                        <a href="#specialities"><i data-lucide="stethoscope"></i><span>Internal Medicine &amp; Critical Care</span></a>
+                                        <a href="#specialities"><i data-lucide="heart"></i><span>Psychiatry &amp; Mental Health</span></a>
+                                        <a href="#specialities"><i data-lucide="smile"></i><span>Dentistry &amp; Maxillofacial</span></a>
+                                        <a href="#specialities"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehab</span></a>
+                                    </div>
+                                </div>
+                                <div class="mega-col medpark-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda MedPark</div>
+                                            <div class="mega-col-sub">Cancer &amp; Super Speciality Hospital</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid single-col">
+                                        <a href="servicemockup/index.php" class="featured-service">
+                                            <i data-lucide="ribbon"></i>
+                                            <div>
+                                                <b>Medical Oncology (Chemo &amp; Daycare)</b>
+                                                <small>Chemotherapy, Daycare Suite &amp; Immunotherapy</small>
+                                            </div>
+                                        </a>
+                                        <a href="#specialities"><i data-lucide="shield-alert"></i><span>Surgical Oncology</span></a>
+                                        <a href="#specialities"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
+                                        <a href="#specialities"><i data-lucide="brain"></i><span>Neuro Surgery &amp; Spine</span></a>
+                                        <a href="#specialities"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
+                                        <a href="#specialities"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
+                                        <a href="#specialities"><i data-lucide="stethoscope"></i><span>Critical Care &amp; Tumour Board</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services →</a>
+                                <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24×7 ER: <b>01662-249473</b> | MedPark: <b>+91-99965-44005</b></div>
+                            </div>
+                        </div>
                     </span>
                     <a href="#doctors">Doctors</a>
                     <a href="#infrastructure">Technology</a>
