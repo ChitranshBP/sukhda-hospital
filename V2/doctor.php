@@ -1265,7 +1265,9 @@ $allDoctors = [
 ];
 
 // Determine selected doctor
-$reqDoc = isset($_GET['doc']) ? trim($_GET['doc']) : 'dr-amit-mehta';
+if (!isset($reqDoc) || empty($reqDoc)) {
+    $reqDoc = isset($_GET['doc']) ? trim($_GET['doc']) : 'dr-amit-mehta';
+}
 if (!array_key_exists($reqDoc, $allDoctors)) {
     $reqDoc = 'dr-amit-mehta';
 }
@@ -3792,7 +3794,7 @@ $empanelledTPA = [
                             <h4><?= htmlspecialchars($cDoc['name']) ?></h4>
                             <div class="col-deg"><?= htmlspecialchars($cDoc['degrees']) ?></div>
                             <div class="col-spec"><?= htmlspecialchars($cDoc['role']) ?></div>
-                            <a href="doctor.php?doc=<?= urlencode($cSlug) ?>" class="btn-profile">View Profile →</a>
+                            <a href="<?= htmlspecialchars($cSlug) ?>.php" class="btn-profile">View Profile →</a>
                         </div>
                     </article>
                 <?php endforeach; ?>

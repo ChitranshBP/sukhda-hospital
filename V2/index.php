@@ -3073,7 +3073,7 @@ function embedded_image(string $relativePath): string
                     <?php foreach ($doctors as $d): 
                         $docSlug = basename($d[0], '.jpg');
                     ?>
-                        <a href="doctor.php?doc=<?= $docSlug ?>" class="doctor-card">
+                        <a href="<?= $docSlug ?>.php" class="doctor-card">
                             <div class="doctor-photo">
                                 <img src="<?= embedded_image($d[0]) ?>" alt="<?= htmlspecialchars($d[1]) ?>">
                             </div>

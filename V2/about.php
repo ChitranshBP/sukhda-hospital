@@ -2520,7 +2520,7 @@ $empanelledTPA = [
                             patient's unique needs."
                         </div>
                         <div style="margin-top: 18px;">
-                            <a href="doctor.php?doc=dr-amit-mehta" class="btn small primary" style="display:inline-flex;align-items:center;gap:6px">View Clinical Profile &amp; OPD Timings →</a>
+                            <a href="dr-amit-mehta.php" class="btn small primary" style="display:inline-flex;align-items:center;gap:6px">View Clinical Profile &amp; OPD Timings →</a>
                         </div>
                     </div>
                 </article>
@@ -2551,6 +2551,9 @@ $empanelledTPA = [
                             ourselves to bring greater accessibility, affordability, and reliability in healthcare
                             delivery with an unrelenting focus on quality, patient-centricity, and delightful healing
                             experiences."
+                        </div>
+                        <div style="margin-top: 18px;">
+                            <a href="dr-manisha-mehta.php" class="btn small primary" style="display:inline-flex;align-items:center;gap:6px">View Clinical Profile &amp; OPD Timings →</a>
                         </div>
                     </div>
                 </article>
