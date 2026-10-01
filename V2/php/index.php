@@ -877,45 +877,47 @@ function embedded_image(string $relativePath): string
         }
 
         .title {
-            font-size: 30px;
-            margin: 0 0 8px
+            font-size: 34px;
+            margin: 0 0 10px
         }
 
         .sub {
             color: var(--muted);
-            margin: 0 0 24px;
-            font-size: 15.5px;
-            line-height: 1.5
+            margin: 0 0 26px;
+            font-size: 17px;
+            line-height: 1.6
         }
 
         .hospital-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 26px
+            gap: 28px
         }
 
         .hospital {
             display: grid;
-            grid-template-columns: 46% 54%;
+            grid-template-columns: 42% 58%;
             background: #fff;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 4px 18px #03205a12;
+            box-shadow: 0 4px 20px rgba(3, 32, 90, 0.1);
             border: 1px solid var(--line);
             transition: transform 0.25s ease, box-shadow 0.25s ease
         }
 
         .hospital:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 28px rgba(3, 32, 90, 0.16)
+            box-shadow: 0 12px 32px rgba(3, 32, 90, 0.16)
         }
 
         .photo {
-            position: relative
+            position: relative;
+            min-height: 100%
         }
 
         .photo img {
             height: 100%;
+            width: 100%;
             object-fit: cover
         }
 
@@ -923,70 +925,75 @@ function embedded_image(string $relativePath): string
             position: absolute;
             left: 14px;
             bottom: 14px;
-            background: rgba(3, 32, 90, 0.92);
+            background: rgba(3, 32, 90, 0.94);
             backdrop-filter: blur(6px);
             color: #fff;
-            font-size: 13px;
+            font-size: 14px;
             line-height: 1.45;
-            padding: 8px 13px;
-            border-radius: 7px;
+            padding: 10px 15px;
+            border-radius: 8px;
             font-weight: 700
         }
 
         .h-info {
-            padding: 26px 28px
+            padding: 30px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between
         }
 
         .h-logo {
-            width: 155px;
-            height: 44px;
+            width: 170px;
+            height: 48px;
             object-fit: contain;
             object-position: left center;
-            margin-bottom: 12px
+            margin-bottom: 14px
         }
 
         .h-info h3 {
-            font-size: 21px;
+            font-size: 23px;
             font-weight: 800;
             margin: 0 0 10px;
             color: var(--blue);
-            line-height: 1.3
+            line-height: 1.28
         }
 
         .h-info p {
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--muted);
-            margin: 0 0 18px
+            font-size: 16px;
+            line-height: 1.65;
+            color: #475569;
+            margin: 0 0 20px
         }
 
         .checks {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px 12px;
-            margin-bottom: 22px
+            gap: 12px 16px;
+            margin-bottom: 24px
         }
 
         .checks span {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 14.5px;
+            gap: 9px;
+            font-size: 15.5px;
             font-weight: 700;
             line-height: 1.4;
             color: var(--blue)
         }
 
         .checks i {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
             color: var(--green);
             flex-shrink: 0
         }
 
         .small {
-            padding: 11px 24px;
-            font-size: 14px
+            padding: 12px 26px;
+            font-size: 15px;
+            font-weight: 800
         }
 
         .heading {

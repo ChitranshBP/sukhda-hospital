@@ -1174,11 +1174,13 @@ $empanelledTPA = [
         }
 
         .photo {
-            position: relative
+            position: relative;
+            min-height: 100%
         }
 
         .photo img {
             height: 100%;
+            width: 100%;
             object-fit: cover
         }
 
@@ -1186,66 +1188,67 @@ $empanelledTPA = [
             position: absolute;
             left: 14px;
             bottom: 14px;
-            background: rgba(3, 32, 90, 0.9);
-            backdrop-filter: blur(4px);
+            background: rgba(3, 32, 90, 0.94);
+            backdrop-filter: blur(6px);
             color: #fff;
-            font-size: 12px;
-            line-height: 1.35;
-            padding: 6px 11px;
-            border-radius: 7px;
-            font-weight: 700;
-            font-size: 13px;
+            font-size: 14px;
             line-height: 1.45;
-            padding: 8px 13px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: 700
         }
 
         .h-info {
-            padding: 26px 28px
+            padding: 30px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between
         }
 
         .h-logo {
-            width: 155px;
-            height: 44px;
+            width: 170px;
+            height: 48px;
             object-fit: contain;
             object-position: left center;
-            margin-bottom: 12px
+            margin-bottom: 14px
         }
 
         .h-info h3 {
-            font-size: 21px;
+            font-size: 23px;
             font-weight: 800;
             margin: 0 0 10px;
             color: var(--blue);
-            line-height: 1.3
+            line-height: 1.28
         }
 
         .h-info p {
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--muted);
-            margin: 0 0 18px
+            font-size: 16px;
+            line-height: 1.65;
+            color: #475569;
+            margin: 0 0 20px
         }
 
         .checks {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px 12px;
-            margin-bottom: 22px
+            gap: 12px 16px;
+            margin-bottom: 24px
         }
 
         .checks span {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 14.5px;
+            gap: 9px;
+            font-size: 15.5px;
             font-weight: 700;
             line-height: 1.4;
             color: var(--blue)
         }
 
         .checks i {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
             color: var(--green);
             flex-shrink: 0
         }
