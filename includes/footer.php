@@ -103,7 +103,7 @@
     <!-- Column 1: Hospital Brand Identity & Direct Triage Desk (4 cols) -->
     <div class="lg:col-span-4 space-y-6">
       <a href="#" class="inline-block focus:outline-none" aria-label="<?= htmlspecialchars($HOSPITAL['name']) ?>">
-        <img src="assets/images/sukhda-multispeciality-logo.png"
+        <img src="assets/images/sukhda-logo.png"
              alt="<?= htmlspecialchars($HOSPITAL['name']) ?>"
              width="831" height="300"
              class="h-14 w-auto select-none brightness-0 invert opacity-95 hover:opacity-100 transition">

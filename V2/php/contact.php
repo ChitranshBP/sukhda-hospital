@@ -2077,12 +2077,12 @@ $empanelledTPA = [
     <header class="nav">
         <div class="wrap">
             <a href="index.php" aria-label="Sukhda Healthcare home">
-                <img class="logo" src="assets/images/sukhda-multispeciality-logo.png"
+                <img class="logo" src="assets/images/sukhda-logo.png"
                     alt="Sukhda Multispeciality Hospital Hisar">
             </a>
             <nav class="menu">
                 <div class="mobile-menu-head">
-                    <img src="assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Hospital">
+                    <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital">
                     <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
                 </div>
                 <div class="mobile-nav-links">
@@ -2526,7 +2526,7 @@ $empanelledTPA = [
         <div class="wrap footer-grid">
             <div>
                 <div class="footer-brand-wrap">
-                    <img class="footer-logo" src="assets/images/sukhda-multispeciality-logo.png"
+                    <img class="footer-logo" src="assets/images/sukhda-logo.png"
                         alt="Sukhda Multispeciality Hospital Hisar">
                 </div>
                 <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
