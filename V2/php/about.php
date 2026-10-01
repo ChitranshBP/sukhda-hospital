@@ -2600,7 +2600,7 @@ $empanelledTPA = [
                 <!-- HOSPITAL 2 -->
                 <article class="hospital">
                     <div class="photo">
-                        <img src="assets/images/oncology/medical-oncology-redesign.jpg" alt="Sukhda MedPark">
+                        <img src="assets/images/sukhda-medpark-hospital.jpeg" alt="Sukhda MedPark Hospital">
                         <div class="place">HISAR<br>SUPER SPECIALITY &amp; CANCER</div>
                     </div>
                     <div class="h-info">
